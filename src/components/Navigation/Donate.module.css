@@ -1,0 +1,35 @@
+.donate_details img {
+  width: 100%;
+}
+.donate_text {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.donate_card {
+  box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
+  border-radius: 5px;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(139, 155, 167) 0%,
+    rgb(66, 59, 30) 90%
+  );
+  margin-bottom: 50px;
+  padding: 15px;
+}
+.donate_card_details {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  color: white;
+  font-weight: 700;
+}
+.donate_card_details h1 {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.donate_card_now {
+  display: flex;
+  align-items: center;
+}

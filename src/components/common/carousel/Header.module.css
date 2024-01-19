@@ -1,0 +1,13 @@
+.header_contente {
+  max-width: 100vw;
+}
+.header_contente_details {
+}
+.header_image {
+  display: flex;
+  justify-content: center;
+}
+.sliderimg {
+  width: 100%;
+  object-fit: cover;
+}

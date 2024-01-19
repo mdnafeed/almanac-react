@@ -1,0 +1,27 @@
+@import '../../components/commonScss/common';
+.news_section {
+  img {
+    width: 100%;
+  }
+  .news_text {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    h1 {
+      text-align: center;
+      position: relative;
+      font-family: "Lato", sans-serif;
+      font-weight: normal;
+      margin: 0px;
+      background: none;
+      line-height: 1.6em;
+    }
+    p {
+      text-align: justify;
+      span {
+        color: $Gray-color;
+        font-size: bold;
+      }
+    }
+  }
+}

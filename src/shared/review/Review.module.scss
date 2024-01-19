@@ -1,0 +1,45 @@
+@import "../../components/commonScss/common";
+.review_heding_bg {
+  background: $Background-white;
+  margin-top: 25px;
+  .review_heding {
+    max-width: 1200px;
+    margin: 0 auto;
+    .review_heading_text {
+      text-align: $Text-align-center;
+      h1 {
+        font-family: $Font-family-Raleway;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: $Black-color;
+        text-transform: uppercase;
+        line-height: 1.4em;
+      }
+    }
+    .review_images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: $justify-content-center;
+      .review_images_description {
+        border-radius: 10px;
+        border: 1px solid #e8e4e4;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        p {
+          text-align: $Text-align-center;
+          line-height: 2em;
+          padding-top: 20px;
+          padding: 16px 4px;
+          font-size: 13px;
+          font-family: $Font-family-Raleway;
+          letter-spacing: 1px;
+          color: $Black-color;
+        }
+      }
+    }
+  }
+}

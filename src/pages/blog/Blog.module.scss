@@ -1,0 +1,67 @@
+@import '../../components/commonScss/common';
+.blog {
+  height: 450px;
+  // height: 450px;
+  .blog_title {
+    font-size: $Font-text-size;
+   
+  cursor: pointer;
+    .blogImg {
+      color: $Black-color;
+      text-decoration: none;
+      
+    }
+  
+  }
+
+  .blog_description {
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .blogImg {
+    position: relative;
+   
+    .publishedDate {
+      position: absolute;
+      margin-top: -28px;
+      color: $Black-color;
+      padding: 5px;
+      background-color: $Background-white;
+      left: 5px;
+      z-index: 1;
+      border-radius: 4px;
+      .dateIcon {
+        font-size: 30px;
+        color: $Dark-blue;
+      }
+    }
+  }
+}
+.description_all_text{
+  text-align: justify;
+}
+// blog details section a css add 
+.all_description{
+  text-align: justify;
+}
+.blogTile{
+  font-weight: 700;
+  font-size: 28px;
+}
+.tag{
+  display: flex;
+  margin-bottom:10px;
+   align-items: center;
+}
+.tagName{
+    padding: 5px 9px;
+    border-radius: 5px;
+    margin-left: 20px;
+    background-color: #d3d3d3;
+}
+.author{
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(49, 42, 42);
+}

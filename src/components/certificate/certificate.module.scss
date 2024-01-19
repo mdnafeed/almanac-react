@@ -1,0 +1,62 @@
+.container{
+    position: relative;
+    text-align: center;
+}
+.certificate{
+    position:relative;
+    width:100%;
+}
+.membershipNumber{
+    position: absolute;
+    font-weight: 700;
+    top: 10.8%;
+    right: 9%;
+}
+.name{
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    top: 57%;
+    left: 42%;
+}
+.date{
+    font-weight: bold;
+    top: 84%;
+    position: absolute;
+    font-size: 23px;
+    left: 28%;
+}
+.print{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    border: none;
+    width: 67px;
+    background: black;
+    color: white;
+}
+@media print {
+    /* Styles for printing */
+    body {
+      font-size: 14pt;
+    }
+  
+    .date{
+        top: 82%;
+        left: 27%;
+    }
+    .name{
+        top: 58%;
+        font-size: 15px;
+    }
+    .membershipNumber{
+        right:7%;
+        font-size: 10px;
+    }
+    /* Hide header and footer in print mode */
+    header, footer {
+      display: none;
+    }
+  }

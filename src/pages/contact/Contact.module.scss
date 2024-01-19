@@ -1,0 +1,23 @@
+@import '../../components/commonScss/common';
+.officeInfo {
+  .location_icons {
+    font-size: 60px;
+    padding-bottom: 10px;
+    display: flex;
+    margin: 0 auto;
+    color: $Light-blue;
+  }
+}
+.contactInfo {
+  .location_icons {
+    font-size: 60px;
+    padding-bottom: 10px;
+    display: flex;
+    margin: 0 auto;
+    color: $Light-blue;
+  }
+}
+
+.form_bg{
+  background-color: #ebebeb;
+}
