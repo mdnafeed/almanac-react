@@ -83,19 +83,20 @@ function Footer() {
                       {CONSTANT_LABEL.HEALTHCARE}
                     </NavLink>
                   </p>
+                  <p>
+                  <NavLink to={RouteConstant.BLOG} className={style.link}>
+                    {CONSTANT_LABEL.BLOG}
+                  </NavLink>
+                </p>
+               
                 </>
               </div>
               <hr className="w-100 clearfix d-md-none" />
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 className={style.use_usfull_link}>Useful links</h6>
                 <p>
-                  <NavLink to={RouteConstant.BLOG} className={style.link}>
-                    {CONSTANT_LABEL.BLOG}
-                  </NavLink>
-                </p>
-                <p>
                   <NavLink to={RouteConstant.MEMBERSHIP} className={style.link}>
-                    MEMBERSHIP
+                    {CONSTANT_LABEL.MEMBERSHIP}
                   </NavLink>
                 </p>
                 <p>
@@ -109,18 +110,18 @@ function Footer() {
                   </NavLink>
                 </p>
                 <p>
-                  <NavLink to="/payment-cancelation" className={style.link}>
-                    PAYMENT CANCELATION
+                  <NavLink to={RouteConstant.PAYMENT_CANCELATION} className={style.link}>
+                    {CONSTANT_LABEL.PAYMENT_CANCELATION}
                   </NavLink>
                 </p>
                 <p>
-                  <NavLink to="/privacy-policy" className={style.link}>
-                    PRIVACY POLICY
+                  <NavLink to={RouteConstant.PRIVACY_POLICY} className={style.link}>
+                    {CONSTANT_LABEL.PRIVACY_POLICY}
                   </NavLink>
                 </p>
                 <p>
-                  <NavLink to="/terms-and-condition" className={style.link}>
-                    TERMS & CONDITION
+                  <NavLink to={RouteConstant.TERMS_AND_CONDITION} className={style.link}>
+                    {CONSTANT_LABEL.TERMS_AND_CONDITION}
                   </NavLink>
                 </p>
               </div>
@@ -129,16 +130,15 @@ function Footer() {
                 <h6 className={style.use_usfull_link}>Contact</h6>
                 <p className={style.contact_details}>
                   <i className="fas fa-home mr-3"></i>{" "}
-                  <b>Registered Address: </b>277, Okhla Village, Jamia Nagar,
-                  New Delhi-110025
+                  <b>Registered Address: </b>{CONSTANT_LABEL.REGISTERED_ADDRESS}
                 </p>
                 <p className={style.contact_details}>
                   <i className="fas fa-home mr-3"></i> <b>Branch Address: </b>
-                  43-B, Okhla Village, Jamia Nagar, New Delhi-110025
+                  {CONSTANT_LABEL.BRANCH_ADDRESS}
                 </p>
                 <p className={style.contact_details}>
                   <i className="fas fa-envelope mr-3"></i>{" "}
-                  socialwelfarealmanac@gmail.com
+                  {CONSTANT_LABEL.SOCIAL_WELFARE_ALMANAC_EMAIL}
                 </p>
                 <p className={style.contact_details}>
                   <i className="fas fa-phone mr-3"></i> 011-43506838
