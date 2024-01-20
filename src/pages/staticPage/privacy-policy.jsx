@@ -16,10 +16,10 @@ const PrivacyPolicy = () => {
         <p>If you have any additional questions or concerns about our privacy policy, please contact us at socialwelfarealmanac@gmail.com.</p>
 
         <p><b>Prohibited Uses</b></p>
-        <p>You may access and use the Website only for lawful purposes and by these Terms of Use. ICF reserves the right to investigate and take appropriate legal action against anyone who, in ICF's sole discretion, violates this provision, including, without limitation, removing the offending communication from the Site and ceasing the use of such violators.</p>
+        <p>You may access and use the Website only for lawful purposes and by these Terms of Use. ASW reserves the right to investigate and take appropriate legal action against anyone who, in ASW's sole discretion, violates this provision, including, without limitation, removing the offending communication from the Site and ceasing the use of such violators.</p>
 
         <p><b>Cookies</b></p>
-        <p>The ICF website may occasionally use cookies to get user information from each visit. Certain parts of our website rely on cookies to function correctly and make the site easier to use for visitors. You consent to this by using the website.</p>
+        <p>The ASW website may occasionally use cookies to get user information from each visit. Certain parts of our website rely on cookies to function correctly and make the site easier to use for visitors. You consent to this by using the website.</p>
 
         <p><b>Governing Law & Jurisdiction</b></p>
         <p>The website and its Terms of Use are governed by Indian internal laws, without conflict of law provisions. Legal proceedings are exclusively instituted in Delhi, India, but may be brought against users in their country or other relevant countries. Users waive objections to jurisdiction and venue in such courts.</p>
