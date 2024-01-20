@@ -108,6 +108,21 @@ function Footer() {
                     {CONSTANT_LABEL.CONTACT}
                   </NavLink>
                 </p>
+                <p>
+                  <NavLink to="/payment-cancelation" className={style.link}>
+                    PAYMENT CANCELATION
+                  </NavLink>
+                </p>
+                <p>
+                  <NavLink to="/privacy-policy" className={style.link}>
+                    PRIVACY POLICY
+                  </NavLink>
+                </p>
+                <p>
+                  <NavLink to="/terms-and-condition" className={style.link}>
+                    TERMS & CONDITION
+                  </NavLink>
+                </p>
               </div>
               <hr className="w-100 clearfix d-md-none" />
               <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
