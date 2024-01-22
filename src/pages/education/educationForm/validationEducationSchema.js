@@ -32,18 +32,33 @@ const validationEducationSchema = yup.object().shape({
   age: yup.number().required("Age is required"),
   category: yup.string().required("category is required"),
 
+  // student_photo: yup
+  //   .mixed()
+  //   .required("Patient photo is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
+
+
   student_photo: yup
     .mixed()
-    .required("Patient photo is required")
+    .required("Student photo is required")
     .test(
       "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
+      "File size is too large (max 1MB)",
+      (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+      "Unsupported file format. Only PDF files are allowed.",
+      (value) => value && value.type === "application/pdf"
     ),
   religion: yup
     .string()
@@ -152,76 +167,149 @@ const validationEducationSchema = yup.object().shape({
     .required("Enter mobile number"),
   aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
 
+  // aadhar_card_check: yup
+  //   .mixed()
+  //   .required("Aadhar  photo is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
+
   aadhar_card_check: yup
     .mixed()
-    .required("Aadhar  photo is required")
+    .required("Aadhar Card is required")
     .test(
       "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
+      "File size is too large (max 1MB)",
+      (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+      "Unsupported file format. Only PDF files are allowed.",
+      (value) => value && value.type === "application/pdf"
     ),
 
-  voter_id_card_checkbox: yup
+
+    voter_id_card_checkbox: yup
     .mixed()
-    .required("")
+    .required("Voter Id Card  is required")
     .test(
       "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
+      "File size is too large (max 1MB)",
+      (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+      "Unsupported file format. Only PDF files are allowed.",
+      (value) => value && value.type === "application/pdf"
     ),
+
+  // voter_id_card_checkbox: yup
+  //   .mixed()
+  //   .required("")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
+
 
   income_certificate_checkbox: yup
-    .mixed()
-    .required("Income photo is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
-    )
-    .test(
-      "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
-    ),
+  .mixed()
+  .required("Income Certificate  is required")
+  .test(
+    "fileSize",
+    "File size is too large (max 1MB)",
+    (value) => value && value.size <= 1000000
+  )
+  .test(
+    "fileType",
+    "Unsupported file format. Only PDF files are allowed.",
+    (value) => value && value.type === "application/pdf"
+  ),
+
+  // income_certificate_checkbox: yup
+  //   .mixed()
+  //   .required("Income photo is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
   // domicile_certificate_checkbox
 
   domicile_certificate_checkbox: yup
-    .mixed()
-    .required("Domicile photo is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
-    )
-    .test(
-      "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
-    ),
+  .mixed()
+  .required("Domicile Certificate  is required")
+  .test(
+    "fileSize",
+    "File size is too large (max 1MB)",
+    (value) => value && value.size <= 1000000
+  )
+  .test(
+    "fileType",
+    "Unsupported file format. Only PDF files are allowed.",
+    (value) => value && value.type === "application/pdf"
+  ),
+
+  // domicile_certificate_checkbox: yup
+  //   .mixed()
+  //   .required("Domicile photo is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
+
 
   patient_thumb_impression: yup
-    .mixed()
-    .required("Patient signature/thump impression is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
-    )
-    .test(
-      "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
-    ),
+  .mixed()
+  .required("Patient  Thumb Impression  is required")
+  .test(
+    "fileSize",
+    "File size is too large (max 1MB)",
+    (value) => value && value.size <= 1000000
+  )
+  .test(
+    "fileType",
+    "Unsupported file format. Only PDF files are allowed.",
+    (value) => value && value.type === "application/pdf"
+  ),
+
+  // patient_thumb_impression: yup
+  //   .mixed()
+  //   .required("Patient signature/thump impression is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
 
   i_have_declared: yup
     .string()
