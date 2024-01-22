@@ -19,6 +19,7 @@ import NewsMedia from "./pages/news/NewsMedia";
 // --------------------HEALTHCARE PAGE----------------
 import Healthcare from "./pages/healthcare/Healthcare";
 import HealthcareForm from "./pages/healthcare/healthcareForm/HealthcareForm";
+import  HealthcareSumbitAfter from  "./pages/sumbitafterEandH/HealthcareSumbitAfter"
 // -----------------BLOG-----------------------
 import Detail from "./pages/blog/detail";
 import BlogList from "./pages/blog/Blog";
@@ -28,9 +29,10 @@ import Contact from "./pages/contact/Contact";
 
 import ThankYou from "./pages/commonPage/ThankYou";
 import ErrorPage from "./pages/commonPage/ErrorPage";
+import EducationSumbitAfter from './pages/sumbitafterEandH/EducationSumbitAfter';
 import Certificate from './components/certificate/certificate'
 
-// STATIC PAGE
+// STATIC PAGE   educationsumbitafter
 import PaymentCancelation from "./pages/staticPage/cancelation-process";
 import PrivacyPolicy from "./pages/staticPage/privacy-policy";
 import TermsAndCondition from "./pages/staticPage/terms-and-condition";
@@ -55,6 +57,8 @@ function App() {
             <Route path={RouteConstant.DONATE} element={<Donate />} />
             <Route path="/certificate/:id" element={<Certificate/>}/>
             <Route path={RouteConstant.THANK_YOU} element={<ThankYou/>} />
+            <Route path='/educationsumbitafter' element={<EducationSumbitAfter/>}/>
+            <Route path="/healthcareSumbitafter" element={<HealthcareSumbitAfter/>}/>
             <Route path={RouteConstant.ERROR_PAGE} element={<ErrorPage/>}/>
 
             <Route path={RouteConstant.TERMS_AND_CONDITION} element={<TermsAndCondition/>} />

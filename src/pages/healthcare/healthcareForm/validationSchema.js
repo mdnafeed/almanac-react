@@ -17,19 +17,33 @@ const validationSchema = yup.object().shape({
     )
     .required("Department name is required"),
   address: yup.string().required("Permanent address is required"),
+  // patient_photo: yup
+  //   .mixed()
+  //   .required("Patient photo is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
+
   patient_photo: yup
-    .mixed()
-    .required("Patient photo is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
-    )
-    .test(
-      "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
-    ),
+  .mixed()
+  .required("Patient photo is required")
+  .test(
+    "fileSize",
+    "File size is too large (max 1MB)",
+    (value) => value && value.size <= 1000000
+  )
+  .test(
+    "fileType",
+    "Unsupported file format. Only PDF files are allowed.",
+    (value) => value && value.type === "application/pdf"
+  ),
   name_of_the_patient: yup
     .string()
     .matches(
@@ -107,35 +121,77 @@ const validationSchema = yup.object().shape({
     )
     .required("Enter mobile number"),
   aadhar_card_checkbox: yup.boolean().oneOf([true], "Aadhar card required"),
+  // patient_thumb_impression: yup
+  //   .mixed()
+  //   .required("Patient signature/thump impression is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
+
   patient_thumb_impression: yup
-    .mixed()
-    .required("Patient signature/thump impression is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
-    )
-    .test(
-      "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
-    ),
+  .mixed()
+  .required("Patient signature/thump impression is required")
+  .test(
+    "fileSize",
+    "File size is too large (max 1MB)",
+    (value) => value && value.size <= 1000000
+  )
+  .test(
+    "fileType",
+    "Unsupported file format. Only PDF files are allowed.",
+    (value) => value && value.type === "application/pdf"
+  ),
   guardian_address: yup.string().required("Address is required"),
   aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
+  // aadhar_card_check: yup
+  //   .mixed()
+  //   .required("Aadhar  photo is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
+
   aadhar_card_check: yup
     .mixed()
-    .required("Aadhar  photo is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
-    )
-    .test(
-      "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
-    ),
+    .required("Aadhar  is required")
+  .test(
+    "fileSize",
+    "File size is too large (max 1MB)",
+    (value) => value && value.size <= 1000000
+  )
+  .test(
+    "fileType",
+    "Unsupported file format. Only PDF files are allowed.",
+    (value) => value && value.type === "application/pdf"
+  ),
 
+
+  voter_id_card_checkbox: yup
+    .mixed()
+    .required(" Voter Id Card is required")
+.test(
+  "fileSize",
+  "File size is too large (max 1MB)",
+  (value) => value && value.size <= 1000000
+)
+.test(
+  "fileType",
+  "Unsupported file format. Only PDF files are allowed.",
+  (value) => value && value.type === "application/pdf"
+),
   // voter_id_card_checkbox: yup
   //   .mixed()
   //   .required("")
@@ -150,49 +206,77 @@ const validationSchema = yup.object().shape({
   //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
   //   ),
 
-  voter_id_card: yup.boolean(),
-  voter_id_card_checkbox: yup
-    .mixed()
-    .test("isRequired", "Voter ID Card is required", function (value) {
-      const { path, createError } = this;
-      const { voter_id_card } = this.parent;
+  // voter_id_card: yup.boolean(),
+  // voter_id_card_checkbox: yup
+  //   .mixed()
+  //   .test("isRequired", "Voter ID Card is required", function (value) {
+  //     const { path, createError } = this;
+  //     const { voter_id_card } = this.parent;
 
-      if (voter_id_card && !value) {
-        return createError({ path, message: "Voter ID Card is required" });
-      }
-      return true;
-    }),
+  //     if (voter_id_card && !value) {
+  //       return createError({ path, message: "Voter ID Card is required" });
+  //     }
+  //     return true;
+  //   }),
 
-  income_certificate: yup.boolean(),
+
   income_certificate_checkbox: yup
     .mixed()
     .required("Income photo is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
-    )
-    .test(
-      "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
-    ),
+.test(
+"fileSize",
+"File size is too large (max 1MB)",
+(value) => value && value.size <= 1000000
+)
+.test(
+"fileType",
+"Unsupported file format. Only PDF files are allowed.",
+(value) => value && value.type === "application/pdf"
+),
+  // income_certificate: yup.boolean(),
+  // income_certificate_checkbox: yup
+  //   .mixed()
+  //   .required("Income photo is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
 
   // domicile_certificate_checkbox
 
   domicile_certificate_checkbox: yup
-    .mixed()
-    .required("Domicile photo is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
-    )
-    .test(
-      "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
-    ),
+  .mixed()
+  .required("Domicile photo is required")
+.test(
+"fileSize",
+"File size is too large (max 1MB)",
+(value) => value && value.size <= 1000000
+)
+.test(
+"fileType",
+"Unsupported file format. Only PDF files are allowed.",
+(value) => value && value.type === "application/pdf"
+),
+
+  // domicile_certificate_checkbox: yup
+  //   .mixed()
+  //   .required("Domicile photo is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 5MB)",
+  //     (value) => value && value.size <= 5000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format",
+  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+  //   ),
 
   i_have_declared: yup
     .string()

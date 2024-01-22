@@ -10,8 +10,8 @@ const api = {
     // Add more API functions as needed
 
     educationPostData: (data) => axiosInstance.post('/education', data),
-    // Add more API functions as needed
-
+    healthcarePostData: (data) => axiosInstance.post('/healthcare', data),
+    // Add more API functions as needed   
     generateCertificate:(id) => axiosInstance.get(`/membership/${id}`)
 
 };
