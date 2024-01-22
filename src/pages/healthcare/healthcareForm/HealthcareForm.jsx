@@ -82,9 +82,10 @@ const HealthcareForm = () => {
       patient_occupation: "",
       patient_email_id: "",
       patient_mobile_number: "",
-      aadhar_card_checkbox: "",
       guardian_address: "",
-      patient_thumb_impression: "",
+      aadhar_card_checkbox: "",
+      
+      
 
       // aadhar_card_check: "",
       aadhar_card_checked: false,
@@ -94,7 +95,7 @@ const HealthcareForm = () => {
       income_certificate_checkbox:"",
       voter_id_card_checkbox: "",
       voter_id_card:false,
-
+      patient_thumb_impression: "",
       i_have_declared: "",
       s_o_w_o: "",
       R_o: "",

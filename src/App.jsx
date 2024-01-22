@@ -29,6 +29,11 @@ import Contact from "./pages/contact/Contact";
 import ThankYou from "./pages/commonPage/ThankYou";
 import ErrorPage from "./pages/commonPage/ErrorPage";
 import Certificate from './components/certificate/certificate'
+
+// STATIC PAGE
+import PaymentCancelation from "./pages/staticPage/cancelation-process";
+import PrivacyPolicy from "./pages/staticPage/privacy-policy";
+import TermsAndCondition from "./pages/staticPage/terms-and-condition";
 // END: PAGE
 function App() {
   return (
@@ -51,6 +56,10 @@ function App() {
             <Route path="/certificate/:id" element={<Certificate/>}/>
             <Route path={RouteConstant.THANK_YOU} element={<ThankYou/>} />
             <Route path={RouteConstant.ERROR_PAGE} element={<ErrorPage/>}/>
+
+            <Route path={RouteConstant.TERMS_AND_CONDITION} element={<TermsAndCondition/>} />
+            <Route path={RouteConstant.PRIVACY_POLICY} element={<PrivacyPolicy/>}/>
+            <Route path={RouteConstant.PAYMENT_CANCELATION} element={<PaymentCancelation/>}/>
           </Routes>
           <Footer />
         </>
