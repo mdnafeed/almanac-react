@@ -57,9 +57,9 @@ function App() {
             <Route path={RouteConstant.THANK_YOU} element={<ThankYou/>} />
             <Route path={RouteConstant.ERROR_PAGE} element={<ErrorPage/>}/>
 
-            <Route path="terms-and-condition" element={<TermsAndCondition/>} />
-            <Route path="privacy-policy" element={<PrivacyPolicy/>}/>
-            <Route path="payment-cancelation" element={<PaymentCancelation/>}/>
+            <Route path={RouteConstant.TERMS_AND_CONDITION} element={<TermsAndCondition/>} />
+            <Route path={RouteConstant.PRIVACY_POLICY} element={<PrivacyPolicy/>}/>
+            <Route path={RouteConstant.PAYMENT_CANCELATION} element={<PaymentCancelation/>}/>
           </Routes>
           <Footer />
         </>
