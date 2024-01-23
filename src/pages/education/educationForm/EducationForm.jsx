@@ -3,7 +3,7 @@ import { Form, Col, Row, Button, Container } from "react-bootstrap";
 import validationEducationSchema from "./validationEducationSchema";
 import { useFormik } from "formik";
 import api from "../../../api/api";
-import { toast } from "react-toastify";
+
 
 import { useNavigate } from "react-router-dom";
 const EducationForm = () => {
@@ -109,13 +109,13 @@ const EducationForm = () => {
     validationSchema: validationEducationSchema,
     onSubmit: async (values) => {
       try {
-        console.log(educationFormik.values);
-        const response = await api.educationPostData(educationFormik.values);
+        console.log(values);
+        const response = await api.educationPostData(values);
         if (response.data.status === 1) {
-          toast.success("Thank for Applying", {
-            position: toast.POSITION.TOP_CENTER,
-          });
-          navigate("/thankyou");
+          // toast.success("Thank for Applying", {
+          //   position: toast.POSITION.TOP_CENTER,
+          // });
+          navigate("/educationsumbitafter",{ state: {apidata:response.data} });
         }
       } catch (error) {
         console.error("Error making POST request:", error);

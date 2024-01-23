@@ -3,6 +3,7 @@ import { Form, Col, Row, Button, Container } from "react-bootstrap";
 import { useFormik } from "formik";
 import validationSchema from "./validationSchema";
 import "./healthcare.scss";
+import api from "../../../api/api";
 import { useNavigate } from "react-router-dom";
 const HealthcareForm = () => {
   const navigate=useNavigate();
@@ -103,10 +104,19 @@ const HealthcareForm = () => {
       date: "",
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {
-      console.log("Form submitted successfully:", values);
+    onSubmit: async(values) => { 
+      // healthcarePostData
       try{
-        navigate('/thankyou');
+        console.log("Form submitted successfully:", values);
+        const response = await api.healthcarePostData(values);
+        if (response.data.status === 1) {
+          // toast.success("Thank for Applying", {
+          //   position: toast.POSITION.TOP_CENTER,
+          // });
+          navigate("/healthcareSumbitafter",{ state: {apidata:response.data} });
+        }
+        // navigate('/thankyou');
+        // navigate("/healthcareSumbitafter",{ state: {apidata:response.data} });
       }catch(error){
         console.error("Error making POST request:", error);
         navigate("/errorpage");
