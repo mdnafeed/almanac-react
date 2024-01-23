@@ -1,11 +1,6 @@
-
 import { Container } from 'react-bootstrap'
 import { useLocation } from 'react-router-dom'
-
 const EducationSumbitAfter = () => {
-
- 
-
   const location = useLocation()
   const { apidata } = location.state || {}
   console.log(apidata)
@@ -45,8 +40,6 @@ const EducationSumbitAfter = () => {
               </tr>
             </tr>
           </tr>
-
-
           <tr style={{ display: 'block', padding: '20px' }}>
             <td style={{ fontFamily: 'calibri, helvetica, arial, sans-serif' }}>
               <table style={{ width: '760px', display: 'block', wordBreak: 'break-all', boxShadow: '0px 0 6px #ccc', background: '#fff', padding: '0px 15px', borderRadius: '5px', fontSize: '14px' }} cellSpacing="0" cellPadding="0" border="0" align="center">
@@ -226,21 +219,12 @@ const EducationSumbitAfter = () => {
                             <td>{apidata.data.date}</td>
                           </tr>
                         </tbody>
-                      </table>
-                      
-        
-
+                      </table>       
                     </td>
                   </tr>
                 </tbody>
-
-
               </table>
-{/* marginLeft: '20px' */}
-
-       
             </td>
-
             <tbody style={{ width:"100%",paddingTop: '20px', textAlign: 'center', alignItems: 'center' }}>
             <td style={{ borderTop: '2px solid transparent', borderImage: 'linear-gradient(0.25turn, red, green) 1', width: '800px', border: '1px solid #cac2be' }}>
     <div style={{ width: '100%', textAlign: 'center', fontSize: '12px', border: '1px solid #eeeeee', paddingBottom: '7px', background: '#fff'}}>
@@ -253,49 +237,12 @@ const EducationSumbitAfter = () => {
     </div>
   </td>
 </tbody>
-         
           </tr>
           </table>
         </Container>
-
-
-
-
-
       </>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </>
   )
 }
-
 export default EducationSumbitAfter
 

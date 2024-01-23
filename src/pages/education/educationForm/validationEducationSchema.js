@@ -30,8 +30,12 @@ const validationEducationSchema = yup.object().shape({
     .max(50, "Applicant name should not exceed 50 characters"),
   gender: yup.string().required("Select gender"),
   age: yup.number().required("Age is required"),
-  category: yup.string().required("category is required"),
-
+  // category: yup.string().required("category is required"),
+  category: yup
+  .string()
+  .required("Category name is required")
+  .min(2, "Category name should be at least 2 characters")
+  .max(50, "Category name should not exceed 50 characters"),
   // student_photo: yup
   //   .mixed()
   //   .required("Patient photo is required")
@@ -47,19 +51,33 @@ const validationEducationSchema = yup.object().shape({
   //   ),
 
 
+  // student_photo: yup
+  //   .mixed()
+  //   .required("Student photo is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size is too large (max 1MB)",
+  //     (value) => value && value.size <= 1000000
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format. Only PDF files are allowed.",
+  //     (value) => value && value.type === "application/pdf"
+  //   ),
+
   student_photo: yup
-    .mixed()
-    .required("Student photo is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 1MB)",
-      (value) => value && value.size <= 1000000
-    )
-    .test(
-      "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
-      (value) => value && value.type === "application/pdf"
-    ),
+  .mixed()
+  .required("Aadhar Card is required")
+  .test(
+    "fileSize",
+    "File size is too large (max 1MB)",
+    (value) => value && value.size <= 1 * 1024 * 1024
+  )
+  .test(
+    "fileType",
+    "Unsupported file format. Only PDF files are allowed.",
+    (value) => value && value.type === "application/pdf"
+  ),
   religion: yup
     .string()
     .matches(
@@ -85,7 +103,7 @@ const validationEducationSchema = yup.object().shape({
   permanent_address: yup
     .string()
     .required("Permanent address is required")
-    .min(5, "Address should be at least 5 characters")
+    .min(3, "Address should be at least 5 characters")
     .max(100, "Address should not exceed 100 characters"),
   aadhar_no: yup
     .string()
@@ -160,12 +178,13 @@ const validationEducationSchema = yup.object().shape({
     .required("Email is required"),
   parent_mobile_no: yup
     .string()
-    .matches(
-      /^[0-9]{10}$/,
-      "Invalid mobile number. It must be 10 digits and only contain numbers"
-    )
+    // .matches(
+    //   /^[0-9]{9}$/,
+    //   "Invalid mobile number. It must be 10 digits and only contain numbers"
+    // )
+    .matches(/^[6-9]\d{9}$/, "Invalid mobile number")
     .required("Enter mobile number"),
-  aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
+  // aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
 
   // aadhar_card_check: yup
   //   .mixed()
@@ -180,14 +199,48 @@ const validationEducationSchema = yup.object().shape({
   //     "Unsupported file format",
   //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
   //   ),
+  // aadhar_card_checked: yup
+  // .required("Aadhar Check is required"),
+
+  // aadhar_card_check: yup
+  //   .mixed()
+  //   .required("Aadhar Card is required")
+  //   .test(
+  //     "fileSize",
+  //     "File size exceeds the maximum limit (1MB).",
+  //     (value) => value && value.size <= 1 * 1024 * 1024
+  //   )
+  //   .test(
+  //     "fileType",
+  //     "Unsupported file format. Only PDF files are allowed.",
+  //     (value) => value && value.type === "application/pdf"
+  //   ),
+
 
   aadhar_card_check: yup
+  .mixed()
+  .required("Aadhar Card is required")
+  .test(
+    "fileSize",
+    "File size exceeds the maximum limit (1MB).",
+    (value) => value && value.size <= 1 * 1024 * 1024
+  )
+  .test(
+    "fileType",
+    "Unsupported file format. Only PDF files are allowed.",
+    (value) => value && value.type === "application/pdf"
+  ),
+
+
+
+
+    voter_id_card_checkbox: yup
     .mixed()
     .required("Aadhar Card is required")
     .test(
       "fileSize",
       "File size is too large (max 1MB)",
-      (value) => value && value.size <= 1000000
+      (value) => value && value.size <= 1 * 1024 * 1024
     )
     .test(
       "fileType",
@@ -195,20 +248,7 @@ const validationEducationSchema = yup.object().shape({
       (value) => value && value.type === "application/pdf"
     ),
 
-
-    voter_id_card_checkbox: yup
-    .mixed()
-    .required("Voter Id Card  is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 1MB)",
-      (value) => value && value.size <= 1000000
-    )
-    .test(
-      "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
-      (value) => value && value.type === "application/pdf"
-    ),
+  
 
   // voter_id_card_checkbox: yup
   //   .mixed()
@@ -227,11 +267,26 @@ const validationEducationSchema = yup.object().shape({
 
   income_certificate_checkbox: yup
   .mixed()
-  .required("Income Certificate  is required")
+  .required("Aadhar Card is required")
   .test(
     "fileSize",
     "File size is too large (max 1MB)",
-    (value) => value && value.size <= 1000000
+    (value) => value && value.size <= 1 * 1024 * 1024
+  )
+  .test(
+    "fileType",
+    "Unsupported file format. Only PDF files are allowed.",
+    (value) => value && value.type === "application/pdf"
+  ),
+
+
+  domicile_certificate_checkbox: yup
+  .mixed()
+  .required("Aadhar Card is required")
+  .test(
+    "fileSize",
+    "File size is too large (max 1MB)",
+    (value) => value && value.size <= 1 * 1024 * 1024
   )
   .test(
     "fileType",
@@ -254,19 +309,7 @@ const validationEducationSchema = yup.object().shape({
   //   ),
   // domicile_certificate_checkbox
 
-  domicile_certificate_checkbox: yup
-  .mixed()
-  .required("Domicile Certificate  is required")
-  .test(
-    "fileSize",
-    "File size is too large (max 1MB)",
-    (value) => value && value.size <= 1000000
-  )
-  .test(
-    "fileType",
-    "Unsupported file format. Only PDF files are allowed.",
-    (value) => value && value.type === "application/pdf"
-  ),
+  
 
   // domicile_certificate_checkbox: yup
   //   .mixed()
@@ -285,17 +328,19 @@ const validationEducationSchema = yup.object().shape({
 
   patient_thumb_impression: yup
   .mixed()
-  .required("Patient  Thumb Impression  is required")
+  .required("Aadhar Card is required")
   .test(
     "fileSize",
     "File size is too large (max 1MB)",
-    (value) => value && value.size <= 1000000
+    (value) => value && value.size <= 1 * 1024 * 1024
   )
   .test(
     "fileType",
     "Unsupported file format. Only PDF files are allowed.",
     (value) => value && value.type === "application/pdf"
   ),
+
+
 
   // patient_thumb_impression: yup
   //   .mixed()

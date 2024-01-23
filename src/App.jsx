@@ -58,7 +58,7 @@ function App() {
             <Route path="/certificate/:id" element={<Certificate/>}/>
             <Route path={RouteConstant.THANK_YOU} element={<ThankYou/>} />
             <Route path='/educationsumbitafter' element={<EducationSumbitAfter/>}/>
-            <Route path="/healthcareSumbitafter" element={<HealthcareSumbitAfter/>}/>
+            <Route path='/healthcareSumbitafter' element={<HealthcareSumbitAfter/>}/>
             <Route path={RouteConstant.ERROR_PAGE} element={<ErrorPage/>}/>
 
             <Route path={RouteConstant.TERMS_AND_CONDITION} element={<TermsAndCondition/>} />
