@@ -217,7 +217,7 @@ const validationEducationSchema = yup.object().shape({
   //   ),
 
 
-  aadhar_card_check: yup
+  aadhar_card_checked: yup
   .mixed()
   .required("Aadhar Card is required")
   .test(
