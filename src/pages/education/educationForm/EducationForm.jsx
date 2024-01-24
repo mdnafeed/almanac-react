@@ -110,6 +110,11 @@ const EducationForm = () => {
     onSubmit: async (values) => {
       try {
         console.log(values);
+        const formDataToSend = new FormData();
+
+        for (let key in values) {
+          formDataToSend.append(key, values[key]);
+        }
         const response = await api.educationPostData(values);
         if (response.data.status === 1) {
           // toast.success("Thank for Applying", {
@@ -129,6 +134,295 @@ const EducationForm = () => {
     educationFormik.setFieldValue("aadhar_card_checked", e.target.checked);
     handleFileChange(e, "aadhar_card");
   };
+
+
+  
+  // const handleFileChange = (e, inputType) => {
+  //   const isChecked = e.target.checked;
+
+  //   switch (inputType) {
+  //     case "aadhar_card":
+  //       setAddAdharFile(isChecked);
+  //       break;
+  //     case "voter_id_card":
+  //       setAddVoterIdFilet(isChecked);
+  //       break;
+  //     case "income_certificate":
+  //       setAddIncomeFile(isChecked);
+  //       break;
+  //     case "domicile_certificate":
+  //       setAddDomicileFile(isChecked);
+  //       break;
+  //     default:
+  //       break;
+  //   }
+
+  //   // // Set the file value in formik
+  //   // if (isChecked) {
+  //   //   educationFormik.setFieldValue(inputType, e.currentTarget.files[0]);
+  //   // } else {
+  //   //   educationFormik.setFieldValue(inputType, null);
+  //   // }
+
+
+
+  //   // //  If it's a checkbox, set the checkbox state
+  //   //  if (e.target.type === "checkbox") {
+  //   //   educationFormik.setFieldValue(`${inputType}_checked`, isChecked);
+  //   // }
+
+
+  //   const file = isChecked ? e.currentTarget.files[0] : null;
+  // educationFormik.setFieldValue(inputType, file);
+
+  // // Set the file value for specific fields
+  // if (e.target.name == "student_photo") {
+  //       educationFormik.setFieldValue("student_photo", e.currentTarget.files[0]);
+  //     }
+  //     if (e.target.name == "aadhar_card_check") {
+  //       educationFormik.setFieldValue(
+  //         "aadhar_card_check",
+  //         e.currentTarget.files[0]
+  //       );
+  //     } else if (e.target.name == "voter_id_card_checkbox") {
+  //       educationFormik.setFieldValue(
+  //         "voter_id_card_checkbox",
+  //         e.currentTarget.files[0]
+  //       );
+  //     } else if (e.target.name == "income_certificate_checkbox") {
+  //       educationFormik.setFieldValue(
+  //         "income_certificate_checkbox",
+  //         e.currentTarget.files[0]
+  //       );
+  //     } else if (e.target.name == "domicile_certificate_checkbox") {
+  //       educationFormik.setFieldValue(
+  //         "domicile_certificate_checkbox",
+  //         e.currentTarget.files[0]
+  //       );
+  //     } else if (e.target.name == "patient_thumb_impression") {
+  //       educationFormik.setFieldValue(
+  //         "patient_thumb_impression",
+  //         e.currentTarget.files[0]
+  //       );
+  //     }
+
+
+  // };
+  // const educationFormik = useFormik({
+  //   initialValues: {
+  //     university_name: "",
+  //     course_applied_pursuing: "",
+  //     year_semester_fee: "",
+  //     last_qualification: "",
+  //     applicant_name: "",
+  //     gender: "",
+  //     age: "",
+  //     category: "",
+  //     student_photo: "",
+  //     religion: "",
+  //     father_husband_name: "",
+  //     motherName: "",
+  //     permanent_address: "",
+  //     aadhar_no: "",
+  //     voter_id_no: "",
+  //     email: "",
+  //     monthly_family_income: "",
+  //     mobileNo: "",
+  //     bank_name: "",
+  //     branch_name: "",
+  //     account: "",
+  //     ifsc_code: "",
+  //     account_holder_name: "",
+  //     parent_name: "",
+  //     relationship_with_guardian: "",
+  //     parent_occupation: "",
+  //     parent_address: "",
+  //     parent_email: "",
+  //     parent_mobile_no: "",
+  //     aadhar_card_checked: "",
+  //     aadhar_card_check: "",
+  //     voter_id_card_checkbox: "",
+  //     income_certificate_checkbox: "",
+  //     domicile_certificate_checkbox: "",
+  //     patient_thumb_impression: "",
+  //     // student_photo: null,
+  //     // aadhar_card_check: null,
+  //     // voter_id_card_checkbox: null,
+  //     // income_certificate_checkbox: null,
+  //     // domicile_certificate_checkbox: null,
+  //     // patient_thumb_impression: null,
+  //     i_have_declared: "",
+  //     s_o_w_o: "",
+  //     R_o: "",
+  //     place: "",
+  //     date: "",
+  //   },
+  //   validationSchema: validationEducationSchema,
+  //   onSubmit: async (values) => {
+  //     try {
+  //       console.log(values);
+  //       const formDataToSend = new FormData();
+  //       for (let key in values) {
+  //         formDataToSend.append(key, values[key]);
+  //       }
+  //       console.log("Validation Errors:", educationFormik.errors);
+
+  //       const response = await api.educationPostData(formDataToSend);
+  //       if (response.data.status === 1) {
+  //         navigate("/educationsumbitafter", { state: { apidata: response.data } });
+  //       }
+  //     } catch (error) {
+  //       console.error("Error making POST request:", error);
+  //       navigate("/errorpage");
+  //     }
+  //   },
+  // });
+
+  // console.log(educationFormik);
+
+  // const toggleCheckbox = (e) => {
+  //   educationFormik.setFieldValue("aadhar_card_checked", e.target.checked);
+  //   handleFileChange(e, "aadhar_card");
+  // };
+
+
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  // const handleFileChange = (event) => {
+  //   // const isChecked = e.target.checked;
+  //   const { name, value, type, files } = event.target;
+
+  //   if (type === "file") {
+  //     setFormData((prevData) => ({
+  //       ...prevData,
+  //       [name]: files[0],
+  //     }));
+  //   } else {
+  //     setFormData((prevData) => ({
+  //       ...prevData,
+  //       [name]: value,
+  //     }));
+  //   }
+
+   
+
+ 
+
+  //   // if (e.target.name == "student_photo") {
+  //   //   educationFormik.setFieldValue("student_photo", e.currentTarget.files[0]);
+  //   // }
+  //   // if (e.target.name == "aadhar_card_checked") {
+  //   //   educationFormik.setFieldValue(
+  //   //     "aadhar_card_checked",
+  //   //     e.currentTarget.files[0]
+  //   //   );
+  //   // } else if (e.target.name == "voter_id_card_checkbox") {
+  //   //   educationFormik.setFieldValue(
+  //   //     "voter_id_card_checkbox",
+  //   //     e.currentTarget.files[0]
+  //   //   );
+  //   // } else if (e.target.name == "income_certificate_checkbox") {
+  //   //   educationFormik.setFieldValue(
+  //   //     "income_certificate_checkbox",
+  //   //     e.currentTarget.files[0]
+  //   //   );
+  //   // } else if (e.target.name == "domicile_certificate_checkbox") {
+  //   //   educationFormik.setFieldValue(
+  //   //     "domicile_certificate_checkbox",
+  //   //     e.currentTarget.files[0]
+  //   //   );
+  //   // } else if (e.target.name == "patient_thumb_impression") {
+  //   //   educationFormik.setFieldValue(
+  //   //     "patient_thumb_impression",
+  //   //     e.currentTarget.files[0]
+  //   //   );
+  //   // }
+  // };
+
+// ------------------------------------------========================================
+//   const handleFileChange = (event) => {
+//     const { name, type, files } = event.target;
+
+//     if (type === "file") {
+//       educationFormik.setFieldValue(name, files[0]);
+//     } else {
+//       // Handle non-file inputs if needed
+//       educationFormik.setFieldValue(name, event.target.value);
+//     }
+//   };
+//    const educationFormik = useFormik({
+//     initialValues: {
+//       university_name: "",
+//       course_applied_pursuing: "",
+//       year_semester_fee: "",
+//       last_qualification: "",
+//       applicant_name: "",
+//       gender: "",
+//       age: "",
+//       category: "",
+//       student_photo: "",
+//       religion: "",
+//       father_husband_name: "",
+//       motherName: "",
+//       permanent_address: "",
+//       aadhar_no: "",
+//       voter_id_no: "",
+//       email: "",
+//       monthly_family_income: "",
+//       mobileNo: "",
+//       bank_name: "",
+//       branch_name: "",
+//       account: "",
+//       ifsc_code: "",
+//       account_holder_name: "",
+//       parent_name: "",
+//       relationship_with_guardian: "",
+//       parent_occupation: "",
+//       parent_address: "",
+//       parent_email: "",
+//       parent_mobile_no: "",
+//       aadhar_card_checked: "",
+//       aadhar_card_check: "",
+//       voter_id_card_checkbox: "",
+//       income_certificate_checkbox: "",
+//       domicile_certificate_checkbox: "",
+//       patient_thumb_impression: "",
+//       // student_photo: null,
+//       // aadhar_card_check: null,
+//       // voter_id_card_checkbox: null,
+//       // income_certificate_checkbox: null,
+//       // domicile_certificate_checkbox: null,
+//       // patient_thumb_impression: null,
+//       i_have_declared: "",
+//       s_o_w_o: "",
+//       R_o: "",
+//       place: "",
+//       date: "",
+//     },
+//     validationSchema: validationEducationSchema,
+//   onSubmit: async (values) => {
+//     try {
+//       console.log("faizy",values);
+//       const formDataToSend = new FormData();
+
+//       for (let key in values) {
+//         formDataToSend.append(key, values[key]);
+//       }
+//     const response = await api.educationPostData(formDataToSend);
+//           if (response.data.status === 1) {
+//             navigate("/educationsumbitafter", { state: { apidata: response.data } });
+//           }
+//         } catch (error) {
+//           console.error("Error making POST request:", error);
+//           navigate("/errorpage");
+//         }
+//   },
+// });
+
+//  const toggleCheckbox = (e) => {
+//     educationFormik.setFieldValue("aadhar_card_checked", e.target.checked);
+//     handleFileChange(e, "aadhar_card");
+//   };
+  console.log("form data sumbit show",educationFormik);
 
   return (
     <>
@@ -314,7 +608,7 @@ const EducationForm = () => {
                 {educationFormik.errors.category}
               </Form.Control.Feedback>
             </Col>
-            <Col xs={12} sm={12} md={8} lg={8} className="mb-3">
+            {/* <Col xs={12} sm={12} md={8} lg={8} className="mb-3">
               <Form.Label htmlFor="photo">
                 Student Photo<span className="text-danger">*</span>
               </Form.Label>
@@ -325,14 +619,60 @@ const EducationForm = () => {
                 className="rounded-0"
                 onChange={handleFileChange}
                 isInvalid={
-                  educationFormik.touched.student_photo &&
-                  educationFormik.errors.student_photo
+                  educationFormik.touched.student_photo_checkbox &&
+                  educationFormik.errors.student_photo_checkbox
                 }
+              
               />
               <Form.Control.Feedback type="invalid">
                 {educationFormik.errors.student_photo}
               </Form.Control.Feedback>
-            </Col>
+            </Col> */}
+
+
+{/* <Col xs={12} sm={12} md={8} lg={8} className="mb-3">
+  <Form.Label htmlFor="photo">
+    Student Photo<span className="text-danger">*</span>
+  </Form.Label>
+  <Form.Control
+    type="file"
+    id="photo"
+    name="student_photo"
+    className="rounded-0"
+    onChange={(e) => handleFileChange(e, "student_photo")}
+    onBlur={educationFormik.handleBlur}
+    isInvalid={
+      educationFormik.touched.student_photo &&
+      educationFormik.errors.student_photo
+    }
+  />
+  <Form.Control.Feedback type="invalid">
+    {educationFormik.errors.student_photo}
+  </Form.Control.Feedback>
+</Col> */}
+
+<Col xs={12} sm={12} md={8} lg={8} className="mb-3">
+  <Form.Label htmlFor="photo">
+    Student Photo<span className="text-danger">*</span>
+  </Form.Label>
+  <Form.Control
+    type="file"
+    id="photo"
+    name="student_photo"
+    className="rounded-0"
+    onChange={(e) => handleFileChange(e, "student_photo")}
+    onBlur={educationFormik.handleBlur}
+    isInvalid={
+      educationFormik.touched.student_photo &&
+      educationFormik.errors.student_photo
+    }
+  />
+  <Form.Control.Feedback type="invalid">
+    {educationFormik.errors.student_photo}
+  </Form.Control.Feedback>
+</Col>
+
+
 
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="religion">
@@ -787,6 +1127,12 @@ const EducationForm = () => {
 
             {/*--------------------------Document Uploade ----------------------------------------*/}
 
+
+
+
+
+ 
+
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Group>
                 <Form.Check
@@ -807,15 +1153,15 @@ const EducationForm = () => {
                   <Form.Control
                     type="file"
                     placeholder="Aadhar Upload"
-                    name="aadhar_card_check"
-                    onChange={(e) => handleFileChange(e, "aadhar_card_check")}
+                    name="aadhar_card_checked"
+                    onChange={(e) => handleFileChange(e, "aadhar_card_checked")}
                     isInvalid={
-                      !educationFormik.values.aadhar_card_check &&
-                      educationFormik.touched.aadhar_card_check
+                      !educationFormik.values.aadhar_card_checked &&
+                      educationFormik.touched.aadhar_card_checked
                     }
                   />
                   <Form.Control.Feedback type="invalid">
-                    {educationFormik.errors.aadhar_card_check}
+                    {educationFormik.errors.aadhar_card_checked}
                   </Form.Control.Feedback>
                   {educationFormik.errors.aadhar_card_checked &&
                     educationFormik.touched.aadhar_card_checked && (
@@ -824,6 +1170,8 @@ const EducationForm = () => {
                 </div>
               )}
             </Col>
+
+       
 
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Check
@@ -885,7 +1233,7 @@ const EducationForm = () => {
                   {educationFormik.errors.income_certificate_checkbox &&
                     educationFormik.touched.income_certificate_checkbox && (
                       <div className="text-danger">
-                        {/* Please upload Aadhar Card */}
+                       
                       </div>
                     )}
                 </div>
@@ -922,12 +1270,12 @@ const EducationForm = () => {
                   {educationFormik.errors.domicile_certificate_checkbox &&
                     educationFormik.touched.domicile_certificate_checkbox && (
                       <div className="text-danger">
-                        {/* Please upload Aadhar Card */}
+                      
                       </div>
                     )}
                 </div>
               )}
-            </Col>
+            </Col> 
 
             <Form.Group as={Col} md="12" className="mb-3">
               <Form.Label>
@@ -948,6 +1296,113 @@ const EducationForm = () => {
                 {educationFormik.errors.patient_thumb_impression}
               </Form.Control.Feedback>
             </Form.Group>
+
+
+{/* dummy document */}
+            {/* <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
+  <Form.Label htmlFor="aadhar">
+  Aadhar Card<span className="text-danger">*</span>
+  </Form.Label>
+  <Form.Control
+    type="file"
+    id="aadhar"
+    name="aadhar_card_checked"
+    className="rounded-0"
+    onChange={(e) => handleFileChange(e, "aadhar_card_checked")}
+    onBlur={educationFormik.handleBlur}
+    isInvalid={
+      educationFormik.touched.aadhar_card_checked &&
+      educationFormik.errors.aadhar_card_checked
+    }
+  />
+  <Form.Control.Feedback type="invalid">
+    {educationFormik.errors.student_photo}
+  </Form.Control.Feedback>
+</Col>
+<Col xs={12} sm={12} md={3} lg={3} className="mb-3">
+  <Form.Label htmlFor="voter">
+  voter_id_card_checkbox<span className="text-danger">*</span>
+  </Form.Label>
+  <Form.Control
+    type="file"
+    id="voter"
+    name="voter_id_card_checkbox"
+    className="rounded-0"
+    onChange={(e) => handleFileChange(e, "voter_id_card_checkbox")}
+    onBlur={educationFormik.handleBlur}
+    isInvalid={
+      educationFormik.touched.voter_id_card_checkbox &&
+      educationFormik.errors.voter_id_card_checkbox
+    }
+  />
+  <Form.Control.Feedback type="invalid">
+    {educationFormik.errors.voter_id_card_checkbox}
+  </Form.Control.Feedback>
+</Col>
+<Col xs={12} sm={12} md={3} lg={3} className="mb-3">
+  <Form.Label htmlFor="income">
+  income_certificate_checkbox<span className="text-danger">*</span>
+  </Form.Label>
+  <Form.Control
+    type="file"
+    id="income"
+    name="income_certificate_checkbox"
+    className="rounded-0"
+    onChange={(e) => handleFileChange(e, "income_certificate_checkbox")}
+    onBlur={educationFormik.handleBlur}
+    isInvalid={
+      educationFormik.touched.income_certificate_checkbox &&
+      educationFormik.errors.income_certificate_checkbox
+    }
+  />
+  <Form.Control.Feedback type="invalid">
+    {educationFormik.errors.income_certificate_checkbox}
+  </Form.Control.Feedback>
+</Col>
+
+<Col xs={12} sm={12} md={3} lg={3} className="mb-3">
+  <Form.Label htmlFor="domicile">
+  domicile_certificate_checkbox<span className="text-danger">*</span>
+  </Form.Label>
+  <Form.Control
+    type="file"
+    id="domicile"
+    name="domicile_certificate_checkbox"
+    className="rounded-0"
+    onChange={(e) => handleFileChange(e, "domicile_certificate_checkbox")}
+    onBlur={educationFormik.handleBlur}
+    isInvalid={
+      educationFormik.touched.domicile_certificate_checkbox &&
+      educationFormik.errors.domicile_certificate_checkbox
+    }
+  />
+  <Form.Control.Feedback type="invalid">
+    {educationFormik.errors.student_photo}
+  </Form.Control.Feedback>
+</Col> */}
+
+{/* -------------------- */}
+{/* <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
+  <Form.Label htmlFor="aadhar">
+  Aadhar Card<span className="text-danger">*</span>
+  </Form.Label>
+  <Form.Control
+    type="file"
+    id="aadhar"
+    name="aadhar_card_checked"
+    className="rounded-0"
+    onChange={(e) => handleFileChange(e, "aadhar_card_checked")}
+    onBlur={educationFormik.handleBlur}
+    isInvalid={
+      educationFormik.touched.aadhar_card_checked &&
+      educationFormik.errors.aadhar_card_checked
+    }
+  />
+  <Form.Control.Feedback type="invalid">
+    {educationFormik.errors.student_photo}
+  </Form.Control.Feedback>
+</Col> */}
+
 
             {/* --------------------------------------------------------- */}
             <p className="text-center">Declaration</p>

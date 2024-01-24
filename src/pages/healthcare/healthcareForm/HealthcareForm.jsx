@@ -85,17 +85,14 @@ const HealthcareForm = () => {
       patient_mobile_number: "",
       guardian_address: "",
       aadhar_card_checkbox: "",
-      
-      
-
-      // aadhar_card_check: "",
-      aadhar_card_checked: false,
+  
+      aadhar_card_checked: "",
       aadhar_card_check:"",
       domicile_certificate_checkbox: "",
-      income_certificate:false,
+      income_certificate:"",
       income_certificate_checkbox:"",
       voter_id_card_checkbox: "",
-      voter_id_card:false,
+      voter_id_card:"",
       patient_thumb_impression: "",
       i_have_declared: "",
       s_o_w_o: "",
@@ -104,25 +101,60 @@ const HealthcareForm = () => {
       date: "",
     },
     validationSchema: validationSchema,
-    onSubmit: async(values) => { 
-      // healthcarePostData
-      try{
-        console.log("Form submitted successfully:", values);
+    // onSubmit: async(values) => { 
+      // try{
+      //   console.log("Form submitted successfully:", values);
+      //   const response = await api.healthcarePostData(values);
+      //   if (response.data.status === 1) {
+      //     // toast.success("Thank for Applying", {
+      //     //   position: toast.POSITION.TOP_CENTER,
+      //     // });
+      //     navigate("/healthcareSumbitafter",{ state: {apidata:response.data} });
+      //   }
+      //   // navigate('/thankyou');
+      //   // navigate("/healthcareSumbitafter",{ state: {apidata:response.data} });
+      // }catch(error){
+      //   console.error("Error making POST request:", error);
+      //   navigate("/errorpage");
+      // }
+
+    //   try {
+    //     console.log(values);
+    //     const response = await api.healthcarePostData(values);
+    //     if (response.data.status === 1) {
+    //       // toast.success("Thank for Applying", {
+    //       //   position: toast.POSITION.TOP_CENTER,
+    //       // });
+    //       navigate("/healthcareSumbitafter",{ state: {apidata:response.data} });
+    //     }
+    //   } catch (error) {
+    //     console.error("Error making POST request:", error);
+    //     navigate("/errorpage");
+    //   }
+    // },
+ 
+
+    onSubmit: async (values) => {
+      console.log("before sumbit");
+      try {
+        console.log("before sumbit2");
+        console.log(values);
         const response = await api.healthcarePostData(values);
+        console.log(response);
         if (response.data.status === 1) {
-          // toast.success("Thank for Applying", {
-          //   position: toast.POSITION.TOP_CENTER,
-          // });
-          navigate("/healthcareSumbitafter",{ state: {apidata:response.data} });
+          // Uncomment the next line if you want to use toast notifications
+          // toast.success("Thank for Applying", { position: toast.POSITION.TOP_CENTER });
+          // navigate("/healthcareSumbitafter");
+          navigate("/healthcareSumbitafter", { state: { apidata: response.data } });
         }
-        // navigate('/thankyou');
-        // navigate("/healthcareSumbitafter",{ state: {apidata:response.data} });
-      }catch(error){
+      } catch (error) {
         console.error("Error making POST request:", error);
+        console.log("before sumbit3");
         navigate("/errorpage");
       }
     },
   });
+  console.log("before sumbit4");
   console.log(formik);
   return (
     <>
@@ -192,7 +224,7 @@ const HealthcareForm = () => {
               </Form.Control.Feedback>
             </Form.Group>
             <Col xs={12} sm={12} md={12} lg={12} className="mb-2">
-              <b>Patient's Information</b>
+              <b>Patient`s Information</b>
             </Col>
 
             <Form.Group as={Col} md="4" className="mb-3">
@@ -236,7 +268,7 @@ const HealthcareForm = () => {
 
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label>
-                Father's/Husband Name<span className="text-danger">*</span>
+                Father`s/Husband Name<span className="text-danger">*</span>
               </Form.Label>
               <Form.Control
                 type="text"
@@ -708,7 +740,7 @@ const HealthcareForm = () => {
             </Col>
             <Form.Group as={Col} md="12" className="mb-3">
               <Form.Label>
-                Patient's Signature/Thump Impression
+                Patient`s Signature/Thump Impression
                 <span className="text-danger">*</span>
               </Form.Label>
               <Form.Control

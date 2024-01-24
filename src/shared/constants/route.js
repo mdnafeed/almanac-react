@@ -19,6 +19,8 @@ export class RouteConstant {
   static PRIVACY_POLICY = "/privacy-policy";
   static TERMS_AND_CONDITION = "/terms-and-condition";
   static PAYMENT_CANCELATION = "/payment-cancelation";
+  static EDUCATION_SUMBITAFTER="/educationsumbitafter";
+  static HEALTHCARE_SUMBITAFTER="/healthcareSumbitafter";
  // START:SOCIAL ROUTE LINK
   static FACEBOOK_PROFILE_URL='https://www.facebook.com/profile.php?id=61553053787820';
   static TWITTER_PROFILE_URL = 'https://twitter.com/socialalmanac';
