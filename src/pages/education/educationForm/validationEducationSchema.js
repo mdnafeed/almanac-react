@@ -1,40 +1,47 @@
 import * as yup from "yup";
-
+// ../../../shared/constants/constantData
+import { ValidationConstant_EDUCATION } from "../../../shared/constants/constantData";
 const validationEducationSchema = yup.object().shape({
   university_name: yup
-    .string()
-    .required("University name is required")
-    .min(2, "University name should be at least 2 characters")
-    .max(50, "University name should not exceed 50 characters"),
-  course_applied_pursuing: yup
-    .string()
-    .required("Course information is required")
-    .min(2, "Course information should be at least 2 characters")
-    .max(50, "Course information should not exceed 50 characters"),
+  .string()
+  .required(ValidationConstant_EDUCATION.UNIVERSITY_NAME_REQUIRED)
+  .min(2,ValidationConstant_EDUCATION.UNIVERSITY_NAME_MIN_TWO_CHAR)
+  .max(40,ValidationConstant_EDUCATION.UNIVERSITY_NAME_MAX_FORTY_CHAR)
+  .matches(/^[a-zA-Z\s]*$/, ValidationConstant_EDUCATION.UNIVERSITY_NAME_ONLY_CHAR),
+
+
+course_applied_pursuing: yup
+  .string()
+  .required(ValidationConstant_EDUCATION.COURSE_APPLIED_PURSUING_REQUIRED)
+  .min(2,ValidationConstant_EDUCATION.COURSE_APPLIED_PURSUING_REQUIRED_MIN)
+  .max(40,ValidationConstant_EDUCATION.COURSE_APPLIED_PURSUING_REQUIRED_MAX)
+  .matches(/^[a-zA-Z\s]*$/, ValidationConstant_EDUCATION.COURSE_APPLIED_PURSUING_ONLY_CHAR),
   year_semester_fee: yup
     .number()
     .typeError("Fee must be a number")
-    .required("Fee is required")
-    .positive("Fee must be a positive number")
+    .required(ValidationConstant_EDUCATION.YEAR_SEMESTER_FEE_REQUIRED)
+    .positive(ValidationConstant_EDUCATION.YEAR_SEMESTER_FEE_ONLY_NUMBER)
     .integer("Fee must be an integer"),
   last_qualification: yup
     .string()
-    .required("Last qualification is required")
-    .min(2, "Last qualification should be at least 2 characters")
-    .max(50, "Last qualification should not exceed 50 characters"),
-
+    .required(ValidationConstant_EDUCATION.APPLICANT_NAME_REQUIRED)
+    .min(2, ValidationConstant_EDUCATION.LAST_QUALIFICATION_MIN_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.LAST_QUALIFICATION_MAX_LENGTH)
+    .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.LAST_QUALIFICATION_ONLY_CHAR),
   applicant_name: yup
     .string()
-    .required("Applicant name is required")
-    .min(2, "Applicant name should be at least 2 characters")
-    .max(50, "Applicant name should not exceed 50 characters"),
+    .required(ValidationConstant_EDUCATION.APPLICANT_NAME_REQUIRED)
+    .min(2, ValidationConstant_EDUCATION.APPLICANT_NAME_MIN_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.APPLICANT_NAME_MAX_LENGTH)
+    .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.LAST_QUALIFICATION_ONLY_CHAR),
   gender: yup.string().required("Select gender"),
-  age: yup.number().required("Age is required"),
+  age: yup.number().required(ValidationConstant_EDUCATION.AGE_REQUIRED),
   category: yup
     .string()
-    .required("Category name is required")
-    .min(2, "Category name should be at least 2 characters")
-    .max(50, "Category name should not exceed 50 characters"),
+    .required(ValidationConstant_EDUCATION.CATEGORY_REQUIRED)
+    .min(2, ValidationConstant_EDUCATION.CATEGORY_MIN_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.CATEGORY_MAX_LENGTH)
+    .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.LAST_QUALIFICATION_ONLY_CHAR),
   student_photo: yup
     .mixed()
     .required("Aadhar Card is required")
@@ -52,104 +59,117 @@ const validationEducationSchema = yup.object().shape({
     .string()
     .matches(
       /^[A-Za-z]+$/,
-      "Religion must only contain alphabetical characters"
+     ValidationConstant_EDUCATION. RELIGION_ONLY_CHAR
     )
-    .required("Religion is required"),
+    .min(2, ValidationConstant_EDUCATION.RELIGION_MIN_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.RELIGION_MAX_LENGTH)
+    .required(ValidationConstant_EDUCATION.RELIGION_REQUIRED),
   father_husband_name: yup
     .string()
     .matches(
       /^[A-Za-z\s]+$/,
-      "Father/Husband's name must only contain alphabetical characters and spaces"
+      ValidationConstant_EDUCATION.FATHER_HUSBAND_NAME_ONLY_CHAR
     )
-    .required("Father/Husband's name is required"),
+    .min(2, ValidationConstant_EDUCATION.FATHER_HUSBAND_NAME_MIN_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.FATHER_HUSBAND_NAME_MAX_LENGTH)
+    .required(ValidationConstant_EDUCATION.FATHER_HUSBAND_NAME_REQUIRED),
   motherName: yup
     .string()
     .matches(
       /^[A-Za-z\s]+$/,
-      "Mother's name must only contain alphabetical characters and spaces"
+      ValidationConstant_EDUCATION.MOTHER_NAME_ONLY_CHAR
     )
-    .required("Mother's name is required"),
-
+    .required(ValidationConstant_EDUCATION.MOTHER_NAME_REQUIRED)
+    .min(2, ValidationConstant_EDUCATION.MOTHER_NAME_MIN_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.MOTHER_NAME_MAX_LENGTH),
   permanent_address: yup
     .string()
-    .required("Permanent address is required")
-    .min(3, "Address should be at least 5 characters")
-    .max(100, "Address should not exceed 100 characters"),
+    .required(ValidationConstant_EDUCATION.PERMANENT_ADDRESS_REQUIRED)
+    .min(3, ValidationConstant_EDUCATION.PARENT_ADDRESS_MIN_LENGTH)
+    .max(100, ValidationConstant_EDUCATION.PARENT_ADDRESS_MAX_LENGTH),
   aadhar_no: yup
     .string()
-    .matches(/^[0-9]{12}$/, "Invalid Aadhar card number. It must be 12 digits")
-    .required("Aadhar card number is required"),
+    .matches(/^[0-9]{12}$/, ValidationConstant_EDUCATION.AADHAR_VALID_NUMBER)
+    .required(ValidationConstant_EDUCATION.AADHAR_NO_REQUIRED),
   voter_id_no: yup
     .string()
-    .required("Voter ID number is required")
-    .matches(/^[A-Z]{3}[0-9]{7}$/, "Invalid Voter ID number format"),
+    .required(ValidationConstant_EDUCATION.VOTER_ID_NO_REQUIRED)
+    .matches(/^[A-Z]{3}[0-9]{7}$/, ValidationConstant_EDUCATION.VOTER_ID_NO_VALID_NUMBER),
   email: yup
     .string()
-    .email("Invalid email address")
-    .required("Email is required"),
+    .email(ValidationConstant_EDUCATION.EMAIL_IS_VALID)
+    .required(ValidationConstant_EDUCATION.EMAIL_REQUIRED),
 
   monthly_family_income: yup
     .number()
-    .positive("Income must be a positive number")
-    .required("Income is required"),
+    .positive(ValidationConstant_EDUCATION.MONTHLY_FAMILY_INCOME_ONLY_NUMBER)
+    .required(ValidationConstant_EDUCATION.MONTHLY_FAMILY_INCOME_REQUIRED),
   mobileNo: yup
     .string()
-    .required("Mobile number is required")
-    .matches(/^[6-9]\d{9}$/, "Invalid mobile number"),
+    .required(ValidationConstant_EDUCATION.MOBILE_NO_REQUIRED)
+    .matches(/^[6-9]\d{9}$/, ValidationConstant_EDUCATION.MOBILE_NO_VALID_NUMBER),
   bank_name: yup
     .string()
-    .required("Bank name is required")
-    .min(2, "Bank name should be at least 2 characters")
-    .max(50, "Bank name should not exceed 50 characters"),
+    .required(ValidationConstant_EDUCATION.BANK_NAME_REQUIRED)
+    .min(2, ValidationConstant_EDUCATION.BANK_NAME_MIN_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.BANK_NAME_MAX_LENGTH)
+    .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.BANK_NAME_ONLY_CHAT),
   branch_name: yup
     .string()
-    .required("Branch name is required")
-    .min(2, "Branch name should be at least 2 characters")
-    .max(50, "Branch name should not exceed 50 characters"),
+    .required(ValidationConstant_EDUCATION.BRANCH_NAME_REQUIRED)
+    .min(2, ValidationConstant_EDUCATION.BRANCH_NAME_MIN_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.BRANCH_NAME_MAX_LENGTH)
+    .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.BRANCH_NAME_ONLY_CHARS),
+
 
   account: yup
     .string()
-    .required("Account number is required")
+    .required(ValidationConstant_EDUCATION.ACCOUNT_REQUIRED)
     .matches(/^\d{9,18}$/, "Invalid account number format"),
   ifsc_code: yup
     .string()
-    .required("IFSC code is required")
-    .matches(/^([A-Za-z]{4}\d{7})$/, "Invalid IFSC code format"),
+    .required(ValidationConstant_EDUCATION.IFSC_CODE_REQUIRED)
+    .matches(/^([A-Za-z]{4}\d{7})$/, ValidationConstant_EDUCATION.IFSC_CODE_VALID),
   account_holder_name: yup
     .string()
-    .required("Account holder's name is required")
-    .min(2, "Account holder's name should be at least 2 characters")
-    .max(50, "Account holder's name should not exceed 50 characters"),
-
+    .required(ValidationConstant_EDUCATION.ACCOUNT_HOLDER_NAME_REQUIRED)
+    .min(2, ValidationConstant_EDUCATION.ACCOUNT_HOLDER_NAME_NIM_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.ACCOUNT_HOLDER_NAME_MAX_LENGTH)
+    .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.BRANCH_NAME_ONLY_CHARS),
   parent_name: yup
     .string()
-    .required("Parent's name is required")
-    .min(2, "Parent's name should be at least 2 characters")
-    .max(50, "Parent's name should not exceed 50 characters"),
+    .required(ValidationConstant_EDUCATION.PARENT_NAME_REQUIRED)
+    .min(2, ValidationConstant_EDUCATION.PARENT_NAME_NIM_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.PARENT_NAME_MAX_LENGTH)
+    .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.PARENT_NAME_ONLY_CHAR),
 
+// PARENT_NAME_ONLY_CHAR
   relationship_with_guardian: yup
     .string()
-    .required("Relationship with guardian is required")
-    .min(2, "Relationship should be at least 2 characters")
-    .max(50, "Relationship should not exceed 50 characters"),
+    .required(ValidationConstant_EDUCATION.RELATIONSHIP_WITH_GUARDIAN_REQUIRED)
+    .min(2, ValidationConstant_EDUCATION.RELATIONSHIP_WITH_GUARDIAN_MIN_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.RELATIONSHIP_WITH_GUARDIAN_MAX_LENGTH)
+    .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.RELATIONSHIP_WITH_GUARDIAN_ONLY_CHARS),
   parent_occupation: yup
     .string()
-    .required("Parent's occupation is required")
-    .min(2, "Occupation should be at least 2 characters")
-    .max(50, "Occupation should not exceed 50 characters"),
+    .required(ValidationConstant_EDUCATION.PARENT_OCCUPATION_REQUIRED)
+    .min(2, ValidationConstant_EDUCATION.PARENT_OCCUPATION_MIN_LENGTH)
+    .max(50, ValidationConstant_EDUCATION.PARENT_OCCUPATION_MAX_LENGTH)
+    .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.PARENT_OCCUPATION_ONLY_CHARS),
   parent_address: yup
     .string()
-    .required("Address is required")
-    .min(5, "Address should be at least 5 characters")
-    .max(100, "Address should not exceed 100 characters"),
+    .required(ValidationConstant_EDUCATION.PARENT_ADDRESS_REQUIRED)
+    .min(5, ValidationConstant_EDUCATION.PARENT_ADDRESS_MIN_LENGTH)
+    .max(100, ValidationConstant_EDUCATION.PARENT_ADDRESS_MAX_LENGTH)
+    .matches(/^[a-zA-Z0-9\s]*$/,ValidationConstant_EDUCATION.PARENT_ADDRESS_CHAR_AND_NUMBER),
   parent_email: yup
     .string()
-    .email("Invalid email address")
-    .required("Email is required"),
+    .email(ValidationConstant_EDUCATION.PARENT_EMAIL_INVALID)
+    .required(ValidationConstant_EDUCATION.PARENT_EMAIL_REQUIRED),
   parent_mobile_no: yup
     .string()
-    .matches(/^[6-9]\d{9}$/, "Invalid mobile number")
-    .required("Enter mobile number"),
+    .matches(/^[6-9]\d{9}$/,ValidationConstant_EDUCATION.PARENT_MOBILE_NO_INVALID)
+    .required(ValidationConstant_EDUCATION.PARENT_MOBILE_NO_REQUIRED),
   aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
   aadhar_card_check: yup
     .mixed()
@@ -166,7 +186,7 @@ const validationEducationSchema = yup.object().shape({
     ),
   voter_id_card_checkbox: yup
     .mixed()
-    .required("Aadhar Card is required")
+    .required("Voter id cord is required")
     .test(
       "fileSize",
       "File size is too large (max 1MB)",
@@ -179,7 +199,7 @@ const validationEducationSchema = yup.object().shape({
     ),
   income_certificate_checkbox: yup
     .mixed()
-    .required("Aadhar Card is required")
+    .required("Income certificate is required")
     .test(
       "fileSize",
       "File size is too large (max 1MB)",
@@ -194,7 +214,7 @@ const validationEducationSchema = yup.object().shape({
 
   domicile_certificate_checkbox: yup
     .mixed()
-    .required("Aadhar Card is required")
+    .required("Domicile certificate is required")
     .test(
       "fileSize",
       "File size is too large (max 1MB)",
@@ -207,7 +227,7 @@ const validationEducationSchema = yup.object().shape({
     ),
   patient_thumb_impression: yup
     .mixed()
-    .required("Aadhar Card is required")
+    .required("Patient thumb impression is required")
     .test(
       "fileSize",
       "File size is too large (max 1MB)",
@@ -222,25 +242,25 @@ const validationEducationSchema = yup.object().shape({
     .string()
     .matches(
       /^[A-Za-z\s]+$/,
-      "I have declared must only contain alphabetical characters and spaces"
+      ValidationConstant_EDUCATION.I_HAVE_ONLY_CHAR
     )
-    .required("I have declared is required"),
+    .required(ValidationConstant_EDUCATION.I_HAVE_DECLARED_REQUIRED),
 
   s_o_w_o: yup
     .string()
     .matches(
       /^[A-Za-z\s]+$/,
-      "S/o/W/o/D/o must name  only contain alphabetical characters and spaces"
+      ValidationConstant_EDUCATION.S_O_W_O_ONLY_CHARS
     )
-    .required("S/o/W/o/D/o name is required"),
+    .required(ValidationConstant_EDUCATION.S_O_W_O_REQUIRED),
 
   R_o: yup
     .string()
     .matches(
       /^[A-Za-z\s]+$/,
-      "R/o must only contain alphabetical characters and spaces"
+      ValidationConstant_EDUCATION.R_O_W_O_ONLY_CHAR
     )
-    .required("R/o is required"),
+    .required(ValidationConstant_EDUCATION.R_O_REQUIRED),
 
   place: yup
     .string()
@@ -248,7 +268,7 @@ const validationEducationSchema = yup.object().shape({
       /^[A-Za-z\s]+$/,
       "place must only contain alphabetical characters and spaces"
     )
-    .required("place is required"),
+    .required(ValidationConstant_EDUCATION.PLACE_REQUIRED),
 
   date: yup.string().required("Enter Date"),
 });

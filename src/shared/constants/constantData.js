@@ -20,3 +20,142 @@ export class CONSTANT_LABEL {
     static BRANCH_ADDRESS = `43-B, Okhla Village, Jamia Nagar, New Delhi-110025`;
     static SOCIAL_WELFARE_ALMANAC_EMAIL = "socialwelfarealmanac@gmail.com"
 }
+
+
+
+
+export class ValidationConstant_EDUCATION{
+    
+
+static UNIVERSITY_NAME_REQUIRED = "University name is required";
+static UNIVERSITY_NAME_MIN_TWO_CHAR = "University name should be at least 2 characters";
+static UNIVERSITY_NAME_MAX_FORTY_CHAR = "University name should be max 40 characters";
+static UNIVERSITY_NAME_ONLY_CHAR="University name should contain only alphabets";
+
+static COURSE_APPLIED_PURSUING_REQUIRED = "Course applied is required";
+static COURSE_APPLIED_PURSUING_REQUIRED_MIN = "Course name should be at least 2 characters";
+static COURSE_APPLIED_PURSUING_REQUIRED_MAX = "Course name should be at most 40 characters";
+static COURSE_APPLIED_PURSUING_ONLY_CHAR="Course name should contain only alphabets";
+
+
+static YEAR_SEMESTER_FEE_REQUIRED="Fee is only positive number required";
+static YEAR_SEMESTER_FEE_ONLY_NUMBER="Fee must be a positive number";
+
+static LAST_QUALIFICATION_REQUIRED="Last qualification is required";
+static LAST_QUALIFICATION_MIN_LENGTH="Last qualification should be at least 2 characters";
+static LAST_QUALIFICATION_MAX_LENGTH="Last qualification should be at most 50 characters";
+static LAST_QUALIFICATION_ONLY_CHAR="Last qualification should contain only alphabets ";
+
+
+static APPLICANT_NAME_REQUIRED="Applicant name is required";
+static APPLICANT_NAME_MIN_LENGTH="Applicant name shoud be at least 2 characters";
+static APPLICANT_NAME_MAX_LENGTH="Applicant name shoud be at most 50 characters";
+static APPLICANT_NAME_ONLY_CHAR="Applicant name should contain only alphabets";
+
+
+static GENDER_REQUIRED="Select gender";
+
+static AGE_REQUIRED="Age is required";
+static CATEGORY_REQUIRED="Category name is required";
+static CATEGORY_MIN_LENGTH="Category name shoud be at least 2 characters";
+static CATEGORY_MAX_LENGTH="Category name  should be at most 50 characters";
+static CATEGORY_ONLY_CHAR="Category name should contain only alphabets";
+
+static STUDENT_PHOTO_REQUIRED="Aadhar Card is required";
+static RELIGION_REQUIRED="Religion is required";
+static RELIGION_MIN_LENGTH="Religion name shoud be at least 2 characters";
+static RELIGION_MAX_LENGTH="Religion name should be at most 50 characters";
+static RELIGION_ONLY_CHAR="Religion name should contain only alphabets"
+
+static FATHER_HUSBAND_NAME_REQUIRED="Father/Husband name required";
+static FATHER_HUSBAND_NAME_MIN_LENGTH="Father/Husband name shoud be at least 2 characters";
+static FATHER_HUSBAND_NAME_MAX_LENGTH="Father/Husband name should be at most 50 characters ";
+static FATHER_HUSBAND_NAME_ONLY_CHAR="Father/Husband name should contain only alphabets";
+
+static MOTHER_NAME_REQUIRED="Mother name required";
+static MOTHER_NAME_MIN_LENGTH="Mother name should be at least 2 characters";
+static MOTHER_NAME_MAX_LENGTH="Mother name should be at most 50 characters";
+static MOTHER_NAME_ONLY_CHAR="Mother name should contain only alphabets";
+
+static PERMANENT_ADDRESS_REQUIRED="Permanent address required";
+static PARENT_ADDRESS_MIN_LENGTH="Permanent address must be at least 2 characters ";
+static PARENT_ADDRESS_MAX_LENGTH="Permanent address must be at most 100 characters";
+
+static AADHAR_NO_REQUIRED="Aadha number required";
+static AADHAR_VALID_NUMBER="Ivalid Aadhar card number. It must be 12 digits"
+
+static VOTER_ID_NO_REQUIRED="Voter id required";
+static VOTER_ID_NO_VALID_NUMBER="Invalid Voter ID number format";
+
+static EMAIL_REQUIRED="Email address required";
+static EMAIL_IS_VALID="Invalid email address"
+static MONTHLY_FAMILY_INCOME_REQUIRED="Monthly family income required";
+static MONTHLY_FAMILY_INCOME_ONLY_NUMBER="MONTHLY family inccome only number"
+
+static MOBILE_NO_REQUIRED="Mobile Number is required";
+static MOBILE_NO_VALID_NUMBER="Invalid mobile number";
+static BANK_NAME_REQUIRED="Bank name is required";
+static BANK_NAME_MIN_LENGTH="Bank number must be  at least 2 characters";
+static BANK_NAME_MAX_LENGTH="Bank name  should be at most 50 characters"
+static BANK_NAME_ONLY_CHAT="Bank name should be contain only alphabets";
+
+static BRANCH_NAME_REQUIRED="Bank name required";
+static BRANCH_NAME_MIN_LENGTH="Branch name must be at least 2 characters";
+static BRANCH_NAME_MAX_LENGTH="Branch name must be at most 50 characters";
+static BRANCH_NAME_ONLY_CHARS="Bank name only allowed characters";
+
+static ACCOUNT_REQUIRED="Account no required ";
+static ACCOUNT_NO_ONLY_NUMBER="";
+static IFSC_CODE_REQUIRED="Ifsc code required";
+static IFSC_CODE_VALID="Ifsc code valid format";
+
+static ACCOUNT_HOLDER_NAME_REQUIRED="Account holder's name is required";
+static ACCOUNT_HOLDER_NAME_NIM_LENGTH="Account holder name be at least 2 characters";
+static ACCOUNT_HOLDER_NAME_MAX_LENGTH="Account holder name should be at most 50 characters";
+static ACCOUNT_HOLDER_NAME_ONLY_CHAR="Account holder name is only allowed contain only alphabets";
+
+
+static PARENT_NAME_REQUIRED="Parent name is required";
+static PARENT_NAME_NIM_LENGTH="Parent name be at least 2 characters";
+static PARENT_NAME_MAX_LENGTH="Parent name should be at most 50 characters";
+static PARENT_NAME_ONLY_CHAR="Parent name is only allowed contain only alphabets";
+
+static RELATIONSHIP_WITH_GUARDIAN_REQUIRED="Relationship is required";
+static RELATIONSHIP_WITH_GUARDIAN_MIN_LENGTH="Relationship name be at least 2 characters";
+static RELATIONSHIP_WITH_GUARDIAN_MAX_LENGTH="Relationship  name is only allowed contain only alphabets";
+static RELATIONSHIP_WITH_GUARDIAN_ONLY_CHARS="Relationship  name is only allowed contain only alphabets";
+
+static PARENT_OCCUPATION_REQUIRED="Parent occupation required";
+static PARENT_OCCUPATION_MIN_LENGTH="Parent occupation be at least 2 characters";
+static PARENT_OCCUPATION_MAX_LENGTH="Parent occupation is  should be at most 50 characters";
+static PARENT_OCCUPATION_ONLY_CHARS="Parent occupation is only allowed contain only alphabets";
+static PARENT_ADDRESS_REQUIRED="Parent Address is required";
+static PARENT_ADDRESS_MIN_LENGTH="Parent Address must be at least 2 characters";
+// static PARENT_ADDRESS_MIN_LENGTH="Parent Address must be at least 2 characters";
+static PARENT_ADDRESS_MAX_LENGTH="Parent Address should be at most 100 characters";
+static PARENT_ADDRESS_CHAR_AND_NUMBER="Parent Address is only allowed contain only alphabets";
+
+static PARENT_EMAIL_REQUIRED="Parent email is required";
+static PARENT_EMAIL_INVALID="Invalid email address"
+static PARENT_MOBILE_NO_REQUIRED="Parent mobile number is required";
+static PARENT_MOBILE_NO_INVALID="Invalid mobile number"
+// static AADHAR_CARD_CHECKED_REQUIRED="";
+static AADHAR_CARD_CHECK_REQUIRED="";
+static VOTER_ID_CARD_CHECKBOX_REQUIRED="";
+static INCOME_CERTIFICATE_CHECKBOX_REQUIRED="";
+static DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED="";
+static PATIENT_THUMB_IMPRESSION_REQUIRED="";
+
+static I_HAVE_DECLARED_REQUIRED="i have decorated is required";
+static I_HAVE_ONLY_CHAR="I have declared must only contain alphabetical characters and spaces";
+
+static S_O_W_O_REQUIRED="s_o_w_o is required";
+static S_O_W_O_ONLY_CHARS="S/o/W/o/D/o must name  only contain alphabetical characters and spaces";
+
+static R_O_REQUIRED="R_o is required";
+static R_O_W_O_ONLY_CHAR="R/o must only contain alphabetical characters and spaces";
+static PLACE_REQUIRED="Place is required";
+
+
+
+}
