@@ -149,7 +149,7 @@ const validationSchema = yup.object().shape({
     (value) => value && value.type === "application/pdf"
   ),
   guardian_address: yup.string().required("Address is required"),
-  aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
+  // aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
   // aadhar_card_check: yup
   //   .mixed()
   //   .required("Aadhar  photo is required")
@@ -164,13 +164,13 @@ const validationSchema = yup.object().shape({
   //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
   //   ),
 
-  aadhar_card_check: yup
-    .mixed()
-    .required("Aadhar  is required")
+  aadhar_card_checked: yup
+  .mixed()
+  .required("Aadhar Card is required")
   .test(
     "fileSize",
-    "File size is too large (max 1MB)",
-    (value) => value && value.size <= 1000000
+    "File size exceeds the maximum limit (1MB).",
+    (value) => value && value.size <= 1 * 1024 * 1024
   )
   .test(
     "fileType",

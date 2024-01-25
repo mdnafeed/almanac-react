@@ -51,20 +51,6 @@ const validationEducationSchema = yup.object().shape({
   //   ),
 
 
-  // student_photo: yup
-  //   .mixed()
-  //   .required("Student photo is required")
-  //   .test(
-  //     "fileSize",
-  //     "File size is too large (max 1MB)",
-  //     (value) => value && value.size <= 1000000
-  //   )
-  //   .test(
-  //     "fileType",
-  //     "Unsupported file format. Only PDF files are allowed.",
-  //     (value) => value && value.type === "application/pdf"
-  //   ),
-
   student_photo: yup
   .mixed()
   .required("Aadhar Card is required")
@@ -178,14 +164,15 @@ const validationEducationSchema = yup.object().shape({
     .required("Email is required"),
   parent_mobile_no: yup
     .string()
-    // .matches(
-    //   /^[0-9]{9}$/,
-    //   "Invalid mobile number. It must be 10 digits and only contain numbers"
-    // )
     .matches(/^[6-9]\d{9}$/, "Invalid mobile number")
     .required("Enter mobile number"),
   // aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
 
+
+
+  
+
+  aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
   // aadhar_card_check: yup
   //   .mixed()
   //   .required("Aadhar  photo is required")
@@ -199,37 +186,21 @@ const validationEducationSchema = yup.object().shape({
   //     "Unsupported file format",
   //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
   //   ),
-  // aadhar_card_checked: yup
-  // .required("Aadhar Check is required"),
 
-  // aadhar_card_check: yup
-  //   .mixed()
-  //   .required("Aadhar Card is required")
-  //   .test(
-  //     "fileSize",
-  //     "File size exceeds the maximum limit (1MB).",
-  //     (value) => value && value.size <= 1 * 1024 * 1024
-  //   )
-  //   .test(
-  //     "fileType",
-  //     "Unsupported file format. Only PDF files are allowed.",
-  //     (value) => value && value.type === "application/pdf"
-  //   ),
-
-
-  aadhar_card_checked: yup
-  .mixed()
-  .required("Aadhar Card is required")
+  aadhar_card_check: yup
+    .mixed()
+    .required("Aadhar  is required")
   .test(
     "fileSize",
-    "File size exceeds the maximum limit (1MB).",
-    (value) => value && value.size <= 1 * 1024 * 1024
+    "File size is too large (max 1MB)",
+    (value) => value && value.size <= 1000000
   )
   .test(
     "fileType",
     "Unsupported file format. Only PDF files are allowed.",
     (value) => value && value.type === "application/pdf"
   ),
+
 
 
 
