@@ -29,14 +29,9 @@ const Certificate = () => {
                 const backendResponse = await api.generateCertificate(id);
                 if(backendResponse.status == 200){
                     setCertificateData(backendResponse.data.membershipObj);
-                
-                
-
                 const originalDate = backendResponse.data.membershipObj?.created_date;
-
                 // Create a Date object from the string
-                const dateObject = new Date(originalDate);
-            
+                const dateObject = new Date(originalDate);           
                 // Get full year, month, and date
                 const year = dateObject.getFullYear();
                 const month = dateObject.getMonth() + 1; // Month is 0-based, so add 1
@@ -44,18 +39,12 @@ const Certificate = () => {
                 const formattedDate = `${day < 10 ? '0' : ''}${day}-${month < 10 ? '0' : ''}${month}-${year}`;
                 setDate(formattedDate);
                 }
-                
-
-
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
-
         fetchData(); // Call the fetchData function
     }, [id]); // Specify dependencies to trigger the effect when 'id' changes
-
-
     return (
         <>
             <div className={styles.container}>
@@ -64,7 +53,6 @@ const Certificate = () => {
                 <div className={styles.name}>{certificateData?.name} ({certificateData?.type_of_membership})</div>
                 <div className={styles.date}>{date}</div>
             </div>
-
             <button onClick={() => window.print()} className={styles.print}>Print</button>
         </>
     )

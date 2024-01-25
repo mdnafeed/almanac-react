@@ -44,7 +44,6 @@ function Header() {
               <img src={logo_icon} alt="" className={styles.logo} />
             </NavLink>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}
-
             />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}

@@ -170,7 +170,6 @@ export const blogs = [
         },
         blogBoxImageURL:'https://webstaging-strapi.knowlarity.com/uploads/IVR_m_c4f3c3a653.jpg'
     },
-
     {
         id:'8',
         path:'an-alarming-surge-in-the-non-communicable-diseases-ncds-in-india',

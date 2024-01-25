@@ -2,7 +2,6 @@ import contactDoneImg from "../../assets/contactDone.jpg";
 import style from "./Contact.module.scss";
 import { MdEmail, MdLocationPin } from "react-icons/md";
 import { Form, Container, Row, Col, Card } from "react-bootstrap";
-
 import validationContactSchema from './validationContactSchema';
 import { useFormik } from 'formik';
 import api from '../../api/api';
@@ -24,16 +23,13 @@ const Contact = () => {
         if(response.status == 200){
           toast.success("We appreciate you contacting us. One of our colleagues will get back in touch with you soon!Have a great day!", {
             position: toast.POSITION.TOP_CENTER
-
           });
           navigate('/thankyou');
-     
         }
       } catch (error) {
         console.error('Error making POST request:', error);
         navigate('/errorpage');
       }
-
     },
   });
   console.log(contactFormik)

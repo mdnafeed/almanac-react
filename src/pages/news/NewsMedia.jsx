@@ -1,7 +1,6 @@
 import style from './News.module.scss';
 import newsDoneImg from "../../assets/news-done-.jpg";
 import { Container } from 'react-bootstrap';
-
 const NewsMedia = () => {
   return (
    <>

@@ -53,7 +53,6 @@ const EducationForm = () => {
       );
     }
   };
-
   const toggleCheckbox = (e) => {
     educationFormik.setFieldValue("aadhar_card_checked", e.target.checked);
     handleFileChange(e, "aadhar_card");
@@ -137,96 +136,8 @@ const EducationForm = () => {
         navigate("/errorpage");
       }
     },
-
   });
-
-
-  // ------------------------------dummy------------========================================
-  //   const handleFileChange = (event) => {
-  //     const { name, type, files } = event.target;
-
-  //     if (type === "file") {
-  //       educationFormik.setFieldValue(name, files[0]);
-  //     } else {
-  //       // Handle non-file inputs if needed
-  //       educationFormik.setFieldValue(name, event.target.value);
-  //     }
-  //   };
-  //    const educationFormik = useFormik({
-  //     initialValues: {
-  //       university_name: "",
-  //       course_applied_pursuing: "",
-  //       year_semester_fee: "",
-  //       last_qualification: "",
-  //       applicant_name: "",
-  //       gender: "",
-  //       age: "",
-  //       category: "",
-  //       student_photo: "",
-  //       religion: "",
-  //       father_husband_name: "",
-  //       motherName: "",
-  //       permanent_address: "",
-  //       aadhar_no: "",
-  //       voter_id_no: "",
-  //       email: "",
-  //       monthly_family_income: "",
-  //       mobileNo: "",
-  //       bank_name: "",
-  //       branch_name: "",
-  //       account: "",
-  //       ifsc_code: "",
-  //       account_holder_name: "",
-  //       parent_name: "",
-  //       relationship_with_guardian: "",
-  //       parent_occupation: "",
-  //       parent_address: "",
-  //       parent_email: "",
-  //       parent_mobile_no: "",
-  //       aadhar_card_checked: "",
-  //       aadhar_card_check: "",
-  //       voter_id_card_checkbox: "",
-  //       income_certificate_checkbox: "",
-  //       domicile_certificate_checkbox: "",
-  //       patient_thumb_impression: "",
-  //       // student_photo: null,
-  //       // aadhar_card_check: null,
-  //       // voter_id_card_checkbox: null,
-  //       // income_certificate_checkbox: null,
-  //       // domicile_certificate_checkbox: null,
-  //       // patient_thumb_impression: null,
-  //       i_have_declared: "",
-  //       s_o_w_o: "",
-  //       R_o: "",
-  //       place: "",
-  //       date: "",
-  //     },
-  //     validationSchema: validationEducationSchema,
-  //   onSubmit: async (values) => {
-  //     try {
-  //       console.log("faizy",values);
-  //       const formDataToSend = new FormData();
-
-  //       for (let key in values) {
-  //         formDataToSend.append(key, values[key]);
-  //       }
-  //     const response = await api.educationPostData(formDataToSend);
-  //           if (response.data.status === 1) {
-  //             navigate("/educationsumbitafter", { state: { apidata: response.data } });
-  //           }
-  //         } catch (error) {
-  //           console.error("Error making POST request:", error);
-  //           navigate("/errorpage");
-  //         }
-  //   },
-  // });
-
-  //  const toggleCheckbox = (e) => {
-  //     educationFormik.setFieldValue("aadhar_card_checked", e.target.checked);
-  //     handleFileChange(e, "aadhar_card");
-  //   };
   console.log("form data sumbit show", educationFormik);
-
   return (
     <>
       <Form onSubmit={educationFormik.handleSubmit}>
@@ -431,9 +342,6 @@ const EducationForm = () => {
                 {educationFormik.errors.student_photo}
               </Form.Control.Feedback>
             </Col>
-
-
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="religion">
                 Religion<span className="text-danger">*</span>
@@ -455,7 +363,6 @@ const EducationForm = () => {
                 {educationFormik.errors.religion}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="id_father_husband_name">
                 Father's/Husband Name<span className="text-danger">*</span>
@@ -477,7 +384,6 @@ const EducationForm = () => {
                 {educationFormik.errors.father_husband_name}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="motherName">
                 Mother's Name<span className="text-danger">*</span>
@@ -520,7 +426,6 @@ const EducationForm = () => {
                 {educationFormik.errors.permanent_address}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Label htmlFor="id_aadhar_no">
                 Aadhar No<span className="text-danger">*</span>
@@ -542,7 +447,6 @@ const EducationForm = () => {
                 {educationFormik.errors.aadhar_no}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Label htmlFor="id_voter_id_no">
                 Voter Id No.<span className="text-danger">*</span>
@@ -564,7 +468,6 @@ const EducationForm = () => {
                 {educationFormik.errors.voter_id_no}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={3} lg={4} className="mb-3">
               <Form.Label htmlFor="email">
                 Email<span className="text-danger">*</span>
@@ -585,8 +488,6 @@ const EducationForm = () => {
                 {educationFormik.errors.email}
               </Form.Control.Feedback>
             </Col>
-            {/* -------------------- */}
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label htmlFor="familyIncome">
                 Monthly Family Income<span className="text-danger">*</span>
@@ -608,7 +509,6 @@ const EducationForm = () => {
                 {educationFormik.errors.monthly_family_income}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="mobile">
                 Mobile No.<span className="text-danger">*</span>
@@ -630,7 +530,6 @@ const EducationForm = () => {
                 {educationFormik.errors.mobileNo}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={12} lg={12} className="mb-2">
               <b>
                 BANK ACCOUNT DETAIL OF APPLICANT / INSTITUTION / UNIVERSITY /
@@ -658,7 +557,6 @@ const EducationForm = () => {
                 {educationFormik.errors.bank_name}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="id_branch_name">
                 Branch Name<span className="text-danger">*</span>
@@ -680,7 +578,6 @@ const EducationForm = () => {
                 {educationFormik.errors.branch_name}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="id_account">
                 Account<span className="text-danger">*</span>
@@ -702,7 +599,6 @@ const EducationForm = () => {
                 {educationFormik.errors.account}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="id_ifsc_code">
                 IFSC Code<span className="text-danger">*</span>
@@ -724,7 +620,6 @@ const EducationForm = () => {
                 {educationFormik.errors.ifsc_code}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="id_account_holder_name">
                 Account Holder's Name<span className="text-danger">*</span>
@@ -746,13 +641,11 @@ const EducationForm = () => {
                 {educationFormik.errors.account_holder_name}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={3} lg={12} className="my-2">
               <b>
                 PARENTS/GUARDIAN DETAILS<span className="text-danger">*</span>
               </b>
             </Col>
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="id_parent_name">
                 Name<span className="text-danger">*</span>
@@ -774,7 +667,6 @@ const EducationForm = () => {
                 {educationFormik.errors.parent_name}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="id_relationship_with_guardian">
                 Relationship with guardian<span className="text-danger">*</span>
@@ -796,7 +688,6 @@ const EducationForm = () => {
                 {educationFormik.errors.relationship_with_guardian}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={4} lg={4} className="mb-3">
               <Form.Label htmlFor="id_parent_occupation">
                 Occupation<span className="text-danger">*</span>
@@ -818,7 +709,6 @@ const EducationForm = () => {
                 {educationFormik.errors.parent_occupation}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={6} lg={6} className="mb-3">
               <Form.Label htmlFor="id_parent_address">
                 Address<span className="text-danger">*</span>
@@ -840,7 +730,6 @@ const EducationForm = () => {
                 {educationFormik.errors.parent_address}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Label htmlFor="id_parent_email">
                 Email ID<span className="text-danger">*</span>
@@ -862,7 +751,6 @@ const EducationForm = () => {
                 {educationFormik.errors.parent_email}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Label htmlFor="id_parent_mobile_no">
                 Mobile No<span className="text-danger">*</span>
@@ -884,7 +772,6 @@ const EducationForm = () => {
                 {educationFormik.errors.parent_mobile_no}
               </Form.Control.Feedback>
             </Col>
-
             {/*--------------------------Document Uploade ----------------------------------------*/}
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Group>
@@ -922,10 +809,6 @@ const EducationForm = () => {
                 </div>
               )}
             </Col>
-
-
-
-
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Check
                 inline
@@ -960,7 +843,6 @@ const EducationForm = () => {
                 </div>
               )}
             </Col>
-
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Check
                 inline
@@ -992,7 +874,6 @@ const EducationForm = () => {
                 </div>
               )}
             </Col>
-
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Check
                 inline
@@ -1048,98 +929,7 @@ const EducationForm = () => {
                 {educationFormik.errors.patient_thumb_impression}
               </Form.Control.Feedback>
             </Form.Group>
-
-
-            {/* dummy document */}
-            {/* <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
-  <Form.Label htmlFor="aadhar">
-  Aadhar Card<span className="text-danger">*</span>
-  </Form.Label>
-  <Form.Control
-    type="file"
-    id="aadhar"
-    name="aadhar_card_checked"
-    className="rounded-0"
-    onChange={(e) => handleFileChange(e, "aadhar_card_checked")}
-    onBlur={educationFormik.handleBlur}
-    isInvalid={
-      educationFormik.touched.aadhar_card_checked &&
-      educationFormik.errors.aadhar_card_checked
-    }
-  />
-  <Form.Control.Feedback type="invalid">
-    {educationFormik.errors.student_photo}
-  </Form.Control.Feedback>
-</Col>
-<Col xs={12} sm={12} md={3} lg={3} className="mb-3">
-  <Form.Label htmlFor="voter">
-  voter_id_card_checkbox<span className="text-danger">*</span>
-  </Form.Label>
-  <Form.Control
-    type="file"
-    id="voter"
-    name="voter_id_card_checkbox"
-    className="rounded-0"
-    onChange={(e) => handleFileChange(e, "voter_id_card_checkbox")}
-    onBlur={educationFormik.handleBlur}
-    isInvalid={
-      educationFormik.touched.voter_id_card_checkbox &&
-      educationFormik.errors.voter_id_card_checkbox
-    }
-  />
-  <Form.Control.Feedback type="invalid">
-    {educationFormik.errors.voter_id_card_checkbox}
-  </Form.Control.Feedback>
-</Col>
-<Col xs={12} sm={12} md={3} lg={3} className="mb-3">
-  <Form.Label htmlFor="income">
-  income_certificate_checkbox<span className="text-danger">*</span>
-  </Form.Label>
-  <Form.Control
-    type="file"
-    id="income"
-    name="income_certificate_checkbox"
-    className="rounded-0"
-    onChange={(e) => handleFileChange(e, "income_certificate_checkbox")}
-    onBlur={educationFormik.handleBlur}
-    isInvalid={
-      educationFormik.touched.income_certificate_checkbox &&
-      educationFormik.errors.income_certificate_checkbox
-    }
-  />
-  <Form.Control.Feedback type="invalid">
-    {educationFormik.errors.income_certificate_checkbox}
-  </Form.Control.Feedback>
-</Col>
-
-<Col xs={12} sm={12} md={3} lg={3} className="mb-3">
-  <Form.Label htmlFor="domicile">
-  domicile_certificate_checkbox<span className="text-danger">*</span>
-  </Form.Label>
-  <Form.Control
-    type="file"
-    id="domicile"
-    name="domicile_certificate_checkbox"
-    className="rounded-0"
-    onChange={(e) => handleFileChange(e, "domicile_certificate_checkbox")}
-    onBlur={educationFormik.handleBlur}
-    isInvalid={
-      educationFormik.touched.domicile_certificate_checkbox &&
-      educationFormik.errors.domicile_certificate_checkbox
-    }
-  />
-  <Form.Control.Feedback type="invalid">
-    {educationFormik.errors.student_photo}
-  </Form.Control.Feedback>
-</Col> */}
-
-            {/* -------------------- */}
-
-
-
-            {/* --------------------------------------------------------- */}
-            <p className="text-center">Declaration</p>
-
+             <p className="text-center">Declaration</p>
             <Col xs={12} sm={12} md={6} lg={6} className="mb-3">
               <Form.Label htmlFor=" I have declared that">
                 I have declared that<span className="text-danger">*</span>
@@ -1182,7 +972,6 @@ const EducationForm = () => {
                 {educationFormik.errors.s_o_w_o}
               </Form.Control.Feedback>
             </Col>
-
             <Col sm={12} md={12} lg={12} className="mb-3">
               <Form.Label htmlFor="R_o">
                 R/o<span className="text-danger">*</span>
@@ -1203,7 +992,6 @@ const EducationForm = () => {
                 {educationFormik.errors.R_o}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={6} lg={6} className="mb-3">
               <Form.Label htmlFor="place">
                 Place<span className="text-danger">*</span>
@@ -1224,7 +1012,6 @@ const EducationForm = () => {
                 {educationFormik.errors.place}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={6} lg={6} className="mb-3">
               <Form.Label htmlFor="date">
                 Date<span className="text-danger">*</span>
@@ -1245,7 +1032,6 @@ const EducationForm = () => {
                 {educationFormik.errors.date}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={1} lg={6} className="mb-3">
               <Button
                 className="btn rounded-0 btn-primary btn-large centerButton my-2"

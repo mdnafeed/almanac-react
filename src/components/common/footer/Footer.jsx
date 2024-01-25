@@ -88,7 +88,6 @@ function Footer() {
                     {CONSTANT_LABEL.BLOG}
                   </NavLink>
                 </p>
-               
                 </>
               </div>
               <hr className="w-100 clearfix d-md-none" />

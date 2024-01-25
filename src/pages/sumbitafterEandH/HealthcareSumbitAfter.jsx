@@ -62,7 +62,6 @@ const HealthcareSumbitAfter = () => {
                             </tr>
                           </thead>
                           <tbody>
-
                             <tr>
                               <td width="100px" style={{ fontFamily: 'calibri, helvetica, arial, sans-serif' }}>Hospital Name</td>
                               <td width="40px" align="center"><b>:</b></td>
@@ -183,41 +182,6 @@ const HealthcareSumbitAfter = () => {
                               <td width="40px" align="center"><b>:</b></td>
                               <td>{apidata.data.date}</td>
                             </tr>
-                            {/* <tr>
-                            <td width="100px" style={{ fontFamily: 'calibri, helvetica, arial, sans-serif' }}>Parent Email</td>
-                            <td width="40px" align="center"><b>:</b></td>
-                            <td>{apidata.data.parent_email}</td>
-                          </tr>
-                          <tr>
-                            <td width="100px" style={{ fontFamily: 'calibri, helvetica, arial, sans-serif' }}>Parent Mobile No</td>
-                            <td width="40px" align="center"><b>:</b></td>
-                            <td>{apidata.data.parent_mobile_no}</td>
-                          </tr>
-                          <tr>
-                            <td width="100px" style={{ fontFamily: 'calibri, helvetica, arial, sans-serif' }}>I Have Declared That</td>
-                            <td width="40px" align="center"><b>:</b></td>
-                            <td>{apidata.data.i_have_declared}</td>
-                          </tr>
-                          <tr>
-                            <td width="100px" style={{ fontFamily: 'calibri, helvetica, arial, sans-serif' }}>S/o/D/o/W/o</td>
-                            <td width="40px" align="center"><b>:</b></td>
-                            <td>{apidata.data.s_o_w_o}</td>
-                          </tr>
-                          <tr>
-                            <td width="100px" style={{ fontFamily: 'calibri, helvetica, arial, sans-serif' }}>R/o</td>
-                            <td width="40px" align="center"><b>:</b></td>
-                            <td>{apidata.data.R_o}</td>
-                          </tr>
-                          <tr>
-                            <td width="100px" style={{ fontFamily: 'calibri, helvetica, arial, sans-serif' }}>Place</td>
-                            <td width="40px" align="center"><b>:</b></td>
-                            <td>{apidata.data.place}</td>
-                          </tr>
-                          <tr>
-                            <td width="100px" style={{ fontFamily: 'calibri, helvetica, arial, sans-serif' }}>Date</td>
-                            <td width="40px" align="center"><b>:</b></td>
-                            <td>{apidata.data.date}</td>
-                          </tr> */}
                           </tbody>
                         </table>
                       </td>
@@ -237,7 +201,6 @@ const HealthcareSumbitAfter = () => {
                   </div>
                 </td>
               </tbody>
-
             </tr>
           </table>
         </Container>
