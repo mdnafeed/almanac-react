@@ -7,9 +7,7 @@ const validationEducationSchema = yup.object().shape({
   .required(ValidationConstant_EDUCATION.UNIVERSITY_NAME_REQUIRED)
   .min(2,ValidationConstant_EDUCATION.UNIVERSITY_NAME_MIN_TWO_CHAR)
   .max(40,ValidationConstant_EDUCATION.UNIVERSITY_NAME_MAX_FORTY_CHAR)
-  .matches(/^[a-zA-Z\s]*$/, ValidationConstant_EDUCATION.UNIVERSITY_NAME_ONLY_CHAR),
-
-
+  .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.UNIVERSITY_NAME_ONLY_CHAR),
 course_applied_pursuing: yup
   .string()
   .required(ValidationConstant_EDUCATION.COURSE_APPLIED_PURSUING_REQUIRED)
@@ -34,7 +32,7 @@ course_applied_pursuing: yup
     .min(2, ValidationConstant_EDUCATION.APPLICANT_NAME_MIN_LENGTH)
     .max(50, ValidationConstant_EDUCATION.APPLICANT_NAME_MAX_LENGTH)
     .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.LAST_QUALIFICATION_ONLY_CHAR),
-  gender: yup.string().required("Select gender"),
+  gender: yup.string().required(ValidationConstant_EDUCATION.GENDER_REQUIRED),
   age: yup.number().required(ValidationConstant_EDUCATION.AGE_REQUIRED),
   category: yup
     .string()
@@ -44,22 +42,19 @@ course_applied_pursuing: yup
     .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.LAST_QUALIFICATION_ONLY_CHAR),
   student_photo: yup
     .mixed()
-    .required("Aadhar Card is required")
+    .required(ValidationConstant_EDUCATION.STUDENT_PHOTO_REQUIRED)
     .test(
-      "fileSize",
-      "File size is too large (max 1MB)",
+      "fileSize",ValidationConstant_EDUCATION.STUDENT_PHOTO_SUPPORT_MAX_SIZE,
       (value) => value && value.size <= 1 * 1024 * 1024
     )
     .test(
-      "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+      "fileType",ValidationConstant_EDUCATION.STUDENT_PHOTO_SUPPORT_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   religion: yup
     .string()
     .matches(
-      /^[A-Za-z]+$/,
-     ValidationConstant_EDUCATION. RELIGION_ONLY_CHAR
+      /^[A-Za-z]+$/,ValidationConstant_EDUCATION. RELIGION_ONLY_CHAR
     )
     .min(2, ValidationConstant_EDUCATION.RELIGION_MIN_LENGTH)
     .max(50, ValidationConstant_EDUCATION.RELIGION_MAX_LENGTH)
@@ -67,8 +62,7 @@ course_applied_pursuing: yup
   father_husband_name: yup
     .string()
     .matches(
-      /^[A-Za-z\s]+$/,
-      ValidationConstant_EDUCATION.FATHER_HUSBAND_NAME_ONLY_CHAR
+      /^[A-Za-z\s]+$/,ValidationConstant_EDUCATION.FATHER_HUSBAND_NAME_ONLY_CHAR
     )
     .min(2, ValidationConstant_EDUCATION.FATHER_HUSBAND_NAME_MIN_LENGTH)
     .max(50, ValidationConstant_EDUCATION.FATHER_HUSBAND_NAME_MAX_LENGTH)
@@ -76,8 +70,7 @@ course_applied_pursuing: yup
   motherName: yup
     .string()
     .matches(
-      /^[A-Za-z\s]+$/,
-      ValidationConstant_EDUCATION.MOTHER_NAME_ONLY_CHAR
+      /^[A-Za-z\s]+$/,ValidationConstant_EDUCATION.MOTHER_NAME_ONLY_CHAR
     )
     .required(ValidationConstant_EDUCATION.MOTHER_NAME_REQUIRED)
     .min(2, ValidationConstant_EDUCATION.MOTHER_NAME_MIN_LENGTH)
@@ -142,8 +135,6 @@ course_applied_pursuing: yup
     .min(2, ValidationConstant_EDUCATION.PARENT_NAME_NIM_LENGTH)
     .max(50, ValidationConstant_EDUCATION.PARENT_NAME_MAX_LENGTH)
     .matches(/^[a-zA-Z\s]*$/,ValidationConstant_EDUCATION.PARENT_NAME_ONLY_CHAR),
-
-// PARENT_NAME_ONLY_CHAR
   relationship_with_guardian: yup
     .string()
     .required(ValidationConstant_EDUCATION.RELATIONSHIP_WITH_GUARDIAN_REQUIRED)
@@ -173,101 +164,76 @@ course_applied_pursuing: yup
   aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
   aadhar_card_check: yup
     .mixed()
-    .required("Aadhar  is required")
+    .required(ValidationConstant_EDUCATION.AADHAR_CARD_CHECK_REQUIRED)
     .test(
-      "fileSize",
-      "File size is too large (max 1MB)",
+      "fileSize",ValidationConstant_EDUCATION.AADHAR_CARD_CHECK_MAX_FILE_SIZE,
       (value) => value && value.size <= 1000000
     )
     .test(
-      "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+      "fileType",ValidationConstant_EDUCATION.AADHAR_CARD_CHECK_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   voter_id_card_checkbox: yup
     .mixed()
-    .required("Voter id cord is required")
+    .required(ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
-      "fileSize",
-      "File size is too large (max 1MB)",
+      "fileSize",ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_MAX_FILE,
       (value) => value && value.size <= 1 * 1024 * 1024
     )
     .test(
-      "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+      "fileType",ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   income_certificate_checkbox: yup
     .mixed()
-    .required("Income certificate is required")
+    .required(ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
-      "fileSize",
-      "File size is too large (max 1MB)",
-      (value) => value && value.size <= 1 * 1024 * 1024
-    )
+      "fileSize",ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE,
+      (value) => value && value.size <= 1 * 1024 * 1024)
     .test(
-      "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+      "fileType",ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
       (value) => value && value.type === "application/pdf"
     ),
-
-
-  domicile_certificate_checkbox: yup
+domicile_certificate_checkbox: yup
     .mixed()
-    .required("Domicile certificate is required")
+    .required(ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
-      "fileSize",
-      "File size is too large (max 1MB)",
+      "fileSize",ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE,
       (value) => value && value.size <= 1 * 1024 * 1024
     )
     .test(
-      "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+      "fileType",ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   patient_thumb_impression: yup
     .mixed()
-    .required("Patient thumb impression is required")
+    .required(ValidationConstant_EDUCATION.PATIENT_THUMB_IMPRESSION_REQUIRED)
     .test(
-      "fileSize",
-      "File size is too large (max 1MB)",
+      "fileSize",ValidationConstant_EDUCATION.PATIENT_THUMB_IMPRESSION_MAX_FILE_SIZE,
       (value) => value && value.size <= 1 * 1024 * 1024
     )
     .test(
-      "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+      "fileType",ValidationConstant_EDUCATION.PATIENT_THUMB_IMPRESSION_SUPPORT_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   i_have_declared: yup
     .string()
     .matches(
-      /^[A-Za-z\s]+$/,
-      ValidationConstant_EDUCATION.I_HAVE_ONLY_CHAR
+      /^[A-Za-z\s]+$/,ValidationConstant_EDUCATION.I_HAVE_ONLY_CHAR
     )
     .required(ValidationConstant_EDUCATION.I_HAVE_DECLARED_REQUIRED),
-
   s_o_w_o: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      ValidationConstant_EDUCATION.S_O_W_O_ONLY_CHARS
-    )
+    .matches(/^[A-Za-z\s]+$/,ValidationConstant_EDUCATION.S_O_W_O_ONLY_CHARS)
     .required(ValidationConstant_EDUCATION.S_O_W_O_REQUIRED),
-
   R_o: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      ValidationConstant_EDUCATION.R_O_W_O_ONLY_CHAR
-    )
+    .matches(/^[A-Za-z\s]+$/,ValidationConstant_EDUCATION.R_O_W_O_ONLY_CHAR)
     .required(ValidationConstant_EDUCATION.R_O_REQUIRED),
 
   place: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "place must only contain alphabetical characters and spaces"
-    )
+    .matches(/^[A-Za-z\s]+$/,"Place must only contain alphabetical characters and spaces")
     .required(ValidationConstant_EDUCATION.PLACE_REQUIRED),
 
   date: yup.string().required("Enter Date"),

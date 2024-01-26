@@ -25,18 +25,14 @@ export class CONSTANT_LABEL {
 
 
 export class ValidationConstant_EDUCATION{
-    
-
 static UNIVERSITY_NAME_REQUIRED = "University name is required";
 static UNIVERSITY_NAME_MIN_TWO_CHAR = "University name should be at least 2 characters";
 static UNIVERSITY_NAME_MAX_FORTY_CHAR = "University name should be max 40 characters";
 static UNIVERSITY_NAME_ONLY_CHAR="University name should contain only alphabets";
-
 static COURSE_APPLIED_PURSUING_REQUIRED = "Course applied is required";
 static COURSE_APPLIED_PURSUING_REQUIRED_MIN = "Course name should be at least 2 characters";
 static COURSE_APPLIED_PURSUING_REQUIRED_MAX = "Course name should be at most 40 characters";
 static COURSE_APPLIED_PURSUING_ONLY_CHAR="Course name should contain only alphabets";
-
 
 static YEAR_SEMESTER_FEE_REQUIRED="Fee is only positive number required";
 static YEAR_SEMESTER_FEE_ONLY_NUMBER="Fee must be a positive number";
@@ -46,12 +42,10 @@ static LAST_QUALIFICATION_MIN_LENGTH="Last qualification should be at least 2 ch
 static LAST_QUALIFICATION_MAX_LENGTH="Last qualification should be at most 50 characters";
 static LAST_QUALIFICATION_ONLY_CHAR="Last qualification should contain only alphabets ";
 
-
 static APPLICANT_NAME_REQUIRED="Applicant name is required";
 static APPLICANT_NAME_MIN_LENGTH="Applicant name shoud be at least 2 characters";
 static APPLICANT_NAME_MAX_LENGTH="Applicant name shoud be at most 50 characters";
 static APPLICANT_NAME_ONLY_CHAR="Applicant name should contain only alphabets";
-
 
 static GENDER_REQUIRED="Select gender";
 
@@ -62,6 +56,9 @@ static CATEGORY_MAX_LENGTH="Category name  should be at most 50 characters";
 static CATEGORY_ONLY_CHAR="Category name should contain only alphabets";
 
 static STUDENT_PHOTO_REQUIRED="Aadhar Card is required";
+static STUDENT_PHOTO_SUPPORT_FILE="Unsupported file format. Only PDF files are allowed.";
+static STUDENT_PHOTO_SUPPORT_MAX_SIZE="File size  max 1MB";
+
 static RELIGION_REQUIRED="Religion is required";
 static RELIGION_MIN_LENGTH="Religion name shoud be at least 2 characters";
 static RELIGION_MAX_LENGTH="Religion name should be at most 50 characters";
@@ -139,12 +136,26 @@ static PARENT_EMAIL_REQUIRED="Parent email is required";
 static PARENT_EMAIL_INVALID="Invalid email address"
 static PARENT_MOBILE_NO_REQUIRED="Parent mobile number is required";
 static PARENT_MOBILE_NO_INVALID="Invalid mobile number"
-// static AADHAR_CARD_CHECKED_REQUIRED="";
-static AADHAR_CARD_CHECK_REQUIRED="";
-static VOTER_ID_CARD_CHECKBOX_REQUIRED="";
-static INCOME_CERTIFICATE_CHECKBOX_REQUIRED="";
-static DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED="";
-static PATIENT_THUMB_IMPRESSION_REQUIRED="";
+
+static AADHAR_CARD_CHECK_REQUIRED="Aadhar Card file is required";
+static AADHAR_CARD_CHECK_FILE="Unsupported file format. Only PDF files are allowed.";
+static AADHAR_CARD_CHECK_MAX_FILE_SIZE="File size is max 1MB";
+
+static VOTER_ID_CARD_CHECKBOX_REQUIRED="Voter Id Card is required";
+static VOTER_ID_CARD_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed.";
+static VOTER_ID_CARD_MAX_FILE_SIZE="File size is max 1MB";
+
+static INCOME_CERTIFICATE_CHECKBOX_REQUIRED="Income photo is required";
+static INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed.";
+static INCOME_CERTIFICATE_CHECKBOX_MAX_FILE="File size is max 1MB";
+
+static DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED="Domicile photo is required";
+static DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed";
+static DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE="File size is max 1MB";
+
+static PATIENT_THUMB_IMPRESSION_REQUIRED="Patient signature/thump impression is required";
+static PATIENT_THUMB_IMPRESSION_SUPPORT_FILE="Unsupported file format. Only PDF files are allowed. ";
+static PATIENT_THUMB_IMPRESSION_MAX_FILE_SIZE="File size is max 1MB";
 
 static I_HAVE_DECLARED_REQUIRED="i have decorated is required";
 static I_HAVE_ONLY_CHAR="I have declared must only contain alphabetical characters and spaces";
@@ -155,11 +166,6 @@ static S_O_W_O_ONLY_CHARS="S/o/W/o/D/o must name  only contain alphabetical char
 static R_O_REQUIRED="R_o is required";
 static R_O_W_O_ONLY_CHAR="R/o must only contain alphabetical characters and spaces";
 static PLACE_REQUIRED="Place is required";
-
-
-
-
-
 
 }
 
@@ -183,7 +189,9 @@ static ADDRESS_REQUIRED="Address is required";
 static ADDRESS_MAX_LENGHT="Address should be at least 2 characters";
 static ADDRESS_MIN_LENGTH="Address should be at most 100 characters";
 
-static PATIENT_PHOTO_REQUIRED="";
+static PATIENT_PHOTO_REQUIRED="Patient photo is required";
+static PATIENT_PHOTO_SUPPORT_FILE="Unsupported file format. Only PDF files are allowed.";
+static PATIENT_PHOTO_SUPPORT_MAX_SIZE="File size  max 1MB";
 
 static NAME_OF_THE_PATIENT_REQUIRED="Patient name is required";
 static NAME_OF_THE_PATIENT_MIN_LENGTH="Patient name should be at least 2 characters";
@@ -194,21 +202,17 @@ static FATHER_HUSBAND_NAME_REQUIRED="Father/Husband name is required";
 static FATHER_HUSBAND_NAME_MIN_LENGTH="Father/Husband name should be at least 2 characters";
 static FATHER_HUSBAND_NAME_MAX_LENGTH="Father/Husband name should be at most 50 characters";
 static FATHER_HUSBAND_NAME_ONLY_ALPHABETE="Father/Husband name must only contain alphabetical characters and spaces";
-// c
 
 static MOTHER_NAME_REQUIRED="Mother name is required";
 static MOTHER_NAME_MIN_LENGTH="Mother name should be at least 2 characters";
 static MOTHER_NAME_MAX_LENGTH="Mother name should be at most 50 characters";
 static MOTHER_NAME_ONLY_ALPHABETE="Mother name must only contain alphabetical characters and spaces";
 
-
 static PERMANENT_ADDRESS_REQUIRED="Permanent address is required";
 static PERMANENT_ADDRESS_MIN_LENGTH="Permanent address  should be at least 2 characters";
 static PERMANENT_ADDRESS_MAX_LENGTH=" Permanent address name should be at most 50 characters";
 static PERMANENT_ADDRESS_ONLY_ALPHABETE=" Permanent address must only contain alphabetical characters and spaces";
-
 static GENDER_REQUIRED="Gender is required";
-
 static AGE_REQUIRED="Age is required";
 
 static CATEGORY_REQUIRED="Category is required";
@@ -217,14 +221,12 @@ static RELIGION_MIN_LENGTH="Religion should be at least 2 characters";
 static RELIGION_MAX_LENGTH="Religion should be at most 50 characters";
 static RELIGION_ONLY_ALPHABATE=" Religion must only contain alphabetical characters and spaces";
 
-
 static AADHAR_NO_VOTER_ID_NO_REQUIRED="Aadhar/Voter is no required";
 static EMAIL_REQUIRED="Email is required";
 static EMAIL_INVALID="Invalid email address";
 
 static MOBILE_NO_REQUIRED="Mobile number is required";
-static MOBILE_NO_INVALID="Invalid mobile number. It must be 10 digits and only contain numbers"
-;
+static MOBILE_NO_INVALID="Invalid mobile number. It must be 10 digits and only contain numbers";
 static MONTHLY_FAMILY_INCOME_REQUIRED="Monthly family icome is required";
 static  MONTHLY_FAMILY_INCOME_POSITIVE_NO ="Income must be a positive number";
 
@@ -242,9 +244,9 @@ static PATIENT_EMAIL_ID_REQUIRED="Patient email address is required";
 static  PATIENT_EMAIL_ID_INVALID ="Patient Invalid email address";
 static PATIENT_MOBILE_NUMBER_REQUIRED="Patient mobile number is required";
 static PATIENT_MOBILE_NUMBER_INVALID  ="Invalid mobile number. It must be 10 digits and only contain numbers";
-static PATIENT_THUMB_IMPRESSION_REQUIRED="";
-
-
+static PATIENT_THUMB_IMPRESSION_REQUIRED="Patient signature/thump impression is required";
+static PATIENT_THUMB_IMPRESSION_SUPPORT_FILE="Unsupported file format. Only PDF files are allowed. ";
+static PATIENT_THUMB_IMPRESSION_MAX_FILE_SIZE="File size is max 1MB";
 
 static AADHAR_CARD_CHECKBOX_REQUIRED="";
 
@@ -252,16 +254,20 @@ static GUARDIAN_ADDRESS_REQUIRED="Guardian is required";
 static GUARDIAN_ADDRESS_MIN_LENGTH="Guardian should be at least 2 character";
 static GUARDIAN_ADDRESS_MAX_LENGTH="Guardian should be at most 50 characters";
 
-static AADHAR_CARD_CHECKED_REQUIRED="";
-static VOTER_ID_CARD_CHECKBOX_REQUIRED="";
+static AADHAR_CARD_CHECKED_REQUIRED="Aadhar Card file is required";
+static AADHAR_CARD_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed.";
+static AADHAR_CARD_MAX_FILE_SIZE="File size is max 1MB";
 
+static VOTER_ID_CARD_CHECKBOX_REQUIRED="Voter Id Card is required";
+static VOTER_ID_CARD_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed.";
+static VOTER_ID_CARD_MAX_FILE_SIZE="File size is max 1MB";
 
-static INCOME_CERTIFICATE_CHECKBOX_REQUIRED="";
-static DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED="";
-
-// static I_HAVE_DECLARED_REQUIRED="";
-
-// static S_O_W_O_REQUIRED="";
+static INCOME_CERTIFICATE_CHECKBOX_REQUIRED="Income photo is required";
+static INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed.";
+static INCOME_CERTIFICATE_CHECKBOX_MAX_FILE="File size is max 1MB";
+static DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED="Domicile photo is required";
+static DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed";
+static DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE="File size is max 1MB";
 
 static I_HAVE_DECLARED_REQUIRED="i have decorated is required";
 static I_HAVE_ONLY_CHAR="I have declared must only contain alphabetical characters and spaces";
@@ -272,8 +278,7 @@ static S_O_W_O_ONLY_CHARS="S/o/W/o/D/o must name  only contain alphabetical char
 static R_O_REQUIRED="R_o is required";
 static R_O_W_O_ONLY_CHAR="R/o must only contain alphabetical characters and spaces";
 static PLACE_REQUIRED="Place is required";
-
-
+static DATE_REQUIRED="Date is required";
 
 
 

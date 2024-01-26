@@ -21,15 +21,15 @@ const validationSchema = yup.object().shape({
   .required(ValidationConstant_HEALTHCARE.PERMANENT_ADDRESS_REQUIRED),
   patient_photo: yup
     .mixed()
-    .required("Patient photo is required")
+    .required(ValidationConstant_HEALTHCARE.PATIENT_PHOTO_REQUIRED)
     .test(
       "fileSize",
-      "File size is too large (max 1MB)",
+      ValidationConstant_HEALTHCARE.PATIENT_PHOTO_SUPPORT_MAX_SIZE,
       (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+      ValidationConstant_HEALTHCARE.PATIENT_PHOTO_SUPPORT_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   name_of_the_patient: yup
@@ -64,7 +64,6 @@ const validationSchema = yup.object().shape({
     .min(2,ValidationConstant_HEALTHCARE.RELIGION_MIN_LENGTH)
     .max(40,ValidationConstant_HEALTHCARE.RELIGION_MAX_LENGTH)
     .required(ValidationConstant_HEALTHCARE.RELIGION_REQUIRED),
-
   aadhar_no_voter_id_no: yup
     .string()
     .matches(/^[0-9]{12}$/, "Invalid Aadhar card number. It must be 12 digits")
@@ -75,8 +74,7 @@ const validationSchema = yup.object().shape({
     .required(ValidationConstant_HEALTHCARE.EMAIL_REQUIRED),
   mobile_no: yup
     .string()
-    .matches(
-      /^[0-9]{10}$/,ValidationConstant_HEALTHCARE.MOBILE_NO_INVALID)
+    .matches(/^[0-9]{10}$/,ValidationConstant_HEALTHCARE.MOBILE_NO_INVALID)
     .required(ValidationConstant_HEALTHCARE.MOBILE_NO_REQUIRED),
   monthly_family_income: yup
     .number()
@@ -105,15 +103,15 @@ const validationSchema = yup.object().shape({
   aadhar_card_checkbox: yup.boolean().oneOf([true], "Aadhar card required"),
   patient_thumb_impression: yup
     .mixed()
-    .required("Patient signature/thump impression is required")
+    .required(ValidationConstant_HEALTHCARE.PATIENT_THUMB_IMPRESSION_REQUIRED)
     .test(
       "fileSize",
-      "File size is too large (max 1MB)",
+      ValidationConstant_HEALTHCARE.PATIENT_THUMB_IMPRESSION_MAX_FILE_SIZE,
       (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+     ValidationConstant_HEALTHCARE.PATIENT_THUMB_IMPRESSION_SUPPORT_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   guardian_address: yup.string()
@@ -122,54 +120,50 @@ const validationSchema = yup.object().shape({
   .required(ValidationConstant_HEALTHCARE.GUARDIAN_ADDRESS_MAX_LENGTH),
   aadhar_card_checked: yup
     .mixed()
-    .required("Aadhar Card is required")
-    .test(
-      "fileSize",
-      "File size exceeds the maximum limit (1MB).",
+    .required(ValidationConstant_HEALTHCARE.AADHAR_CARD_CHECKED_REQUIRED)
+    .test( "fileSize",ValidationConstant_HEALTHCARE.AADHAR_CARD_MAX_FILE_SIZE,
       (value) => value && value.size <= 1 * 1024 * 1024
     )
-    .test(
-      "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+    .test("fileType",ValidationConstant_HEALTHCARE.AADHAR_CARD_SUPPORTED_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   voter_id_card_checkbox: yup
     .mixed()
-    .required(" Voter Id Card is required")
+    .required(ValidationConstant_HEALTHCARE.VOTER_ID_CARD_CHECKBOX_REQUIRED)
     .test(
       "fileSize",
-      "File size is too large (max 1MB)",
+      ValidationConstant_HEALTHCARE.VOTER_ID_CARD_MAX_FILE_SIZE,
       (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+      ValidationConstant_HEALTHCARE.VOTER_ID_CARD_SUPPORTED_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   income_certificate_checkbox: yup
     .mixed()
-    .required("Income photo is required")
+    .required(ValidationConstant_HEALTHCARE.INCOME_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
       "fileSize",
-      "File size is too large (max 1MB)",
+      ValidationConstant_HEALTHCARE.INCOME_CERTIFICATE_CHECKBOX_MAX_FILE,
       (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+      ValidationConstant_HEALTHCARE.INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   domicile_certificate_checkbox: yup
     .mixed()
-    .required("Domicile photo is required")
+    .required(ValidationConstant_HEALTHCARE.DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
       "fileSize",
-      "File size is too large (max 1MB)",
+      ValidationConstant_HEALTHCARE.DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE,
       (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format. Only PDF files are allowed.",
+      ValidationConstant_HEALTHCARE.DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   i_have_declared: yup
@@ -190,11 +184,10 @@ const validationSchema = yup.object().shape({
   place: yup
     .string()
     .matches(/^[A-Za-z\s]+$/,"place must only contain alphabetical characters and spaces"
-      // ValidationConstant_HEALTHCARE.
     )
     .required(ValidationConstant_HEALTHCARE.PLACE_REQUIRED),
 
-  date: yup.string().required("Enter Date"),
+  date: yup.string().required(ValidationConstant_HEALTHCARE.DATE_REQUIRED),
 });
 
 export default validationSchema;
