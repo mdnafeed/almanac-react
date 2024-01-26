@@ -101,20 +101,71 @@ const HealthcareForm = () => {
     },
     validationSchema: validationSchema,
     onSubmit: async (values) => {
-      console.log("before sumbit");
       try {
+<<<<<<< HEAD
         console.log("before sumbit2");
         console.log(values);
         const response = await api.healthcarePostData(values);
         console.log(response);
         if (response.data.status === 1) {
+=======
+        const formData = new FormData();
+    
+        // Append text values to FormData
+        for (const key in values) {
+          if (values.hasOwnProperty(key) && key !== "patient_photo" && key !== "aadhar_card_check" && key !== "voter_id_card_checkbox" && key !== "income_certificate_checkbox" && key !== "domicile_certificate_checkbox") {
+            formData.append(key, values[key]);
+          }
+        }
+    
+        // Append file attachments to FormData
+        if (addAdharFile) {
+          formData.append("aadhar_card_check", values.aadhar_card_check);
+        }
+    
+        if (addVoterIdFilet) {
+          formData.append("voter_id_card_checkbox", values.voter_id_card_checkbox);
+        }
+    
+        if (addIncomeFile) {
+          formData.append("income_certificate_checkbox", values.income_certificate_checkbox);
+        }
+    
+        if (addDomicileFile) {
+          formData.append("domicile_certificate_checkbox", values.domicile_certificate_checkbox);
+        }
+        // if(values.patient_photo){
+
+        // }
+        formData.append("patient_photo", values.patient_photo)
+        
+    
+        // Append additional file attachments if needed
+    
+        const response = await api.healthcarePostData(formData);
+    
+        if (response.data.status === 0) {
+>>>>>>> 620548fa4f069b0832c9f368d16ff11b4d35500a
           navigate("/healthcareSumbitafter", { state: { apidata: response.data } });
         }
       } catch (error) {
         console.error("Error making POST request:", error);
-        console.log("before sumbit3");
-        navigate("/errorpage");
+        // Handle error and navigate to error page if needed
       }
+    
+      // try {
+      //   console.log("before sumbit2");
+      //   console.log(values);
+      //   const response = await api.healthcarePostData(values);
+      //   console.log(response);
+      //   if (response.data.status === 0) {
+      //     navigate("/healthcareSumbitafter", { state: { apidata: response.data } });
+      //   }
+      // } catch (error) {
+      //   console.error("Error making POST request:", error);
+      //   console.log("before sumbit3");
+      //   // navigate("/errorpage");
+      // }
     },
   });
   console.log("before sumbit4");
@@ -125,7 +176,7 @@ const HealthcareForm = () => {
         src="https://i.ibb.co/ZWGKMyH/medical-doctor-stethoscope-and-office-sign-web-header.jpg"
         className="w-100"
       />
-      <Form onSubmit={formik.handleSubmit}>
+      <Form onSubmit={formik.handleSubmit} enctype="multipart/form-data">
         <Container>
           <Row>
             <h1 className="text-center pt-2">ONLINE FORM</h1>
