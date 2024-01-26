@@ -174,24 +174,24 @@ course_applied_pursuing: yup
       (value) => value && value.type === "application/pdf"
     ),
   voter_id_card_checkbox: yup
-    .mixed()
-    .required(ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_REQUIRED)
+    .mixed()//VOTER_ID_CARD_CHECKBOX_REQUIRED  
+    .required(ValidationConstant_EDUCATION.VOTER_ID_CARD_CHECKBOX_REQUIRED)
     .test(
-      "fileSize",ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_MAX_FILE,
+      "fileSize",ValidationConstant_EDUCATION.VOTER_ID_CARD_MAX_FILE_SIZE,
       (value) => value && value.size <= 1 * 1024 * 1024
     )
     .test(
-      "fileType",ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
+      "fileType",ValidationConstant_EDUCATION.VOTER_ID_CARD_SUPPORTED_FILE,
       (value) => value && value.type === "application/pdf"
     ),
   income_certificate_checkbox: yup
     .mixed()
-    .required(ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED)
+    .required(ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
-      "fileSize",ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE,
+      "fileSize",ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_MAX_FILE,
       (value) => value && value.size <= 1 * 1024 * 1024)
     .test(
-      "fileType",ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
+      "fileType",ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
       (value) => value && value.type === "application/pdf"
     ),
 domicile_certificate_checkbox: yup

@@ -796,7 +796,7 @@ const EducationForm = () => {
                     name="aadhar_card_check"
                     onChange={(e) => handleFileChange(e, "aadhar_card_check")}
                     // onChange={handleFileChange}
-
+                    onBlur={educationFormik.handleBlur}
                     isInvalid={
                       !educationFormik.values.aadhar_card_check &&
                       educationFormik.touched.aadhar_card_check
@@ -831,15 +831,16 @@ const EducationForm = () => {
                     // }
                     onChange={handleFileChange}
                     // onChange={(e) => handleUpload(e, "voter_id_card")}
+                    onBlur={educationFormik.handleBlur}
                     isInvalid={
                       !educationFormik.values.voter_id_card_checkbox &&
                       educationFormik.touched.voter_id_card_checkbox
                     }
                   />
-                  {educationFormik.errors.voter_id_card_checkbox &&
-                    educationFormik.touched.voter_id_card_checkbox && (
-                      <div className="text-danger"></div>
-                    )}
+                    <Form.Control.Feedback type="invalid">
+                    {educationFormik.errors.voter_id_card_checkbox}
+                  </Form.Control.Feedback>
+
                 </div>
               )}
             </Col>
@@ -865,12 +866,10 @@ const EducationForm = () => {
                       educationFormik.touched.income_certificate_checkbox
                     }
                   />
-                  {educationFormik.errors.income_certificate_checkbox &&
-                    educationFormik.touched.income_certificate_checkbox && (
-                      <div className="text-danger">
-
-                      </div>
-                    )}
+                    <Form.Control.Feedback type="invalid">
+                    {educationFormik.errors.income_certificate_checkbox}
+                  </Form.Control.Feedback>
+                   
                 </div>
               )}
             </Col>
@@ -901,12 +900,9 @@ const EducationForm = () => {
                       educationFormik.touched.domicile_certificate_checkbox
                     }
                   />
-                  {educationFormik.errors.domicile_certificate_checkbox &&
-                    educationFormik.touched.domicile_certificate_checkbox && (
-                      <div className="text-danger">
-
-                      </div>
-                    )}
+                  <Form.Control.Feedback type="invalid">
+                    {educationFormik.errors.domicile_certificate_checkbox}
+                  </Form.Control.Feedback>
                 </div>
               )}
             </Col>

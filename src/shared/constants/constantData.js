@@ -52,12 +52,12 @@ static GENDER_REQUIRED="Select gender";
 static AGE_REQUIRED="Age is required";
 static CATEGORY_REQUIRED="Category name is required";
 static CATEGORY_MIN_LENGTH="Category name shoud be at least 2 characters";
-static CATEGORY_MAX_LENGTH="Category name  should be at most 50 characters";
+static CATEGORY_MAX_LENGTH="Category name should be at most 50 characters";
 static CATEGORY_ONLY_CHAR="Category name should contain only alphabets";
 
-static STUDENT_PHOTO_REQUIRED="Aadhar Card is required";
+static STUDENT_PHOTO_REQUIRED="Student photo is required";
 static STUDENT_PHOTO_SUPPORT_FILE="Unsupported file format. Only PDF files are allowed.";
-static STUDENT_PHOTO_SUPPORT_MAX_SIZE="File size  max 1MB";
+static STUDENT_PHOTO_SUPPORT_MAX_SIZE="File size max 1MB";
 
 static RELIGION_REQUIRED="Religion is required";
 static RELIGION_MIN_LENGTH="Religion name shoud be at least 2 characters";
