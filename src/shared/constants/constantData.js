@@ -158,4 +158,123 @@ static PLACE_REQUIRED="Place is required";
 
 
 
+
+
+
+}
+
+
+
+
+
+
+export class ValidationConstant_HEALTHCARE{
+static HOSPITAL_NAME_REQUIRED="Hospital name is required";
+static HOSPITAL_NAME_MIN_LENGTH="Hospital name should be at least 2 characters";
+static HOSPITAL_NAME_MAX_LENGTH="Hospital name should be at most 50 characters";
+static HOSPITAL_NAME_ONLY_ALPHABATE="Hospital name must only contain alphabetical characters and spaces";
+
+static DEPARTMENT_NAME_REQUIRED=" Department name is required";
+static DEPARTMENT_NAME_MIN_LENGTH="Department name should be at least 2 characters";
+static DEPARTMENT_NAME_MAX_LENGTH=" Department name should be at most 50 characters";
+static DEPARTMENT_NAME_ONLY_ALPHABATE="Department name must only contain alphabetical characters and spaces";
+
+static ADDRESS_REQUIRED="Address is required";
+static ADDRESS_MAX_LENGHT="Address should be at least 2 characters";
+static ADDRESS_MIN_LENGTH="Address should be at most 100 characters";
+
+static PATIENT_PHOTO_REQUIRED="";
+
+static NAME_OF_THE_PATIENT_REQUIRED="Patient name is required";
+static NAME_OF_THE_PATIENT_MIN_LENGTH="Patient name should be at least 2 characters";
+static NAME_OF_THE_PATIENT_MAX_LENGTH="Patient name should be at most 50 characters";
+static NAME_OF_THE_PATIENT_ONLY_ALPHABETE="Patient name must only contain alphabetical characters and spaces";
+
+static FATHER_HUSBAND_NAME_REQUIRED="Father/Husband name is required";
+static FATHER_HUSBAND_NAME_MIN_LENGTH="Father/Husband name should be at least 2 characters";
+static FATHER_HUSBAND_NAME_MAX_LENGTH="Father/Husband name should be at most 50 characters";
+static FATHER_HUSBAND_NAME_ONLY_ALPHABETE="Father/Husband name must only contain alphabetical characters and spaces";
+// c
+
+static MOTHER_NAME_REQUIRED="Mother name is required";
+static MOTHER_NAME_MIN_LENGTH="Mother name should be at least 2 characters";
+static MOTHER_NAME_MAX_LENGTH="Mother name should be at most 50 characters";
+static MOTHER_NAME_ONLY_ALPHABETE="Mother name must only contain alphabetical characters and spaces";
+
+
+static PERMANENT_ADDRESS_REQUIRED="Permanent address is required";
+static PERMANENT_ADDRESS_MIN_LENGTH="Permanent address  should be at least 2 characters";
+static PERMANENT_ADDRESS_MAX_LENGTH=" Permanent address name should be at most 50 characters";
+static PERMANENT_ADDRESS_ONLY_ALPHABETE=" Permanent address must only contain alphabetical characters and spaces";
+
+static GENDER_REQUIRED="Gender is required";
+
+static AGE_REQUIRED="Age is required";
+
+static CATEGORY_REQUIRED="Category is required";
+static RELIGION_REQUIRED="Religion is required";
+static RELIGION_MIN_LENGTH="Religion should be at least 2 characters";
+static RELIGION_MAX_LENGTH="Religion should be at most 50 characters";
+static RELIGION_ONLY_ALPHABATE=" Religion must only contain alphabetical characters and spaces";
+
+
+static AADHAR_NO_VOTER_ID_NO_REQUIRED="Aadhar/Voter is no required";
+static EMAIL_REQUIRED="Email is required";
+static EMAIL_INVALID="Invalid email address";
+
+static MOBILE_NO_REQUIRED="Mobile number is required";
+static MOBILE_NO_INVALID="Invalid mobile number. It must be 10 digits and only contain numbers"
+;
+static MONTHLY_FAMILY_INCOME_REQUIRED="Monthly family icome is required";
+static  MONTHLY_FAMILY_INCOME_POSITIVE_NO ="Income must be a positive number";
+
+static PATIENT_NAME_REQUIRED="Patient Name is required";
+static PATIENT_NAME_MIN_LENGTH="Patient Name should be at least 2 characters";
+static PATIENT_NAME_MAX_LENGTH=" Patient Name should be at most 50 characters";
+static PATIENT_NAME_ONLY_ALPHABATE="Patient Name must only contain alphabetical characters";
+
+static PATIENT_OCCUPATION_REQUIRED="Patient occupation is required";
+static PATIENT_OCCUPATION_MIN_LENGTH="Occupation should be at least 2 characters";
+static PATIENT_OCCUPATION_MAX_LENGTH="Occupation should be at most 50 characters";
+static PATIENT_OCCUPATION_ONLY_ALPHABATE="Occupation must only contain alphabetical characters";
+
+static PATIENT_EMAIL_ID_REQUIRED="Patient email address is required";
+static  PATIENT_EMAIL_ID_INVALID ="Patient Invalid email address";
+static PATIENT_MOBILE_NUMBER_REQUIRED="Patient mobile number is required";
+static PATIENT_MOBILE_NUMBER_INVALID  ="Invalid mobile number. It must be 10 digits and only contain numbers";
+static PATIENT_THUMB_IMPRESSION_REQUIRED="";
+
+
+
+static AADHAR_CARD_CHECKBOX_REQUIRED="";
+
+static GUARDIAN_ADDRESS_REQUIRED="Guardian is required";
+static GUARDIAN_ADDRESS_MIN_LENGTH="Guardian should be at least 2 character";
+static GUARDIAN_ADDRESS_MAX_LENGTH="Guardian should be at most 50 characters";
+
+static AADHAR_CARD_CHECKED_REQUIRED="";
+static VOTER_ID_CARD_CHECKBOX_REQUIRED="";
+
+
+static INCOME_CERTIFICATE_CHECKBOX_REQUIRED="";
+static DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED="";
+
+// static I_HAVE_DECLARED_REQUIRED="";
+
+// static S_O_W_O_REQUIRED="";
+
+static I_HAVE_DECLARED_REQUIRED="i have decorated is required";
+static I_HAVE_ONLY_CHAR="I have declared must only contain alphabetical characters and spaces";
+
+static S_O_W_O_REQUIRED="s_o_w_o is required";
+static S_O_W_O_ONLY_CHARS="S/o/W/o/D/o must name  only contain alphabetical characters and spaces";
+
+static R_O_REQUIRED="R_o is required";
+static R_O_W_O_ONLY_CHAR="R/o must only contain alphabetical characters and spaces";
+static PLACE_REQUIRED="Place is required";
+
+
+
+
+
 }
