@@ -8,7 +8,6 @@ import { RouteConstant } from "../../shared/constants/route";
 import healthcareForm from "../../assets/pdf/healthcare-form.pdf";
 import HealthcareImage from "../../assets/halthcare/1.jpg";
 import { FaAngleRight } from "react-icons/fa6";
-
 const Healthcare = () => {
   return (
     <>

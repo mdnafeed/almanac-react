@@ -28,3 +28,5 @@ export class RouteConstant {
   static INSTAGRAM_PROFILE_URL  = 'https://www.instagram.com/aswelfare55766/';
   // END:SOCIAL ROUTE LINK
 }
+
+

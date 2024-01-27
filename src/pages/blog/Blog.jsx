@@ -8,7 +8,6 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CgCalendarDates } from "react-icons/cg";
-
 function BlogList() {
   const [allDescriptions, setAllDescriptions] = useState(false);
   const [blogPath, setBlogPath] = useState(null);

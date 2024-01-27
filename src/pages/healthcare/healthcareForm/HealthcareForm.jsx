@@ -6,12 +6,12 @@ import "./healthcare.scss";
 import api from "../../../api/api";
 import { useNavigate } from "react-router-dom";
 const HealthcareForm = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const [addAdharFile, setAddAdharFile] = useState(false);
   const [addVoterIdFilet, setAddVoterIdFilet] = useState(false);
   const [addIncomeFile, setAddIncomeFile] = useState(false);
   const [addDomicileFile, setAddDomicileFile] = useState(false);
-  
+
 
   const handleFileChange = (e, inputType) => {
     const isChecked = e.target.checked;
@@ -85,14 +85,13 @@ const HealthcareForm = () => {
       patient_mobile_number: "",
       guardian_address: "",
       aadhar_card_checkbox: "",
-  
       aadhar_card_checked: "",
-      aadhar_card_check:"",
+      aadhar_card_check: "",
       domicile_certificate_checkbox: "",
-      income_certificate:"",
-      income_certificate_checkbox:"",
+      income_certificate: "",
+      income_certificate_checkbox: "",
       voter_id_card_checkbox: "",
-      voter_id_card:"",
+      voter_id_card: "",
       patient_thumb_impression: "",
       i_have_declared: "",
       s_o_w_o: "",
@@ -128,9 +127,6 @@ const HealthcareForm = () => {
         if (addDomicileFile) {
           formData.append("domicile_certificate_checkbox", values.domicile_certificate_checkbox);
         }
-        // if(values.patient_photo){
-
-        // }
         formData.append("patient_photo", values.patient_photo)
         
     
@@ -145,20 +141,6 @@ const HealthcareForm = () => {
         console.error("Error making POST request:", error);
         // Handle error and navigate to error page if needed
       }
-    
-      // try {
-      //   console.log("before sumbit2");
-      //   console.log(values);
-      //   const response = await api.healthcarePostData(values);
-      //   console.log(response);
-      //   if (response.data.status === 0) {
-      //     navigate("/healthcareSumbitafter", { state: { apidata: response.data } });
-      //   }
-      // } catch (error) {
-      //   console.error("Error making POST request:", error);
-      //   console.log("before sumbit3");
-      //   // navigate("/errorpage");
-      // }
     },
   });
   console.log("before sumbit4");
@@ -233,7 +215,6 @@ const HealthcareForm = () => {
             <Col xs={12} sm={12} md={12} lg={12} className="mb-2">
               <b>Patient`s Information</b>
             </Col>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label htmlFor="photo">
                 Patient Photo<span className="text-danger">*</span>
@@ -251,7 +232,6 @@ const HealthcareForm = () => {
                 {formik.errors.patient_photo}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label>
                 Name of the Patient<span className="text-danger">*</span>
@@ -272,7 +252,6 @@ const HealthcareForm = () => {
                 {formik.errors.name_of_the_patient}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label>
                 Father`s/Husband Name<span className="text-danger">*</span>
@@ -293,7 +272,6 @@ const HealthcareForm = () => {
                 {formik.errors.father_husband_name}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label>
                 Mother Name<span className="text-danger">*</span>
@@ -393,7 +371,6 @@ const HealthcareForm = () => {
                 {formik.errors.category}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label htmlFor="religion">
                 Religion<span className="text-danger">*</span>
@@ -412,7 +389,6 @@ const HealthcareForm = () => {
                 {formik.errors.religion}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label htmlFor="idproved">
                 Aadhar No<span className="text-danger">*</span>
@@ -434,7 +410,6 @@ const HealthcareForm = () => {
                 {formik.errors.aadhar_no_voter_id_no}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label htmlFor="email">
                 Email<span className="text-danger">*</span>
@@ -453,7 +428,6 @@ const HealthcareForm = () => {
                 {formik.errors.email}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label htmlFor="mobile">
                 Mobile No.<span className="text-danger">*</span>
@@ -472,7 +446,6 @@ const HealthcareForm = () => {
                 {formik.errors.mobile_no}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label htmlFor="familyIncome">
                 Monthly Family Income<span className="text-danger">*</span>
@@ -494,7 +467,6 @@ const HealthcareForm = () => {
                 {formik.errors.monthly_family_income}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Col xs={12} sm={12} md={12} lg={12} className="mb-2">
               <b>Parents/Guardians Details</b>
             </Col>
@@ -518,7 +490,6 @@ const HealthcareForm = () => {
                 {formik.errors.patient_name}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label htmlFor="occupation">
                 Occupation<span className="text-danger">*</span>
@@ -561,7 +532,6 @@ const HealthcareForm = () => {
                 {formik.errors.patient_email_id}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Form.Group as={Col} md="4" className="mb-3" controlId="mobileNo">
               <Form.Label>
                 Mobile No<span className="text-danger">*</span>
@@ -602,13 +572,11 @@ const HealthcareForm = () => {
                 {formik.errors.guardian_address}
               </Form.Control.Feedback>
             </Form.Group>
-
             <Col xs={12} sm={12} md={3} lg={12} className="my-2">
               <b>
                 Documents<span className="text-danger">*</span>
               </b>
             </Col>
-            {/* ---------------- */}
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Group>
                 <Form.Check
@@ -641,7 +609,7 @@ const HealthcareForm = () => {
                   <Form.Control.Feedback type="invalid">
                     {formik.errors.aadhar_card_check}
                   </Form.Control.Feedback>
-                 
+
                 </div>
               )}
             </Col>
@@ -653,7 +621,7 @@ const HealthcareForm = () => {
                 type="checkbox"
                 onChange={(e) => handleFileChange(e, "voter_id_card")}
 
-             
+
               />
               {addVoterIdFilet && (
                 <div>
@@ -674,14 +642,13 @@ const HealthcareForm = () => {
                   {formik.errors.voter_id_card_checkbox &&
                     formik.touched.voter_id_card_checkbox && (
                       <div className="text-danger">
-                         {formik.errors.voter_id_card_checkbox}
+                        {formik.errors.voter_id_card_checkbox}
                       </div>
                     )}
                 </div>
               )}
             </Col>
-
-         <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
+            <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Check
                 inline
                 label="Income Certificate"
@@ -690,7 +657,7 @@ const HealthcareForm = () => {
                 id="income-checkbox"
                 onChange={(e) => handleFileChange(e, "income_certificate")}
               />
-        {addIncomeFile && (
+              {addIncomeFile && (
                 <div>
                   <Form.Control
                     className="my-3"
@@ -713,7 +680,6 @@ const HealthcareForm = () => {
                 </div>
               )}
             </Col>
-
             <Col xs={12} sm={12} md={3} lg={3} className="mb-3">
               <Form.Check
                 inline
@@ -764,10 +730,7 @@ const HealthcareForm = () => {
                 {formik.errors.patient_thumb_impression}
               </Form.Control.Feedback>
             </Form.Group>
-            {/* ---------------------------------------------------------------------------------------------- */}
-
             <p className="text-center">Declaration</p>
-
             <Col xs={12} sm={12} md={6} lg={6} className="mb-3">
               <Form.Label htmlFor=" I have declared that">
                 I have declared that<span className="text-danger">*</span>
@@ -807,7 +770,6 @@ const HealthcareForm = () => {
                 {formik.errors.s_o_w_o}
               </Form.Control.Feedback>
             </Col>
-
             <Col sm={12} md={12} lg={12} className="mb-3">
               <Form.Label htmlFor="R_o">
                 R/o<span className="text-danger">*</span>
@@ -826,7 +788,6 @@ const HealthcareForm = () => {
                 {formik.errors.R_o}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={6} lg={6} className="mb-3">
               <Form.Label htmlFor="place">
                 Place<span className="text-danger">*</span>
@@ -845,7 +806,6 @@ const HealthcareForm = () => {
                 {formik.errors.place}
               </Form.Control.Feedback>
             </Col>
-
             <Col xs={12} sm={12} md={6} lg={6} className="mb-3">
               <Form.Label htmlFor="date">
                 Date<span className="text-danger">*</span>
@@ -864,7 +824,6 @@ const HealthcareForm = () => {
                 {formik.errors.date}
               </Form.Control.Feedback>
             </Col>
-
             <Form.Group as={Col} md="4" className="mb-3">
               <Button
                 className="btn rounded-0 btn-primary btn-large centerButton my-2"
