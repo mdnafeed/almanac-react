@@ -45,9 +45,9 @@ const ThankYou = () => {
               </Col>
               <Col  className="bg-light m-2  p-5 py-5 rounded-2  w-50 ">
                 <h4 className="py-3">Visite Our Website</h4>
-                <Link   className="text-decoration-none bg-success fw-normal fs-5 text-white p-2 rounded-4 tect-center">
-                  Visit Website
-                </Link>
+                <a href="/" className="text-decoration-none bg-success fw-normal fs-5 text-white p-2 rounded-4 text-center">
+                Visit Website
+                </a>
               </Col>
             </Row>
             <Row>

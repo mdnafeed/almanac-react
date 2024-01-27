@@ -128,7 +128,6 @@ static PARENT_OCCUPATION_MAX_LENGTH="Parent occupation is  should be at most 50 
 static PARENT_OCCUPATION_ONLY_CHARS="Parent occupation is only allowed contain only alphabets";
 static PARENT_ADDRESS_REQUIRED="Parent Address is required";
 static PARENT_ADDRESS_MIN_LENGTH="Parent Address must be at least 2 characters";
-// static PARENT_ADDRESS_MIN_LENGTH="Parent Address must be at least 2 characters";
 static PARENT_ADDRESS_MAX_LENGTH="Parent Address should be at most 100 characters";
 static PARENT_ADDRESS_CHAR_AND_NUMBER="Parent Address is only allowed contain only alphabets";
 

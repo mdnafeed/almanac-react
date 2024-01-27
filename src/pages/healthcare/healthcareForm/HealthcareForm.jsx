@@ -102,13 +102,6 @@ const HealthcareForm = () => {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       try {
-<<<<<<< HEAD
-        console.log("before sumbit2");
-        console.log(values);
-        const response = await api.healthcarePostData(values);
-        console.log(response);
-        if (response.data.status === 1) {
-=======
         const formData = new FormData();
     
         // Append text values to FormData
@@ -134,9 +127,6 @@ const HealthcareForm = () => {
         if (addDomicileFile) {
           formData.append("domicile_certificate_checkbox", values.domicile_certificate_checkbox);
         }
-        // if(values.patient_photo){
-
-        // }
         formData.append("patient_photo", values.patient_photo)
         
     
@@ -145,27 +135,13 @@ const HealthcareForm = () => {
         const response = await api.healthcarePostData(formData);
     
         if (response.data.status === 0) {
->>>>>>> 620548fa4f069b0832c9f368d16ff11b4d35500a
-          navigate("/healthcareSumbitafter", { state: { apidata: response.data } });
+          // navigate("/healthcareSumbitafter", { state: { apidata: response.data } });
+          navigate("/thankyou");
         }
       } catch (error) {
         console.error("Error making POST request:", error);
         // Handle error and navigate to error page if needed
       }
-    
-      // try {
-      //   console.log("before sumbit2");
-      //   console.log(values);
-      //   const response = await api.healthcarePostData(values);
-      //   console.log(response);
-      //   if (response.data.status === 0) {
-      //     navigate("/healthcareSumbitafter", { state: { apidata: response.data } });
-      //   }
-      // } catch (error) {
-      //   console.error("Error making POST request:", error);
-      //   console.log("before sumbit3");
-      //   // navigate("/errorpage");
-      // }
     },
   });
   console.log("before sumbit4");
@@ -624,8 +600,6 @@ const HealthcareForm = () => {
                     placeholder="Aadhar Upload"
                     name="aadhar_card_check"
                     onChange={(e) => handleFileChange(e, "aadhar_card_check")}
-                    // onChange={handleFileChange}
-
                     isInvalid={
                       !formik.values.aadhar_card_check &&
                       formik.touched.aadhar_card_check
@@ -634,7 +608,6 @@ const HealthcareForm = () => {
                   <Form.Control.Feedback type="invalid">
                     {formik.errors.aadhar_card_check}
                   </Form.Control.Feedback>
-
                 </div>
               )}
             </Col>
@@ -655,9 +628,6 @@ const HealthcareForm = () => {
                     type="file"
                     placeholder=""
                     name="voter_id_card_checkbox"
-                    // onChange={(e) =>
-                    //   handleFileChange(e, "voter_id_card_checkbox")
-                    // }
                     onChange={handleFileChange}
                     isInvalid={
                       !formik.values.voter_id_card_checkbox &&

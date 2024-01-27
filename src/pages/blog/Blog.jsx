@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CgCalendarDates } from "react-icons/cg";
+import BlogBanner from "../../assets/blog/banner-blog.png"
 function BlogList() {
   const [allDescriptions, setAllDescriptions] = useState(false);
   const [blogPath, setBlogPath] = useState(null);
@@ -29,7 +30,7 @@ function BlogList() {
   return (
     <>
       <img
-        src="https://img.freepik.com/free-vector/hand-drawn-charity-event-twitch-banner_23-2149404991.jpg?w=1380&t=st=1701507217~exp=1701507817~hmac=1ced3dede73e7edd971e56edfd1681a5a9f0459c9753fa1f6da45db9ba1291bd"
+        src={BlogBanner}
         className="w-100"
         alt="Blog Banner"
       />

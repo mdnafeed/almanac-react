@@ -14,7 +14,6 @@ export const review = [
     paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
      Sciences, AIIMS, New Delhi-29`,
   },
-  //  
   {
     id: "3",
     img: RecentCauses3,

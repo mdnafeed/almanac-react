@@ -128,7 +128,8 @@ const EducationForm = () => {
         // Append additional file attachments if needed
         const response = await api.educationPostData(formData);
         if (response.data.status === 0) {
-          navigate("/educationsumbitafter", { state: { apidata: response.data } });
+          // navigate("/educationsumbitafter", { state: { apidata: response.data } });
+          navigate("/thankyou");
         }
       } catch (error) {
         console.error("Error making POST request:", error);
