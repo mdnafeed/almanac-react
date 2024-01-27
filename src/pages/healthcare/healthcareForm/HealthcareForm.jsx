@@ -599,8 +599,6 @@ const HealthcareForm = () => {
                     placeholder="Aadhar Upload"
                     name="aadhar_card_check"
                     onChange={(e) => handleFileChange(e, "aadhar_card_check")}
-                    // onChange={handleFileChange}
-
                     isInvalid={
                       !formik.values.aadhar_card_check &&
                       formik.touched.aadhar_card_check
@@ -609,7 +607,6 @@ const HealthcareForm = () => {
                   <Form.Control.Feedback type="invalid">
                     {formik.errors.aadhar_card_check}
                   </Form.Control.Feedback>
-
                 </div>
               )}
             </Col>
@@ -630,9 +627,6 @@ const HealthcareForm = () => {
                     type="file"
                     placeholder=""
                     name="voter_id_card_checkbox"
-                    // onChange={(e) =>
-                    //   handleFileChange(e, "voter_id_card_checkbox")
-                    // }
                     onChange={handleFileChange}
                     isInvalid={
                       !formik.values.voter_id_card_checkbox &&

@@ -1,8 +1,8 @@
 import axiosInstance from './axiosInstance';
 const api = {
-    postEnquiry:(data) => axiosInstance.post('/enquiry',data),
+    postEnquiry:(data) => axiosInstance.post('/api/enquiry',data),
 
-    PostMembership:(data) => axiosInstance.post('/membership',data),
+    PostMembership:(data) => axiosInstance.post('/api/membership',data),
     fetchData: () => axiosInstance.get('/data'),
 
     postData: (data) => axiosInstance.post('/data', data),
@@ -18,7 +18,7 @@ const api = {
         },
       }),
     // Add more API functions as needed   
-    generateCertificate:(id) => axiosInstance.get(`/membership/${id}`)
+    generateCertificate:(id) => axiosInstance.get(`/api/membership/${id}`)
 
 };
 export default api;

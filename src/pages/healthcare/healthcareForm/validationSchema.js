@@ -117,15 +117,15 @@ const validationSchema = yup.object().shape({
   .min(2,ValidationConstant_HEALTHCARE.GUARDIAN_ADDRESS_REQUIRED)
     .max(40,ValidationConstant_HEALTHCARE.GUARDIAN_ADDRESS_MIN_LENGTH)
   .required(ValidationConstant_HEALTHCARE.GUARDIAN_ADDRESS_MAX_LENGTH),
-  aadhar_card_checked: yup
-    .mixed()
-    .required(ValidationConstant_HEALTHCARE.AADHAR_CARD_CHECKED_REQUIRED)
-    .test( "fileSize",ValidationConstant_HEALTHCARE.AADHAR_CARD_MAX_FILE_SIZE,
-      (value) => value && value.size <= 1 * 1024 * 1024
-    )
-    .test("fileType",ValidationConstant_HEALTHCARE.AADHAR_CARD_SUPPORTED_FILE,
-      (value) => value && value.type === "application/pdf"
-    ),
+  // aadhar_card_checked: yup
+  //   .mixed()
+  //   .required(ValidationConstant_HEALTHCARE.AADHAR_CARD_CHECKED_REQUIRED)
+  //   .test( "fileSize",ValidationConstant_HEALTHCARE.AADHAR_CARD_MAX_FILE_SIZE,
+  //     (value) => value && value.size <= 1 * 1024 * 1024
+  //   )
+  //   .test("fileType",ValidationConstant_HEALTHCARE.AADHAR_CARD_SUPPORTED_FILE,
+  //     (value) => value && value.type === "application/pdf"
+  //   ),
   voter_id_card_checkbox: yup
     .mixed()
     .required(ValidationConstant_HEALTHCARE.VOTER_ID_CARD_CHECKBOX_REQUIRED)

@@ -9,8 +9,8 @@
 .membershipNumber{
     position: absolute;
     font-weight: 700;
-    top: 10.8%;
-    right: 9%;
+    top: 8.5%;
+    right: 6%;
 }
 .name{
     position: absolute;
@@ -46,6 +46,7 @@
     .date{
         top: 82%;
         left: 27%;
+        font-size: 12px;
     }
     .name{
         top: 58%;
@@ -53,7 +54,7 @@
     }
     .membershipNumber{
         right:7%;
-        font-size: 10px;
+        font-size: 8px;
     }
     /* Hide header and footer in print mode */
     header, footer {
