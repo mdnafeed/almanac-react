@@ -128,21 +128,20 @@ const Education = () => {
               href={educationForm}
               target="_blank" // opens the link in a new tab/window
               rel="noopener noreferrer" // recommended for security reasons
-              style={{ width: "300px",height: "40px",backgroundColor:"#54B4D3" }}
+              style={{ width: "300px", height: "40px", backgroundColor: "#54B4D3" }}
               className="border p-2  text-decoration-none text-white"
             >
-           <FaAngleRight className="mb-1" /> EDUCATION FORM DOWNLOAD
+              <FaAngleRight className="mb-1" /> EDUCATION FORM DOWNLOAD
             </a>
             <NavLink
               to={RouteConstant.EDUCATION_ONLINE_FORM}
-              className=" border p-2 text-decoration-none" 
-              style={{ width:"300px",backgroundColor:"#54B4D3",height: "40px",color: "white"}}
+              className=" border p-2 text-decoration-none"
+              style={{ width: "300px", backgroundColor: "#54B4D3", height: "40px", color: "white" }}
             >
               <FaAngleRight className="mb-1" /> EDUCATION FORM ONLINE
             </NavLink>
           </Col>
         </Row>
-
         <Container className="w-100%">
           <Review />
         </Container>

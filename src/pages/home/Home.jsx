@@ -3,14 +3,10 @@ import Review from "../../shared/review/Review";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 import slider1 from '../../assets/SlidersImage/slider1.jpg';
 import slider2 from '../../assets/SlidersImage/slider2.jpg';
 import slider3 from '../../assets/SlidersImage/slider3.jpg';
-
 import healthVision from '../../assets/health-vision.jpeg';
-
-
 const Home = () => {
   const sliderImage = [
     {
@@ -25,7 +21,6 @@ const Home = () => {
       id:3,
       image:slider3,
     }
-
   ]
   return (
     <>

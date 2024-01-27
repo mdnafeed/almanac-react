@@ -1,232 +1,192 @@
 // validationSchema.js
 import * as yup from "yup";
-
+import { ValidationConstant_HEALTHCARE } from "../../../shared/constants/constantData";
 const validationSchema = yup.object().shape({
   hospital_name: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "Hospital name must only contain alphabetical characters and spaces"
-    )
-    .required("Hospital name is required"),
+    .matches(/^[A-Za-z\s]+$/,ValidationConstant_HEALTHCARE.HOSPITAL_NAME_ONLY_ALPHABATE)
+    .min(2,ValidationConstant_HEALTHCARE.HOSPITAL_NAME_MIN_LENGTH)
+    .max(40,ValidationConstant_HEALTHCARE.HOSPITAL_NAME_MAX_LENGTH)
+    .required(ValidationConstant_HEALTHCARE.HOSPITAL_NAME_REQUIRED),
   department_name: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "Department name must only contain alphabetical characters and spaces"
-    )
-    .required("Department name is required"),
-  address: yup.string().required("Permanent address is required"),
+    .matches(/^[A-Za-z\s]+$/,ValidationConstant_HEALTHCARE.DEPARTMENT_NAME_ONLY_ALPHABATE)
+    .min(2,ValidationConstant_HEALTHCARE.DEPARTMENT_NAME_MIN_LENGTH)
+    .max(40,ValidationConstant_HEALTHCARE.DEPARTMENT_NAME_MAX_LENGTH)
+    .required(ValidationConstant_HEALTHCARE.DEPARTMENT_NAME_REQUIRED),
+  address: yup.string()
+  .min(2,ValidationConstant_HEALTHCARE.UNIVERSITY_NAME_MIN_TWO_CHAR)
+  .max(40,ValidationConstant_HEALTHCARE.UNIVERSITY_NAME_MAX_FORTY_CHAR)
+  .required(ValidationConstant_HEALTHCARE.PERMANENT_ADDRESS_REQUIRED),
   patient_photo: yup
     .mixed()
-    .required("Patient photo is required")
+    .required(ValidationConstant_HEALTHCARE.PATIENT_PHOTO_REQUIRED)
     .test(
       "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
+      ValidationConstant_HEALTHCARE.PATIENT_PHOTO_SUPPORT_MAX_SIZE,
+      (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+      ValidationConstant_HEALTHCARE.PATIENT_PHOTO_SUPPORT_FILE,
+      (value) => value && value.type === "application/pdf"
     ),
   name_of_the_patient: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "Name of the patient must only contain alphabetical characters and spaces"
+    .matches( /^[A-Za-z\s]+$/,ValidationConstant_HEALTHCARE.NAME_OF_THE_PATIENT_ONLY_ALPHABETE
     )
-    .required("Name of the patient is required"),
+    .min(2,ValidationConstant_HEALTHCARE.NAME_OF_THE_PATIENT_MIN_LENGTH)
+    .max(40,ValidationConstant_HEALTHCARE.NAME_OF_THE_PATIENT_MAX_LENGTH)
+    .required(ValidationConstant_HEALTHCARE.NAME_OF_THE_PATIENT_REQUIRED),
   father_husband_name: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "Father/Husband's name must only contain alphabetical characters and spaces"
-    )
-    .required("Father/Husband's name is required"),
+    .matches( /^[A-Za-z\s]+$/,ValidationConstant_HEALTHCARE.FATHER_HUSBAND_NAME_REQUIRED)
+    .min(2,ValidationConstant_HEALTHCARE.FATHER_HUSBAND_NAME_MIN_LENGTH)
+    .max(40,ValidationConstant_HEALTHCARE.FATHER_HUSBAND_NAME_MAX_LENGTH)
+    .required(ValidationConstant_HEALTHCARE.FATHER_HUSBAND_NAME_REQUIRED),
   mother_name: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "Mother's name must only contain alphabetical characters and spaces"
-    )
-    .required("Mother's name is required"),
-  permanent_address: yup.string().required("Permanent address is required"),
-  gender: yup.string().required("Select gender"),
-  age: yup.number().required("Age is required"),
-  category: yup.string().required("category is required"),
+    .matches(/^[A-Za-z\s]+$/,ValidationConstant_HEALTHCARE.MOTHER_NAME_ONLY_ALPHABETE )
+    .min(2,ValidationConstant_HEALTHCARE.MOTHER_NAME_MIN_LENGTH)
+    .max(40,ValidationConstant_HEALTHCARE.MOTHER_NAME_MAX_LENGTH)
+    .required(ValidationConstant_HEALTHCARE.MOTHER_NAME_REQUIRED),
+  permanent_address: yup.string()
+  .min(2,ValidationConstant_HEALTHCARE.PERMANENT_ADDRESS_MIN_LENGTH)
+  .max(40,ValidationConstant_HEALTHCARE.PERMANENT_ADDRESS_MAX_LENGTH)
+  .required(ValidationConstant_HEALTHCARE.PERMANENT_ADDRESS_REQUIRED),
+  gender: yup.string().required(ValidationConstant_HEALTHCARE.GENDER_REQUIRED),
+  age: yup.number().required(ValidationConstant_HEALTHCARE.AGE_REQUIRED),
+  category: yup.string().required(ValidationConstant_HEALTHCARE.CATEGORY_REQUIRED),
   religion: yup
     .string()
-    .matches(
-      /^[A-Za-z]+$/,
-      "Religion must only contain alphabetical characters"
-    )
-    .required("Religion is required"),
+    .matches(/^[A-Za-z]+$/,ValidationConstant_HEALTHCARE.RELIGION_ONLY_ALPHABATE)
+    .min(2,ValidationConstant_HEALTHCARE.RELIGION_MIN_LENGTH)
+    .max(40,ValidationConstant_HEALTHCARE.RELIGION_MAX_LENGTH)
+    .required(ValidationConstant_HEALTHCARE.RELIGION_REQUIRED),
   aadhar_no_voter_id_no: yup
     .string()
     .matches(/^[0-9]{12}$/, "Invalid Aadhar card number. It must be 12 digits")
-    .required("Aadhar card number is required"),
+    .required(ValidationConstant_HEALTHCARE.AADHAR_NO_VOTER_ID_NO_REQUIRED),
   email: yup
     .string()
-    .email("Invalid email address")
-    .required("Email is required"),
+    .email(ValidationConstant_HEALTHCARE.EMAIL_INVALID)
+    .required(ValidationConstant_HEALTHCARE.EMAIL_REQUIRED),
   mobile_no: yup
     .string()
-    .matches(
-      /^[0-9]{10}$/,
-      "Invalid mobile number. It must be 10 digits and only contain numbers"
-    )
-    .required("Enter mobile number"),
+    .matches(/^[0-9]{10}$/,ValidationConstant_HEALTHCARE.MOBILE_NO_INVALID)
+    .required(ValidationConstant_HEALTHCARE.MOBILE_NO_REQUIRED),
   monthly_family_income: yup
     .number()
-    .positive("Income must be a positive number")
-    .required("Income is required"),
+    .positive(ValidationConstant_HEALTHCARE.MONTHLY_FAMILY_INCOME_REQUIRED)
+    .required(ValidationConstant_HEALTHCARE.MONTHLY_FAMILY_INCOME_POSITIVE_NO),
   patient_name: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "Patient Name must only contain alphabetical characters"
-    )
-    .required("Name is required"),
+    .matches(/^[A-Za-z\s]+$/,ValidationConstant_HEALTHCARE.PATIENT_NAME_ONLY_ALPHABATE)
+    .min(2,ValidationConstant_HEALTHCARE.PATIENT_NAME_MIN_LENGTH)
+    .max(40,ValidationConstant_HEALTHCARE.PATIENT_NAME_MAX_LENGTH)
+    .required(ValidationConstant_HEALTHCARE.PATIENT_NAME_REQUIRED),
   patient_occupation: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "Occupation must only contain alphabetical characters"
-    )
-    .required("Occupation is required"),
+    .matches(/^[A-Za-z\s]+$/,ValidationConstant_HEALTHCARE.PATIENT_OCCUPATION_ONLY_ALPHABATE)
+    .min(2,ValidationConstant_HEALTHCARE.PATIENT_OCCUPATION_MIN_LENGTH)
+    .max(40,ValidationConstant_HEALTHCARE.PATIENT_OCCUPATION_MAX_LENGTH)
+    .required(ValidationConstant_HEALTHCARE.PATIENT_OCCUPATION_REQUIRED),
   patient_email_id: yup
     .string()
-    .email("Invalid email address")
-    .required("Email is required"),
+    .email(ValidationConstant_HEALTHCARE.PATIENT_EMAIL_ID_INVALID)
+    .required(ValidationConstant_HEALTHCARE.PATIENT_EMAIL_ID_REQUIRED),
   patient_mobile_number: yup
     .string()
-    .matches(
-      /^[0-9]{10}$/,
-      "Invalid mobile number. It must be 10 digits and only contain numbers"
-    )
-    .required("Enter mobile number"),
+    .matches(/^[0-9]{10}$/,ValidationConstant_HEALTHCARE.PATIENT_MOBILE_NUMBER_INVALID)
+    .required(ValidationConstant_HEALTHCARE.PATIENT_MOBILE_NUMBER_REQUIRED),
   aadhar_card_checkbox: yup.boolean().oneOf([true], "Aadhar card required"),
   patient_thumb_impression: yup
     .mixed()
-    .required("Patient signature/thump impression is required")
+    .required(ValidationConstant_HEALTHCARE.PATIENT_THUMB_IMPRESSION_REQUIRED)
     .test(
       "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
+      ValidationConstant_HEALTHCARE.PATIENT_THUMB_IMPRESSION_MAX_FILE_SIZE,
+      (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+     ValidationConstant_HEALTHCARE.PATIENT_THUMB_IMPRESSION_SUPPORT_FILE,
+      (value) => value && value.type === "application/pdf"
     ),
-  guardian_address: yup.string().required("Address is required"),
-  aadhar_card_checked: yup.boolean().oneOf([true], "Aadhar card required"),
-  aadhar_card_check: yup
+  guardian_address: yup.string()
+  .min(2,ValidationConstant_HEALTHCARE.GUARDIAN_ADDRESS_REQUIRED)
+    .max(40,ValidationConstant_HEALTHCARE.GUARDIAN_ADDRESS_MIN_LENGTH)
+  .required(ValidationConstant_HEALTHCARE.GUARDIAN_ADDRESS_MAX_LENGTH),
+  aadhar_card_checked: yup
     .mixed()
-    .required("Aadhar  photo is required")
-    .test(
-      "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
+    .required(ValidationConstant_HEALTHCARE.AADHAR_CARD_CHECKED_REQUIRED)
+    .test( "fileSize",ValidationConstant_HEALTHCARE.AADHAR_CARD_MAX_FILE_SIZE,
+      (value) => value && value.size <= 1 * 1024 * 1024
     )
-    .test(
-      "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+    .test("fileType",ValidationConstant_HEALTHCARE.AADHAR_CARD_SUPPORTED_FILE,
+      (value) => value && value.type === "application/pdf"
     ),
-
-  // voter_id_card_checkbox: yup
-  //   .mixed()
-  //   .required("")
-  //   .test(
-  //     "fileSize",
-  //     "File size is too large (max 5MB)",
-  //     (value) => value && value.size <= 5000000
-  //   )
-  //   .test(
-  //     "fileType",
-  //     "Unsupported file format",
-  //     (value) => value && ["image/jpeg", "image/png"].includes(value.type)
-  //   ),
-
-  voter_id_card: yup.boolean(),
   voter_id_card_checkbox: yup
     .mixed()
-    .test("isRequired", "Voter ID Card is required", function (value) {
-      const { path, createError } = this;
-      const { voter_id_card } = this.parent;
-
-      if (voter_id_card && !value) {
-        return createError({ path, message: "Voter ID Card is required" });
-      }
-      return true;
-    }),
-
-  income_certificate: yup.boolean(),
+    .required(ValidationConstant_HEALTHCARE.VOTER_ID_CARD_CHECKBOX_REQUIRED)
+    .test(
+      "fileSize",
+      ValidationConstant_HEALTHCARE.VOTER_ID_CARD_MAX_FILE_SIZE,
+      (value) => value && value.size <= 1000000
+    )
+    .test(
+      "fileType",
+      ValidationConstant_HEALTHCARE.VOTER_ID_CARD_SUPPORTED_FILE,
+      (value) => value && value.type === "application/pdf"
+    ),
   income_certificate_checkbox: yup
     .mixed()
-    .required("Income photo is required")
+    .required(ValidationConstant_HEALTHCARE.INCOME_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
       "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
+      ValidationConstant_HEALTHCARE.INCOME_CERTIFICATE_CHECKBOX_MAX_FILE,
+      (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+      ValidationConstant_HEALTHCARE.INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
+      (value) => value && value.type === "application/pdf"
     ),
-
-  // domicile_certificate_checkbox
-
   domicile_certificate_checkbox: yup
     .mixed()
-    .required("Domicile photo is required")
+    .required(ValidationConstant_HEALTHCARE.DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
       "fileSize",
-      "File size is too large (max 5MB)",
-      (value) => value && value.size <= 5000000
+      ValidationConstant_HEALTHCARE.DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE,
+      (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      "Unsupported file format",
-      (value) => value && ["image/jpeg", "image/png"].includes(value.type)
+      ValidationConstant_HEALTHCARE.DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
+      (value) => value && value.type === "application/pdf"
     ),
-
   i_have_declared: yup
     .string()
     .matches(
-      /^[A-Za-z\s]+$/,
-      "I have declared must only contain alphabetical characters and spaces"
-    )
-    .required("I have declared is required"),
-
+      /^[A-Za-z\s]+$/,ValidationConstant_HEALTHCARE.I_HAVE_ONLY_CHAR)
+    .required(ValidationConstant_HEALTHCARE.I_HAVE_DECLARED_REQUIRED),
   s_o_w_o: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "S/o/W/o/D/o must only contain alphabetical characters and spaces"
-    )
-    .required("S/o/W/o/D/o Name is required"),
+    .matches(/^[A-Za-z\s]+$/, ValidationConstant_HEALTHCARE. S_O_W_O_ONLY_CHARS)
+    .required(ValidationConstant_HEALTHCARE.S_O_W_O_REQUIRED),
 
   R_o: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "R/o  must only contain alphabetical characters and spaces"
-    )
-    .required("R/o  is required"),
+    .matches(/^[A-Za-z\s]+$/,ValidationConstant_HEALTHCARE.R_O_W_O_ONLY_CHAR)
+    .required(ValidationConstant_HEALTHCARE.R_O_REQUIRED),
 
   place: yup
     .string()
-    .matches(
-      /^[A-Za-z\s]+$/,
-      "place must only contain alphabetical characters and spaces"
+    .matches(/^[A-Za-z\s]+$/,"place must only contain alphabetical characters and spaces"
     )
-    .required("place is required"),
+    .required(ValidationConstant_HEALTHCARE.PLACE_REQUIRED),
 
-  date: yup.string().required("Enter Date"),
+  date: yup.string().required(ValidationConstant_HEALTHCARE.DATE_REQUIRED),
 });
 
 export default validationSchema;

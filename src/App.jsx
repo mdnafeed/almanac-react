@@ -19,6 +19,7 @@ import NewsMedia from "./pages/news/NewsMedia";
 // --------------------HEALTHCARE PAGE----------------
 import Healthcare from "./pages/healthcare/Healthcare";
 import HealthcareForm from "./pages/healthcare/healthcareForm/HealthcareForm";
+import  HealthcareSumbitAfter from  "./pages/sumbitafterEandH/HealthcareSumbitAfter"
 // -----------------BLOG-----------------------
 import Detail from "./pages/blog/detail";
 import BlogList from "./pages/blog/Blog";
@@ -28,7 +29,13 @@ import Contact from "./pages/contact/Contact";
 
 import ThankYou from "./pages/commonPage/ThankYou";
 import ErrorPage from "./pages/commonPage/ErrorPage";
+import EducationSumbitAfter from './pages/sumbitafterEandH/EducationSumbitAfter';
 import Certificate from './components/certificate/certificate'
+
+// STATIC PAGE   educationsumbitafter
+import PaymentCancelation from "./pages/staticPage/cancelation-process";
+import PrivacyPolicy from "./pages/staticPage/privacy-policy";
+import TermsAndCondition from "./pages/staticPage/terms-and-condition";
 // END: PAGE
 function App() {
   return (
@@ -50,7 +57,13 @@ function App() {
             <Route path={RouteConstant.DONATE} element={<Donate />} />
             <Route path="/certificate/:id" element={<Certificate/>}/>
             <Route path={RouteConstant.THANK_YOU} element={<ThankYou/>} />
+            <Route path={RouteConstant.EDUCATION_SUMBITAFTER} element={<EducationSumbitAfter/>}/>
+            <Route path={RouteConstant.HEALTHCARE_SUMBITAFTER} element={<HealthcareSumbitAfter/>}/>
             <Route path={RouteConstant.ERROR_PAGE} element={<ErrorPage/>}/>
+
+            <Route path={RouteConstant.TERMS_AND_CONDITION} element={<TermsAndCondition/>} />
+            <Route path={RouteConstant.PRIVACY_POLICY} element={<PrivacyPolicy/>}/>
+            <Route path={RouteConstant.PAYMENT_CANCELATION} element={<PaymentCancelation/>}/>
           </Routes>
           <Footer />
         </>

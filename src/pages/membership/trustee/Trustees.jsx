@@ -6,10 +6,7 @@ import validationTrusteeSchema from "./validationTrusteeSchema";
 import api from "../../../api/api.js";
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate,Route } from "react-router-dom";
-import Certificate from "../../../components/certificate/certificate.jsx";
 import { RouteConstant } from "../../../shared/constants/route.js";
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
 
 const Trustees = () => {
   const navigate = useNavigate();
@@ -46,10 +43,6 @@ const Trustees = () => {
               if(backendResponse.status == 200){
 
                 navigate(`${RouteConstant.CERTIFICATE}/${backendResponse.data.membershipObj._id}`);
-                // <Route
-                //   path={RouteConstant.CERTIFICATE}
-                //   render={(props) => <Certificate {...props} data={backendResponse} />}
-                // />
               }
               else{
                 // In Case Payment success 
@@ -74,19 +67,6 @@ const Trustees = () => {
   
       const rzp = new window.Razorpay(options);
       rzp.open();
-
-      // try {
-      //   const response = await api.PostMembership(values);
-      //   if(response.status == 200){
-      //     toast.success("Membership Added!", {
-      //       position: toast.POSITION.TOP_CENTER
-      //     });
-      //     navigate('/thankyou');
-      //   }
-      // } catch (error) {
-      //   console.error('Error making POST request:', error);
-      //   navigate('/errorpage');
-      // }
     },
   });
   console.log(trusteeFormik)
@@ -103,8 +83,6 @@ const Trustees = () => {
     };
   }, []);
 
-
-  // add to by default set amount of fields
   trusteeFormik.setDefault = () => {
     const membershipType = trusteeFormik.values.type_of_membership;
 
@@ -123,11 +101,9 @@ const Trustees = () => {
         break;
     }
   };
-  // Call the setDefault function whenever 'type_of_membership' changes
   useEffect(() => {
     trusteeFormik.setDefault();
   }, [trusteeFormik.values.type_of_membership]);
-  //print console all file details
   console.log(trusteeFormik);
 
   return (
@@ -272,50 +248,6 @@ const Trustees = () => {
                 {trusteeFormik.errors.address}
               </Form.Control.Feedback>
             </Col>
-
-
-            {/* 
-<Col xs={12} sm={12} md={12} lg={12} className="mb-3">
-            <Form.Label htmlFor="type_of_membership">
-              Types of Membership<span className="text-danger">*</span>
-            </Form.Label>
-            <Form.Select
-              id="type_of_membership"
-              onChange={trusteeFormik.handleChange}
-              name="type_of_membership"
-              className="rounded-0"
-              isInvalid={trusteeFormik.touched.type_of_membership && trusteeFormik.errors.type_of_membership}
-            >
-              <option value="">Select Membership</option>
-              <option value="Trustee">Trustee</option>
-              <option value="Volunteers">Volunteers</option>
-              <option value="CRS Fund">CRS Fund</option>
-            </Form.Select>
-            <Form.Control.Feedback type="invalid">
-              {trusteeFormik.errors.type_of_membership}
-            </Form.Control.Feedback>
-          </Col>
-
-          <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
-            <Form.Label htmlFor="amount">
-              Amount<span className="text-danger">*</span>
-            </Form.Label>
-            <Form.Control
-              type="text"
-              name="amount"
-              placeholder="Enter amount"
-              id="amount"
-              className="rounded-0"
-              defaultValue={trusteeFormik.values.amount}
-              onChange={trusteeFormik.handleChange}
-              isInvalid={trusteeFormik.touched.amount && trusteeFormik.errors.amount}
-            />
-            <Form.Control.Feedback type="invalid">
-              {trusteeFormik.errors.amount}
-            </Form.Control.Feedback>
-          </Col> */}
-
-   
             <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
               <Form.Label htmlFor="type_of_membership">
                 Types of Membership<span className="text-danger">*</span>

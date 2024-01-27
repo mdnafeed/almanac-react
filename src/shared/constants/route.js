@@ -16,6 +16,11 @@ export class RouteConstant {
   static CERTIFICATE = "/certificate";
   static THANK_YOU="/thankyou";
   static ERROR_PAGE="/errorpage";
+  static PRIVACY_POLICY = "/privacy-policy";
+  static TERMS_AND_CONDITION = "/terms-and-condition";
+  static PAYMENT_CANCELATION = "/payment-cancelation";
+  static EDUCATION_SUMBITAFTER="/educationsumbitafter";
+  static HEALTHCARE_SUMBITAFTER="/healthcareSumbitafter";
  // START:SOCIAL ROUTE LINK
   static FACEBOOK_PROFILE_URL='https://www.facebook.com/profile.php?id=61553053787820';
   static TWITTER_PROFILE_URL = 'https://twitter.com/socialalmanac';
@@ -23,3 +28,5 @@ export class RouteConstant {
   static INSTAGRAM_PROFILE_URL  = 'https://www.instagram.com/aswelfare55766/';
   // END:SOCIAL ROUTE LINK
 }
+
+
