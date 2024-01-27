@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 
 const About = () => {
   return (
-    <Container fluid>
+    <Container>
       <Row>
         <Col lg="12" className={styles.about_text_item}>
           Almanac Social Welfare (ASW) is a nonprofit organization that helps the poor and the needy on all fronts in the fields of education and healthcare. We work on behalf of millions of people living here in India with our unmatched scope of initiatives that we undertake to provide the underprivileged all the support that is required to fulfill the obligations in either securing basic education and/or medical treatments.

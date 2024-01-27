@@ -27,7 +27,7 @@ const Trustees = () => {
     onSubmit: async (values) => {
 
       const options = {
-        key: 'rzp_test_hAakLAx9OzIPeu', // Replace with your Razorpay key_id
+        key: 'rzp_live_FPc38VCRKMBqNY', // Replace with your Razorpay key_id
         amount: values.amount * 100, // Convert amount to paise
         currency: 'INR',
         name: 'Almanac Social Welfare',
@@ -53,12 +53,12 @@ const Trustees = () => {
           }
         },
         prefill: {
-          name: 'John Doe',
-          email: 'john@example.com',
-          contact: '9876543210',
+          name: values.name,
+          email: values.email_id,
+          contact: values.mobile_number,
         },
         notes: {
-          address: 'Razorpay Corporate Office',
+          address: values.address,
         },
         theme: {
           color: '#528FF0', // Customize the color according to your UI

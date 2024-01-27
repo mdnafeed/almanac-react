@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <>
       <SliderImage slider={sliderImage}/>
-      <Container fluid>
+      <Container>
         <Row>
           <Col lg={12} className="p-4" style={{ textAlign: 'justify' }}>
             <b>Almanac Social Welfare (ASW)</b> is a nonprofit organization that helps the poor and the needy on all fronts in the fields of education and healthcare. We work on behalf of millions of people living here in India with our unmatched scope of initiatives that we undertake to provide the underprivileged all the support that is required to fulfill the obligations in either securing basic education and/or medical treatments.
@@ -40,7 +40,7 @@ const Home = () => {
           </Col>
         </Row>
         <Row className="p-4">
-          <Col xs={12} md={6} lg={6}>
+          <Col xs={12} md={6} lg={6} style={{paddingLeft:'0px'}}>
             <img
               src={healthVision}
               alt=""
@@ -48,7 +48,7 @@ const Home = () => {
               style={{ width: '600px', height: '316px' }}
             />
           </Col>
-          <Col xs={12} md={6} lg={6}>
+          <Col xs={12} md={6} lg={6} style={{paddingRight:'0px'}}>
             <h1>Mission & Vision</h1>
 
             <p style={{ textAlign: 'justify' }}>
