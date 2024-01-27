@@ -135,7 +135,8 @@ const HealthcareForm = () => {
         const response = await api.healthcarePostData(formData);
     
         if (response.data.status === 0) {
-          navigate("/healthcareSumbitafter", { state: { apidata: response.data } });
+          // navigate("/healthcareSumbitafter", { state: { apidata: response.data } });
+          navigate("/thankyou");
         }
       } catch (error) {
         console.error("Error making POST request:", error);
