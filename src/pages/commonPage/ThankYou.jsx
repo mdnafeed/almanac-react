@@ -1,4 +1,4 @@
-import './thank&Error.scss';
+import './thankyou.scss';
 import { Button, Container, Row, Col} from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -13,22 +13,22 @@ const ThankYou = () => {
   return (
     <>
       <Container>
-        <Row className="my-4">
+        <Row className="topcontainer">
         
             <Col>
-              <Col className="text-center my-4 ">
+              <Col className="clickicon">
                 <FaRegCheckCircle className="check-circle-icon"/>
               </Col>
-              <h3 className="text-center text-secondary">
+              <h3 className="sumbit-text">
                 Thank you for your submission! <br/>Your Form was successfully sent.{" "}
               </h3>
             </Col>
 
-            <Row sm={12} md={12} lg={12} className="text-center  my-4 w-100">
-              <Col  className="bg-light m-2  p-5 py-5 rounded-2 w-50">
-                <h4 className="py-3">Contact With Us</h4>
+            <Row sm={12} md={12} lg={12} className="information-detail">
+              <Col  className="contact-details">
+                <h4 >Contact With Us</h4>
 
-                <Col className="text-center d-flex justify-content-center ">
+                <Col className='social-icon'>
                   <Link to={RouteConstant.FACEBOOK_PROFILE_URL} className="px-2 fs-4 text-success">
                     <FaFacebook />
                   </Link>
@@ -43,9 +43,10 @@ const ThankYou = () => {
                   </Link>
                 </Col>
               </Col>
-              <Col  className="bg-light m-2  p-5 py-5 rounded-2  w-50 ">
+              {/* className="bg-light m-2  p-5 py-5 rounded-2  w-50 " */}
+              <Col  className='visite-website'>
                 <h4 className="py-3">Visite Our Website</h4>
-                <a href="/" className="text-decoration-none bg-success fw-normal fs-5 text-white p-2 rounded-4 text-center">
+                <a href="/" className="website-link">
                 Visit Website
                 </a>
               </Col>

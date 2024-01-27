@@ -35,8 +35,7 @@ function Footer() {
   return (
     <div className="container-fluid p-0 mt-2">
       <footer
-        className="text-center text-lg-start text-white"
-        style={{ backgroundColor: "#1678bb" }}
+        className={style.footer_container}
       >
         <div className="container p-4 pb-0">
           <section className="">

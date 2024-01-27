@@ -791,7 +791,7 @@ const HealthcareForm = () => {
                 type="text"
                 name="place"
                 id="place_name"
-                placeholder="....."
+                placeholder="place....."
                 className="rounded-0"
                 defaultValue={formik.values.place}
                 onChange={formik.handleChange}

@@ -1,3 +1,4 @@
+import styles from './Education.module.scss';
 import edusbannerImg from "../../assets/edusbanner.jpg";
 import ourProgramImage from "../../assets/our-program.png";
 import { NavLink } from "react-router-dom";
@@ -11,11 +12,11 @@ import { FaAngleRight } from "react-icons/fa6";
 const Education = () => {
   return (
     <>
-      <img src={edusbannerImg} alt="" className="w-100" />
+      <img src={edusbannerImg} alt="educationimg" className={styles.education_image} />
       <Container>
-        <h2 className="text-center p-2">EDUCATION</h2>
+        <h2 className={styles.education_heading}>EDUCATION</h2>
         <Row>
-          <Col lg={12} className="mb-2" style={{ textAlign: "justify" }}>
+          <Col lg={12} className={styles.paragraph_text} >
             The one factor that pulls nations from the abyss of darkness is by
             providing education to its citizens. The easier it could be accessed
             and acquired, the faster the nation progresses. We acknowledge that
@@ -23,7 +24,7 @@ const Education = () => {
             lets citizens know about their fundamental rights and duties that
             eventually transforms societies from strength to strength.
           </Col>
-          <Col lg={12} className="mb-2" style={{ textAlign: "justify" }}>
+          <Col lg={12} className={styles.paragraph_text}>
             The one factor that pulls nations from the abyss of darkness is by
             providing education to its citizens. The easier it could be accessed
             and acquired, the faster the nation progresses. We acknowledge that
@@ -31,7 +32,7 @@ const Education = () => {
             lets citizens know about their fundamental rights and duties that
             eventually transforms societies from strength to strength.
           </Col>
-          <Col lg={12} className="mb-2" style={{ textAlign: "justify" }}>
+          <Col lg={12} className={styles.paragraph_text}>
             The one factor that pulls nations from the abyss of darkness is by
             providing education to its citizens. The easier it could be accessed
             and acquired, the faster the nation progresses. We acknowledge that
@@ -40,11 +41,11 @@ const Education = () => {
             eventually transforms societies from strength to strength.
           </Col>
         </Row>
-        <Row className="my-3">
-          <Col lg={12} className="text-center">
-            <img src={ourProgramImage} className="w-25" />
+        <Row className={styles.cource_details}>
+          <Col lg={12} className={styles.program_heading}>
+            <img src={ourProgramImage} className={styles.program_image} />
           </Col>
-          <Col lg={12} className="mb-2">
+          <Col lg={12} className={styles.program_cource_text}>
             <p className="mb-0">
               <b>UPSC Prepration support program</b>
             </p>
