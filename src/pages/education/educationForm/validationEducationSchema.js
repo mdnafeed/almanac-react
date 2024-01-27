@@ -1,5 +1,4 @@
 import * as yup from "yup";
-// ../../../shared/constants/constantData
 import { ValidationConstant_EDUCATION } from "../../../shared/constants/constantData";
 const validationEducationSchema = yup.object().shape({
   university_name: yup

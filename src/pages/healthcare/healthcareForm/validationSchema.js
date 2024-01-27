@@ -1,6 +1,5 @@
 // validationSchema.js
 import * as yup from "yup";
-// import {ValidationConstant_HEALTHCARE} from "../../../";
 import { ValidationConstant_HEALTHCARE } from "../../../shared/constants/constantData";
 const validationSchema = yup.object().shape({
   hospital_name: yup
