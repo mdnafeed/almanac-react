@@ -8,7 +8,7 @@ const About = () => {
       <div className={style.const_about_content}>
         <img src={aboutImg} alt="" className="w-100"/>
       </div>
-      <Container fluid className={style.pad_30}>
+      <Container className={style.pad_30}>
         <Row >
           <Col >
             {AboutData.map((title) => (

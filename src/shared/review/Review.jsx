@@ -29,7 +29,7 @@ const Review = () => {
   const reviewSection = arraySize(review, displaySize);
 
   return (
-    <Container fluid>
+    <Container>
       <h2 className="text-center p-2"><b>RESENT CAUSES</b></h2>
       <Carousel>
         {reviewSection.map((reviewImg, index) => (

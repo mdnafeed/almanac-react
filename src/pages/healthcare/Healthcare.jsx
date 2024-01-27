@@ -59,7 +59,7 @@ const Healthcare = () => {
           </Col>
         </Row>
       </Container>
-      <Container fluid>
+      <Container>
         <Row>
           <Col md={12} className="text-center py-2">
             <h2>Healthcare Support</h2>

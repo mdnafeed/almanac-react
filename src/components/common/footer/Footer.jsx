@@ -41,7 +41,7 @@ function Footer() {
         <div className="container p-4 pb-0">
           <section className="">
             <div className="row">
-              <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <div className="col-md-3 col-lg-3 col-xl-3 mt-3">
                 <h6 className={style.use_usfull_link}>
                   Almanac Social Welfare
                 </h6>
@@ -91,7 +91,7 @@ function Footer() {
                 </>
               </div>
               <hr className="w-100 clearfix d-md-none" />
-              <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <div className="col-md-3 col-lg-2 col-xl-2 mt-3">
                 <h6 className={style.use_usfull_link}>Useful links</h6>
                 <p>
                   <NavLink to={RouteConstant.MEMBERSHIP} className={style.link}>
@@ -125,7 +125,7 @@ function Footer() {
                 </p>
               </div>
               <hr className="w-100 clearfix d-md-none" />
-              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <div className="col-md-4 col-lg-3 col-xl-3 mt-3">
                 <h6 className={style.use_usfull_link}>Contact</h6>
                 <p className={style.contact_details}>
                   <i className="fas fa-home mr-3"></i>{" "}
