@@ -19,12 +19,18 @@ const validationTrusteeSchema = yup.object().shape({
   mobile_number: yup
     .string()
     .matches(/^[6-9]\d{9}$/, "Enter a valid mobile number")
+    .min(10,"Mobile number at least 10 characters")
+    .max(10,"Mobile number should be at most 10 characters")
     .required("Mobile number is required"),
   email_id: yup
     .string()
     .email("Enter a valid email address")
+    .max(50,"Email id must be less than 50 characters long")
     .required("Email is required"),
-  address: yup.string().required("Address is required"),
+  address: yup
+    .string()
+    .max(100,"Address must be less than 100 characters long")
+    .required("Address is required"),
   type_of_membership: yup.string().required("Select Membership"),
   amount: yup
     .number()
