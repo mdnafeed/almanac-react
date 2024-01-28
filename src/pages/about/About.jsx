@@ -6,14 +6,14 @@ const About = () => {
   return (
     <>
       <div className={style.const_about_content}>
-        <img src={aboutImg} alt="" className="w-100"/>
+        <img src={aboutImg} alt="" />
       </div>
-      <Container className={style.pad_30}>
+      <Container className={style.about_text}>
         <Row >
           <Col >
             {AboutData.map((title) => (
               <div key={title.id}>
-                <p style={{textAlign: 'justify'}}>{title.paragraph}</p>
+                <p>{title.paragraph}</p>
               </div>
             ))}
           </Col>

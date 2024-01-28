@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { review } from "./reviewSlide";
 import { useMediaQuery } from "react-responsive";
+import styles from './Review.module.scss';
 
 const Review = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 760px)" });
@@ -25,31 +26,22 @@ const Review = () => {
   } else {
     displaySize = 4;
   }
-
   const reviewSection = arraySize(review, displaySize);
-
   return (
     <Container>
-      <h2 className="text-center p-2"><b>RESENT CAUSES</b></h2>
+      <h2 className={styles.causes_review}><b>RESENT CAUSES</b></h2>
       <Carousel>
         {reviewSection.map((reviewImg, index) => (
-          <Carousel.Item key={index} className="text-center">
+          <Carousel.Item key={index} className={styles.review_slider}>
             <Row>
               {reviewImg.map((slide) => (
                 <Col key={slide.id}>
                   <img
                     src={slide.img}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "200px",
-                      cursor: "pointer",
-                    }}
-                  />
-                  <p
-                    className="py-3 w-100 text-center"
-                    style={{ fontSize: "14px" }}
-                  >
+                    alt="recentimage"
+                    className={styles.recent_image}/>
+                  <p className={styles.recent_text}
+                    style={{ fontSize: "14px" }}>
                     {slide.paragraph}
                   </p>
                 </Col>

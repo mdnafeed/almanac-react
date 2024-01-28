@@ -35,13 +35,15 @@
 .description_all_text {
   text-align: justify;
 }
+
+
 // blog details section a css add 
 .all_description {
   text-align: justify;
-}
-.blogTile {
-  font-weight: 700;
-  font-size: 28px;
+  .blogTile {
+    font-weight: 700;
+    font-size: 28px;
+  }
 }
 .tag {
   display: flex;

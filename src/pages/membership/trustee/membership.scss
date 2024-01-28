@@ -1,0 +1,16 @@
+.member-ship-content{
+    border: 2px solid black;
+      border-color: #a1805a #76dd45 #a1805a #a53e2f;
+      border-width: 3px 3px 3px 3px;
+      .membership-text{
+        font-size: 1.875rem;
+        font-weight: bold ;
+        color: #000;
+        text-align: center;
+        padding: 2px;
+      }
+      Button{
+        width: 100%;
+        background-color: #236928 ;
+      }
+}

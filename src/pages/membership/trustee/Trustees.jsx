@@ -7,7 +7,7 @@ import api from "../../../api/api.js";
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate,Route } from "react-router-dom";
 import { RouteConstant } from "../../../shared/constants/route.js";
-
+import './membership.scss';
 const Trustees = () => {
   const navigate = useNavigate();
 
@@ -107,14 +107,10 @@ const Trustees = () => {
   console.log(trusteeFormik);
 
   return (
-    <Card style={{
-      border: '2px solid black',
-      borderColor: '#a1805a #76dd45 #a1805a #a53e2f',
-      borderWidth: '3px 3px 3px 3px',
-    }}>
+    <Card  className="member-ship-content">
       <Form onSubmit={trusteeFormik.handleSubmit}>
         <Container>
-          <h1 className="fs-3 font-bold text-dark text-center py-2"><b>Become a Membership</b></h1>
+          <h1 className="membership-text"><b>Become a Membership</b></h1>
           <Row>
             <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
               <Form.Label htmlFor="name">
@@ -295,7 +291,7 @@ const Trustees = () => {
             </Col>
 
             <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
-              <Button className="border-0 btn btn-success my-2 rounded-0 w-100" type="submit">Pay Now</Button>
+              <Button className="" type="submit">Pay Now</Button>
             </Col>
           </Row>
         </Container>
