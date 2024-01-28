@@ -8,7 +8,7 @@ const NewsMedia = () => {
           <img src={newsDoneImg} alt="" />
       <Container>
       <div className={style.news_text}>
-    <h1> News & Media</h1>
+    <h2 className='text-center'> <strong>NEWS & MEDIA</strong></h2>
     <p>Our News & Media team believes in exchanging information especially when the cause is as noble as this one. Please feel free to get in touch with us by sending us an email to <span>newsmedia.asw@gmail.com</span></p>
       </div>
       </Container>

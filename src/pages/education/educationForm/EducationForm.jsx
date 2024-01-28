@@ -144,7 +144,7 @@ const EducationForm = () => {
       <Form onSubmit={educationFormik.handleSubmit}>
         <Container>
           <Row>
-            <h1 className="text-center">ONLINE FORM</h1>
+            <h2 className="text-center pt-3"><strong>ONLINE FORM</strong></h2>
             <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
               <Form.Label htmlFor="university">
                 Institution/University/College
@@ -313,6 +313,7 @@ const EducationForm = () => {
                 <option value="">Select Category</option>
                 <option value="sc">SC</option>
                 <option value="st">ST</option>
+                <option value="gen">GEN</option>
                 <option value="obc">OBC</option>
                 <option value="Rba">RBA</option>
                 <option value="alc">ALC</option>
@@ -325,7 +326,7 @@ const EducationForm = () => {
             </Col>
             <Col xs={12} sm={12} md={8} lg={8} className="mb-3">
               <Form.Label htmlFor="photo">
-                Student Photo<span className="text-danger">*</span>
+                Student Photo<span className="text-danger">*</span><span className="text-danger" style={{fontSize:"11px"}}>(Only PDF file allowed, size:1mb)</span>
               </Form.Label>
               <Form.Control
                 type="file"
@@ -910,7 +911,7 @@ const EducationForm = () => {
             <Form.Group as={Col} md="12" className="mb-3">
               <Form.Label>
                 Patient's Signature/Thump Impression
-                <span className="text-danger">*</span>
+                <span className="text-danger">*</span><span className="text-danger" style={{fontSize:"11px"}}>(Only PDF file allowed, size:1mb)</span>
               </Form.Label>
               <Form.Control
                 type="file"

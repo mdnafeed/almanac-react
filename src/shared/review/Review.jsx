@@ -29,7 +29,8 @@ const Review = () => {
   const reviewSection = arraySize(review, displaySize);
   return (
     <Container>
-      <h2 className={styles.causes_review}><b>RESENT CAUSES</b></h2>
+      <h2 className={styles.causes_review}><b>RECENT CAUSES</b></h2>
+      <p><strong>Eye Checkup Camp at Rural Area</strong> </p>
       <Carousel>
         {reviewSection.map((reviewImg, index) => (
           <Carousel.Item key={index} className={styles.review_slider}>
@@ -40,16 +41,13 @@ const Review = () => {
                     src={slide.img}
                     alt="recentimage"
                     className={styles.recent_image}/>
-                  <p className={styles.recent_text}
-                    style={{ fontSize: "14px" }}>
-                    {slide.paragraph}
-                  </p>
                 </Col>
               ))}
             </Row>
           </Carousel.Item>
         ))}
       </Carousel>
+      <br/>
     </Container>
   );
 };
