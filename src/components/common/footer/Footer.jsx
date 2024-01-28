@@ -144,10 +144,10 @@ function Footer() {
               </div>
             </div>
           </section>
-          <section className="p-3 pt-0">
+          <section className="pt-0">
             <div className="row d-flex align-items-center">
               <div className="col-md-7 col-lg-8 text-center text-md-start">
-                <div className="p-3">
+                <div className="pt-3 pb-3">
                   © 2023 Copyright: &nbsp;
                   <a className={style.link}>
                     {CONSTANT_LABEL.ALMANAC_INFOTECH_INDIA_PRIVATE_LIMITED}
