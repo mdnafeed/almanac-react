@@ -45,8 +45,8 @@ function Footer() {
                   Almanac Social Welfare
                 </h6>
                 <p className={style.contact_details}>
-                  Almanac Social Welfare funds education programs and healthcare
-                  solutions for the underprivileged. We do this by giving
+                  Almanac Social Welfare funds for Education and Healthcare programs
+                   for the underprivileged. We do this by giving
                   visibility of the poor and what makes us unique is our
                   transparency level by ensuring each penny received is spent on
                   the needy
@@ -139,15 +139,15 @@ function Footer() {
                   {CONSTANT_LABEL.SOCIAL_WELFARE_ALMANAC_EMAIL}
                 </p>
                 <p className={style.contact_details}>
-                  <i className="fas fa-phone mr-3"></i> 011-43506838
+                  <i className="fas fa-phone mr-3"></i><strong>Phone No:</strong> 011 - 43506838
                 </p>
               </div>
             </div>
           </section>
-          <section className="p-3 pt-0">
+          <section className="pt-0">
             <div className="row d-flex align-items-center">
               <div className="col-md-7 col-lg-8 text-center text-md-start">
-                <div className="p-3">
+                <div className="pt-3 pb-3">
                   © 2023 Copyright: &nbsp;
                   <a className={style.link}>
                     {CONSTANT_LABEL.ALMANAC_INFOTECH_INDIA_PRIVATE_LIMITED}

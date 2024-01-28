@@ -59,7 +59,7 @@ const Contact = () => {
                 <p className="my-4">socialwelfarealmanac@gmail.com</p>
               </Card.Title>
               <Card.Text>
-                <p>011-43506838</p>
+                <p className={style.phoneNumber}>011-43506838</p>
               </Card.Text>
            </Card.Title>
 

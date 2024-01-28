@@ -16,7 +16,7 @@ function Detail() {
           <Col className={style.all_description}>
             <Card.Body className="p-2">
               
-              <Card.Title className={style.blogTile}>{data.title}</Card.Title>
+              <h2 className={style.blogTile}>{data.title}</h2>
               <Card.Title
                 className="font-weight-bold"
                 atyle={{ fontSize: "18px" }}

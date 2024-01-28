@@ -53,9 +53,11 @@
 .review_slider{
   text-align: center;
 .recent_image{
-  width: 100%;
+  width: 105%;
    height: 200px;
    cursor: pointer;
+   border-radius: 10px;
+   border-color: green;
 }
 .recent_text{
   text-align: justify;

@@ -14,7 +14,7 @@ const Education = () => {
     <>
       <img src={edusbannerImg} alt="educationimg" className={styles.education_image} />
       <Container>
-        <h2 className={styles.education_heading}>EDUCATION</h2>
+        <h2 className={styles.education_heading}><strong>EDUCATION</strong></h2>
         <Row>
           <Col lg={12} className={styles.paragraph_text} >
             The one factor that pulls nations from the abyss of darkness is by
@@ -43,7 +43,8 @@ const Education = () => {
         </Row>
         <Row className={styles.cource_details}>
           <Col lg={12} className={styles.program_heading}>
-            <img src={ourProgramImage} className={styles.program_image} />
+            <h2><strong>OUR PROGRAMS</strong></h2>
+            {/* <img src={ourProgramImage} className={styles.program_image} /> */}
           </Col>
           <Col lg={12} className={styles.program_cource_text}>
             <p className="mb-0">
@@ -144,7 +145,8 @@ const Education = () => {
           </Col>
         </Row>
         <Container className="w-100%">
-          <Review />
+          
+          {/* <Review /> */}
         </Container>
       </Container>
     </>

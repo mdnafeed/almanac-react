@@ -81,7 +81,7 @@ function Header() {
                     className={styles.headerLink}
 
                   >
-                    {CONSTANT_LABEL.EDUCATION}
+                    {CONSTANT_LABEL.EDUCATION}                  
                   </Nav.Link>
                   <Nav.Link
                     
