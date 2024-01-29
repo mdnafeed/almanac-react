@@ -7,7 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { RouteConstant } from "../../shared/constants/route";
 import educationForm from "../../assets/pdf/education-form.pdf";
-import Review from "../../shared/recentCausesSliders/Review";
+import Review from "../../shared/recentCauseSliders/Review";
 import { FaAngleRight } from "react-icons/fa6";
 import { educationreviewslider } from "./educationsliders";
 const Education = () => {

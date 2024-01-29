@@ -1,5 +1,5 @@
 import SliderImage from "../../components/common/carousel/Carousel";
-import Review from "../../shared/recentCausesSliders/Review";
+import Review from "../../shared/recentCauseSliders/Review";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

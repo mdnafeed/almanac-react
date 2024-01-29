@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 import { review } from './reviewSlide';
 import { useMediaQuery } from 'react-responsive';
 import Carousel from 'react-bootstrap/Carousel';
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import styles from './Review.module.scss';

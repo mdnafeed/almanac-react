@@ -18,7 +18,7 @@ import NewsMedia from "./pages/news/NewsMedia";
 // --------------------HEALTHCARE PAGE----------------
 import Healthcare from "./pages/healthcare/Healthcare";
 import HealthcareForm from "./pages/healthcare/healthcareForm/HealthcareForm";
-import  HealthcareSumbitAfter from  "./pages/sumbitafterEandH/HealthcareSumbitAfter"
+import  HealthcareSumbitAfter from  "./pages/sumbitAfterEandH/HealthcareSumbitAfter"
 // -----------------BLOG-----------------------
 import Detail from "./pages/blog/detail";
 import BlogList from "./pages/blog/Blog";
@@ -28,7 +28,7 @@ import Contact from "./pages/contact/Contact";
 
 import ThankYou from "./pages/commonPage/ThankYou";
 import ErrorPage from "./pages/commonPage/ErrorPage";
-import EducationSumbitAfter from './pages/sumbitafterEandH/EducationSumbitAfter';
+import EducationSumbitAfter from './pages/sumbitAfterEandH/EducationSumbitAfter';
 import Certificate from './components/certificate/certificate'
 
 // STATIC PAGE   educationsumbitafter
