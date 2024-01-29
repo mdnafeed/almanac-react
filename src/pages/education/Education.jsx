@@ -7,8 +7,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { RouteConstant } from "../../shared/constants/route";
 import educationForm from "../../assets/pdf/education-form.pdf";
-import Review from "../../shared/review/Review";
+import Review from "../../shared/recentcausessliders/Review";
 import { FaAngleRight } from "react-icons/fa6";
+import {educationreviewslider} from './educationsliders';
 const Education = () => {
   return (
     <>
@@ -144,7 +145,7 @@ const Education = () => {
           </Col>
         </Row>
         <Container className="w-100%">
-          <Review />
+          <Review educationreviewslider={educationreviewslider} />
         </Container>
       </Container>
     </>

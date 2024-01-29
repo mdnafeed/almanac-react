@@ -9,6 +9,8 @@ import healthcareForm from "../../assets/pdf/healthcare-form.pdf";
 import HealthcareImage from "../../assets/halthcare/1.jpg";
 import { FaAngleRight } from "react-icons/fa6";
 import styles from "./Healt.module.scss"
+import {healthcarereviewslider} from './healthcarereview';
+import Review from "../../shared/recentcausessliders/Review";
 const Healthcare = () => {
   return (
     <>
@@ -82,6 +84,9 @@ const Healthcare = () => {
             />
           </Col>
         </Row>
+        <Container className="w-100%">
+          <Review healthcarereviewslider={healthcarereviewslider} />
+        </Container>
       </Container>
     </>
   );
