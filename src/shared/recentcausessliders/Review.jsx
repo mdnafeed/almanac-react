@@ -38,80 +38,54 @@ const Review = ({ educationreviewslider, healthcarereviewslider }) => {
   const isEducationRoute = location.pathname === '/education';
   const isHealthcareRoute = location.pathname === '/healthcare';
 
+
+  const getRoute = () => {
+    if (isEducationRoute) {
+      return 'EDUCATION RECENT CAUSES';
+    } else if (isHealthcareRoute) {
+      return 'HEALTHCARE RECENT CAUSES';
+    } else {
+      return 'RECENT CAUSES';
+    }
+  };
+//slider img
+  const getReviewSliderImage = () => {
+    if (isEducationRoute) {
+      return educationReviewSection;
+    } else if (isHealthcareRoute) {
+      return healthcareReviewSection;
+    } else {
+      return reviewSection;
+    }
+  };
+
+  const renderCarousel = (sliderData) => (
+    <Carousel>
+      {sliderData.map((slider, index) => (
+        <Carousel.Item key={index} className={styles.review_slider}>
+          <Row>
+            {slider.map((slide) => (
+              <Col key={slide.id}>
+                <img
+                  src={slide.img}
+                  alt="recentimage"
+                  className={styles.recent_image}
+                />
+                <p className={styles.recent_text} style={{ fontSize: '14px' }}>
+                  {slide.paragraph}
+                </p>
+              </Col>
+            ))}
+          </Row>
+        </Carousel.Item>
+      ))}
+    </Carousel>
+  );
+
   return (
     <Container>
-      {isEducationRoute ? (
-        <h2 className={styles.causes_review}><b>EDUCATION RECENT CAUSES</b></h2>
-      ) : isHealthcareRoute ? (
-        <h2 className={styles.causes_review}><b>HEALTHCARE RECENT CAUSES</b></h2>
-      ) : (
-        <h2 className={styles.causes_review}><b>RECENT CAUSES</b></h2>
-      )}
-      {isEducationRoute ? (
-        <Carousel>
-          {educationReviewSection.map((educationslider, index) => (
-            <Carousel.Item key={index} className={styles.review_slider}>
-              <Row>
-                {educationslider.map((slide) => (
-                  <Col key={slide.id}>
-                    <img
-                      src={slide.img}
-                      alt="recentimage"
-                      className={styles.recent_image}
-                    />
-                    <p className={styles.recent_text} style={{ fontSize: '14px' }}>
-                      {slide.paragraph}
-                    </p>
-                  </Col>
-                ))}
-              </Row>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      ) : isHealthcareRoute ? (
-       <Carousel>
-          {healthcareReviewSection.map((healthcareslider, index) => (
-            <Carousel.Item key={index} className={styles.review_slider}>
-              <Row>
-                {healthcareslider.map((slide) => (
-                  <Col key={slide.id}>
-                    <img
-                      src={slide.img}
-                      alt="recentimage"
-                      className={styles.recent_image}
-                    />
-                    <p className={styles.recent_text} style={{ fontSize: '14px' }}>
-                      {slide.paragraph}
-                    </p>
-                  </Col>
-                ))}
-              </Row>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-
-      ) : (
-        <Carousel>
-          {reviewSection.map((reviewImg, index) => (
-            <Carousel.Item key={index} className={styles.review_slider}>
-              <Row>
-                {reviewImg.map((slide) => (
-                  <Col key={slide.id}>
-                    <img
-                      src={slide.img}
-                      alt="recentimage"
-                      className={styles.recent_image}
-                    />
-                    <p className={styles.recent_text} style={{ fontSize: '14px' }}>
-                      {slide.paragraph}
-                    </p>
-                  </Col>
-                ))}
-              </Row>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      )}
+      <h2 className={styles.causes_review}><b>{getRoute()}</b></h2>
+      {renderCarousel(getReviewSliderImage())}
     </Container>
   );
 };

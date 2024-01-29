@@ -73,7 +73,7 @@ function BlogList() {
                   <Card.Text className={style.description_all_text}>
                     {allDescriptions
                       ? item.description1
-                      : item.description1.substring(0, 200)}
+                      : item.description1.substring(0, 149)}
                   </Card.Text>
                 </Card.Body>
               </Card>

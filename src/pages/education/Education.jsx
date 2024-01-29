@@ -1,4 +1,4 @@
-import styles from './Education.module.scss';
+import styles from "./Education.module.scss";
 import edusbannerImg from "../../assets/edusbanner.jpg";
 import ourProgramImage from "../../assets/our-program.png";
 import { NavLink } from "react-router-dom";
@@ -7,17 +7,23 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { RouteConstant } from "../../shared/constants/route";
 import educationForm from "../../assets/pdf/education-form.pdf";
-import Review from "../../shared/recentcausessliders/Review";
+import Review from "../../shared/recentCausesSliders/Review";
 import { FaAngleRight } from "react-icons/fa6";
-import {educationreviewslider} from './educationsliders';
+import { educationreviewslider } from "./educationsliders";
 const Education = () => {
   return (
     <>
-      <img src={edusbannerImg} alt="educationimg" className={styles.education_image} />
+      <img
+        src={edusbannerImg}
+        alt="educationimg"
+        className={styles.education_image}
+      />
       <Container>
-        <h2 className={styles.education_heading}><strong>EDUCATION</strong></h2>
+        <h2 className={styles.education_heading}>
+          <strong>EDUCATION</strong>
+        </h2>
         <Row>
-          <Col lg={12} className={styles.paragraph_text} >
+          <Col lg={12} className={styles.paragraph_text}>
             The one factor that pulls nations from the abyss of darkness is by
             providing education to its citizens. The easier it could be accessed
             and acquired, the faster the nation progresses. We acknowledge that
@@ -44,7 +50,9 @@ const Education = () => {
         </Row>
         <Row className={styles.cource_details}>
           <Col lg={12} className={styles.program_heading}>
-            <h2><strong>OUR PROGRAMS</strong></h2>
+            <h2>
+              <strong>OUR PROGRAMS</strong>
+            </h2>
             {/* <img src={ourProgramImage} className={styles.program_image} /> */}
           </Col>
           <Col lg={12} className={styles.program_cource_text}>
@@ -131,7 +139,11 @@ const Education = () => {
               href={educationForm}
               target="_blank" // opens the link in a new tab/window
               rel="noopener noreferrer" // recommended for security reasons
-              style={{ width: "300px", height: "40px", backgroundColor: "#54B4D3" }}
+              style={{
+                width: "300px",
+                height: "40px",
+                backgroundColor: "#54B4D3",
+              }}
               className="border p-2  text-decoration-none text-white"
             >
               <FaAngleRight className="mb-1" /> EDUCATION FORM DOWNLOAD
@@ -139,7 +151,12 @@ const Education = () => {
             <NavLink
               to={RouteConstant.EDUCATION_ONLINE_FORM}
               className=" border p-2 text-decoration-none"
-              style={{ width: "300px", backgroundColor: "#54B4D3", height: "40px", color: "white" }}
+              style={{
+                width: "300px",
+                backgroundColor: "#54B4D3",
+                height: "40px",
+                color: "white",
+              }}
             >
               <FaAngleRight className="mb-1" /> EDUCATION FORM ONLINE
             </NavLink>

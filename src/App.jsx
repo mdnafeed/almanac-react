@@ -6,7 +6,6 @@ import { RouteConstant } from "./shared/constants/route";
 // START: GLOBAL COMPONENT
 import Header from "./components/common/header/Header";
 import Footer from "./components/common/footer/Footer";
-import Donate from "./components/Navigation/Donate";
 // END: GLOBAL COMPONENT
 
 // START: PAGE
@@ -54,7 +53,6 @@ function App() {
             <Route path={RouteConstant.MEMBERSHIP} element={<Trustee />} />
             <Route path={RouteConstant.NEWS_MEDIA} element={<NewsMedia />} />
             <Route path={RouteConstant.CONTACT} element={<Contact />} />
-            <Route path={RouteConstant.DONATE} element={<Donate />} />
             <Route path="/certificate/:id" element={<Certificate/>}/>
             <Route path={RouteConstant.THANK_YOU} element={<ThankYou/>} />
             <Route path={RouteConstant.EDUCATION_SUMBITAFTER} element={<EducationSumbitAfter/>}/>
