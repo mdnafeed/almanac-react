@@ -56,8 +56,9 @@ static CATEGORY_MAX_LENGTH="Category name should be at most 50 characters";
 static CATEGORY_ONLY_CHAR="Category name should contain only alphabets";
 
 static STUDENT_PHOTO_REQUIRED="Student photo is required";
-static STUDENT_PHOTO_SUPPORT_FILE="Unsupported file format. Only PDF files are allowed.";
-static STUDENT_PHOTO_SUPPORT_MAX_SIZE="File size max 1MB";
+//cont name file
+static CONSTANT_FILE_MAX="File size max 1MB";
+static CONSTANT_FILE_SUPPORT="Unsupported file format. Only PDF files are allowed.";
 
 static RELIGION_REQUIRED="Religion is required";
 static RELIGION_MIN_LENGTH="Religion name shoud be at least 2 characters";
@@ -137,24 +138,11 @@ static PARENT_MOBILE_NO_REQUIRED="Parent mobile number is required";
 static PARENT_MOBILE_NO_INVALID="Invalid mobile number"
 
 static AADHAR_CARD_CHECK_REQUIRED="Aadhar Card file is required";
-static AADHAR_CARD_CHECK_FILE="Unsupported file format. Only PDF files are allowed.";
-static AADHAR_CARD_CHECK_MAX_FILE_SIZE="File size is max 1MB";
-
 static VOTER_ID_CARD_CHECKBOX_REQUIRED="Voter Id Card is required";
-static VOTER_ID_CARD_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed.";
-static VOTER_ID_CARD_MAX_FILE_SIZE="File size is max 1MB";
-
 static INCOME_CERTIFICATE_CHECKBOX_REQUIRED="Income photo is required";
-static INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed.";
-static INCOME_CERTIFICATE_CHECKBOX_MAX_FILE="File size is max 1MB";
-
 static DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED="Domicile photo is required";
-static DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed";
-static DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE="File size is max 1MB";
-
 static PATIENT_THUMB_IMPRESSION_REQUIRED="Patient signature/thump impression is required";
-static PATIENT_THUMB_IMPRESSION_SUPPORT_FILE="Unsupported file format. Only PDF files are allowed. ";
-static PATIENT_THUMB_IMPRESSION_MAX_FILE_SIZE="File size is max 1MB";
+
 
 static I_HAVE_DECLARED_REQUIRED="i have decorated is required";
 static I_HAVE_ONLY_CHAR="I have declared must only contain alphabetical characters and spaces";
@@ -174,6 +162,13 @@ static PLACE_REQUIRED="Place is required";
 
 
 export class ValidationConstant_HEALTHCARE{
+
+//const file name validation error message
+static CONSTANT_FILE_MAX="File size max 1MB";
+static CONSTANT_FILE_SUPPORT="Unsupported file format. Only PDF files are allowed.";
+
+
+
 static HOSPITAL_NAME_REQUIRED="Hospital name is required";
 static HOSPITAL_NAME_MIN_LENGTH="Hospital name should be at least 2 characters";
 static HOSPITAL_NAME_MAX_LENGTH="Hospital name should be at most 50 characters";
@@ -189,8 +184,6 @@ static ADDRESS_MAX_LENGHT="Address should be at least 2 characters";
 static ADDRESS_MIN_LENGTH="Address should be at most 100 characters";
 
 static PATIENT_PHOTO_REQUIRED="Patient photo is required";
-static PATIENT_PHOTO_SUPPORT_FILE="Unsupported file format. Only PDF files are allowed.";
-static PATIENT_PHOTO_SUPPORT_MAX_SIZE="File size  max 1MB";
 
 static NAME_OF_THE_PATIENT_REQUIRED="Patient name is required";
 static NAME_OF_THE_PATIENT_MIN_LENGTH="Patient name should be at least 2 characters";
@@ -244,8 +237,7 @@ static  PATIENT_EMAIL_ID_INVALID ="Patient Invalid email address";
 static PATIENT_MOBILE_NUMBER_REQUIRED="Patient mobile number is required";
 static PATIENT_MOBILE_NUMBER_INVALID  ="Invalid mobile number. It must be 10 digits and only contain numbers";
 static PATIENT_THUMB_IMPRESSION_REQUIRED="Patient signature/thump impression is required";
-static PATIENT_THUMB_IMPRESSION_SUPPORT_FILE="Unsupported file format. Only PDF files are allowed. ";
-static PATIENT_THUMB_IMPRESSION_MAX_FILE_SIZE="File size is max 1MB";
+
 
 static AADHAR_CARD_CHECKBOX_REQUIRED="";
 
@@ -254,19 +246,10 @@ static GUARDIAN_ADDRESS_MIN_LENGTH="Guardian should be at least 2 character";
 static GUARDIAN_ADDRESS_MAX_LENGTH="Guardian should be at most 50 characters";
 
 static AADHAR_CARD_CHECKED_REQUIRED="Aadhar Card file is required";
-static AADHAR_CARD_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed.";
-static AADHAR_CARD_MAX_FILE_SIZE="File size is max 1MB";
-
 static VOTER_ID_CARD_CHECKBOX_REQUIRED="Voter Id Card is required";
-static VOTER_ID_CARD_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed.";
-static VOTER_ID_CARD_MAX_FILE_SIZE="File size is max 1MB";
-
 static INCOME_CERTIFICATE_CHECKBOX_REQUIRED="Income photo is required";
-static INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed.";
-static INCOME_CERTIFICATE_CHECKBOX_MAX_FILE="File size is max 1MB";
 static DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED="Domicile photo is required";
-static DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE="Unsupported file format. Only PDF files are allowed";
-static DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE="File size is max 1MB";
+
 
 static I_HAVE_DECLARED_REQUIRED="i have decorated is required";
 static I_HAVE_ONLY_CHAR="I have declared must only contain alphabetical characters and spaces";

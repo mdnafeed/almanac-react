@@ -11,7 +11,7 @@ import { FaAngleRight } from "react-icons/fa6";
 import styles from "./Healt.module.scss";
 import { healthcarereviewslider } from "./healthcarereview";
 // import Review from "../../shared/recentcausessliders/Review";
-import Review from "../../shared/recentCauseSliders/Review";
+import Review from "../../shared/recentCausesSliders/Review";
 const Healthcare = () => {
   return (
     <>

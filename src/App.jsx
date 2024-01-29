@@ -10,7 +10,8 @@ import Footer from "./components/common/footer/Footer";
 
 // START: PAGE
 import Home from "./pages/home/Home";
-import About from "./pages/about/About";
+// import About from "./pages/about/About";
+import About from "./shared/About/About"
 
 import Education from "./pages/education/Education";
 import EducationForm from "./pages/education/educationForm/EducationForm";
@@ -42,7 +43,8 @@ function App() {
         <>
           <Header />
           <Routes>
-            <Route index element={<Home />} />
+            {/* <Route index element={<Home />} /> */}
+            <Route index element={<Home/>}/>
             <Route path={RouteConstant.ABOUT_US} element={<About />} />
             <Route path={RouteConstant.EDUCATION} element={<Education />} />
             <Route path={RouteConstant.EDUCATION_ONLINE_FORM} element={<EducationForm />} />

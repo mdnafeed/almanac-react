@@ -1,27 +1,11 @@
 import SliderImage from "../../components/common/carousel/Carousel";
-import Review from "../../shared/recentCauseSliders/Review";
+import Review from "../../shared/recentCausesSliders/Review";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import slider1 from "../../assets/SlidersImage/slider1.jpg";
-import slider2 from "../../assets/SlidersImage/slider2.jpg";
-import slider3 from "../../assets/SlidersImage/slider3.jpg";
 import healthVision from "../../assets/health-vision.jpeg";
+import { sliderImage } from "./homeSlider";
 const Home = () => {
-  const sliderImage = [
-    {
-      id: 1,
-      image: slider1,
-    },
-    {
-      id: 2,
-      image: slider2,
-    },
-    {
-      id: 3,
-      image: slider3,
-    },
-  ];
   return (
     <>
       <SliderImage slider={sliderImage} />
@@ -72,11 +56,9 @@ const Home = () => {
             />
           </Col>
           <Col xs={12} md={6} lg={6} style={{ paddingRight: "0px" }}>
-            {/* <h1>Mission & Vision</h1> */}
             <h2>
               <b>MISSION & VISION</b>
             </h2>
-
             <p style={{ textAlign: "justify" }}>
               One of the ideas with which humanity should be in the state of war
               is Poverty. Until humanity does not win, ASW will always be a

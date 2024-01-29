@@ -7,7 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { RouteConstant } from "../../shared/constants/route";
 import educationForm from "../../assets/pdf/education-form.pdf";
-import Review from "../../shared/recentCauseSliders/Review";
+import Review from "../../shared/recentCausesSliders/Review";
 import { FaAngleRight } from "react-icons/fa6";
 import { educationreviewslider } from "./educationsliders";
 const Education = () => {
@@ -53,7 +53,6 @@ const Education = () => {
             <h2>
               <strong>OUR PROGRAMS</strong>
             </h2>
-            {/* <img src={ourProgramImage} className={styles.program_image} /> */}
           </Col>
           <Col lg={12} className={styles.program_cource_text}>
             <p className="mb-0">

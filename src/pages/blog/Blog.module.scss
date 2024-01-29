@@ -1,7 +1,6 @@
 @import '../../components/commonScss/common';
 .blog {
   height: 414px;
-  // height: 450px;
   .blog_title {
     font-size: $Font-text-size;
     cursor: pointer;
@@ -35,8 +34,6 @@
 .description_all_text {
   text-align: justify;
 }
-
-
 // blog details section a css add 
 .all_description {
   text-align: justify;

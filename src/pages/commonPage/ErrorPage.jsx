@@ -1,8 +1,6 @@
 import { Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-// import style from "./module.thank&Error.css";
 import './error.scss';
- 
 const ErrorPage = () => {
   const navigate = useNavigate();
   const handleGoBack = () => {
