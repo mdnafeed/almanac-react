@@ -1,6 +1,6 @@
 export class CONSTANT_LABEL {
     static HOME = 'HOME';
-    static ABOUT = "ABOUT";
+    static ABOUT = "ABOUT US";
     static EDUCATION = "EDUCATION";
     static HEALTHCARE = "HEALTHCARE";
     static BLOG = "BLOG";

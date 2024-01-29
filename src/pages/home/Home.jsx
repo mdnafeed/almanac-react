@@ -49,7 +49,8 @@ const Home = () => {
             />
           </Col>
           <Col xs={12} md={6} lg={6} style={{paddingRight:'0px'}}>
-            <h1>Mission & Vision</h1>
+            {/* <h1>Mission & Vision</h1> */}
+            <h2><b>MISSION & VISION</b></h2>
 
             <p style={{ textAlign: 'justify' }}>
               One of the ideas with which humanity should be in the state of war is Poverty. Until humanity does not win, ASW will always be a movement with a mission to provide high quality education and health care facilities all over India for the poor and needy through its programs and initiatives..

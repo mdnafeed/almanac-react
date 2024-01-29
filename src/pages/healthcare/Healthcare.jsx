@@ -14,11 +14,11 @@ import Review from "../../shared/recentcausessliders/Review";
 const Healthcare = () => {
   return (
     <>
-      <img src={healthcareBanner} alt="" className={styles.healthcareBanner} />   
+      <img src={healthcareBanner} alt="" className={styles.healthcareBanner} />
       <Container>
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
-            <h1 className={styles.heathcare_heading}>HEALTHCARE</h1>
+            <h2 className={styles.heathcare_heading}><strong>HEALTHCARE</strong></h2>
             {HealthCareObj.map((title) => (
               <div key={title.map}>
                 <p className={styles.heathcare_paragraph}>{title.paragraph}</p>
@@ -30,8 +30,6 @@ const Healthcare = () => {
               sm={12}
               md={12}
               lg={12}
-              // style={{ border: "none", gap: "13px" }}
-              // className="py-3 flex-wrap d-flex"
               className={styles.health_from_content}
             >
               <a
@@ -50,13 +48,13 @@ const Healthcare = () => {
               </NavLink>
             </Col>
           </Col>
-          
+
         </Row>
       </Container>
       <Container>
-        <Row>
+         <Row>
           <Col md={12} className={styles.health_care_support}>
-            <h2>Healthcare Support</h2>
+            <h2 className="p-3"><strong>HEALTHCARE SUPPORT</strong></h2>
           </Col>
           <Col md={3}>
             <img

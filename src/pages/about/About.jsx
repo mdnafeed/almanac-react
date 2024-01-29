@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <div className={style.const_about_content}>
-        <img src={aboutImg} alt="" />
+        <img src={aboutImg} alt="" className="w-100"/>
       </div>
       <Container className={style.about_text}>
         <Row >
