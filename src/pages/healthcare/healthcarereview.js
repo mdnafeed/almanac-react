@@ -1,6 +1,3 @@
-
-
-
 export const healthcarereviewslider=[
     {
         id:'1',
