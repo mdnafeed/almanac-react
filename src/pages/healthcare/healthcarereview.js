@@ -33,6 +33,10 @@ export const healthcarereviewslider=[
         img:'https://images.pexels.com/photos/1350593/pexels-photo-1350593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     }
 ];
+ 
+
+export const  heading="HEALTHCARE RECENT CAUSE"
+        
 
 export const healthcareSupportImg = [
     {

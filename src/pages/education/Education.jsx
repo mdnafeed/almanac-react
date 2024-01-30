@@ -9,15 +9,11 @@ import { RouteConstant } from "../../shared/constants/route";
 import educationForm from "../../assets/pdf/education-form.pdf";
 import Review from "../../shared/recentCausesSliders/Review";
 import { FaAngleRight } from "react-icons/fa6";
-import { educationreviewslider } from "./educationsliders";
+import {educationreviewslider ,sliderheading} from "./educationsliders";
 const Education = () => {
   return (
     <>
-      <img
-        src={edusbannerImg}
-        alt="educationimg"
-        className={styles.education_image}
-      />
+      <img src={edusbannerImg}alt="educationimg" className={styles.education_image}/>
       <Container>
         <h2 className={styles.education_heading}>
           <strong>EDUCATION</strong>
@@ -93,7 +89,6 @@ const Education = () => {
               <b>&#42;</b> BA LLB, BCom LLB, BBA LLB, LLB, LLM, PCSJ,and HJS
             </span>
           </Col>
-
           <Col lg={12} className="mb-2">
             <p className="mb-0">
               <b>Engineering Program</b>
@@ -102,7 +97,6 @@ const Education = () => {
               <b>&#42;</b> B.Tech, M.Tech, BCA, MCA, and BSc.IT{" "}
             </span>
           </Col>
-
           <Col lg={12} className="mb-2">
             <p className="mb-0">
               <b>Motivational Awareness Program</b>
@@ -111,7 +105,6 @@ const Education = () => {
               <b>&#42;</b> Conferences, Seminar, Camp, and Social media{" "}
             </span>
           </Col>
-
           <Col lg={12} className="mb-2">
             <p className="mb-0">
               <b>Student Conselling Program</b>
@@ -129,7 +122,6 @@ const Education = () => {
               scientific experience{" "}
             </span>
           </Col>
-
           <Col
             style={{ border: "none", gap: "13px" }}
             className="py-3 flex-wrap d-flex"
@@ -162,10 +154,7 @@ const Education = () => {
           </Col>
         </Row>
         <Container className="w-100%">
-        <h2 className={styles.education_heading}>
-          <strong>EDUCATION RECENT CAUSE</strong>
-        </h2>
-          <Review educationreviewslider={educationreviewslider} />
+          <Review text={sliderheading} sliderImg={educationreviewslider} />
         </Container>
       </Container>
     </>

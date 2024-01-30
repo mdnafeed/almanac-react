@@ -8,7 +8,7 @@ import { RouteConstant } from "../../shared/constants/route";
 import healthcareForm from "../../assets/pdf/healthcare-form.pdf";
 import { FaAngleRight } from "react-icons/fa6";
 import styles from "./Healt.module.scss";
-import { healthcarereviewslider ,healthcareSupportImg} from "./healthcarereview";
+import { healthcarereviewslider ,healthcareSupportImg,heading} from "./healthcarereview";
 import Review from "../../shared/recentCausesSliders/Review";
 const Healthcare = () => {
   return (
@@ -58,8 +58,7 @@ const Healthcare = () => {
               <strong>HEALTHCARE SUPPORT</strong>
             </h2>
           </Col>
-
-           <Col md={12} className={styles.flexContainer}>
+          <Col md={12} className={styles.flexContainer}>
                  <Row className={styles.flexRow}>
                    {healthcareSupportImg.map((supportimg, id) => (
                     <Col md={3} key={supportimg.id}>
@@ -68,13 +67,13 @@ const Healthcare = () => {
                             ))}
                        </Row>
                         </Col>
-
         </Row>
+        
         <Container className="w-100%">
-        <h2 className={styles.heathcare_heading}>
+        {/* <h2 className={styles.heathcare_heading}>
               <strong>HEALTHCARE RECENT CAUSE</strong>
-            </h2>
-          <Review healthcarereviewslider={healthcarereviewslider} />
+            </h2> */}
+          <Review text={heading}  sliderImg={healthcarereviewslider}/>
         </Container>
       </Container>
     </>

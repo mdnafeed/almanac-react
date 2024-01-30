@@ -33,3 +33,5 @@ export const educationreviewslider=[
     }
 
 ] ;
+
+export const sliderheading='EDUCATION RECENT CAUSE';
