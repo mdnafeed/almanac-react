@@ -1,99 +1,45 @@
-// import { useLocation } from 'react-router-dom';
-// import { review } from './reviewSlide';
-// import { useMediaQuery } from 'react-responsive';
 // import Carousel from 'react-bootstrap/Carousel';
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
 // import styles from './Review.module.scss';
-// const Review = ({ educationreviewslider, healthcarereviewslider }) => {
-//   const location = useLocation();
-//   const isMobile = useMediaQuery({ query: '(max-width: 760px)' });
-//   const isDesktop = useMediaQuery({ query: '(max-width: 961px)' });
-//   const arraySize = (arr, displaySize) => {
-//     if (!arr || !Array.isArray(arr)) {
-//       return [];
-//     }
-//     const array = [];
-//     for (let i = 0; i < arr.length; i += displaySize) {
-//       array.push(arr.slice(i, i + displaySize));
-//     }
-//     return array;
-//   };
 
-//   let displaySize;
-//   if (isMobile) {
-//     displaySize = 1;
-//   } else if (isDesktop) {
-//     displaySize = 2;
-//   } else {
-//     displaySize = 4;
-//   }
-//   const reviewSection = arraySize(review, displaySize);
-//   const educationReviewSection = arraySize(educationreviewslider, displaySize);
-//   const healthcareReviewSection = arraySize(healthcarereviewslider, displaySize);
-//   const isEducationRoute = location.pathname === '/education';
-//   const isHealthcareRoute = location.pathname === '/healthcare';
-//   // Slider img
-//   const getReviewSliderImage = () => {
-//     if (isEducationRoute) {
-//       return educationReviewSection;
-//     } else if (isHealthcareRoute) {
-//       return healthcareReviewSection;
-//     } else {
-//       return reviewSection;
-//     }
-//   };
-//   const renderCarousel = (sliderData) => (
-//     <Carousel>
-//       {sliderData.map((slider, index) => (
+// const Review = ({ text, sliderImg }) => {
+//   console.log(sliderImg)
+
+//   return (
+//     <Container>
+//       <strong><h2 className={styles.causes_review}>{text}</h2></strong>
+//       <Carousel>
+//       {sliderImg.map((sliderImgGroup, index) => (
 //         <Carousel.Item key={index} className={styles.review_slider}>
-//           <Row>
-//             {slider.map((slide) => (
-//               <Col key={slide.id}>
+//           <Row width="250">
 //                 <img
-//                   src={slide.img}
-//                   alt="recentimage"
+//                   src={sliderImgGroup.img} 
+//                   alt={`recentimage-${index}`}
 //                   className={styles.recent_image}
 //                 />
 //                 <p className={styles.recent_text} style={{ fontSize: '14px' }}>
-//                   {slide.paragraph}
+//                   {sliderImgGroup.paragraph}
 //                 </p>
-//               </Col>
-//             ))}
 //           </Row>
 //         </Carousel.Item>
 //       ))}
 //     </Carousel>
-//   );
-//   return (
-//     <Container>
-//       <h2 className={styles.causes_review}></h2>
-//       {renderCarousel(getReviewSliderImage())}
 //     </Container>
 //   );
 // };
+
 // export default Review;
 
-
-
-
-
-
-import { review } from './reviewSlide';
 import Carousel from 'react-bootstrap/Carousel';
-import { useLocation } from 'react-router-dom';
-import { useMediaQuery } from 'react-responsive';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import styles from './Review.module.scss';
-
+import { useMediaQuery } from 'react-responsive';
 const Review = ({ text, sliderImg }) => {
-  const location = useLocation();
   const isMobile = useMediaQuery({ query: '(max-width: 760px)' });
-  const isDesktop = useMediaQuery({ query: '(max-width: 961px)' });
-
+  const isDesktop = useMediaQuery({ query: '(min-width: 961px)' });
   const arraySize = (arr, displaySize) => {
     if (!arr || !Array.isArray(arr)) {
       return [];
@@ -104,56 +50,41 @@ const Review = ({ text, sliderImg }) => {
     }
     return array;
   };
-
   let displaySize;
   if (isMobile) {
     displaySize = 1;
   } else if (isDesktop) {
-    displaySize = 2;
+    displaySize = 4;
   } else {
     displaySize = 4;
   }
-
-  const reviewSection = arraySize(review, displaySize); 
-  const educationReviewSection = arraySize(sliderImg, displaySize); 
-  const healthcareReviewSection = arraySize(sliderImg, displaySize);
-
-  const isEducationRoute = location.pathname === '/education';
-  const isHealthcareRoute = location.pathname === '/healthcare';
-
-  // Slider img
-  const getReviewSliderImage = () => {
-    return isEducationRoute ? educationReviewSection :
-           isHealthcareRoute ? healthcareReviewSection : reviewSection;
-  };
-
-  const renderCarousel = (sliderData) => (
-    <Carousel>
-      {sliderData.map((sliderImgGroup, index) => (
-        <Carousel.Item key={index} className={styles.review_slider}>
-          <Row>
-            {sliderImgGroup.map((slide) => (
-              <Col key={slide.id}>
-                <img
-                  src={slide.img}
-                  alt={`recentimage-${index}`}
-                  className={styles.recent_image}
-                />
-                <p className={styles.recent_text} style={{ fontSize: '14px' }}>
-                  {slide.paragraph}
-                </p>
-              </Col>
-            ))}
-          </Row>
-        </Carousel.Item>
-      ))}
-    </Carousel>
-  );
+  const groupedSliderImg = arraySize(sliderImg, displaySize);
 
   return (
     <Container>
-      <strong><h2 className={styles.causes_review}>{text}</h2></strong>
-      {renderCarousel(getReviewSliderImage())}
+      <strong>
+        <h2 className={styles.causes_review}>{text}</h2>
+      </strong>
+      <Carousel>
+        {groupedSliderImg.map((sliderImgGroup, index) => (
+          <Carousel.Item key={index} className={styles.review_slider}>
+            <Row>
+              {sliderImgGroup.map((item, subIndex) => (
+                <Col key={subIndex}>
+                  <img
+                    src={item.img}
+                    alt={`recentimage-${index}-${subIndex}`}
+                    className={styles.recent_image}
+                  />
+                  <p className={styles.recent_text} style={{ fontSize: '14px' }}>
+                    {item.paragraph}
+                  </p>
+                </Col>
+              ))}
+            </Row>
+          </Carousel.Item>
+        ))}
+      </Carousel>
     </Container>
   );
 };

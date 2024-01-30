@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import healthVision from "../../assets/health-vision.jpeg";
-import { sliderImage } from "./homeSlider";
+import { sliderImage ,review,reviewHeading} from "./homeSlider";
 const Home = () => {
   return (
     <>
@@ -78,8 +78,7 @@ const Home = () => {
             </p>
           </Col>
         </Row>
-        <Col><h1 className="text-center ">RECENT CAUSE</h1></Col>
-        <Review />
+        <Review   sliderImg={review} text={reviewHeading}/>
       </Container>
     </>
   );
