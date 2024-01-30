@@ -6,11 +6,9 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { RouteConstant } from "../../shared/constants/route";
 import healthcareForm from "../../assets/pdf/healthcare-form.pdf";
-import HealthcareImage from "../../assets/halthcare/1.jpg";
 import { FaAngleRight } from "react-icons/fa6";
 import styles from "./Healt.module.scss";
-import { healthcarereviewslider } from "./healthcarereview";
-// import Review from "../../shared/recentcausessliders/Review";
+import { healthcarereviewslider ,healthcareSupportImg} from "./healthcarereview";
 import Review from "../../shared/recentCausesSliders/Review";
 const Healthcare = () => {
   return (
@@ -27,7 +25,6 @@ const Healthcare = () => {
                 <p className={styles.heathcare_paragraph}>{title.paragraph}</p>
               </div>
             ))}
-
             <Col
               xs={12}
               sm={12}
@@ -56,37 +53,27 @@ const Healthcare = () => {
       </Container>
       <Container>
         <Row>
-          <Col md={12} className={styles.health_care_support}>
+           <Col md={12} className={styles.health_care_support}>
             <h2 className="p-3">
               <strong>HEALTHCARE SUPPORT</strong>
             </h2>
           </Col>
-          <Col md={3}>
-            <img
-              src={HealthcareImage}
-              className={styles.heath_care_support_img}
-            />
-          </Col>
-          <Col md={3}>
-            <img
-              src={HealthcareImage}
-              className={styles.heath_care_support_img}
-            />
-          </Col>
-          <Col md={3}>
-            <img
-              src={HealthcareImage}
-              className={styles.heath_care_support_img}
-            />
-          </Col>
-          <Col md={3}>
-            <img
-              src={HealthcareImage}
-              className={styles.heath_care_support_img}
-            />
-          </Col>
+
+           <Col md={12} className={styles.flexContainer}>
+                 <Row className={styles.flexRow}>
+                   {healthcareSupportImg.map((supportimg, id) => (
+                    <Col md={3} key={supportimg.id}>
+                           <img src={supportimg.img} className={styles.heath_care_support_img} />
+                           </Col>
+                            ))}
+                       </Row>
+                        </Col>
+
         </Row>
         <Container className="w-100%">
+        <h2 className={styles.heathcare_heading}>
+              <strong>HEALTHCARE RECENT CAUSE</strong>
+            </h2>
           <Review healthcarereviewslider={healthcarereviewslider} />
         </Container>
       </Container>

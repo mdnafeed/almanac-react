@@ -162,6 +162,9 @@ const Education = () => {
           </Col>
         </Row>
         <Container className="w-100%">
+        <h2 className={styles.education_heading}>
+          <strong>EDUCATION RECENT CAUSE</strong>
+        </h2>
           <Review educationreviewslider={educationreviewslider} />
         </Container>
       </Container>

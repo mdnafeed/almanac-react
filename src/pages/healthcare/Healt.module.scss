@@ -106,3 +106,12 @@ text-align: justify;
     // cursor: pointer;
     cursor: pointer;
 }
+
+.flexContainer {
+  display: flex;
+  justify-content: center; 
+}
+
+.flexRow {
+  flex-wrap: wrap; 
+}

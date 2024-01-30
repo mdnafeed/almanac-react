@@ -1,3 +1,4 @@
+import HealthcareImage from "../../assets/halthcare/1.jpg";
 export const healthcarereviewslider=[
     {
         id:'1',
@@ -32,3 +33,23 @@ export const healthcarereviewslider=[
         img:'https://images.pexels.com/photos/1350593/pexels-photo-1350593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     }
 ];
+
+export const healthcareSupportImg = [
+    {
+      id: "1",
+      img: HealthcareImage,
+    },
+    {
+        id: "1",
+        img: HealthcareImage,
+      },
+      {
+        id: "1",
+        img: HealthcareImage,
+      },
+      {
+        id: "1",
+        img: HealthcareImage,
+      },
+  ];
+  

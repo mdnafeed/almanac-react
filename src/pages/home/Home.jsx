@@ -78,6 +78,7 @@ const Home = () => {
             </p>
           </Col>
         </Row>
+        <Col><h1 className="text-center ">RECENT CAUSE</h1></Col>
         <Review />
       </Container>
     </>

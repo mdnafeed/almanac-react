@@ -43,7 +43,6 @@ function App() {
         <>
           <Header />
           <Routes>
-            {/* <Route index element={<Home />} /> */}
             <Route index element={<Home/>}/>
             <Route path={RouteConstant.ABOUT_US} element={<About />} />
             <Route path={RouteConstant.EDUCATION} element={<Education />} />

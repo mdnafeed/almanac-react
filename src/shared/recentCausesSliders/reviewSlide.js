@@ -8,6 +8,7 @@ import RecentCauses8 from "../../assets/resentCauses/recent-causes-8.jpg";
 import RecentCauses9 from "../../assets/resentCauses/recent-causes-9.jpg";
 
 export const review = [
+
   // {
   //   id: "1",
   //   img: RecentCauses1,
@@ -20,6 +21,7 @@ export const review = [
   //   paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
   //       Sciences, AIIMS, New Delhi-29`,
   // },
+
 
   {
     id: "1",
@@ -69,4 +71,6 @@ export const review = [
     paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
         Sciences, AIIMS, New Delhi-29`,
   },
+
+
 ];
