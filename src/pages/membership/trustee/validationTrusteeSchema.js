@@ -4,6 +4,8 @@ const validationTrusteeSchema = yup.object().shape({
   name: yup
     .string()
     .matches(/^[A-Za-z\s]+$/, "Name must only contain alphabetical characters")
+    .min(2,"Mobile number at least 2 characters")
+    .max(40,"Mobile number should be at most 40 characters")
     .required("Name is required"),
   pan_card_number: yup
     .string()
@@ -11,6 +13,8 @@ const validationTrusteeSchema = yup.object().shape({
       /^([a-zA-Z]){5}([0-9]){4}([a-zA-Z]){1}?$/,
       "Enter a valid PAN card number"
     )
+    .min(10,"Pan number at least 10 characters")
+    .max(10,"Pan number should be at most 10 characters")
     .required("PAN card number is required"),
   aadhar_no: yup
     .string()
@@ -25,10 +29,12 @@ const validationTrusteeSchema = yup.object().shape({
   email_id: yup
     .string()
     .email("Enter a valid email address")
+    .min(5,"Mobile number at least 5 characters")
     .max(50,"Email id must be less than 50 characters long")
     .required("Email is required"),
   address: yup
     .string()
+    .min(5,"Mobile number at least 5 characters")
     .max(100,"Address must be less than 100 characters long")
     .required("Address is required"),
   type_of_membership: yup.string().required("Select Membership"),

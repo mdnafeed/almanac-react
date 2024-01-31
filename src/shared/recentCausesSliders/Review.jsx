@@ -1,36 +1,3 @@
-// import Carousel from 'react-bootstrap/Carousel';
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import styles from './Review.module.scss';
-
-// const Review = ({ text, sliderImg }) => {
-//   console.log(sliderImg)
-
-//   return (
-//     <Container>
-//       <strong><h2 className={styles.causes_review}>{text}</h2></strong>
-//       <Carousel>
-//       {sliderImg.map((sliderImgGroup, index) => (
-//         <Carousel.Item key={index} className={styles.review_slider}>
-//           <Row width="250">
-//                 <img
-//                   src={sliderImgGroup.img} 
-//                   alt={`recentimage-${index}`}
-//                   className={styles.recent_image}
-//                 />
-//                 <p className={styles.recent_text} style={{ fontSize: '14px' }}>
-//                   {sliderImgGroup.paragraph}
-//                 </p>
-//           </Row>
-//         </Carousel.Item>
-//       ))}
-//     </Carousel>
-//     </Container>
-//   );
-// };
-
-// export default Review;
-
 import Carousel from 'react-bootstrap/Carousel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
