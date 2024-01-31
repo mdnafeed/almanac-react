@@ -1,5 +1,5 @@
 // import CertificateIMAGE from "../../assets/certificate/certificate.jpg"
-import ALMANACSOCIALWELFARECertificate from './ALMANACSOCIALWELFARECertificate.png';
+import almanacCertificateIMAGE from '../../assets/certificate/almanacCertificate.png';
 import styles from "./certificate.module.scss";
 import { useParams } from 'react-router-dom';
 import api from "../../api/api.js";
@@ -34,7 +34,7 @@ const Certificate = () => {
     return (
         <>
             <div className={styles.container}>
-                <img src={ALMANACSOCIALWELFARECertificate} alt="" className={styles.certificate} />
+                <img src={almanacCertificateIMAGE} alt="" className={styles.certificate} />
                 <div className={styles.membershipNumber}>{certificateData?._id}</div>
                 <div className={styles.name}>{certificateData?.name} ({certificateData?.type_of_membership})</div>
                 <div className={styles.date}>{date}</div>
