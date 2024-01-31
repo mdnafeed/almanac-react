@@ -1,5 +1,4 @@
 import * as yup from "yup";
-
 const validationTrusteeSchema = yup.object().shape({
   name: yup
     .string()
@@ -38,24 +37,44 @@ const validationTrusteeSchema = yup.object().shape({
     .max(100,"Address must be less than 100 characters long")
     .required("Address is required"),
   type_of_membership: yup.string().required("Select Membership"),
-  amount: yup
-    .number()
-    .test("minimum-amount-validation", "Invalid amount", function (value) {
-      const membershipType = this.parent.type_of_membership;
-      switch (membershipType) {
-        case "Trustee":
-          return value >= 5000;
-        case "Volunteers":
-          return value >= 100;
-        case "CSR Fund":
-          return value >= 100000;
+  // amount: yup
+  //   .number()
+  //   .test("minimum-amount-validation", "Invalid amount", function (value) {
+  //     const membershipType = this.parent.type_of_membership;
+  //     switch (membershipType) {
+  //       case "Trustee":
+  //         return value >= 5000;
+  //       case "Volunteers":
+  //         return value >= 100;
+  //       case "CSR Fund":
+  //         return value >= 100000;
 
-        default:
-          return false;
-      }
-    })
-    .typeError("Amount must be a number")
-    .required("Amount is required"),
+  //       default:
+  //         return false;
+  //     }
+  //   })
+  //   .typeError("Amount must be a number")
+  //   .required("Amount is required"),
+amount: yup
+  .number()
+  .positive("Amount must be a positive number")
+  .integer("Amount must be an integer")
+  .test("minimum-amount-validation", "Invalid amount", function (value) {
+    const membershipType = this.parent.type_of_membership;
+    switch (membershipType) {
+      case "Trustee":
+        return value >= 5000;
+      case "Volunteers":
+        return value >= 100;
+      case "CSR Fund":
+        return value >= 100000;
+      default:
+        return false;}   })
+  .test("maximum-amount-validation", "Amount must have at most 6 digits", function (value) {
+    return value.toString().length <= 6;
+  })
+  .typeError("Amount must be a number")
+  .required("Amount is required"),
 });
 
 export default validationTrusteeSchema;
