@@ -1,10 +1,10 @@
-import CertificateIMAGE from "../../assets/certificate/certificate.jpg"
+// import CertificateIMAGE from "../../assets/certificate/certificate.jpg"
+import ALMANACSOCIALWELFARECertificate from './ALMANACSOCIALWELFARECertificate.png';
 import styles from "./certificate.module.scss";
 import { useParams } from 'react-router-dom';
 import api from "../../api/api.js";
 import { useEffect, useState} from 'react';
 const Certificate = () => {
-
     const { id } = useParams();
     const [certificateData, setCertificateData] = useState(null);
     const [date,setDate] = useState();
@@ -34,7 +34,7 @@ const Certificate = () => {
     return (
         <>
             <div className={styles.container}>
-                <img src={CertificateIMAGE} alt="" className={styles.certificate} />
+                <img src={ALMANACSOCIALWELFARECertificate} alt="" className={styles.certificate} />
                 <div className={styles.membershipNumber}>{certificateData?._id}</div>
                 <div className={styles.name}>{certificateData?.name} ({certificateData?.type_of_membership})</div>
                 <div className={styles.date}>{date}</div>
