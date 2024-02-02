@@ -1,42 +1,45 @@
-.container{
+.container {
     text-align: center;
-    width: 210mm; /* A4 width in millimeters */
-    height: 297mm; /* A4 height in millimeters */
+    width: 210mm;
+    /* A4 width in millimeters */
+    height: 297mm;
+    /* A4 height in millimeters */
     margin: auto;
     position: relative;
 }
-.certificate{
-    position:relative;
+
+.certificate {
+    position: relative;
     width: 100%;
     height: auto;
     max-height: 90%;
     page-break-inside: avoid;
     margin-bottom: 0;
 }
-.membershipNumber{
+
+.membershipNumber {
     position: absolute;
-    font-weight: 700;
-    // top: 6.5%;
-    top:5%;
-    right: 6%;
+    top: 4.8%;
+    left: 21%;
 }
-.name{
+
+.name {
     position: absolute;
-    font-size: 30px;
+    font-size: 16px;
     font-weight: bold;
-    // top: 57%;
     top: 50%;
     left: 42%;
 }
-.date{
+
+.date {
     font-weight: bold;
-    // top: 84%;
-    top:74%;
+    top: 70%;
     position: absolute;
     font-size: 23px;
-    left: 28%;
+    left: 19%;
 }
-.print{
+
+.print {
     text-align: center;
     margin: auto;
     display: flex;
@@ -47,42 +50,40 @@
     background: black;
     color: white;
 }
+
 @media print {
-    /* Styles for printing */
     .container {
         max-height: 100%;
-        page-break-after: avoid; /* Prevent page breaks after the container */
-        page-break-inside: avoid; /* Ensure no page breaks within the container */
+        page-break-after: avoid;
+        /* Prevent page breaks after the container */
+        page-break-inside: avoid;
+        /* Ensure no page breaks within the container */
     }
+
     body {
-      font-size: 14pt;
+        font-size: 14pt;
     }
-    
-    .date{
-        // top: 82%;
-        top:76%;
-        left: 27%;
+
+    .date {
+        top: 72%;
+        left: 23%;
         font-size: 12px;
     }
-    .name{
+
+    .name {
         top: 51%;
-      font-size: 15px;
+        font-size: 15px;
     }
-    .membershipNumber{
-        right:7%;
+
+    .membershipNumber {
         font-size: 8px;
+        top: 5.5%;
+        left: 21%;
     }
+
     /* Hide header and footer in print mode */
-    header, footer {
-      display: none;
+    header,
+    footer {
+        display: none;
     }
-  }
-
-
-
-
-
-
-
-
- 
+}
