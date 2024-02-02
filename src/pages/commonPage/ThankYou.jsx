@@ -3,7 +3,6 @@ import { Button, Container, Row, Col} from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 import { FaFacebook, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import { RouteConstant } from "../../shared/constants/route";
-
 import { FaRegCheckCircle } from "react-icons/fa";
 const ThankYou = () => {
   const navigate = useNavigate();
@@ -43,7 +42,6 @@ const ThankYou = () => {
                   </Link>
                 </Col>
               </Col>
-              {/* className="bg-light m-2  p-5 py-5 rounded-2  w-50 " */}
               <Col  className='visite-website'>
                 <h4 className="py-3">Visite Our Website</h4>
                 <a href="/" className="website-link">

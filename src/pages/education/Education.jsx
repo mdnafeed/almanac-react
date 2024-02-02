@@ -1,4 +1,4 @@
-import styles from './Education.module.scss';
+import styles from "./Education.module.scss";
 import edusbannerImg from "../../assets/edusbanner.jpg";
 import ourProgramImage from "../../assets/our-program.png";
 import { NavLink } from "react-router-dom";
@@ -7,16 +7,19 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { RouteConstant } from "../../shared/constants/route";
 import educationForm from "../../assets/pdf/education-form.pdf";
-import Review from "../../shared/review/Review";
+import Review from "../../shared/recentCausesSliders/Review";
 import { FaAngleRight } from "react-icons/fa6";
+import {educationreviewslider ,sliderheading} from "./educationsliders";
 const Education = () => {
   return (
     <>
-      <img src={edusbannerImg} alt="educationimg" className={styles.education_image} />
+      <img src={edusbannerImg}alt="educationimg" className={styles.education_image}/>
       <Container>
-        <h2 className={styles.education_heading}><strong>EDUCATION</strong></h2>
+        <h2 className={styles.education_heading}>
+          <strong>EDUCATION</strong>
+        </h2>
         <Row>
-          <Col lg={12} className={styles.paragraph_text} >
+          <Col lg={12} className={styles.paragraph_text}>
             The one factor that pulls nations from the abyss of darkness is by
             providing education to its citizens. The easier it could be accessed
             and acquired, the faster the nation progresses. We acknowledge that
@@ -43,8 +46,9 @@ const Education = () => {
         </Row>
         <Row className={styles.cource_details}>
           <Col lg={12} className={styles.program_heading}>
-            <h2><strong>OUR PROGRAMS</strong></h2>
-            {/* <img src={ourProgramImage} className={styles.program_image} /> */}
+            <h2>
+              <strong>OUR PROGRAMS</strong>
+            </h2>
           </Col>
           <Col lg={12} className={styles.program_cource_text}>
             <p className="mb-0">
@@ -85,7 +89,6 @@ const Education = () => {
               <b>&#42;</b> BA LLB, BCom LLB, BBA LLB, LLB, LLM, PCSJ,and HJS
             </span>
           </Col>
-
           <Col lg={12} className="mb-2">
             <p className="mb-0">
               <b>Engineering Program</b>
@@ -94,7 +97,6 @@ const Education = () => {
               <b>&#42;</b> B.Tech, M.Tech, BCA, MCA, and BSc.IT{" "}
             </span>
           </Col>
-
           <Col lg={12} className="mb-2">
             <p className="mb-0">
               <b>Motivational Awareness Program</b>
@@ -103,7 +105,6 @@ const Education = () => {
               <b>&#42;</b> Conferences, Seminar, Camp, and Social media{" "}
             </span>
           </Col>
-
           <Col lg={12} className="mb-2">
             <p className="mb-0">
               <b>Student Conselling Program</b>
@@ -121,7 +122,6 @@ const Education = () => {
               scientific experience{" "}
             </span>
           </Col>
-
           <Col
             style={{ border: "none", gap: "13px" }}
             className="py-3 flex-wrap d-flex"
@@ -130,7 +130,11 @@ const Education = () => {
               href={educationForm}
               target="_blank" // opens the link in a new tab/window
               rel="noopener noreferrer" // recommended for security reasons
-              style={{ width: "300px", height: "40px", backgroundColor: "#54B4D3" }}
+              style={{
+                width: "300px",
+                height: "40px",
+                backgroundColor: "#54B4D3",
+              }}
               className="border p-2  text-decoration-none text-white"
             >
               <FaAngleRight className="mb-1" /> EDUCATION FORM DOWNLOAD
@@ -138,15 +142,19 @@ const Education = () => {
             <NavLink
               to={RouteConstant.EDUCATION_ONLINE_FORM}
               className=" border p-2 text-decoration-none"
-              style={{ width: "300px", backgroundColor: "#54B4D3", height: "40px", color: "white" }}
+              style={{
+                width: "300px",
+                backgroundColor: "#54B4D3",
+                height: "40px",
+                color: "white",
+              }}
             >
               <FaAngleRight className="mb-1" /> EDUCATION FORM ONLINE
             </NavLink>
           </Col>
         </Row>
         <Container className="w-100%">
-          
-          {/* <Review /> */}
+          <Review text={sliderheading} sliderImg={educationreviewslider} />
         </Container>
       </Container>
     </>
