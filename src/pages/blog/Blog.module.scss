@@ -1,7 +1,6 @@
 @import '../../components/commonScss/common';
 .blog {
-  height: 450px;
-  // height: 450px;
+  height: 414px;
   .blog_title {
     font-size: $Font-text-size;
     cursor: pointer;
@@ -38,10 +37,10 @@
 // blog details section a css add 
 .all_description {
   text-align: justify;
-}
-.blogTile {
-  font-weight: 700;
-  font-size: 28px;
+  .blogTile {
+    font-weight: 700;
+    font-size: 28px;
+  }
 }
 .tag {
   display: flex;

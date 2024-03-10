@@ -1,0 +1,53 @@
+.topcontainer{
+    margin-top: 12px;
+    .clickicon{
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .sumbit-text{
+        text-align: center;
+        color: #6c757d;
+        padding-top: 10px;
+    }
+    .information-detail{
+        text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  .contact-details{
+    background-color: #f8f9fa; 
+    margin: 0.5rem; 
+    padding: 3rem; 
+    padding-top: 4rem; 
+    border-radius: 0.25rem; 
+    width: 50%;
+    h4{
+        padding-top: 3px;
+    }
+    .social-icon{
+ text-align: center;
+  display: flex; 
+  justify-content: center;
+    }
+  }
+.visite-website{
+    background-color: #f8f9fa; 
+    margin: 0.5rem; 
+    padding: 3rem; 
+    padding-top: 3rem; 
+    border-radius: 0.25rem; 
+    width: 50%;
+}
+.website-link{
+    text-decoration: none;
+  background-color: #479d5b; 
+  font-weight: normal;
+  font-size: 1.25rem; 
+  color: #ffffff; 
+  padding: 0.5rem; 
+  border-radius: 1.25rem; 
+  text-align: center;
+}
+    }
+}

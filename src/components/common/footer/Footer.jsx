@@ -35,19 +35,18 @@ function Footer() {
   return (
     <div className="container-fluid p-0 mt-2">
       <footer
-        className="text-center text-lg-start text-white"
-        style={{ backgroundColor: "#1678bb" }}
+        className={style.footer_container}
       >
         <div className="container p-4 pb-0">
           <section className="">
             <div className="row">
-              <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <div className="col-md-3 col-lg-3 col-xl-3 mt-3">
                 <h6 className={style.use_usfull_link}>
                   Almanac Social Welfare
                 </h6>
                 <p className={style.contact_details}>
-                  Almanac Social Welfare funds education programs and healthcare
-                  solutions for the underprivileged. We do this by giving
+                  Almanac Social Welfare funds for Education and Healthcare programs
+                   for the underprivileged. We do this by giving
                   visibility of the poor and what makes us unique is our
                   transparency level by ensuring each penny received is spent on
                   the needy
@@ -91,7 +90,7 @@ function Footer() {
                 </>
               </div>
               <hr className="w-100 clearfix d-md-none" />
-              <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <div className="col-md-3 col-lg-2 col-xl-2 mt-3">
                 <h6 className={style.use_usfull_link}>Useful links</h6>
                 <p>
                   <NavLink to={RouteConstant.MEMBERSHIP} className={style.link}>
@@ -125,7 +124,7 @@ function Footer() {
                 </p>
               </div>
               <hr className="w-100 clearfix d-md-none" />
-              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <div className="col-md-4 col-lg-3 col-xl-3 mt-3">
                 <h6 className={style.use_usfull_link}>Contact</h6>
                 <p className={style.contact_details}>
                   <i className="fas fa-home mr-3"></i>{" "}
@@ -140,15 +139,15 @@ function Footer() {
                   {CONSTANT_LABEL.SOCIAL_WELFARE_ALMANAC_EMAIL}
                 </p>
                 <p className={style.contact_details}>
-                  <i className="fas fa-phone mr-3"></i> 011-43506838
+                  <i className="fas fa-phone mr-3"></i><strong>Phone No:</strong> 011 - 43506838
                 </p>
               </div>
             </div>
           </section>
-          <section className="p-3 pt-0">
+          <section className="pt-0">
             <div className="row d-flex align-items-center">
               <div className="col-md-7 col-lg-8 text-center text-md-start">
-                <div className="p-3">
+                <div className="pt-3 pb-3">
                   © 2023 Copyright: &nbsp;
                   <a className={style.link}>
                     {CONSTANT_LABEL.ALMANAC_INFOTECH_INDIA_PRIVATE_LIMITED}

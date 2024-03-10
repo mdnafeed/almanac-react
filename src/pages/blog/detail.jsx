@@ -6,7 +6,6 @@ import Container from "react-bootstrap/Container";
 import { useParams } from "react-router-dom";
 import style from "./Blog.module.scss";
 import logo_icon from "../../assets/logo.png";
-// import style from "./style.module.scss";
 function Detail() {
   const { path } = useParams();
   const data = blogs.find((blog) => blog.path === path);
@@ -16,7 +15,8 @@ function Detail() {
         <Row className="py-4">
           <Col className={style.all_description}>
             <Card.Body className="p-2">
-              <Card.Title className={style.blogTile}>{data.title}</Card.Title>
+              
+              <h2 className={style.blogTile}>{data.title}</h2>
               <Card.Title
                 className="font-weight-bold"
                 atyle={{ fontSize: "18px" }}

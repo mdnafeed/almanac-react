@@ -1,3 +1,8 @@
+import slider1 from "../../assets/SlidersImage/slider1.jpg";
+import slider2 from "../../assets/SlidersImage/slider2.jpg";
+import slider3 from "../../assets/SlidersImage/slider3.jpg";
+///home review slider 
+
 import RecentCauses1 from "../../assets/resentCauses/recent-causes-1.jpg";
 import RecentCauses3 from "../../assets/resentCauses/recent-causes-3.jpg";
 import RecentCauses4 from "../../assets/resentCauses/recent-causes-4.jpg";
@@ -7,21 +12,56 @@ import RecentCauses7 from "../../assets/resentCauses/recent-causes-7.jpg";
 import RecentCauses8 from "../../assets/resentCauses/recent-causes-8.jpg";
 import RecentCauses9 from "../../assets/resentCauses/recent-causes-9.jpg";
 
+
+
+export  const sliderImage = [
+    {
+      id: 1,
+      image: slider1,
+    },
+    {
+      id: '2',
+      image: slider2,
+    },
+    {
+      id: '3',
+      image: slider3,
+    },
+    
+  ];
+
+
+
+ 
+
 export const review = [
+
+  // {
+  //   id: "1",
+  //   img: RecentCauses1,
+  //   paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
+  //    Sciences, AIIMS, New Delhi-29`,
+  // },
+  // {
+  //   id: "3",
+  //   img: RecentCauses3,
+  //   paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
+  //       Sciences, AIIMS, New Delhi-29`,
+  // },
+
+
   {
     id: "1",
-    img: RecentCauses1,
-    paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-     Sciences, AIIMS, New Delhi-29`,
-  },
-  {
-    id: "3",
-    img: RecentCauses3,
+    img: RecentCauses4,
     paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
         Sciences, AIIMS, New Delhi-29`,
   },
-
-
+  {
+    id: "3",
+    img: RecentCauses5,
+    paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
+        Sciences, AIIMS, New Delhi-29`,
+  },
   {
     id: "4",
     img: RecentCauses4,
@@ -58,4 +98,10 @@ export const review = [
     paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
         Sciences, AIIMS, New Delhi-29`,
   },
+
+
 ];
+
+
+export const reviewHeading="RECENT CAUSE";
+  

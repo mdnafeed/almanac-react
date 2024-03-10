@@ -155,7 +155,7 @@ const HealthcareForm = () => {
       <Form onSubmit={formik.handleSubmit} enctype="multipart/form-data">
         <Container>
           <Row>
-            <h1 className="text-center pt-2">ONLINE FORM</h1>
+          <h2 className="text-center pt-3"><strong>ONLINE FORM</strong></h2>
             <Form.Group as={Col} md="6">
               <Form.Label>
                 Hospital Name<span className="text-danger">*</span>
@@ -218,7 +218,7 @@ const HealthcareForm = () => {
             </Col>
             <Form.Group as={Col} md="4" className="mb-3">
               <Form.Label htmlFor="photo">
-                Patient Photo<span className="text-danger">*</span>
+                Patient Photo<span className="text-danger">*</span><span className="text-danger" style={{fontSize:"11px"}}>(Only PDF file allowed, size:1mb)</span>
               </Form.Label>
               <Form.Control
                 type="file"
@@ -364,6 +364,7 @@ const HealthcareForm = () => {
                 <option value="">Select Category</option>
                 <option value="sc">SC</option>
                 <option value="st">ST</option>
+                <option value="gen">GEN</option>
                 <option value="obc">OBC</option>
                 <option value="Rba">RBA</option>
                 <option value="alc">ALC</option>
@@ -709,7 +710,7 @@ const HealthcareForm = () => {
             <Form.Group as={Col} md="12" className="mb-3">
               <Form.Label>
                 Patient`s Signature/Thump Impression
-                <span className="text-danger">*</span>
+                <span className="text-danger">*</span><span className="text-danger" style={{fontSize:"11px"}}>(Only PDF file allowed, size:1mb)</span>
               </Form.Label>
               <Form.Control
                 type="file"
@@ -791,7 +792,7 @@ const HealthcareForm = () => {
                 type="text"
                 name="place"
                 id="place_name"
-                placeholder="....."
+                placeholder="place....."
                 className="rounded-0"
                 defaultValue={formik.values.place}
                 onChange={formik.handleChange}

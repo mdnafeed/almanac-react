@@ -35,7 +35,7 @@ const Contact = () => {
   console.log(contactFormik)
   return (
     <div className={style.contact_details}>
-      <img src={contactDoneImg} alt="" className="w-100" />
+      <img src={contactDoneImg} alt="" className={style.contact_image} />
       <Container>
         <Row>
           <Col md={6} className={style.officeInfo}>
@@ -52,16 +52,22 @@ const Contact = () => {
             </Card.Text>
           </Col>
           <Col className={style.contactInfo}>
-            <Card.Title className="py-3 text-center">
+
+            <Card.Title className={style.location_details}>
               <MdEmail className={style.location_icons} />
               <Card.Title>
                 <p className="my-4">socialwelfarealmanac@gmail.com</p>
               </Card.Title>
               <Card.Text>
-                <p>011-43506838</p>
+                <p className={style.phoneNumber}>011-43506838</p>
               </Card.Text>
-            </Card.Title>
+           </Card.Title>
+
+
+          
           </Col>
+
+
         </Row>
       </Container>
 

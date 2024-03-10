@@ -58,73 +58,72 @@ function Header() {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link
-                    style={{ fontSize: '14px' }}
-                    className="text-dark"
+                    
                     as={Link}
                     to={RouteConstant.HOME}
-
+                    className={styles.headerLink}
                   >
                     {CONSTANT_LABEL.HOME}
                   </Nav.Link>
                   <Nav.Link
-                    className="text-dark"
+                    
                     as={Link}
                     to={RouteConstant.ABOUT_US}
-                    style={{ fontSize: '14px' }}
+                    className={styles.headerLink}
 
                   >
                     {CONSTANT_LABEL.ABOUT}
                   </Nav.Link>
                   <Nav.Link
-                    className="text-dark"
+                    
                     as={Link}
                     to={RouteConstant.EDUCATION}
-                    style={{ fontSize: '14px' }}
+                    className={styles.headerLink}
 
                   >
-                    {CONSTANT_LABEL.EDUCATION}
+                    {CONSTANT_LABEL.EDUCATION}                  
                   </Nav.Link>
                   <Nav.Link
-                    className="text-dark"
+                    
                     as={Link}
                     to={RouteConstant.HEALTHCARE}
-                    style={{ fontSize: '14px' }}
+                    className={styles.headerLink}
 
                   >
                     {CONSTANT_LABEL.HEALTHCARE}
                   </Nav.Link>
                   <Nav.Link
-                    className="text-dark"
+                    
                     as={Link}
                     to={RouteConstant.BLOG}
-                    style={{ fontSize: '14px' }}
+                    className={styles.headerLink}
 
                   >
                     {CONSTANT_LABEL.BLOG}
                   </Nav.Link>
                   <Nav.Link
-                    className="text-dark"
+                    
                     as={Link}
                     to={RouteConstant.MEMBERSHIP}
-                    style={{ fontSize: '14px' }}
+                    className={styles.headerLink}
 
                   >
                     MEMBERSHIP
                   </Nav.Link>
                   <Nav.Link
-                    className="text-dark"
+                    
                     as={Link}
                     to={RouteConstant.NEWS_MEDIA}
-                    style={{ fontSize: '14px' }}
+                    className={styles.headerLink}
 
                   >
                     {CONSTANT_LABEL.NEW_AND_MEDIA}
                   </Nav.Link>
                   <Nav.Link
-                    className="text-dark"
+                    
                     as={Link}
                     to={RouteConstant.CONTACT}
-                    style={{ fontSize: '14px' }}
+                    className={styles.headerLink}
 
                   >
                     {CONSTANT_LABEL.CONTACT}

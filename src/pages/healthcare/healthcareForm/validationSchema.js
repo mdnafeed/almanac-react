@@ -23,12 +23,12 @@ const validationSchema = yup.object().shape({
     .required(ValidationConstant_HEALTHCARE.PATIENT_PHOTO_REQUIRED)
     .test(
       "fileSize",
-      ValidationConstant_HEALTHCARE.PATIENT_PHOTO_SUPPORT_MAX_SIZE,
+      ValidationConstant_HEALTHCARE.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      ValidationConstant_HEALTHCARE.PATIENT_PHOTO_SUPPORT_FILE,
+      ValidationConstant_HEALTHCARE.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
   name_of_the_patient: yup
@@ -105,38 +105,38 @@ const validationSchema = yup.object().shape({
     .required(ValidationConstant_HEALTHCARE.PATIENT_THUMB_IMPRESSION_REQUIRED)
     .test(
       "fileSize",
-      ValidationConstant_HEALTHCARE.PATIENT_THUMB_IMPRESSION_MAX_FILE_SIZE,
+      ValidationConstant_HEALTHCARE.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-     ValidationConstant_HEALTHCARE.PATIENT_THUMB_IMPRESSION_SUPPORT_FILE,
+     ValidationConstant_HEALTHCARE.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
   guardian_address: yup.string()
   .min(2,ValidationConstant_HEALTHCARE.GUARDIAN_ADDRESS_REQUIRED)
     .max(40,ValidationConstant_HEALTHCARE.GUARDIAN_ADDRESS_MIN_LENGTH)
   .required(ValidationConstant_HEALTHCARE.GUARDIAN_ADDRESS_MAX_LENGTH),
-  // aadhar_card_checked: yup
-  //   .mixed()
-  //   .required(ValidationConstant_HEALTHCARE.AADHAR_CARD_CHECKED_REQUIRED)
-  //   .test( "fileSize",ValidationConstant_HEALTHCARE.AADHAR_CARD_MAX_FILE_SIZE,
-  //     (value) => value && value.size <= 1 * 1024 * 1024
-  //   )
-  //   .test("fileType",ValidationConstant_HEALTHCARE.AADHAR_CARD_SUPPORTED_FILE,
-  //     (value) => value && value.type === "application/pdf"
-  //   ),
+  aadhar_card_checked: yup
+    .mixed()
+    .required(ValidationConstant_HEALTHCARE.AADHAR_CARD_CHECKED_REQUIRED)
+    .test( "fileSize",ValidationConstant_HEALTHCARE.CONSTANT_FILE_MAX,
+      (value) => value && value.size <= 1 * 1024 * 1024
+    )
+    .test("fileType",ValidationConstant_HEALTHCARE.CONSTANT_FILE_SUPPORT,
+      (value) => value && value.type === "application/pdf"
+    ),
   voter_id_card_checkbox: yup
     .mixed()
     .required(ValidationConstant_HEALTHCARE.VOTER_ID_CARD_CHECKBOX_REQUIRED)
     .test(
       "fileSize",
-      ValidationConstant_HEALTHCARE.VOTER_ID_CARD_MAX_FILE_SIZE,
+      ValidationConstant_HEALTHCARE.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      ValidationConstant_HEALTHCARE.VOTER_ID_CARD_SUPPORTED_FILE,
+      ValidationConstant_HEALTHCARE.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
   income_certificate_checkbox: yup
@@ -144,12 +144,12 @@ const validationSchema = yup.object().shape({
     .required(ValidationConstant_HEALTHCARE.INCOME_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
       "fileSize",
-      ValidationConstant_HEALTHCARE.INCOME_CERTIFICATE_CHECKBOX_MAX_FILE,
+      ValidationConstant_HEALTHCARE.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      ValidationConstant_HEALTHCARE.INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
+      ValidationConstant_HEALTHCARE.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
   domicile_certificate_checkbox: yup
@@ -157,12 +157,12 @@ const validationSchema = yup.object().shape({
     .required(ValidationConstant_HEALTHCARE.DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
       "fileSize",
-      ValidationConstant_HEALTHCARE.DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE,
+      ValidationConstant_HEALTHCARE.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1000000
     )
     .test(
       "fileType",
-      ValidationConstant_HEALTHCARE.DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
+      ValidationConstant_HEALTHCARE.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
   i_have_declared: yup
