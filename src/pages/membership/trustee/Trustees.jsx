@@ -10,7 +10,7 @@ import { RouteConstant } from "../../../shared/constants/route.js";
 import './membership.scss';
 const Trustees = () => {
   const navigate = useNavigate();
-
+  const currentDate = new Date();
   const trusteeFormik = useFormik({
     initialValues: {
       name: "",
@@ -27,7 +27,7 @@ const Trustees = () => {
     onSubmit: async (values) => {
 
       const options = {
-        key: 'rzp_test_hAakLAx9OzIPeu', // Replace with your Razorpay key_id  // rzp_live_FPc38VCRKMBqNY 
+        key: 'rzp_live_FPc38VCRKMBqNY', // Replace with your Razorpay key_id  // rzp_live_FPc38VCRKMBqNY rzp_test_hAakLAx9OzIPeu 
         amount: values.amount * 100, // Convert amount to paise
         currency: 'INR',
         name: 'Almanac Social Welfare',
@@ -59,6 +59,7 @@ const Trustees = () => {
         },
         notes: {
           address: values.address,
+          currentDate: currentDate.toISOString(),
         },
         theme: {
           color: '#528FF0', // Customize the color according to your UI

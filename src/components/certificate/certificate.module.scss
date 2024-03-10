@@ -19,16 +19,20 @@
 
 .membershipNumber {
     position: absolute;
-    top: 4.8%;
+    top: 5.2%;
     left: 21%;
+    font-family: sans-serif !important;
+    font-size: 12px;
 }
 
 .name {
     position: absolute;
-    font-size: 16px;
+    font-size: 25px;
     font-weight: bold;
-    top: 50%;
-    left: 42%;
+    top: 49.5%;
+    left: 40%;
+    font-family: sans-serif !important;
+    text-transform: capitalize;
 }
 
 .date {
@@ -37,6 +41,7 @@
     position: absolute;
     font-size: 23px;
     left: 19%;
+    font-family: sans-serif !important;
 }
 
 .print {
@@ -50,14 +55,13 @@
     background: black;
     color: white;
 }
+@page{
 
+}
 @media print {
     .container {
-        max-height: 100%;
-        page-break-after: avoid;
-        /* Prevent page breaks after the container */
-        page-break-inside: avoid;
-        /* Ensure no page breaks within the container */
+        height: 100%;
+        width: 100%;
     }
 
     body {
@@ -65,24 +69,24 @@
     }
 
     .date {
-        top: 72%;
+        top: 79%;
         left: 23%;
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .name {
-        top: 51%;
-        font-size: 15px;
+        top: 56.2%;
+        font-size: 20px;
     }
 
     .membershipNumber {
         font-size: 8px;
-        top: 5.5%;
+        top: 6.3%;
         left: 21%;
     }
 
     /* Hide header and footer in print mode */
-    header,
+    header,.print,
     footer {
         display: none;
     }
