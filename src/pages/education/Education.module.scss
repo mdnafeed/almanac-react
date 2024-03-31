@@ -1,25 +1,35 @@
-.education_image{
+.education_image {
     width: 100%;
 }
-.education_heading{
+
+.education_heading {
     text-align: center;
     align-items: center;
     padding: 20px;
 }
-.paragraph_text{
+
+.paragraph_text {
     text-align: justify;
-    margin-bottom: 5px;;
+    margin-bottom: 5px;
+    ;
 }
-.program_heading{
-    .program_image{
+
+.program_heading {
+    .program_image {
         width: 25%
     }
 }
-.cource_details{
+
+.cource_details {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 
-.program_cource_text{
-    margin-bottom: 0.8rem;
+    .program_cource_text {
+        margin-bottom: 0.8rem;
+    }
 }
+.stackIitem{
+    background-color: #712cf926;
+    border: 1px solid #712cf94d;
+    padding: 4px 6px 4px 6px;
 }

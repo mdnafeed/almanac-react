@@ -186,6 +186,7 @@ function Footer() {
                 <a
                   className="text-center btn btn-outline-light btn-floating m-1"
                   role="button"
+                  href="https://www.youtube.com/channel/UC583mQAnBvt0eEfSZKzLhlA"
                 >
                   <FaYoutubeSquare />
                 </a>

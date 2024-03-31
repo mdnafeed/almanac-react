@@ -1,6 +1,5 @@
 import styles from "./Education.module.scss";
 import edusbannerImg from "../../assets/edusbanner.jpg";
-import ourProgramImage from "../../assets/our-program.png";
 import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -9,11 +8,14 @@ import { RouteConstant } from "../../shared/constants/route";
 import educationForm from "../../assets/pdf/education-form.pdf";
 import Review from "../../shared/recentCausesSliders/Review";
 import { FaAngleRight } from "react-icons/fa6";
-import {educationreviewslider ,sliderheading} from "./educationsliders";
+import { educationreviewslider, sliderheading } from "./educationsliders";
+import Stack from 'react-bootstrap/Stack';
+import Card from 'react-bootstrap/Card';
+
 const Education = () => {
   return (
     <>
-      <img src={edusbannerImg}alt="educationimg" className={styles.education_image}/>
+      <img src={edusbannerImg} alt="educationimg" className={styles.education_image} />
       <Container>
         <h2 className={styles.education_heading}>
           <strong>EDUCATION</strong>
@@ -46,82 +48,152 @@ const Education = () => {
         </Row>
         <Row className={styles.cource_details}>
           <Col lg={12} className={styles.program_heading}>
-            <h2>
+            <h2 className="text-center">
               <strong>OUR PROGRAMS</strong>
             </h2>
           </Col>
-          <Col lg={12} className={styles.program_cource_text}>
-            <p className="mb-0">
-              <b>UPSC Prepration support program</b>
-            </p>
-            <span className="d-block">
-              <b>&#42;</b> IAS, IPS, IRS, and IFS
-            </span>
-            <span className="d-block">
-              <b>&#42; </b>IA&AS, ICAS, ICLS, IDAS, and IDES
-            </span>
+          <Col lg={6} className="mb-3">
+            <Card border="success">
+              <Card.Body>
+                <Card.Title className="mb-3"><strong>Judiciary Program</strong></Card.Title>
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>BA LLB</div>
+                  <div className={styles.stackIitem}>BCom LLB</div>
+                  <div className={styles.stackIitem}>BBA LLB</div>
+                  <div className={styles.stackIitem}>LLB</div>
+                  <div className={styles.stackIitem}>LLM</div>
+                  <div className={styles.stackIitem}>PCSJ</div>
+                  <div className={styles.stackIitem}>HJS</div>
+                </Stack>
+              </Card.Body>
+            </Card>
           </Col>
-          <Col lg={12} className="mb-2">
-            <p className="mb-0">
-              <b>Medical Prgram</b>
-            </p>
-            <span className="d-block">
-              <b>&#42;</b> MBBS, BDS, BAMS, BUMS, BHMS, MD, and MS
-            </span>
-            <span className="d-block">
-              <b>&#42; </b>BVSc, BSMS, and BNYS
-            </span>
-            <span className="d-block">
-              <b>&#42;</b> B.Pharma, D.Pharma, BPT, BMLT, DMLT, BSc Nursing, BSc
-              Occupational Therapy, BMIT, BOTT, BOPT, BCLT, BDT, ANM, GNM, and
-              DGNM
-            </span>
-            <span className="d-block">
-              <b>&#42; </b>Diploma in X-ray & ECG, Diploma in Dialysis
-              Techniques, and Diploma in unani Pharmacy
-            </span>
+
+          <Col lg={6} className="mb-3">
+            <Card border="success">
+              <Card.Body>
+                <Card.Title className="mb-3"><strong>Engineering Program</strong></Card.Title>
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>B.Tech</div>
+                  <div className={styles.stackIitem}>M.Tech</div>
+                  <div className={styles.stackIitem}>BCA</div>
+                  <div className={styles.stackIitem}>MCA</div>
+                  <div className={styles.stackIitem}>BSc.IT</div>
+                </Stack>
+              </Card.Body>
+            </Card>
           </Col>
-          <Col lg={12} className="mb-2">
-            <p className="mb-0">
-              <b>Judiciary Program</b>
-            </p>
-            <span className="d-block">
-              <b>&#42;</b> BA LLB, BCom LLB, BBA LLB, LLB, LLM, PCSJ,and HJS
-            </span>
+
+
+          <Col lg={6} className="mb-3">
+            <Card border="success">
+              <Card.Body>
+                <Card.Title className="mb-3"><strong>Motivational Awareness Program</strong></Card.Title>
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>Conferences</div>
+                  <div className={styles.stackIitem}>Seminar</div>
+                  <div className={styles.stackIitem}>Camp</div>
+                  <div className={styles.stackIitem}>Social media</div>
+                </Stack>
+
+              </Card.Body>
+            </Card>
           </Col>
-          <Col lg={12} className="mb-2">
-            <p className="mb-0">
-              <b>Engineering Program</b>
-            </p>
-            <span className="d-block">
-              <b>&#42;</b> B.Tech, M.Tech, BCA, MCA, and BSc.IT{" "}
-            </span>
+
+          <Col lg={6} className="mb-3">
+            <Card border="success">
+              <Card.Body>
+                <Card.Title className="mb-3"><strong>UPSC Preparation support program</strong></Card.Title>
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>IAS</div>
+                  <div className={styles.stackIitem}>IPS</div>
+                  <div className={styles.stackIitem}>IRS</div>
+                  <div className={styles.stackIitem}>IFS</div>
+                </Stack>
+              </Card.Body>
+            </Card>
           </Col>
-          <Col lg={12} className="mb-2">
-            <p className="mb-0">
-              <b>Motivational Awareness Program</b>
-            </p>
-            <span className="d-block">
-              <b>&#42;</b> Conferences, Seminar, Camp, and Social media{" "}
-            </span>
+
+          <Col lg={6} className="mb-3">
+            <Card border="success">
+              <Card.Body>
+                <Card.Title className="mb-3"><strong>Medical Program</strong></Card.Title>
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>MBBS</div>
+                  <div className={styles.stackIitem}>BDS</div>
+                  <div className={styles.stackIitem}>BAMS</div>
+                  <div className={styles.stackIitem}>BUMS</div>
+                  <div className={styles.stackIitem}>BHMS</div>
+                  <div className={styles.stackIitem}>MD</div>
+                  <div className={styles.stackIitem}>MS</div>
+                  <div className={styles.stackIitem}>BVSc</div>
+                  <div className={styles.stackIitem}>BSMS</div>
+                </Stack>
+                <br />
+                <Stack direction="horizontal" gap={3}>
+                <div className={styles.stackIitem}>BNYS</div>
+                  <div className={styles.stackIitem}>BPT</div>
+                  <div className={styles.stackIitem}>BMLT</div>
+                  <div className={styles.stackIitem}>DMLT</div>
+                  <div className={styles.stackIitem}>BOPT</div>
+                  <div className={styles.stackIitem}>BCLT</div>
+                  <div className={styles.stackIitem}>BDT</div>
+                  <div className={styles.stackIitem}>ANM</div>
+                  <div className={styles.stackIitem}>GNM</div>
+                </Stack>
+                
+                <br />
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>BMIT</div>
+                  <div className={styles.stackIitem}>BOTT</div>
+                  <div className={styles.stackIitem}>ECG</div>
+                  <div className={styles.stackIitem}>DGNM</div>
+                  <div className={styles.stackIitem}>B.Pharma</div>
+                  <div className={styles.stackIitem}>D.Pharma</div>
+                  <div className={styles.stackIitem}>BSc Nursing</div>
+                </Stack>
+
+               <br />
+
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>Diploma in X-ray</div>
+                  <div className={styles.stackIitem}>BSc Occupational Therapy</div>
+                </Stack>
+
+                <br />
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>Diploma in Dialysis Techniques</div>
+                  <div className={styles.stackIitem}>Diploma in unani Pharmacy</div>
+                </Stack>
+
+
+              </Card.Body>
+            </Card>
           </Col>
-          <Col lg={12} className="mb-2">
-            <p className="mb-0">
-              <b>Student Conselling Program</b>
-            </p>
-            <span className="d-block">
-              <b>&#42;</b> Lack of objective thinking leads students to not make
-              independent dicisions{" "}
-            </span>
-            <span className="d-block">
-              <b>&#42;</b> The main goal of our program is to help students
-              become self-sufficient
-            </span>
-            <span className="d-block">
-              <b>&#42;</b> Crafting future course of action through our
-              scientific experience{" "}
-            </span>
+          <Col lg={6} className="mb-3">
+            <Card border="success">
+              <Card.Body>
+                <Card.Title className="mb-3"><strong>Student Counselling Program</strong></Card.Title>
+
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>Lack of objective thinking leads students to not make
+                    independent decisions</div>
+                </Stack>
+                <br />
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>The main goal of our program is to help students
+                    become self-sufficient</div>
+                </Stack>
+                <br />
+                <Stack direction="horizontal" gap={3}>
+                  <div className={styles.stackIitem}>Crafting future course of action through our
+                    scientific experience</div>
+                </Stack>
+                
+              </Card.Body>
+            </Card>
           </Col>
+          <Col lg={12}></Col>
           <Col
             style={{ border: "none", gap: "13px" }}
             className="py-3 flex-wrap d-flex"

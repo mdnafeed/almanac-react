@@ -5,6 +5,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import logo_icon from "../../../assets/logo.png";
+import logo_azad from "../../../assets/logo-azad.png"
+import g_20_logo from "../../../assets/g20-logo(1).png"
 import { NavLink, Link } from "react-router-dom";
 import { RouteConstant } from "../../../shared/constants/route";
 import { CONSTANT_LABEL } from "../../../shared/constants/constantData";
@@ -43,6 +45,13 @@ function Header() {
             <NavLink to={RouteConstant.HOME}   >
               <img src={logo_icon} alt="" className={styles.logo} />
             </NavLink>
+
+            <NavLink to={RouteConstant.HOME}  >
+                  <img src={logo_azad} alt="" className={styles.logo} />
+                </NavLink>
+                <NavLink to={RouteConstant.HOME}  >
+                  <img src={g_20_logo} alt="" className={styles.logo} />
+                </NavLink>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}
             />
             <Navbar.Offcanvas
@@ -53,6 +62,14 @@ function Header() {
               <Offcanvas.Header closeButton >
                 <NavLink to={RouteConstant.HOME}  >
                   <img src={logo_icon} alt="" className={styles.logo} />
+                </NavLink>
+               
+                <NavLink to={RouteConstant.HOME}  >
+                  <img src={g_20_logo} alt="" className={styles.logo} />
+                </NavLink>
+
+                <NavLink to={RouteConstant.HOME}  >
+                  <img src={logo_azad} alt="" className={styles.logo} />
                 </NavLink>
               </Offcanvas.Header>
               <Offcanvas.Body>

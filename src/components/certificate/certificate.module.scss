@@ -1,41 +1,49 @@
-.container{
+.container {
     text-align: center;
-    width: 210mm; /* A4 width in millimeters */
-    height: 297mm; /* A4 height in millimeters */
+    width: 210mm;
+    /* A4 width in millimeters */
+    height: 297mm;
+    /* A4 height in millimeters */
     margin: auto;
     position: relative;
 }
-.certificate{
-    position:relative;
+
+.certificate {
+    position: relative;
     width: 100%;
     height: auto;
     max-height: 90%;
     page-break-inside: avoid;
 }
-.membershipNumber{
+
+.membershipNumber {
     position: absolute;
-    font-weight: 700;
-    // top: 6.5%;
-    top:5%;
-    right: 6%;
+    top: 5.2%;
+    left: 21%;
+    font-family: sans-serif !important;
+    font-size: 12px;
 }
-.name{
+
+.name {
     position: absolute;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
-    // top: 57%;
-    top: 50%;
-    left: 42%;
+    top: 49.5%;
+    left: 40%;
+    font-family: sans-serif !important;
+    text-transform: capitalize;
 }
-.date{
+
+.date {
     font-weight: bold;
-    // top: 84%;
-    top:74%;
+    top: 70%;
     position: absolute;
     font-size: 23px;
-    left: 28%;
+    left: 19%;
+    font-family: sans-serif !important;
 }
-.print{
+
+.print {
     text-align: center;
     margin: auto;
     display: flex;
@@ -46,29 +54,43 @@
     background: black;
     color: white;
 }
+@page{
+
+}
 @media print {
-    /* Styles for printing */
     .container {
+        height: 100%;
+        width: 100%;
         page-break-after: avoid; /* Prevent page breaks after the container */
         page-break-inside: avoid; /* Ensure no page breaks within the container */
     }
+
     body {
-      font-size: 14pt;
+        font-size: 14pt;
     }
+
+    .date {
+        top: 79%;
+        left: 23%;
+        font-size: 15px;
     .date{
         // top: 82%;
         top:76%;
         left: 27%;
         font-size: 12px;
     }
-    .name{
-        top: 51%;
-      font-size: 15px;
+
+    .name {
+        top: 56.2%;
+        font-size: 20px;
     }
-    .membershipNumber{
-        right:7%;
+
+    .membershipNumber {
         font-size: 8px;
+        top: 6.3%;
+        left: 21%;
     }
+
     /* Hide header and footer in print mode */
     header, footer {
       display: none;
@@ -80,3 +102,9 @@
 
 
 
+
+    header,.print,
+    footer {
+        display: none;
+    }
+}
