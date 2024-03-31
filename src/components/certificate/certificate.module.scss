@@ -11,7 +11,6 @@
     height: auto;
     max-height: 90%;
     page-break-inside: avoid;
-    margin-bottom: 0;
 }
 .membershipNumber{
     position: absolute;
@@ -50,14 +49,12 @@
 @media print {
     /* Styles for printing */
     .container {
-        max-height: 100%;
         page-break-after: avoid; /* Prevent page breaks after the container */
         page-break-inside: avoid; /* Ensure no page breaks within the container */
     }
     body {
       font-size: 14pt;
     }
-    
     .date{
         // top: 82%;
         top:76%;
@@ -75,14 +72,11 @@
     /* Hide header and footer in print mode */
     header, footer {
       display: none;
+
     }
   }
+  
 
 
 
 
-
-
-
-
- 
