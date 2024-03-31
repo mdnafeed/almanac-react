@@ -1,7 +1,7 @@
 .logo {
   width: 100px;
   height: 60px;
-
+padding: 4px;
 }
 .header-bg {
   background-color: #e0e2e4;
@@ -26,6 +26,6 @@
 
 @media screen and (max-width: 800px) {
   .logo {
-    width: 80px;
+    width: 65px;
   }
 }

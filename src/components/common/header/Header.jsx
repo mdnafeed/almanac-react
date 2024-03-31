@@ -42,16 +42,18 @@ function Header() {
           style={{ boxShadow: "0 1px 10px rgba(0,0,0,.2)" }}
         >
           <Container fluid className="p-1">
+            <Navbar>
             <NavLink to={RouteConstant.HOME}   >
               <img src={logo_icon} alt="" className={styles.logo} />
             </NavLink>
-
             <NavLink to={RouteConstant.HOME}  >
                   <img src={logo_azad} alt="" className={styles.logo} />
                 </NavLink>
                 <NavLink to={RouteConstant.HOME}  >
                   <img src={g_20_logo} alt="" className={styles.logo} />
                 </NavLink>
+
+            </Navbar>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}
             />
             <Navbar.Offcanvas
