@@ -150,7 +150,7 @@ const Education = () => {
 
           <Col lg={6} md={6} xs={12} sm={6} className="mb-3">
               <div className={styles.debit_card}>
-                    <p>Recherche and training program</p>
+                    <p>Research and training program</p>
                     <hr />
                     <ul>
                       <li>IAS</li>
