@@ -5,6 +5,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import logo_icon from "../../../assets/logo.png";
+import logo_azad from "../../../assets/logo-azad.png"
+import g_20_logo from "../../../assets/g20-logo(1).png"
 import { NavLink, Link } from "react-router-dom";
 import { RouteConstant } from "../../../shared/constants/route";
 import { CONSTANT_LABEL } from "../../../shared/constants/constantData";
@@ -40,9 +42,20 @@ function Header() {
           style={{ boxShadow: "0 1px 10px rgba(0,0,0,.2)" }}
         >
           <Container fluid className="p-1">
-            <NavLink to={RouteConstant.HOME}   >
+            {/* <NavLink to={RouteConstant.HOME}   >
               <img src={logo_icon} alt="" className={styles.logo} />
-            </NavLink>
+            </NavLink> */}
+            <Navbar>
+              <NavLink to={RouteConstant.HOME}   >
+                <img src={logo_icon} alt="" className={styles.logo} />
+              </NavLink>
+              <NavLink to="https://amritmahotsav.nic.in/"  >
+                <img src={logo_azad} alt="" className={styles.logo} />
+              </NavLink>
+              <NavLink to="https://www.g20.in/en/"  >
+                <img src={g_20_logo} alt="" className={styles.logo} />
+              </NavLink>
+            </Navbar>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}
             />
             <Navbar.Offcanvas
@@ -54,6 +67,15 @@ function Header() {
                 <NavLink to={RouteConstant.HOME}  >
                   <img src={logo_icon} alt="" className={styles.logo} />
                 </NavLink>
+
+                <NavLink to={RouteConstant.HOME}  >
+                  <img src={g_20_logo} alt="" className={styles.logo} />
+                </NavLink>
+
+                <NavLink to={RouteConstant.HOME}  >
+                  <img src={logo_azad} alt="" className={styles.logo} />
+                </NavLink>
+
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">

@@ -1,5 +1,6 @@
 .logo{
     width: 110px;
+    padding-right: 10px;
     height: 65px;
 }
 .header-bg{
@@ -21,4 +22,10 @@
     font-size: 12px !important;
     color: #002f63 !important;
     padding-top:14px !important;
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    width: 65px;
+  }
 }
