@@ -1,8 +1,4 @@
-.logo{
-    width: 110px;
-    padding-right: 10px;
-    height: 65px;
-}
+
 .header-bg{
   background-color:#e0e2e4;
 }
@@ -28,4 +24,11 @@
   .logo {
     width: 65px;
   }
+}
+@media screen and (min-width: 801px) {
+  .logo{
+    width: auto;
+    padding-right: 10px;
+    height: 65px;
+  } 
 }
