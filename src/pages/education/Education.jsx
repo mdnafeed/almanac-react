@@ -45,10 +45,86 @@ const Education = () => {
             lets citizens know about their fundamental rights and duties that
             eventually transforms societies from strength to strength.
           </Col>
-        </Row>
 
+          
+        </Row>
+        <br />
         <Row>
-        <Col lg={12} className={styles.program_heading}>
+          <Col lg={12} className={styles.program_heading}>
+            <h2 className="text-center mb-4">
+              <strong className={styles.planForAction}>Plan of Action</strong>
+            </h2>
+          </Col>
+
+          <Col lg={4} md={4} xs={12} sm={4} className="mb-3">
+              <div className={styles.borderHight}>
+                  <h5><strong>Research & Training Program</strong></h5>
+                  <p className="mb-0">Ph.D (Biotechnology, Biochemistry, Botany, Clinical Research, Forensic Research & Others.)</p>
+                  <p className="mb-0">MSc Dissertation & Summer Training.</p>
+                  <p className="mb-0">Bachelor Training </p>
+                  {/* <p className="mb-0">IFS</p> */}
+                  
+              </div> 
+          </Col>
+           
+          <Col lg={4} md={4} xs={12} sm={4} className="mb-3">
+              <div className={styles.borderHight}>
+                  <h5><strong>UPSC Preparation Support Program</strong></h5>
+                  <p className="mb-0">Indian Administrative Service (IAS)</p>
+                  <p className="mb-0">Indian Police Service (IPS)</p>
+                  <p className="mb-0">Internal Revenue Service (IRS)</p>
+                  <p className="mb-0">Indian Forest Service (IFS)</p>
+              </div> 
+          </Col>
+          <Col lg={4} md={4} xs={12} sm={4} className="mb-3">
+              <div>
+                  <h5><strong>Judiciary Program</strong></h5>
+                  <p className="mb-0">B.A, B.Com, BBA - LLB Integrated Course </p>
+                  {/* <p className="mb-0"> - LLB Integrated Course</p> */}
+                  {/* <p className="mb-0">BBA - LLB Integrated Course</p> */}
+                  <p className="mb-0">Bachelor of Laws (LLB)</p>
+                  {/* <p className="mb-0">BCom LLB</p> */}
+                  <p className="mb-0">Master of Laws (LL.M) </p>
+                  <p className="mb-0">PCS (J) & HJS</p>
+                  {/* <p className="mb-0">HJS </p> */}
+              </div> 
+          </Col>
+
+          <br/>
+
+          <Col lg={4} md={4} xs={12} sm={4} className="mb-3">
+              <div className={styles.borderHight}>
+                  <h5><strong>Medical Program</strong></h5>
+                  <p className="mb-0">
+                        MBBS, BDS, BAMS, BUMS, BHMS, MD, MS, BPT, BMLT, DMLT, ANM, GNM, B.Pharma, D.Pharma, BSc Nursing Diploma (Dialysis, Unani Pharmacy, X-Ray & ECG, and Operation Theatre)
+                  </p>
+                  
+              </div> 
+          </Col>
+           
+          <Col lg={4} md={4} xs={12} sm={4} className="mb-3">
+              <div className={styles.borderHight}>
+                  <h5><strong>Engineering Program</strong></h5>
+                  <p className="mb-0">Bachelor of Technology (B.Tech)</p>
+                  <p className="mb-0">Master of Technology (M.Tech)</p>
+                  <p className="mb-0">Bachelor of Computer Application (BCA)</p>
+                  <p className="mb-0">Master of Computer Application (MCA)</p>
+              </div> 
+          </Col>
+          <Col lg={4} md={4} xs={12} sm={4} className="mb-3">
+              <div>
+                  <h5><strong>Motivational Awareness Program</strong></h5>
+                  <p className="mb-0">Conferences</p>
+                  <p className="mb-0">Seminar Camp</p>
+                  <p className="mb-0">Camp</p>
+                  <p className="mb-0">Social media</p>
+                  
+              </div> 
+          </Col>
+
+        </Row>
+        <Row>
+        {/* <Col lg={12} className={styles.program_heading}>
             <h2 className="text-center mb-3">
               <strong>OUR PROGRAMS</strong>
             </h2>
@@ -175,7 +251,7 @@ const Education = () => {
                       <li>Crafting future course of action through our scientific experience</li>
                     </ul>
               </div>
-          </Col>
+          </Col> */}
         </Row>
 
         <Row className={styles.cource_details}>
@@ -194,23 +270,25 @@ const Education = () => {
               style={{
                 width: "300px",
                 height: "40px",
-                backgroundColor: "#54B4D3",
+                backgroundColor: "#80e36a",
+                borderRadius:"13px"
               }}
-              className="border p-2  text-decoration-none text-white"
+              className="border p-2 text-dark text-decoration-none "
             >
-              <FaAngleRight className="mb-1" /> EDUCATION FORM DOWNLOAD
+              <FaAngleRight className="mb-1" /> E FORM DOWNLOAD
             </a>
             <NavLink
               to={RouteConstant.EDUCATION_ONLINE_FORM}
-              className=" border p-2 text-decoration-none"
+              className=" border p-2 text-dark text-decoration-none"
               style={{
                 width: "300px",
-                backgroundColor: "#54B4D3",
+                backgroundColor: "#80e36a",
                 height: "40px",
                 color: "white",
+                borderRadius:"13px"
               }}
             >
-              <FaAngleRight className="mb-1" /> EDUCATION FORM ONLINE
+              <FaAngleRight className="mb-1" /> E FORM ONLINE
             </NavLink>
           </Col>
         </Row>

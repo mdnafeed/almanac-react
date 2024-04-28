@@ -36,23 +36,38 @@ const Healthcare = () => {
                 href={healthcareForm}
                 target="_blank" // opens the link in a new tab/window
                 rel="noopener noreferrer" // recommended for security reasons
-                className={styles.health_form_download}
+                style={{
+                  width: "300px",
+                  height: "40px",
+                  backgroundColor: "#80e36a",
+                  borderRadius:"13px"
+                }}
+                className="border p-2 text-dark text-decoration-none "
               >
-                <FaAngleRight className="" /> HEALTHCARE FORM DOWNLOAD
+                <FaAngleRight className="" /> H FORM DOWNLOAD
               </a>
 
               <NavLink
-                className={styles.health_from_online}
+                style={{
+                  width: "300px",
+                  backgroundColor: "#80e36a",
+                  height: "40px",
+                  color: "white",
+                  borderRadius:"13px"
+                }}
+                className="border p-2 text-dark text-decoration-none "
                 to={RouteConstant.HEALTHCARE_ONLINE_FORM}
               >
-                <FaAngleRight className="" /> HEALTHCARE FORM ONLINE
+                <FaAngleRight className="" /> H FORM ONLINE
               </NavLink>
             </Col>
           </Col>
+
+          
         </Row>
       </Container>
       <Container>
-        <Row>
+        {/* <Row>
            <Col md={12} className={styles.health_care_support}>
             <h2 className="p-3">
               <strong>HEALTHCARE SUPPORT</strong>
@@ -68,7 +83,8 @@ const Healthcare = () => {
                        </Row>
                         </Col>
         </Row>
-        
+         */}
+         <br />
         <Container className="w-100%">
         {/* <h2 className={styles.heathcare_heading}>
               <strong>HEALTHCARE RECENT CAUSE</strong>

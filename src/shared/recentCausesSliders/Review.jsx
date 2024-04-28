@@ -38,14 +38,29 @@ const Review = ({ text, sliderImg }) => {
             <Row>
               {sliderImgGroup.map((item, subIndex) => (
                 <Col key={subIndex}>
-                  <img
-                    src={item.img}
-                    alt={`recentimage-${index}-${subIndex}`}
-                    className={styles.recent_image}
-                  />
-                  <p className={styles.recent_text} style={{ fontSize: '14px' }}>
-                    {item.paragraph}
-                  </p>
+                  { !!item.isVideo ? 
+                    (
+
+                      <>
+                        <iframe width="250" height="200"
+                          src={item.img}>
+                          </iframe>
+                      </>
+                    )
+                    :(
+                      <>
+                        <img
+                          src={item.img}
+                          alt={`recentimage-${index}-${subIndex}`}
+                          className={styles.recent_image}
+                        />
+                        <p className={styles.recent_text} style={{ fontSize: '14px' }}>
+                          {item.paragraph}
+                        </p>
+                  </>
+                    )
+                  }
+                  
                 </Col>
               ))}
             </Row>

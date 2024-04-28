@@ -6,6 +6,10 @@
     display: flex;
     margin: 0 auto;
     color: $Light-blue;
+    
+  }
+  span{
+    font-family: sans-serif !important;
   }
 }
 .contactInfo {
@@ -23,6 +27,10 @@
 }
 .form_bg{
   background-color: #ebebeb;
+  input{
+    font-family: sans-serif !important;
+  }
+
 }
 .contact_details{
 
