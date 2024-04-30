@@ -37,12 +37,12 @@ const Review = ({ text, sliderImg }) => {
           <Carousel.Item key={index} className={styles.review_slider}>
             <Row>
               {sliderImgGroup.map((item, subIndex) => (
-                <Col key={subIndex}>
+                <Col key={subIndex} md={3}>
                   { !!item.isVideo ? 
                     (
 
                       <>
-                        <iframe width="250" height="200"
+                        <iframe height="200"
                           src={item.img}>
                           </iframe>
                       </>
