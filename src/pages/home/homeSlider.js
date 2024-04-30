@@ -30,74 +30,48 @@ export  const sliderImage = [
     
   ];
 
-
-
- 
-
 export const review = [
-
-  // {
-  //   id: "1",
-  //   img: RecentCauses1,
-  //   paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-  //    Sciences, AIIMS, New Delhi-29`,
-  // },
-  // {
-  //   id: "3",
-  //   img: RecentCauses3,
-  //   paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-  //       Sciences, AIIMS, New Delhi-29`,
-  // },
-
 
   {
     id: "1",
     img: RecentCauses4,
-    paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-        Sciences, AIIMS, New Delhi-29`,
+    paragraph: `Eye OPD Camp With Association of Nazar Foundation at Dhampur Bijnor UP`,
   },
   {
     id: "3",
     img: RecentCauses5,
-    paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-        Sciences, AIIMS, New Delhi-29`,
+    paragraph: `Eye OPD Camp With Association of Nazar Foundation at Dhampur Bijnor UP`,
   },
-  {
-    id: "4",
-    img: RecentCauses4,
-    paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-        Sciences, AIIMS, New Delhi-29`,
-  },
-  {
-    id: "5",
-    img: RecentCauses5,
-    paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-        Sciences, AIIMS, New Delhi-29`,
-  },
-  {
-    id: "6",
-    img: RecentCauses6,
-    paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-        Sciences, AIIMS, New Delhi-29`,
-  },
+  // {
+  //   id: "4",
+  //   img: RecentCauses4,
+  //   paragraph: `Eye OPD Camp With Association of Nazar Foundation at Dhampur Bijnor UP`,
+  // },
+  // {
+  //   id: "5",
+  //   img: RecentCauses5,
+  //   paragraph: `Eye OPD Camp With Association of Nazar Foundation at Dhampur Bijnor UP`,
+  // },
+  // {
+  //   id: "6",
+  //   img: RecentCauses6,
+  //   paragraph: `Eye OPD Camp With Association of Nazar Foundation at Dhampur Bijnor UP`,
+  // },
   {
     id: "7",
     img: RecentCauses7,
-    paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-        Sciences, AIIMS, New Delhi-29`,
+    paragraph: `Eye OPD Camp With Association of Nazar Foundation at Dhampur Bijnor UP`,
   },
   {
     id: "8",
     img: RecentCauses8,
-    paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-        Sciences, AIIMS, New Delhi-29`,
+    paragraph: `Eye OPD Camp With Association of Nazar Foundation at Dhampur Bijnor UP`,
   },
-  {
-    id: "9",
-    img: RecentCauses9,
-    paragraph: `Eye operation at Dr. Rajendra Prasad Centre for Ophthalmic
-        Sciences, AIIMS, New Delhi-29`,
-  },
+  // {
+  //   id: "9",
+  //   img: RecentCauses9,
+  //   paragraph: `Eye OPD Camp With Association of Nazar Foundation at Dhampur Bijnor UP`,
+  // },
 
 
 ];
