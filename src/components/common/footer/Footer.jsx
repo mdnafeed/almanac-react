@@ -74,7 +74,7 @@ function Footer() {
                       {CONSTANT_LABEL.EDUCATION}
                     </NavLink>
                   </p>
-                  <p>
+                  {/* <p>
                     <NavLink
                       to={RouteConstant.HEALTHCARE}
                       className={style.link}
@@ -86,7 +86,7 @@ function Footer() {
                   <NavLink to={RouteConstant.BLOG} className={style.link}>
                     {CONSTANT_LABEL.BLOG}
                   </NavLink>
-                </p>
+                </p> */}
                 </>
               </div>
               <hr className="w-100 clearfix d-md-none" />
@@ -103,11 +103,11 @@ function Footer() {
                   </NavLink>
                 </p>
                 <p>
-                  <NavLink to={RouteConstant.CONTACT} className={style.link}>
-                    {CONSTANT_LABEL.CONTACT}
+                  <NavLink to={RouteConstant.PAYMENT_CANCELATION} className={style.link}>
+                    {CONSTANT_LABEL.PAYMENT_CANCELATION}
                   </NavLink>
                 </p>
-                <p>
+                {/* <p>
                   <NavLink to={RouteConstant.PAYMENT_CANCELATION} className={style.link}>
                     {CONSTANT_LABEL.PAYMENT_CANCELATION}
                   </NavLink>
@@ -121,7 +121,7 @@ function Footer() {
                   <NavLink to={RouteConstant.TERMS_AND_CONDITION} className={style.link}>
                     {CONSTANT_LABEL.TERMS_AND_CONDITION}
                   </NavLink>
-                </p>
+                </p> */}
               </div>
               <hr className="w-100 clearfix d-md-none" />
               <div className="col-md-4 col-lg-3 col-xl-3 mt-3">
@@ -134,13 +134,13 @@ function Footer() {
                   <i className="fas fa-home mr-3"></i> <b>Branch Address: </b>
                   {CONSTANT_LABEL.BRANCH_ADDRESS}
                 </p>
-                <p className={style.contact_details}>
+                {/* <p className={style.contact_details}>
                   <i className="fas fa-envelope mr-3"></i>{" "}
                   {CONSTANT_LABEL.SOCIAL_WELFARE_ALMANAC_EMAIL}
                 </p>
                 <p className={style.contact_details}>
                   <i className="fas fa-phone mr-3"></i><strong>Phone No:</strong> 011 - 43506838
-                </p>
+                </p> */}
               </div>
             </div>
           </section>

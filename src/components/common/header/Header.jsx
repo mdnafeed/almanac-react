@@ -10,7 +10,15 @@ import g_20_logo from "../../../assets/g20-logo(1).png"
 import { NavLink, Link } from "react-router-dom";
 import { RouteConstant } from "../../../shared/constants/route";
 import { CONSTANT_LABEL } from "../../../shared/constants/constantData";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 function Header() {
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+  
   const googleTranslateElementInit = () => {
     new window.google.translate.TranslateElement(
       {
@@ -57,42 +65,34 @@ function Header() {
                 <Nav.Link as={Link} to={RouteConstant.HOME} className={styles.headerLink}>
                   {CONSTANT_LABEL.HOME}
                 </Nav.Link>
-                <Nav.Link as={Link} to={RouteConstant.ABOUT_US} className={styles.headerLink}>
-                  {CONSTANT_LABEL.ABOUT}
-                </Nav.Link>
+                <NavDropdown show={dropdownOpen}
+      onMouseEnter={toggleDropdown}
+      onMouseLeave={toggleDropdown} title="ASW TRUST" className={styles.trustDropdown} id="basic-nav-dropdown">
+                <NavDropdown.Item as={Link} to={RouteConstant.ABOUT_US}>{CONSTANT_LABEL.ABOUT}</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={RouteConstant.CONTACT}>{CONSTANT_LABEL.CONTACT}</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={RouteConstant.NEWS_MEDIA}>{CONSTANT_LABEL.NEW_AND_MEDIA}</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={RouteConstant.BLOG}>{CONSTANT_LABEL.BLOG}</NavDropdown.Item>
+
+                  <NavDropdown.Item as={Link} to={RouteConstant.TERMS_AND_CONDITION}>{CONSTANT_LABEL.TERMS_AND_CONDITION}</NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={RouteConstant.PRIVACY_POLICY}>{CONSTANT_LABEL.PRIVACY_POLICY}</NavDropdown.Item>
+                 
+                </NavDropdown>
                 <Nav.Link as={Link} to={RouteConstant.EDUCATION} className={styles.headerLink}>
                   {CONSTANT_LABEL.EDUCATION}
                 </Nav.Link>
                 <Nav.Link as={Link} to={RouteConstant.HEALTHCARE} className={styles.headerLink}>
                   {CONSTANT_LABEL.HEALTHCARE}
-                </Nav.Link>
-                <Nav.Link as={Link} to={RouteConstant.BLOG} className={styles.headerLink}>
-                  {CONSTANT_LABEL.BLOG}
-                </Nav.Link>
+                </Nav.Link>                
                 <Nav.Link as={Link} to={RouteConstant.MEMBERSHIP} className={styles.headerLink}>
                   MEMBERSHIP
                 </Nav.Link>
-                <Nav.Link
-
-                  as={Link}
-                  to={RouteConstant.NEWS_MEDIA}
-                  className={styles.headerLink}
-
-                >
-                  {CONSTANT_LABEL.NEW_AND_MEDIA}
-                </Nav.Link>
-                <Nav.Link
-
-                  as={Link}
-                  to={RouteConstant.CONTACT}
-                  className={styles.headerLink}
-
-                >
-                  {CONSTANT_LABEL.CONTACT}
-                </Nav.Link>
+               
                 <Nav.Link>
                   <div id="google_translate_element"></div>
                 </Nav.Link>
+
+                
+
               </Nav>
             </Navbar.Collapse>
           </Container>
