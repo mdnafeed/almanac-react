@@ -32,133 +32,73 @@ function Header() {
 
   return (
     <>
-    <header>
-      {["sm"].map((expand) => (
+      {/* <header> */}
         <Navbar
-          key={expand}
-          expand={expand}
+          expand="lg" // Set when the Navbar should expand
           className="bg-body-tertiary p-0 no-print-header"
           sticky="top"
           style={{ boxShadow: "0 1px 10px rgba(0,0,0,.2)" }}
         >
           <Container fluid className="p-1">
-            {/* <NavLink to={RouteConstant.HOME}   >
-              <img src={logo_icon} alt="" className={styles.logo} />
-            </NavLink> */}
-            <Navbar>
-              <NavLink to={RouteConstant.HOME}   >
+            <Navbar.Brand>
+              <NavLink to={RouteConstant.HOME}>
                 <img src={logo_icon} alt="" className={styles.logo} />
               </NavLink>
-              <NavLink to="https://amritmahotsav.nic.in/"  >
+              <NavLink to="https://amritmahotsav.nic.in/">
                 <img src={logo_azad} alt="" className={styles.logo} />
               </NavLink>
-              <NavLink to="https://www.g20.in/en/"  >
+              <NavLink to="https://www.g20.in/en/">
                 <img src={g_20_logo} alt="" className={styles.logo} />
               </NavLink>
-            </Navbar>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}
-            />
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-${expand}`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="end"
-            >
-              <Offcanvas.Header closeButton >
-                <NavLink to={RouteConstant.HOME}  >
-                  <img src={logo_icon} alt="" className={styles.logo} />
-                </NavLink>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav.Link as={Link} to={RouteConstant.HOME} className={styles.headerLink}>
+                  {CONSTANT_LABEL.HOME}
+                </Nav.Link>
+                <Nav.Link as={Link} to={RouteConstant.ABOUT_US} className={styles.headerLink}>
+                  {CONSTANT_LABEL.ABOUT}
+                </Nav.Link>
+                <Nav.Link as={Link} to={RouteConstant.EDUCATION} className={styles.headerLink}>
+                  {CONSTANT_LABEL.EDUCATION}
+                </Nav.Link>
+                <Nav.Link as={Link} to={RouteConstant.HEALTHCARE} className={styles.headerLink}>
+                  {CONSTANT_LABEL.HEALTHCARE}
+                </Nav.Link>
+                <Nav.Link as={Link} to={RouteConstant.BLOG} className={styles.headerLink}>
+                  {CONSTANT_LABEL.BLOG}
+                </Nav.Link>
+                <Nav.Link as={Link} to={RouteConstant.MEMBERSHIP} className={styles.headerLink}>
+                  MEMBERSHIP
+                </Nav.Link>
+                <Nav.Link
 
-                <NavLink to={RouteConstant.HOME}  >
-                  <img src={g_20_logo} alt="" className={styles.logo} />
-                </NavLink>
+                  as={Link}
+                  to={RouteConstant.NEWS_MEDIA}
+                  className={styles.headerLink}
 
-                <NavLink to={RouteConstant.HOME}  >
-                  <img src={logo_azad} alt="" className={styles.logo} />
-                </NavLink>
+                >
+                  {CONSTANT_LABEL.NEW_AND_MEDIA}
+                </Nav.Link>
+                <Nav.Link
 
-              </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link
-                    
-                    as={Link}
-                    to={RouteConstant.HOME}
-                    className={styles.headerLink}
-                  >
-                    {CONSTANT_LABEL.HOME}
-                  </Nav.Link>
-                  <Nav.Link
-                    
-                    as={Link}
-                    to={RouteConstant.ABOUT_US}
-                    className={styles.headerLink}
+                  as={Link}
+                  to={RouteConstant.CONTACT}
+                  className={styles.headerLink}
 
-                  >
-                    {CONSTANT_LABEL.ABOUT}
-                  </Nav.Link>
-                  <Nav.Link
-                    
-                    as={Link}
-                    to={RouteConstant.EDUCATION}
-                    className={styles.headerLink}
-
-                  >
-                    {CONSTANT_LABEL.EDUCATION}                  
-                  </Nav.Link>
-                  <Nav.Link
-                    
-                    as={Link}
-                    to={RouteConstant.HEALTHCARE}
-                    className={styles.headerLink}
-
-                  >
-                    {CONSTANT_LABEL.HEALTHCARE}
-                  </Nav.Link>
-                  <Nav.Link
-                    
-                    as={Link}
-                    to={RouteConstant.BLOG}
-                    className={styles.headerLink}
-
-                  >
-                    {CONSTANT_LABEL.BLOG}
-                  </Nav.Link>
-                  <Nav.Link
-                    
-                    as={Link}
-                    to={RouteConstant.MEMBERSHIP}
-                    className={styles.headerLink}
-
-                  >
-                    MEMBERSHIP
-                  </Nav.Link>
-                  <Nav.Link
-                    
-                    as={Link}
-                    to={RouteConstant.NEWS_MEDIA}
-                    className={styles.headerLink}
-
-                  >
-                    {CONSTANT_LABEL.NEW_AND_MEDIA}
-                  </Nav.Link>
-                  <Nav.Link
-                    
-                    as={Link}
-                    to={RouteConstant.CONTACT}
-                    className={styles.headerLink}
-
-                  >
-                    {CONSTANT_LABEL.CONTACT}
-                  </Nav.Link>
+                >
+                  {CONSTANT_LABEL.CONTACT}
+                </Nav.Link>
+                <Nav.Link>
                   <div id="google_translate_element"></div>
-                </Nav>
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
           </Container>
         </Navbar>
-       
-      ))}
-       </header>
+
+      {/* </header> */}
     </>
   );
 }
