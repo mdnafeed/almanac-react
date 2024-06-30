@@ -42,8 +42,11 @@ const Review = ({ text, sliderImg }) => {
                     (
 
                       <>
-                        <iframe height="200"
-                          src={item.img}>
+                        <iframe 
+                          height="200"
+                          src={item.img}
+                          width="100%"
+                          >
                           </iframe>
                       </>
                     )

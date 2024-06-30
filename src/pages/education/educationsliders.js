@@ -18,27 +18,7 @@ export const educationreviewslider=[
         id:"4",
         img:"https://www.youtube.com/embed/CGW_LOD17vY?si=gBPmf2voXtjRWSE7",
         isVideo:true
-    },
-    // {
-    //     id:"5",
-    //     img:"https://www.youtube.com/embed/CGW_LOD17vY?si=gBPmf2voXtjRWSE7",
-    //     isVideo:true
-    // },
-    // {
-    //     id:"6",
-    //     img:"https://www.youtube.com/embed/CGW_LOD17vY?si=gBPmf2voXtjRWSE7",
-    //     isVideo:true
-    // },
-    // {
-    //     id:"7",
-    //     img:"https://www.youtube.com/embed/CGW_LOD17vY?si=gBPmf2voXtjRWSE7",
-    //     isVideo:true
-    // },
-    // {
-    //     id:'8',
-    //     img:"https://www.youtube.com/embed/CGW_LOD17vY?si=gBPmf2voXtjRWSE7",
-    //     isVideo:true
-    // }
+    }
 
 ] ;
 

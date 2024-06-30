@@ -55,10 +55,18 @@
     background: black;
     color: white;
 }
-@page{
-
-}
+// @page 
+// {
+//     size: auto;   /* auto is the initial value */
+//     margin: 0mm;  /* this affects the margin in the printer settings */
+// }
 @media print {
+    nav  ,.print{
+        display: none !important;
+    }
+    footer {
+        display: none !important;
+    }
     .container {
         height: 100%;
         width: 100%;
@@ -84,10 +92,6 @@
         top: 6.3%;
         left: 21%;
     }
-
     /* Hide header and footer in print mode */
-    header,.print,
-    footer {
-        display: none;
-    }
+    
 }
