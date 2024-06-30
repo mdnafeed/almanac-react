@@ -6,9 +6,17 @@
     display: flex;
     margin: 0 auto;
     color: $Light-blue;
+    
+  }
+  span{
+    font-family: sans-serif !important;
   }
 }
 .contactInfo {
+  .location_details{
+    text-align: center;
+    padding-top: 15px;
+  }
   .location_icons {
     font-size: 60px;
     padding-bottom: 10px;
@@ -17,7 +25,19 @@
     color: $Light-blue;
   }
 }
-
 .form_bg{
   background-color: #ebebeb;
+  input{
+    font-family: sans-serif !important;
+  }
+
+}
+.contact_details{
+
+.contact_image{
+  width: 100%;
+}
+}
+.phoneNumber{
+  font-family: sans-serif !important;
 }

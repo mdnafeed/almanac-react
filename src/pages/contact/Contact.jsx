@@ -35,33 +35,48 @@ const Contact = () => {
   console.log(contactFormik)
   return (
     <div className={style.contact_details}>
-      <img src={contactDoneImg} alt="" className="w-100" />
+      <img src={contactDoneImg} alt="" className={style.contact_image} />
       <Container>
         <Row>
           <Col md={6} className={style.officeInfo}>
             <Card.Text className="py-3">
               <MdLocationPin className={style.location_icons} />
             </Card.Text>
-            <Card.Text>
-              <b>Branch Office :</b> 43-B, Okhla Village, Jamia Nagar, New
-              Delhi-110025
+            <Card.Text style={{display:'flex'}}>
+              <b style={{fontSize:'17px'}}>Branch Office : </b> 
+              <Card.Title>
+                <span style={{fontFamily:'sans-serif !important;'}}>43-B, Okhla Village, Jamia Nagar, New
+               Delhi-110025</span>
+              </Card.Title>
             </Card.Text>
-            <Card.Text>
-              <b> Registered Office</b> : 277, Okhla Village, Jamia Nagar, New
-              Delhi-110025
+            <Card.Text style={{display:'flex'}}>
+              <b style={{fontSize:'17px'}}> Registered Office</b> : 
+              
+              <Card.Title>
+              <span>277, Okhla Village, Jamia Nagar, New
+              Delhi-110025</span>
+              </Card.Title>
+
+              
             </Card.Text>
           </Col>
           <Col className={style.contactInfo}>
-            <Card.Title className="py-3 text-center">
+
+            <Card.Title className={style.location_details}>
               <MdEmail className={style.location_icons} />
               <Card.Title>
                 <p className="my-4">socialwelfarealmanac@gmail.com</p>
               </Card.Title>
               <Card.Text>
-                <p>011-43506838</p>
+                <p className={style.phoneNumber}>011-43506838</p>
               </Card.Text>
-            </Card.Title>
+           </Card.Title>
+
+
+          
           </Col>
+
+
         </Row>
       </Container>
 

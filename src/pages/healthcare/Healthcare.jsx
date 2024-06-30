@@ -6,29 +6,31 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { RouteConstant } from "../../shared/constants/route";
 import healthcareForm from "../../assets/pdf/healthcare-form.pdf";
-import HealthcareImage from "../../assets/halthcare/1.jpg";
 import { FaAngleRight } from "react-icons/fa6";
+import styles from "./Healt.module.scss";
+import { healthcarereviewslider ,healthcareSupportImg,heading} from "./healthcarereview";
+import Review from "../../shared/recentCausesSliders/Review";
 const Healthcare = () => {
   return (
     <>
-      <img src={healthcareBanner} alt="" className="w-100" />
+      <img src={healthcareBanner} alt="" className={styles.healthcareBanner} />
       <Container>
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}>
-            <h1 className="text-center">HEALTHCARE</h1>
+            <h2 className={styles.heathcare_heading}>
+              <strong>HEALTHCARE</strong>
+            </h2>
             {HealthCareObj.map((title) => (
               <div key={title.map}>
-                <p style={{ textAlign: "justify" }}>{title.paragraph}</p>
+                <p className={styles.heathcare_paragraph}>{title.paragraph}</p>
               </div>
             ))}
-
             <Col
               xs={12}
               sm={12}
               md={12}
               lg={12}
-              style={{ border: "none", gap: "13px" }}
-              className="py-3 flex-wrap d-flex"
+              className={styles.health_from_content}
             >
               <a
                 href={healthcareForm}
@@ -37,74 +39,58 @@ const Healthcare = () => {
                 style={{
                   width: "300px",
                   height: "40px",
-                  backgroundColor: "#54B4D3",
+                  backgroundColor: "#80e36a",
+                  borderRadius:"13px"
                 }}
-                className="border p-2 text-decoration-none text-white"
+                className="border p-2 text-dark text-decoration-none "
               >
-                <FaAngleRight className="mb-1" /> HEALTHCARE FORM DOWNLOAD
+                <FaAngleRight className="" /> H FORM DOWNLOAD
               </a>
 
               <NavLink
                 style={{
                   width: "300px",
+                  backgroundColor: "#80e36a",
                   height: "40px",
-                  backgroundColor: "#54B4D3",
+                  color: "white",
+                  borderRadius:"13px"
                 }}
+                className="border p-2 text-dark text-decoration-none "
                 to={RouteConstant.HEALTHCARE_ONLINE_FORM}
-                className="border p-2 text-decoration-none text-white"
               >
-                <FaAngleRight className="mb-1" /> HEALTHCARE FORM ONLINE
+                <FaAngleRight className="" /> H FORM ONLINE
               </NavLink>
             </Col>
           </Col>
+
+          
         </Row>
       </Container>
-      <Container fluid>
-        <Row>
-          <Col md={12} className="text-center py-2">
-            <h2>Healthcare Support</h2>
+      <Container>
+        {/* <Row>
+           <Col md={12} className={styles.health_care_support}>
+            <h2 className="p-3">
+              <strong>HEALTHCARE SUPPORT</strong>
+            </h2>
           </Col>
-          <Col md={3}>
-            <img
-              src={HealthcareImage}
-              style={{
-                width: "100%",
-                height: "100%",
-                cursor: "pointer",
-              }}
-            />
-          </Col>
-          <Col md={3}>
-            <img
-              src={HealthcareImage}
-              style={{
-                width: "100%",
-                height: "100%",
-                cursor: "pointer",
-              }}
-            />
-          </Col>
-          <Col md={3}>
-            <img
-              src={HealthcareImage}
-              style={{
-                width: "100%",
-                height: "100%",
-                cursor: "pointer",
-              }}
-            />
-          </Col>
-          <Col md={3}>
-            <img
-              src={HealthcareImage}
-              style={{
-                width: "100%",
-                height: "100%",
-                cursor: "pointer",
-              }}
-            />
-          </Col>
+          <Col md={12} className={styles.flexContainer}>
+                 <Row className={styles.flexRow}>
+                   {healthcareSupportImg.map((supportimg, id) => (
+                    <Col md={3} key={supportimg.id}>
+                           <img src={supportimg.img} className={styles.heath_care_support_img} />
+                           </Col>
+                            ))}
+                       </Row>
+                        </Col>
         </Row>
+         */}
+         <br />
+        <Container className="w-100%">
+        {/* <h2 className={styles.heathcare_heading}>
+              <strong>HEALTHCARE RECENT CAUSE</strong>
+            </h2> */}
+          <Review text={heading}  sliderImg={healthcarereviewslider}/>
+        </Container>
       </Container>
     </>
   );

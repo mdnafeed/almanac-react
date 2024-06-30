@@ -6,14 +6,11 @@ import validationTrusteeSchema from "./validationTrusteeSchema";
 import api from "../../../api/api.js";
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate,Route } from "react-router-dom";
-import Certificate from "../../../components/certificate/certificate.jsx";
 import { RouteConstant } from "../../../shared/constants/route.js";
-// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
-
+import './membership.scss';
 const Trustees = () => {
   const navigate = useNavigate();
-
+  const currentDate = new Date();
   const trusteeFormik = useFormik({
     initialValues: {
       name: "",
@@ -30,7 +27,7 @@ const Trustees = () => {
     onSubmit: async (values) => {
 
       const options = {
-        key: 'rzp_test_hAakLAx9OzIPeu', // Replace with your Razorpay key_id
+        key: 'rzp_live_FPc38VCRKMBqNY', // Replace with your Razorpay key_id  // rzp_live_FPc38VCRKMBqNY rzp_test_hAakLAx9OzIPeu 
         amount: values.amount * 100, // Convert amount to paise
         currency: 'INR',
         name: 'Almanac Social Welfare',
@@ -46,10 +43,6 @@ const Trustees = () => {
               if(backendResponse.status == 200){
 
                 navigate(`${RouteConstant.CERTIFICATE}/${backendResponse.data.membershipObj._id}`);
-                // <Route
-                //   path={RouteConstant.CERTIFICATE}
-                //   render={(props) => <Certificate {...props} data={backendResponse} />}
-                // />
               }
               else{
                 // In Case Payment success 
@@ -60,12 +53,13 @@ const Trustees = () => {
           }
         },
         prefill: {
-          name: 'John Doe',
-          email: 'john@example.com',
-          contact: '9876543210',
+          name: values.name,
+          email: values.email_id,
+          contact: values.mobile_number,
         },
         notes: {
-          address: 'Razorpay Corporate Office',
+          address: values.address,
+          currentDate: currentDate.toISOString(),
         },
         theme: {
           color: '#528FF0', // Customize the color according to your UI
@@ -74,19 +68,6 @@ const Trustees = () => {
   
       const rzp = new window.Razorpay(options);
       rzp.open();
-
-      // try {
-      //   const response = await api.PostMembership(values);
-      //   if(response.status == 200){
-      //     toast.success("Membership Added!", {
-      //       position: toast.POSITION.TOP_CENTER
-      //     });
-      //     navigate('/thankyou');
-      //   }
-      // } catch (error) {
-      //   console.error('Error making POST request:', error);
-      //   navigate('/errorpage');
-      // }
     },
   });
   console.log(trusteeFormik)
@@ -103,8 +84,6 @@ const Trustees = () => {
     };
   }, []);
 
-
-  // add to by default set amount of fields
   trusteeFormik.setDefault = () => {
     const membershipType = trusteeFormik.values.type_of_membership;
 
@@ -123,22 +102,16 @@ const Trustees = () => {
         break;
     }
   };
-  // Call the setDefault function whenever 'type_of_membership' changes
   useEffect(() => {
     trusteeFormik.setDefault();
   }, [trusteeFormik.values.type_of_membership]);
-  //print console all file details
   console.log(trusteeFormik);
 
   return (
-    <Card style={{
-      border: '2px solid black',
-      borderColor: '#a1805a #76dd45 #a1805a #a53e2f',
-      borderWidth: '3px 3px 3px 3px',
-    }}>
+    <Card  className="member-ship-content">
       <Form onSubmit={trusteeFormik.handleSubmit}>
         <Container>
-          <h1 className="fs-3 font-bold text-dark text-center py-2"><b>Become a Membership</b></h1>
+          <h1 className="membership-text"><b>Become a Membership</b></h1>
           <Row>
             <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
               <Form.Label htmlFor="name">
@@ -272,50 +245,6 @@ const Trustees = () => {
                 {trusteeFormik.errors.address}
               </Form.Control.Feedback>
             </Col>
-
-
-            {/* 
-<Col xs={12} sm={12} md={12} lg={12} className="mb-3">
-            <Form.Label htmlFor="type_of_membership">
-              Types of Membership<span className="text-danger">*</span>
-            </Form.Label>
-            <Form.Select
-              id="type_of_membership"
-              onChange={trusteeFormik.handleChange}
-              name="type_of_membership"
-              className="rounded-0"
-              isInvalid={trusteeFormik.touched.type_of_membership && trusteeFormik.errors.type_of_membership}
-            >
-              <option value="">Select Membership</option>
-              <option value="Trustee">Trustee</option>
-              <option value="Volunteers">Volunteers</option>
-              <option value="CRS Fund">CRS Fund</option>
-            </Form.Select>
-            <Form.Control.Feedback type="invalid">
-              {trusteeFormik.errors.type_of_membership}
-            </Form.Control.Feedback>
-          </Col>
-
-          <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
-            <Form.Label htmlFor="amount">
-              Amount<span className="text-danger">*</span>
-            </Form.Label>
-            <Form.Control
-              type="text"
-              name="amount"
-              placeholder="Enter amount"
-              id="amount"
-              className="rounded-0"
-              defaultValue={trusteeFormik.values.amount}
-              onChange={trusteeFormik.handleChange}
-              isInvalid={trusteeFormik.touched.amount && trusteeFormik.errors.amount}
-            />
-            <Form.Control.Feedback type="invalid">
-              {trusteeFormik.errors.amount}
-            </Form.Control.Feedback>
-          </Col> */}
-
-   
             <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
               <Form.Label htmlFor="type_of_membership">
                 Types of Membership<span className="text-danger">*</span>
@@ -363,7 +292,7 @@ const Trustees = () => {
             </Col>
 
             <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
-              <Button className="border-0 btn btn-success my-2 rounded-0 w-100" type="submit">Pay Now</Button>
+              <Button className="" type="submit">Pay Now</Button>
             </Col>
           </Row>
         </Container>

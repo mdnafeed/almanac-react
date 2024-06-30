@@ -1,5 +1,4 @@
 import * as yup from "yup";
-// ../../../shared/constants/constantData
 import { ValidationConstant_EDUCATION } from "../../../shared/constants/constantData";
 const validationEducationSchema = yup.object().shape({
   university_name: yup
@@ -44,11 +43,11 @@ course_applied_pursuing: yup
     .mixed()
     .required(ValidationConstant_EDUCATION.STUDENT_PHOTO_REQUIRED)
     .test(
-      "fileSize",ValidationConstant_EDUCATION.STUDENT_PHOTO_SUPPORT_MAX_SIZE,
+      "fileSize",ValidationConstant_EDUCATION.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1 * 1024 * 1024
     )
     .test(
-      "fileType",ValidationConstant_EDUCATION.STUDENT_PHOTO_SUPPORT_FILE,
+      "fileType",ValidationConstant_EDUCATION.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
   religion: yup
@@ -166,54 +165,54 @@ course_applied_pursuing: yup
     .mixed()
     .required(ValidationConstant_EDUCATION.AADHAR_CARD_CHECK_REQUIRED)
     .test(
-      "fileSize",ValidationConstant_EDUCATION.AADHAR_CARD_CHECK_MAX_FILE_SIZE,
+      "fileSize",ValidationConstant_EDUCATION.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1000000
     )
     .test(
-      "fileType",ValidationConstant_EDUCATION.AADHAR_CARD_CHECK_FILE,
+      "fileType",ValidationConstant_EDUCATION.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
   voter_id_card_checkbox: yup
     .mixed()//VOTER_ID_CARD_CHECKBOX_REQUIRED  
     .required(ValidationConstant_EDUCATION.VOTER_ID_CARD_CHECKBOX_REQUIRED)
     .test(
-      "fileSize",ValidationConstant_EDUCATION.VOTER_ID_CARD_MAX_FILE_SIZE,
+      "fileSize",ValidationConstant_EDUCATION.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1 * 1024 * 1024
     )
     .test(
-      "fileType",ValidationConstant_EDUCATION.VOTER_ID_CARD_SUPPORTED_FILE,
+      "fileType",ValidationConstant_EDUCATION.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
   income_certificate_checkbox: yup
     .mixed()
     .required(ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
-      "fileSize",ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_MAX_FILE,
+      "fileSize",ValidationConstant_EDUCATION.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1 * 1024 * 1024)
     .test(
-      "fileType",ValidationConstant_EDUCATION.INCOME_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
+      "fileType",ValidationConstant_EDUCATION.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
 domicile_certificate_checkbox: yup
     .mixed()
     .required(ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_REQUIRED)
     .test(
-      "fileSize",ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_MAX_FILE_SIZE,
+      "fileSize",ValidationConstant_EDUCATION.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1 * 1024 * 1024
     )
     .test(
-      "fileType",ValidationConstant_EDUCATION.DOMICILE_CERTIFICATE_CHECKBOX_SUPPORTED_FILE,
+      "fileType",ValidationConstant_EDUCATION.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
   patient_thumb_impression: yup
     .mixed()
     .required(ValidationConstant_EDUCATION.PATIENT_THUMB_IMPRESSION_REQUIRED)
     .test(
-      "fileSize",ValidationConstant_EDUCATION.PATIENT_THUMB_IMPRESSION_MAX_FILE_SIZE,
+      "fileSize",ValidationConstant_EDUCATION.CONSTANT_FILE_MAX,
       (value) => value && value.size <= 1 * 1024 * 1024
     )
     .test(
-      "fileType",ValidationConstant_EDUCATION.PATIENT_THUMB_IMPRESSION_SUPPORT_FILE,
+      "fileType",ValidationConstant_EDUCATION.CONSTANT_FILE_SUPPORT,
       (value) => value && value.type === "application/pdf"
     ),
   i_have_declared: yup

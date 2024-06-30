@@ -3,8 +3,8 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    // baseURL:'http://node.almanacsocialwelfare.com:3000',   // Replace with your API base URL //http://localhost:3000 
-   baseURL: 'http://localhost:3000',
+    baseURL:'https://almanac-node.onrender.com',   // Replace with your API base URL //http://localhost:3000 
+    // baseURL: 'http://localhost:3000',
     timeout: 5000, // Timeout in milliseconds
     headers: {
         'Content-Type': 'application/json',

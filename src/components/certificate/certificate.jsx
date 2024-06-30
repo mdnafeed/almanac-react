@@ -1,27 +1,13 @@
-import CertificateIMAGE from "../../assets/certificate/certificate.jpg"
+// import CertificateIMAGE from "../../assets/certificate/certificate.jpg"
+import almanacCertificateIMAGE from '../../assets/certificate/almanacCertificate.png';
 import styles from "./certificate.module.scss";
 import { useParams } from 'react-router-dom';
 import api from "../../api/api.js";
 import { useEffect, useState} from 'react';
 const Certificate = () => {
-
     const { id } = useParams();
     const [certificateData, setCertificateData] = useState(null);
     const [date,setDate] = useState();
-    // if(!!certificateData){
-    //     const originalDate = certificateData?.created_date;
-
-    //     // Create a Date object from the string
-    //     const dateObject = new Date(originalDate);
-      
-    //     // Get full year, month, and date
-    //     const year = dateObject.getFullYear();
-    //     const month = dateObject.getMonth() + 1; // Month is 0-based, so add 1
-    //     const day = dateObject.getDate();
-    //     const formattedDate = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`;
-    //     setDate(formattedDate);
-    // }
-
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -48,8 +34,8 @@ const Certificate = () => {
     return (
         <>
             <div className={styles.container}>
-                <img src={CertificateIMAGE} alt="" className={styles.certificate} />
-                <div className={styles.membershipNumber}>{certificateData?._id.substr(10,23)}</div>
+                <img src={almanacCertificateIMAGE} alt="" className={styles.certificate} />
+                <div className={styles.membershipNumber}>{certificateData?._id}</div>
                 <div className={styles.name}>{certificateData?.name} ({certificateData?.type_of_membership})</div>
                 <div className={styles.date}>{date}</div>
             </div>
