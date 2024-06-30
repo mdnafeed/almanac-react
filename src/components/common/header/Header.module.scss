@@ -1,23 +1,24 @@
-
-.header-bg{
-  background-color:#e0e2e4;
+.header-bg {
+  background-color: #e0e2e4;
 }
-.is_active{
+
+.is_active {
   color: black;
   border: 1px solid #006cb5;
 }
-.nav-link{
+
+.nav-link {
   font-size: 14px;
 }
 
-.headerLink{
-    font-family: "Raleway",sans-serif;
-    font-style: normal;
-    font-weight: 600 !important;
-    letter-spacing: 0.061em;
-    font-size: 12px !important;
-    color: #002f63 !important;
-    padding-top:14px !important;
+.headerLink {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 600 !important;
+  letter-spacing: 0.061em;
+  font-size: 12px !important;
+  color: #002f63 !important;
+  padding-top: 14px !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -25,19 +26,20 @@
     width: 65px;
   }
 }
+
 @media screen and (min-width: 801px) {
-  .logo{
+  .logo {
     width: auto;
     padding-right: 10px;
     height: 65px;
-  } 
+  }
 }
 
-.trustDropdown{
+.trustDropdown {
 
- 
 
-  a{
+
+  a {
     color: #002f63 !important;
     font-family: "Raleway", sans-serif !important;
     font-style: normal;
@@ -45,5 +47,20 @@
     letter-spacing: 0.061em;
     font-size: 14px !important;
     padding-top: 12px !important;
+  }
+}
+
+.almanacHeader {
+  h5 {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 24px;
+    color: #1a7bbc;
+  }
+
+  p {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0;
   }
 }

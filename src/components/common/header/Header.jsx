@@ -52,13 +52,17 @@ function Header() {
               <NavLink to={RouteConstant.HOME}>
                 <img src={logo_icon} alt="" className={styles.logo} />
               </NavLink>
-              <NavLink to="https://amritmahotsav.nic.in/">
+              {/* <NavLink to="https://amritmahotsav.nic.in/">
                 <img src={logo_azad} alt="" className={styles.logo} />
               </NavLink>
               <NavLink to="https://www.g20.in/en/">
                 <img src={g_20_logo} alt="" className={styles.logo} />
-              </NavLink>
+              </NavLink> */}
             </Navbar.Brand>
+            <div className={styles.almanacHeader}>
+            <h5 >ALMANAC SOCIAL WELFARE</h5>
+            <p >(Regd. Under Govt. of NCT of Delhi Registration Act 1882)</p>
+            </div>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="justify-content-end flex-grow-1 pe-3">
@@ -67,7 +71,7 @@ function Header() {
                 </Nav.Link>
                 <NavDropdown show={dropdownOpen}
       onMouseEnter={toggleDropdown}
-      onMouseLeave={toggleDropdown} title="ASW TRUST" className={styles.trustDropdown} id="basic-nav-dropdown">
+      onMouseLeave={toggleDropdown} title="ABOUT US" className={styles.trustDropdown} id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to={RouteConstant.ABOUT_US}>{CONSTANT_LABEL.ABOUT}</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={RouteConstant.CONTACT}>{CONSTANT_LABEL.CONTACT}</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={RouteConstant.NEWS_MEDIA}>{CONSTANT_LABEL.NEW_AND_MEDIA}</NavDropdown.Item>
@@ -90,9 +94,6 @@ function Header() {
                 <Nav.Link>
                   <div id="google_translate_element"></div>
                 </Nav.Link>
-
-                
-
               </Nav>
             </Navbar.Collapse>
           </Container>
