@@ -29,3 +29,47 @@ padding: 4px;
     width: 65px;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .logo {
+    width: 65px;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  .logo {
+    width: auto;
+    padding-right: 10px;
+    height: 65px;
+  }
+}
+
+.trustDropdown {
+
+
+
+  a {
+    color: #002f63 !important;
+    font-family: "Raleway", sans-serif !important;
+    font-style: normal;
+    font-weight: 500 !important;
+    letter-spacing: 0.061em;
+    font-size: 14px !important;
+    padding-top: 12px !important;
+  }
+}
+
+.almanacHeader {
+  h5 {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 24px;
+    color: #1a7bbc;
+  }
+
+  p {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}

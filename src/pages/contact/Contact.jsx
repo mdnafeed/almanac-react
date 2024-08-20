@@ -42,13 +42,22 @@ const Contact = () => {
             <Card.Text className="py-3">
               <MdLocationPin className={style.location_icons} />
             </Card.Text>
-            <Card.Text>
-              <b>Branch Office :</b> 43-B, Okhla Village, Jamia Nagar, New
-              Delhi-110025
+            <Card.Text style={{display:'flex'}}>
+              <b style={{fontSize:'17px'}}>Branch Office : </b> 
+              <Card.Title>
+                <span style={{fontFamily:'sans-serif !important;'}}>43-B, Okhla Village, Jamia Nagar, New
+               Delhi-110025</span>
+              </Card.Title>
             </Card.Text>
-            <Card.Text>
-              <b> Registered Office</b> : 277, Okhla Village, Jamia Nagar, New
-              Delhi-110025
+            <Card.Text style={{display:'flex'}}>
+              <b style={{fontSize:'17px'}}> Registered Office</b> : 
+              
+              <Card.Title>
+              <span>277, Okhla Village, Jamia Nagar, New
+              Delhi-110025</span>
+              </Card.Title>
+
+              
             </Card.Text>
           </Col>
           <Col className={style.contactInfo}>

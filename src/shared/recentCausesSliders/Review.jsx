@@ -37,15 +37,33 @@ const Review = ({ text, sliderImg }) => {
           <Carousel.Item key={index} className={styles.review_slider}>
             <Row>
               {sliderImgGroup.map((item, subIndex) => (
-                <Col key={subIndex}>
-                  <img
-                    src={item.img}
-                    alt={`recentimage-${index}-${subIndex}`}
-                    className={styles.recent_image}
-                  />
-                  <p className={styles.recent_text} style={{ fontSize: '14px' }}>
-                    {item.paragraph}
-                  </p>
+                <Col key={subIndex} md={3}>
+                  { !!item.isVideo ? 
+                    (
+
+                      <>
+                        <iframe 
+                          height="200"
+                          src={item.img}
+                          width="100%"
+                          >
+                          </iframe>
+                      </>
+                    )
+                    :(
+                      <>
+                        <img
+                          src={item.img}
+                          alt={`recentimage-${index}-${subIndex}`}
+                          className={styles.recent_image}
+                        />
+                        <p className={styles.recent_text} style={{ fontSize: '14px' }}>
+                          {item.paragraph}
+                        </p>
+                  </>
+                    )
+                  }
+                  
                 </Col>
               ))}
             </Row>

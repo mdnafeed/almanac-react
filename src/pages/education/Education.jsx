@@ -45,8 +45,12 @@ const Education = () => {
             lets citizens know about their fundamental rights and duties that
             eventually transforms societies from strength to strength.
           </Col>
+
+
         </Row>
-        <Row className={styles.cource_details}>
+        <br />
+
+        <Row>
           <Col lg={12} className={styles.program_heading}>
             <h2 className="text-center">
               <strong>OUR PROGRAMS</strong>
@@ -205,23 +209,25 @@ const Education = () => {
               style={{
                 width: "300px",
                 height: "40px",
-                backgroundColor: "#54B4D3",
+                backgroundColor: "#80e36a",
+                borderRadius: "13px"
               }}
-              className="border p-2  text-decoration-none text-white"
+              className="border p-2 text-dark text-decoration-none "
             >
-              <FaAngleRight className="mb-1" /> EDUCATION FORM DOWNLOAD
+              <FaAngleRight className="mb-1" /> E FORM DOWNLOAD
             </a>
             <NavLink
               to={RouteConstant.EDUCATION_ONLINE_FORM}
-              className=" border p-2 text-decoration-none"
+              className=" border p-2 text-dark text-decoration-none"
               style={{
                 width: "300px",
-                backgroundColor: "#54B4D3",
+                backgroundColor: "#80e36a",
                 height: "40px",
                 color: "white",
+                borderRadius: "13px"
               }}
             >
-              <FaAngleRight className="mb-1" /> EDUCATION FORM ONLINE
+              <FaAngleRight className="mb-1" /> E FORM ONLINE
             </NavLink>
           </Col>
         </Row>
