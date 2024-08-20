@@ -43,11 +43,11 @@ const Trustees = () => {
               navigate(RouteConstant.PAYMENT_SUCCESSFUL);
 
               // After 10 seconds, navigate to the certificate page
-              setTimeout(() => {
-                navigate(
-                  `${RouteConstant.CERTIFICATE}/${backendResponse.data.membershipObj._id}`
-                );
-              }, 50000);
+              // setTimeout(() => {
+              //   navigate(
+              //     `${RouteConstant.CERTIFICATE}/${backendResponse.data.membershipObj._id}`
+              //   );
+              // }, 50000);
               // navigate(`${RouteConstant.CERTIFICATE}/${backendResponse.data.membershipObj._id}`);
             } else {
               // In Case Payment success
