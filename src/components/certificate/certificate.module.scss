@@ -27,9 +27,11 @@
 .name {
     position: absolute;
     font-size: 25px;
+    flex-wrap: wrap;
     font-weight: bold;
     top: 49.5%;
     left: 40%;
+    padding-left: 10px;
     font-family: sans-serif !important;
     text-transform: capitalize;
 }
@@ -54,9 +56,11 @@
     background: black;
     color: white;
 }
-@page{
 
-}
+
+
+
+
 @media print {
     .container {
         height: 100%;
@@ -64,7 +68,16 @@
         page-break-after: avoid; /* Prevent page breaks after the container */
         page-break-inside: avoid; /* Ensure no page breaks within the container */
     }
-
+    @media (max-width: 768px) {
+    
+        .name{
+            top:54.4%
+        }
+        header,.print,
+        footer {
+            display: none;
+        }
+    }
     body {
         font-size: 14pt;
     }
@@ -82,6 +95,9 @@
 
     .name {
         top: 56.2%;
+        // top:80%;
+        bottom: -90%;
+        margin-top: 500px;
         font-size: 20px;
     }
 

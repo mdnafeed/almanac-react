@@ -16,6 +16,8 @@ export class RouteConstant {
   static CERTIFICATE = "/certificate";
   static THANK_YOU="/thankyou";
   static ERROR_PAGE="/errorpage";
+  static PAYMENT_SUCCESSFUL="/payment-successful";
+  static PAYMENT_FAILED="/payment-failed";
   static PRIVACY_POLICY = "/privacy-policy";
   static TERMS_AND_CONDITION = "/terms-and-condition";
   static PAYMENT_CANCELATION = "/payment-cancelation";

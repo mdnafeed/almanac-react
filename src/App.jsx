@@ -36,6 +36,10 @@ import Certificate from './components/certificate/certificate'
 import PaymentCancelation from "./pages/staticPage/cancelation-process";
 import PrivacyPolicy from "./pages/staticPage/privacy-policy";
 import TermsAndCondition from "./pages/staticPage/terms-and-condition";
+//Payment Ui
+
+import PaymentSucess from "./pages/commonPage/PaymentSucess";
+import PaymentFaild from "./pages/commonPage/PaymentFaild";
 // END: PAGE
 function App() {
   return (
@@ -59,7 +63,9 @@ function App() {
             <Route path={RouteConstant.EDUCATION_SUMBITAFTER} element={<EducationSumbitAfter/>}/>
             <Route path={RouteConstant.HEALTHCARE_SUMBITAFTER} element={<HealthcareSumbitAfter/>}/>
             <Route path={RouteConstant.ERROR_PAGE} element={<ErrorPage/>}/>
-
+            
+            <Route path={RouteConstant.PAYMENT_SUCCESSFUL} element={<PaymentSucess/>}/>
+            <Route path={RouteConstant.PAYMENT_FAILED} element={<PaymentFaild/>}/>
             <Route path={RouteConstant.TERMS_AND_CONDITION} element={<TermsAndCondition/>} />
             <Route path={RouteConstant.PRIVACY_POLICY} element={<PrivacyPolicy/>}/>
             <Route path={RouteConstant.PAYMENT_CANCELATION} element={<PaymentCancelation/>}/>

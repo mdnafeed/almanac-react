@@ -1,13 +1,13 @@
 import { Form, Col, Row, Button, Container } from "react-bootstrap";
 import { useEffect } from "react";
-import Card from 'react-bootstrap/Card';
+import Card from "react-bootstrap/Card";
 import { useFormik } from "formik";
 import validationTrusteeSchema from "./validationTrusteeSchema";
 import api from "../../../api/api.js";
-import { ToastContainer, toast } from 'react-toastify';
-import { useNavigate,Route } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import { useNavigate, Route } from "react-router-dom";
 import { RouteConstant } from "../../../shared/constants/route.js";
-import './membership.scss';
+import "./membership.scss";
 const Trustees = () => {
   const navigate = useNavigate();
   const currentDate = new Date();
@@ -21,35 +21,40 @@ const Trustees = () => {
       address: "",
       type_of_membership: "",
       amount: "",
-
     },
     validationSchema: validationTrusteeSchema,
     onSubmit: async (values) => {
-
       const options = {
-        key: 'rzp_live_FPc38VCRKMBqNY', // Replace with your Razorpay key_id  // rzp_live_FPc38VCRKMBqNY rzp_test_hAakLAx9OzIPeu 
+        // key: "rzp_live_FPc38VCRKMBqNY", // Replace with your Razorpay key_id //  rzp_live_FPc38VCRKMBqNY 
+        key:"rzp_test_hAakLAx9OzIPeu",  // test key_id
         amount: values.amount * 100, // Convert amount to paise
-        currency: 'INR',
-        name: 'Almanac Social Welfare',
-        description: 'Payment for Membership',
-        image: 'http://almanacsocialwelfare.com/assets/logo-9bd8e0f9.png', // Replace with your company logo URL
+        currency: "INR",
+        name: "Almanac Social Welfare",
+        description: "Payment for Membership",
+        image: "http://almanacsocialwelfare.com/assets/logo-9bd8e0f9.png", // Replace with your company logo URL
         // order_id: 'order_12345', // Generate a unique order_id for each transaction
         handler: async (response) => {
-          // START: if Payment success and received payment id form rozerpay then this block will be executed 
-          if(response.razorpay_payment_id){
+          // START: if Payment success and received payment id form rozerpay then this block will be executed
+          if (response.razorpay_payment_id) {
+            // START: If Backend will share with me proper 200 response then these data will store in DB
+            const backendResponse = await api.PostMembership(values);
+            if (backendResponse.status == 200) {
+              // Navigate to PaymentSuccessful page
+              navigate(RouteConstant.PAYMENT_SUCCESSFUL);
 
-              // START: If Backend will share with me proper 200 response then these data will store in DB
-              const backendResponse = await api.PostMembership(values);
-              if(backendResponse.status == 200){
-
-                navigate(`${RouteConstant.CERTIFICATE}/${backendResponse.data.membershipObj._id}`);
-              }
-              else{
-                // In Case Payment success 
-              }
-          }
-          else{
-
+              // After 10 seconds, navigate to the certificate page
+              setTimeout(() => {
+                navigate(
+                  `${RouteConstant.CERTIFICATE}/${backendResponse.data.membershipObj._id}`
+                );
+              }, 50000);
+              // navigate(`${RouteConstant.CERTIFICATE}/${backendResponse.data.membershipObj._id}`);
+            } else {
+              // In Case Payment success
+            }
+          } else {
+            //            // Payment failed
+            navigate(RouteConstant.PAYMENT_FAILED);
           }
         },
         prefill: {
@@ -62,20 +67,19 @@ const Trustees = () => {
           currentDate: currentDate.toISOString(),
         },
         theme: {
-          color: '#528FF0', // Customize the color according to your UI
+          color: "#528FF0", // Customize the color according to your UI
         },
       };
-  
+
       const rzp = new window.Razorpay(options);
       rzp.open();
     },
   });
-  console.log(trusteeFormik)
-
+  console.log(trusteeFormik);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
     script.async = true;
     document.body.appendChild(script);
 
@@ -88,13 +92,13 @@ const Trustees = () => {
     const membershipType = trusteeFormik.values.type_of_membership;
 
     switch (membershipType) {
-      case 'Trustee':
+      case "Trustee":
         trusteeFormik.setValues({ ...trusteeFormik.values, amount: 5000 });
         break;
-      case 'Volunteers':
+      case "Volunteers":
         trusteeFormik.setValues({ ...trusteeFormik.values, amount: 100 });
         break;
-      case 'CSR Fund':
+      case "CSR Fund":
         trusteeFormik.setValues({ ...trusteeFormik.values, amount: 100000 });
         break;
       default:
@@ -108,10 +112,12 @@ const Trustees = () => {
   console.log(trusteeFormik);
 
   return (
-    <Card  className="member-ship-content">
+    <Card className="member-ship-content">
       <Form onSubmit={trusteeFormik.handleSubmit}>
         <Container>
-          <h1 className="membership-text"><b>Become a Membership</b></h1>
+          <h1 className="membership-text">
+            <b>Become a Membership</b>
+          </h1>
           <Row>
             <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
               <Form.Label htmlFor="name">
@@ -127,8 +133,7 @@ const Trustees = () => {
                 defaultValue={trusteeFormik.values.name}
                 onChange={trusteeFormik.handleChange}
                 isInvalid={
-                  trusteeFormik.touched.name &&
-                  trusteeFormik.errors.name
+                  trusteeFormik.touched.name && trusteeFormik.errors.name
                 }
               />
               <Form.Control.Feedback type="invalid">
@@ -292,13 +297,14 @@ const Trustees = () => {
             </Col>
 
             <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
-              <Button className="" type="submit">Pay Now</Button>
+              <Button className="" type="submit">
+                Pay Now
+              </Button>
             </Col>
           </Row>
         </Container>
-
       </Form>
-      <ToastContainer/>
+      <ToastContainer />
     </Card>
   );
 };

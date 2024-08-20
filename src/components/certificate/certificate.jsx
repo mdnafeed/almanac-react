@@ -36,7 +36,9 @@ const Certificate = () => {
             <div className={styles.container}>
                 <img src={almanacCertificateIMAGE} alt="" className={styles.certificate} />
                 <div className={styles.membershipNumber}>{certificateData?._id}</div>
-                <div className={styles.name}>{certificateData?.name} ({certificateData?.type_of_membership})</div>
+                <div className={styles.name}>{certificateData?.name} <div className='py-4 text-start'>
+                ({certificateData?.type_of_membership})
+                    </div></div>
                 <div className={styles.date}>{date}</div>
             </div>
             <button onClick={() => window.print()} className={styles.print}>Print</button>
