@@ -25,8 +25,8 @@ const Trustees = () => {
     validationSchema: validationTrusteeSchema,
     onSubmit: async (values) => {
       const options = {
-        // key: "rzp_live_FPc38VCRKMBqNY", // Replace with your Razorpay key_id //  rzp_live_FPc38VCRKMBqNY 
-        key:"rzp_test_hAakLAx9OzIPeu",  // test key_id
+        key: "rzp_live_FPc38VCRKMBqNY", // Replace with your Razorpay key_id //  rzp_live_FPc38VCRKMBqNY 
+        // key:"rzp_test_hAakLAx9OzIPeu",  // test key_id
         amount: values.amount * 100, // Convert amount to paise
         currency: "INR",
         name: "Almanac Social Welfare",
