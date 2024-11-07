@@ -1,43 +1,106 @@
-@import '../../components/commonScss/common';
-.officeInfo {
-  .location_icons {
-    font-size: 60px;
-    padding-bottom: 10px;
+@import "../../components/commonScss/common";
+.addressInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  .officeInfo {
+    margin-bottom: 20px;
+
+    text-align: justify;
+
+    .location_icons {
+      font-size: 60px;
+      padding-bottom: 10px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $Light-blue;
+    }
+
+    .addrestext {
+      font-size: 20px;
+      color: #333;
+      line-height: 1.5;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span {
+        font-family: sans-serif !important;
+      }
+    }
+  }
+
+  .contactInfo {
     display: flex;
-    margin: 0 auto;
-    color: $Light-blue;
-    
-  }
-  span{
-    font-family: sans-serif !important;
-  }
-}
-.contactInfo {
-  .location_details{
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-top: 15px;
-  }
-  .location_icons {
-    font-size: 60px;
-    padding-bottom: 10px;
-    display: flex;
-    margin: 0 auto;
-    color: $Light-blue;
+
+    .location_details {
+      padding-top: 15px;
+
+      .location_icons {
+        font-size: 60px;
+        padding-bottom: 10px;
+        display: flex;
+        margin: 0 auto;
+        color: $Light-blue;
+      }
+
+      .phoneNumber {
+        font-size: 16px;
+        font-weight: bold;
+        color: #007bff;
+        margin-top: 10px;
+        font-family: sans-serif !important;
+      }
+    }
   }
 }
-.form_bg{
+
+.form_bg {
   background-color: #ebebeb;
-  input{
+
+  input {
     font-family: sans-serif !important;
   }
-
 }
-.contact_details{
-
-.contact_image{
-  width: 100%;
+.contact_details {
+  .contact_image {
+    width: 100%;
+  }
 }
-}
-.phoneNumber{
+.phoneNumber {
   font-family: sans-serif !important;
+}
+
+@media (max-width: 768px) {
+  .addressInfo {
+    text-align: center;
+    padding: 10px;
+    flex-direction: column;
+
+    .addrestext {
+      font-size: 14px;
+    }
+
+    .phoneNumber {
+      font-size: 14px;
+    }
+
+    .contactInfo {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .addrestext,
+  .phoneNumber {
+    font-size: 14px;
+  }
 }

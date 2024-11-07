@@ -131,7 +131,7 @@ function Footer() {
                   <b>Registered Address: </b>{CONSTANT_LABEL.REGISTERED_ADDRESS}
                 </p>
                 <p className={style.contact_details}>
-                  <i className="fas fa-home mr-3"></i> <b>Branch Address: </b>
+                  <i className="fas fa-home mr-3"></i> <b>Head Office: </b>
                   {CONSTANT_LABEL.BRANCH_ADDRESS}
                 </p>
                 {/* <p className={style.contact_details}>
