@@ -36,7 +36,7 @@ const Trustees = () => {
         // order_id: 'order_12345', // Generate a unique order_id for each transaction
         handler: async (response) => {
           // START: if Payment success and received payment id form rozerpay then this block will be executed 
-          if(response.razorpay_payment_id){
+          if(!!response.razorpay_payment_id){
 
               // START: If Backend will share with me proper 200 response then these data will store in DB
               const backendResponse = await api.PostMembership(values);
@@ -45,11 +45,30 @@ const Trustees = () => {
                 navigate(`${RouteConstant.CERTIFICATE}/${backendResponse.data.membershipObj._id}`);
               }
               else{
-                // In Case Payment success 
+                toast.warn("Your Amounts is transferred  to ASW. please connect with ASW for certificate", {
+                  position: "top-center",
+                  autoClose: 30000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                });
               }
           }
+          // In Case Payment Id will not received 
           else{
-
+            toast.error("Unfortunately, the payment for this order has been failed. Please contact with admin", {
+              position: "top-center",
+              autoClose: 30000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
           }
         },
         prefill: {
