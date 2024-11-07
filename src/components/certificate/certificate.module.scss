@@ -55,11 +55,6 @@
     background: black;
     color: white;
 }
-// @page 
-// {
-//     size: auto;   /* auto is the initial value */
-//     margin: 0mm;  /* this affects the margin in the printer settings */
-// }
 @media print {
     nav  ,.print{
         display: none !important;
@@ -70,6 +65,10 @@
     .container {
         height: 100%;
         width: 100%;
+        // height: 297mm; /* Exact height of an A4 page */
+        // width: 210mm; /* Exact width of an A4 page */
+        margin: 0;
+        padding: 0;
     }
 
     body {

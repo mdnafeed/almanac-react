@@ -130,17 +130,6 @@ function Footer() {
                   <i className="fas fa-home mr-3"></i>{" "}
                   <b>Registered Address: </b>{CONSTANT_LABEL.REGISTERED_ADDRESS}
                 </p>
-                <p className={style.contact_details}>
-                  <i className="fas fa-home mr-3"></i> <b>Branch Address: </b>
-                  {CONSTANT_LABEL.BRANCH_ADDRESS}
-                </p>
-                {/* <p className={style.contact_details}>
-                  <i className="fas fa-envelope mr-3"></i>{" "}
-                  {CONSTANT_LABEL.SOCIAL_WELFARE_ALMANAC_EMAIL}
-                </p>
-                <p className={style.contact_details}>
-                  <i className="fas fa-phone mr-3"></i><strong>Phone No:</strong> 011 - 43506838
-                </p> */}
               </div>
             </div>
           </section>
