@@ -55,13 +55,6 @@ const Contact = () => {
                   43-B, Okhla Village, Jamia Nagar, New Delhi-110025
                 </span>
               </p>
-
-              <p>
-                <b style={{ fontSize: "17px" }}>Registered Office:</b>
-                <span style={{ paddingLeft: "10px" }}>
-                  277, Okhla Village, Jamia Nagar, New Delhi-110025
-                </span>
-              </p>
             </Card.Text>
           </Col>
           <Col md={4} sm={12} className={style.contactInfo}>

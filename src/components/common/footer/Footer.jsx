@@ -126,10 +126,7 @@ function Footer() {
               <hr className="w-100 clearfix d-md-none" />
               <div className="col-md-4 col-lg-3 col-xl-3 mt-3">
                 <h6 className={style.use_usfull_link}>Contact</h6>
-                <p className={style.contact_details}>
-                  <i className="fas fa-home mr-3"></i>{" "}
-                  <b>Registered Address: </b>{CONSTANT_LABEL.REGISTERED_ADDRESS}
-                </p>
+                
                 <p className={style.contact_details}>
                   <i className="fas fa-home mr-3"></i> <b>Head Office: </b>
                   {CONSTANT_LABEL.BRANCH_ADDRESS}
