@@ -27,7 +27,8 @@ const Trustees = () => {
     onSubmit: async (values) => {
 
       const options = {
-        key: 'rzp_live_FPc38VCRKMBqNY', // Replace with your Razorpay key_id  // rzp_live_FPc38VCRKMBqNY rzp_test_hAakLAx9OzIPeu 
+        // key: 'rzp_live_FPc38VCRKMBqNY', // Replace with your Razorpay key_id  // rzp_live_FPc38VCRKMBqNY rzp_test_hAakLAx9OzIPeu 
+       key:'rzp_test_hAakLAx9OzIPeu',
         amount: values.amount * 100, // Convert amount to paise
         currency: 'INR',
         name: 'Almanac Social Welfare',
@@ -42,7 +43,7 @@ const Trustees = () => {
               const backendResponse = await api.PostMembership(values);
               if(backendResponse.status == 200){
 
-                navigate(`${RouteConstant.CERTIFICATE}/${backendResponse.data.membershipObj._id}`);
+                navigate('/thankyou')
               }
               else{
                 toast.warn("Your Amounts is transferred  to ASW. please connect with ASW for certificate", {
@@ -69,6 +70,7 @@ const Trustees = () => {
               progress: undefined,
               theme: "light",
             });
+            navigate(`${RouteConstant.ERROR_PAGE}`);
           }
         },
         prefill: {
@@ -108,10 +110,10 @@ const Trustees = () => {
 
     switch (membershipType) {
       case 'Trustee':
-        trusteeFormik.setValues({ ...trusteeFormik.values, amount: 5000 });
+        trusteeFormik.setValues({ ...trusteeFormik.values, amount: 10000 });
         break;
       case 'Volunteers':
-        trusteeFormik.setValues({ ...trusteeFormik.values, amount: 100 });
+        trusteeFormik.setValues({ ...trusteeFormik.values, amount: 5000 });
         break;
       case 'CSR Fund':
         trusteeFormik.setValues({ ...trusteeFormik.values, amount: 100000 });
@@ -310,8 +312,8 @@ const Trustees = () => {
               </Form.Control.Feedback>
             </Col>
 
-            <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
-              <Button className="" type="submit">Pay Now</Button>
+            <Col xs={12} sm={12} md={12} lg={12} className="mb-3 d-flex justify-content-center">
+              <Button className="w-100" type="submit">Sumbit</Button>
             </Col>
           </Row>
         </Container>
