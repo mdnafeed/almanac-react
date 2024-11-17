@@ -63,9 +63,9 @@ amount: yup
     const membershipType = this.parent.type_of_membership;
     switch (membershipType) {
       case "Trustee":
-        return value >= 5000;
+        return value >= 10000;
       case "Volunteers":
-        return value >= 100;
+        return value >= 5000;
       case "CSR Fund":
         return value >= 100000;
       default:
