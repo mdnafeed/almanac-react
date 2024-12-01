@@ -10,7 +10,7 @@ export class RouteConstant {
   static TRUSTEE = "/trustee";
   static VOLUNTEER = "/volunteer";
   static CRS_FOUND = "/crs-found";
-  static NEWS_MEDIA = "/mews-media";
+  static NEWS_MEDIA = "/news-media";
   static CONTACT = "/contact";
   static DONATE = "/donate";
   static CERTIFICATE = "/certificate";

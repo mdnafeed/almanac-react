@@ -1,27 +1,46 @@
 @import '../../components/commonScss/common';
-.news_section {
-  img {
-    width: 100%;
-  }
-  .news_text {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 20px;
-    h1 {
-      text-align: center;
-      position: relative;
-      font-family: "Lato", sans-serif;
-      font-weight: normal;
-      margin: 0px;
-      background: none;
-      line-height: 1.6em;
-    }
-    p {
-      text-align: justify;
-      span {
-        color: $Gray-color;
-        font-size: bold;
-      }
-    }
-  }
+.newsContent {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 20px auto;
+  max-width: 1301px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2rem;
+  color: #1a73e8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  background: #89bcfe;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: black;
+  padding: 6px;
+}
+
+.subTitle {
+  font-size: 1.2rem;
+  color: #1DA1F2; // Twitter blue
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.description:last-child {
+  margin-bottom: 0;
 }
