@@ -137,43 +137,43 @@ function Footer() {
             <div className="row d-flex align-items-center">
               <div className="col-md-7 col-lg-8 text-center text-md-start">
                 <div className="pt-3 pb-3">
-                  © 2023 Copyright: &nbsp;
+                  © <span className={style.headerFont}>2023</span> Copyright: &nbsp;
                   <a className={style.link}>
                     {CONSTANT_LABEL.ALMANAC_INFOTECH_INDIA_PRIVATE_LIMITED}
                   </a>
                 </div>
               </div>
               <div className="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                <a
-                  className="text-center btn btn-outline-light btn-floating m-1"
+              <a
+                  className={`text-center btn btn-outline-light btn-floating m-1 ${style.facebookIcon}`}
                   role="button"
                   href={RouteConstant.FACEBOOK_PROFILE_URL}
                 >
                   <FaFacebookSquare />
                 </a>
                 <a
-                  className="text-center btn btn-outline-light btn-floating m-1"
+                  className={`text-center btn btn-outline-light btn-floating m-1 ${style.twitt}`}
                   role="button"
                   href={RouteConstant.TWITTER_PROFILE_URL}
                 >
                   <FaTwitterSquare />
                 </a>
                 <a
-                  className="text-center btn btn-outline-light btn-floating m-1"
+                  className={`text-center btn btn-outline-light btn-floating m-1 ${style.linked}`}
                   role="button"
                   href={RouteConstant.LINKEDIN_PROFILE_URL}
                 >
                   <FaLinkedin />
                 </a>
                 <a
-                  className="text-center btn btn-outline-light btn-floating m-1"
+                  className={`btn btn-outline-light btn-floating m-1 ${style.insta}`}
                   role="button"
                   href={RouteConstant.INSTAGRAM_PROFILE_URL}
                 >
                   <FaInstagramSquare />
                 </a>
                 <a
-                  className="text-center btn btn-outline-light btn-floating m-1"
+                  className={`btn btn-outline-light btn-floating m-1 ${style.yout}`}
                   role="button"
                   href="https://www.youtube.com/channel/UC583mQAnBvt0eEfSZKzLhlA"
                 >

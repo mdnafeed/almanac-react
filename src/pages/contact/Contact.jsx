@@ -55,7 +55,7 @@ const Contact = () => {
             </Card.Text>
             <Card.Text className="text-justify">
               <Card.Title>
-                <span style={{ fontFamily: "sans-serif !important;" }}>
+                <span className={`${style.font15}`}>
                   <span className="text-xl text-dark">Registered Office :</span>{" "}
                   43-B, Okhla Village, Jamia Nagar, New Delhi-110025
                 </span>
@@ -66,17 +66,18 @@ const Contact = () => {
             <Card.Title className={style.location_details}>
               <MdEmail className={style.location_icons} />
               <Card.Title>
-                <p className="my-4 text-center">
-                  socialwelfarealmanac@gmail.com
+                <p  className={`my-4 text-center ${style.headerFont} ${style.font15}`}>
+                  E-mail: socialwelfarealmanac@gmail.com
                 </p>
               </Card.Title>
               {/* <Card.Text>
                 <p className="text-center text-primary">011-43506838</p>
               </Card.Text> */}
               <Card.Text>
-  <p className="text-center text-primary">
-    <a href="tel:01143506838" className="text-primary"style={{ textDecoration: 'none' }}>
-      011-43506838
+  <p className={`text-center ${style.font15} ${style.paddRight103}`}>
+    Phone No: &nbsp;
+    <a href="tel:01143506838" className={`${style.headerFont}`} style={{ textDecoration: 'none' }}>
+       011-43506838
     </a>
   </p>
 </Card.Text>
@@ -105,35 +106,35 @@ const Contact = () => {
 
               <div className="d-flex flex-row justify-content-start gap-2 ">
                 <a
-                  className="text-center btn btn-outline-light btn-floating m-1 bg-primary"
+                  className={`text-center btn btn-outline-light btn-floating m-1 ${style.facebookIcon}`}
                   role="button"
                   href={RouteConstant.FACEBOOK_PROFILE_URL}
                 >
                   <FaFacebookSquare />
                 </a>
                 <a
-                  className="text-center btn btn-outline-light btn-floating m-1 bg-primary"
+                  className={`text-center btn btn-outline-light btn-floating m-1 ${style.twitt}`}
                   role="button"
                   href={RouteConstant.TWITTER_PROFILE_URL}
                 >
                   <FaTwitterSquare />
                 </a>
                 <a
-                  className="text-center btn btn-outline-light btn-floating m-1 bg-primary"
+                  className={`text-center btn btn-outline-light btn-floating m-1 ${style.linked}`}
                   role="button"
                   href={RouteConstant.LINKEDIN_PROFILE_URL}
                 >
                   <FaLinkedin />
                 </a>
                 <a
-                  className="text-center btn btn-outline-light btn-floating m-1 bg-primary"
+                  className={`btn btn-outline-light btn-floating m-1 ${style.insta}`}
                   role="button"
                   href={RouteConstant.INSTAGRAM_PROFILE_URL}
                 >
                   <FaInstagramSquare />
                 </a>
                 <a
-                  className="text-center btn btn-outline-light btn-floating m-1 bg-primary"
+                  className={`btn btn-outline-light btn-floating m-1 ${style.yout}`}
                   role="button"
                   href="https://www.youtube.com/channel/UC583mQAnBvt0eEfSZKzLhlA"
                 >

@@ -60,7 +60,7 @@ function Header() {
           </Navbar.Brand>
           <div className={styles.almanacHeader}>
             <h5>ALMANAC SOCIAL WELFARE</h5>
-            <p>(Regd. Under Govt. of NCT of Delhi Registration Act 1882)</p>
+            <p>(Regd. Under Govt. of NCT of Delhi Registration Act <span className={styles.headerFont}>1882</span>)</p>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

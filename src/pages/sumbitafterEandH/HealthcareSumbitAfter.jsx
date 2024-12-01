@@ -24,7 +24,7 @@ const HealthcareSumbitAfter = () => {
                     <span style={{ textAlign: 'center', alignItems: 'center', marginTop: '15px' }}>
                       <b style={{ marginBottom: '0px', color: '#006cb5', fontSize: '28px', fontWeight: 'bold' }}>ALMANAC SOCIAL WELFARE</b>
                       <br />
-                      (Regd. Under Govt. of NCT of Delhi Registration Act 1882)
+                      (Regd. Under Govt. of NCT of Delhi Registration Act <span style={{fontFamily:"sans-serif !important"}}>1882</span>)
                     </span>
                     <table style={{ margin: '0', fontSize: '11px', textAlign: 'right', paddingRight: '-5px', marginTop: '-14px' }}>
                       <td style={{ marginTop: '5px', fontSize: '11px', textAlign: 'right' }}>
