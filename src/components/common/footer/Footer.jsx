@@ -113,11 +113,11 @@ function Footer() {
                     {CONSTANT_LABEL.TERMS_AND_CONDITION}
                   </NavLink>
                 </p>
-                <p>
+                {/* <p>
                 <NavLink to={RouteConstant.ONLINE_PAYMENT} className={style.link}>
                     {CONSTANT_LABEL.ONLINE_PAYMENT}
                   </NavLink>
-                </p>
+                </p> */}
                 <p>
                   <NavLink to={RouteConstant.PAYMENT_CANCELATION} className={style.link}>
                     {CONSTANT_LABEL.PAYMENT_CANCELATION}

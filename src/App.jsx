@@ -36,7 +36,7 @@ import Certificate from './components/certificate/certificate'
 import PaymentCancelation from "./pages/staticPage/cancelation-process";
 import PrivacyPolicy from "./pages/staticPage/privacy-policy";
 import TermsAndCondition from "./pages/staticPage/terms-and-condition";
-import OnlinePayment from "./pages/staticPage/online-payment";
+// import OnlinePayment from "./pages/staticPage/online-payment";
 // END: PAGE
 function App() {
   return (
@@ -64,7 +64,7 @@ function App() {
             <Route path={RouteConstant.TERMS_AND_CONDITION} element={<TermsAndCondition/>} />
             <Route path={RouteConstant.PRIVACY_POLICY} element={<PrivacyPolicy/>}/>
             <Route path={RouteConstant.PAYMENT_CANCELATION} element={<PaymentCancelation/>}/>
-            <Route path={RouteConstant.ONLINE_PAYMENT} element={<OnlinePayment/>}/>
+            {/* <Route path={RouteConstant.ONLINE_PAYMENT} element={<OnlinePayment/>}/> */}
           </Routes>
           <Footer />
         </>
