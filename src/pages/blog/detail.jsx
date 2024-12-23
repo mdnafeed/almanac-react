@@ -37,7 +37,7 @@ function Detail() {
               <Card.Text>{data.description9}</Card.Text>
               <Col className={style.tag} style={{float:'right'}}>
                 Tags:<Card.Title className={style.tagName}>
-                {data.tagName }
+                {data.tagName}
                 </Card.Title>
               </Col>
               <img src={logo_icon} style={{height: '100px',marginBottom:"11px"}}/>

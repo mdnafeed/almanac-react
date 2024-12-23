@@ -15,7 +15,7 @@ export const blogs = [
 
     tagName: "Education",
     authorName: "Dr. Mohammed Tarique",
-    authorDesignation: "Chairman",
+    authorDesignation: "Founder & Chairman",
     authorCompanyName: "Almanac Social Welfare",
     published_date: "01-10-2018",
     image: {
@@ -58,8 +58,8 @@ export const blogs = [
     description3: `If one looks at the root cause for such a depressing situation, one would have to say that it is because of the low public investment in health. In the face of the fact that the Supreme Court of India has declared healthcare to be a fundamental right in the constitution, historical public spending of a little above a percent of the GDP has ensured that the country’s healthcare needs remain underserved and left for the private sector to service. According to the WHO, India ranks very low out of 191 countries in terms of percent-of-GDP spending on health. When the same is compared with Sri Lanka, China and Thailand, all invest three to four times more per capita. The fundamental aspect of healthcare declared by the Supreme Court is indeed in shambles.`,
     description4: `Almanac Social Welfare has been working incessantly to plug this gap in the healthcare situation that exists. We currently organize, manage and facilitate several healthcare programs to provide a one-stop access to high-quality primary healthcare services. Our aim is to provide early detection & treatment of illnesses, preventive care which ultimately reduces long-term health costs for the impoverished. We include services like doctor consultation, medicines, diagnostics and day-care procedures. We deliberately try to choose days and time so that people do not have to miss their work whilst taking our services. From our early days, we have adhered to the use of technology and this helps us track and monitor our efforts at all levels.`,
     tagName: "Healthcare",
-    authorName: "Dr. Mohammed Tarique",
-    authorDesignation: "Chairman",
+    authorName: "Dr. Zahid Ali",
+    authorDesignation: "Trustee",
     authorCompanyName: "Almanac Social Welfare",
     published_date: "30-11-2020",
     image: {
@@ -128,9 +128,9 @@ export const blogs = [
 
     description9:
       "For a nation to progress, education is the key that allow sustainable development goals to achieve. When people are able to get quality education, they can break from the cycle of poverty, gender and caste inequality and empower themselves to live more healthy and sustainable lives. Education is also crucial to fostering tolerance between people and contributes to more peaceful societies. The education system in India demands thoughtful reforms to address challenges in acquiring quality, accessibility, updated curriculum, educator training and the evolving needs of students and teachers with the changing times nurturing, life-skills, critical thinking, creativity and problem solving skills.",
-    tagName: "Healthcare",
-    authorName: "Dr. Mohammed Tarique",
-    authorDesignation: "Chairman",
+    tagName: "Education",
+    authorName: "Dr. Arshi Malik",
+    authorDesignation: "Trustee",
     authorCompanyName: "Almanac Social Welfare",
     published_date: "10-02-2021",
     image: {
@@ -161,9 +161,9 @@ export const blogs = [
       "The most disappointing fact is that this race has led to a drop in independent learning and discovering, abandoning reading classical books that forces one to think, analyze and contribute to the society with fresh ideas and perspectives. There has been also a decline in the participation in extracurricular and co-curricular activities that develops real-life skills in students. The overemphasis on most sought after career choices like engineering and medicine must not disregard each student’s unique quality and interests and the choices accessible to them which seems a distant dream in the current scenario.",
     description8:
       "While coaching institutes do play an important role in preparing students for various competitive examinations, or might make some students exam-ready, what is extremely baffling is to see primary children going to coaching/tuitions after school which totally invalidates the school learning. Have the primary schools or the schools in general just become a place for attendance, recreation and exams, or the coaching institutions become a status symbol? Why nowadays, which was not the case a couple of decades back, primary schools is not efficient in delivering basic learning and knowledge to the children? Why a small kid has to relearn the basics of literacy, numeracy and arithmetic? Whatever the reason, it would not be an exaggeration to say that coaching/tuition has become a thriving ‘dream selling’ industry in India. ",
-    tagName: "Healthcare",
-    authorName: "Shah Zeenat Arjoo",
-    authorDesignation: "Chief Secretary",
+    tagName: "Education",
+    authorName: "Manoj Kumar Yadav",
+    authorDesignation: "Trustee",
     authorCompanyName: "Almanac Social Welfare",
     published_date: "05-03-2022",
     image: {
@@ -198,7 +198,7 @@ export const blogs = [
     tagName: "Healthcare",
 
     authorName: "Dr. Mohammad Tarique",
-    authorDesignation: "Chairman",
+    authorDesignation: "Founder & Chairman",
     authorCompanyName: "Almanac Social Welfare",
     published_date: "01-07-2023",
     image: {
@@ -229,8 +229,8 @@ export const blogs = [
     description7:
       "The epidemic of these diseases cannot be controlled simply through providing treatment facilities; there is a pressing need to take preventive measures by addressing root causes and spreading awareness about it. Reducing the major risk factors for NCDs is crucial to prevent morbidities and mortalities from NCDs. In line with Sustainable Development Goal, the global ambition is to reduce premature mortality from NCDs by one-third by 2030. The Indian government has rebranded and expanded the National Program for Prevention and Control of Cancer, Diabetes, Cardiovascular Diseases & Stroke (NPCDCS) into the NP-NCD, broadening its scope to include Chronic Obstructive Pulmonary Disease (COPD) and Asthma, Chronic Kidney Disease (CKD), and Non-Alcoholic Fatty Liver Disease (NAFLD).",
     tagName: "Healthcare",
-    authorName: "Shah Zeenat Arjoo",
-    authorDesignation: "Chief Secretary",
+    authorName: "Dr. Mohammed Faiz",
+    authorDesignation: "Trustee",
     authorCompanyName: "Almanac Social Welfare",
     published_date: "01-11-2023",
     image: {
@@ -261,11 +261,11 @@ export const blogs = [
       "In response to the growing demand for skilled labor, India’s education system is increasingly focusing on vocational training. The introduction of vocational education courses at the school and college levels, alongside the promotion of Skill India initiatives, aims to better align education with industry requirements. However, skill-based education is still often seen as inferior to academic education, which continues to hinder the expansion of vocational training opportunities.",
     description7:
       "India’s higher education sector is also evolving, with more institutions offering specialized programs in fields like Biotechnology, medicine, and business. The internationalization of Indian higher education is gaining momentum, with Indian universities collaborating with top global institutions. The government’s Study in India initiative aims to attract international students and position India as a global education hub. However, India’s higher education system still faces challenges like limited research output and the need for greater investment in infrastructure and innovation.The rise of private schools and universities, especially in urban areas, has added a new dimension to the education sector. While these institutions often offer better infrastructure and facilities, they also contribute to growing educational inequality. Many private institutions cater to the elite, leaving students from economically disadvantaged backgrounds with limited options. India’s education system in 2024 is marked by ongoing reform, digital transformation, and a focus on quality improvement. While initiatives like the NEP 2020 and digital learning are promising, challenges such as inequality, teacher shortages, and infrastructure deficits continue to hinder the full realization of educational goals. The need for further investment in both physical and human resources remains critical to creating an education system that is equitable, accessible, and globally competitive.",
-    description8:`The rise of private schools and universities, especially in urban areas, has added a new dimension to the education sector. While these institutions often offer better infrastructure and facilities, they also contribute to growing educational inequality. Many private institutions cater to the elite, leaving students from economically disadvantaged backgrounds with limited options.
+    description8: `The rise of private schools and universities, especially in urban areas, has added a new dimension to the education sector. While these institutions often offer better infrastructure and facilities, they also contribute to growing educational inequality. Many private institutions cater to the elite, leaving students from economically disadvantaged backgrounds with limited options.
 India’s education system in 2024 is marked by ongoing reform, digital transformation, and a focus on quality improvement. While initiatives like the NEP 2020 and digital learning are promising, challenges such as inequality, teacher shortages, and infrastructure deficits continue to hinder the full realization of educational goals. The need for further investment in both physical and human resources remains critical to creating an education system that is equitable, accessible, and globally competitive.
 `,
-      tagName: "Education",
-    authorName: "Manoj Kumar Yadav",
+    tagName: "Education",
+    authorName: "Dr. Kamal Ahmad",
     authorDesignation: "Trustee",
     authorCompanyName: "Almanac Social welfare",
     published_date: "10-11-2023",
@@ -281,7 +281,7 @@ India’s education system in 2024 is marked by ongoing reform, digital transfor
   },
   {
     id: "10",
-    path: "an-alarming-surge-in-the-non-communicable-diseases-ncds-in-india",
+    path: "an-alarming-surge-in-the-non-communicable-diseases-ncds-in-india!",
     title:
       "An Alarming Surge in the Non-Communicable Diseases (NCDs) in India!",
     description1: `The escalating burden of Non-Communicable Diseases (NCDs) in India threatens its population with it being the leading cause of deaths in recent years. It is reported that NCDs led to 66% of deaths in India in the year 2019, further revealing that that there was a 22% probability of death between the age of 30 and 70 due to any type of non-communicable disease, including cardiovascular diseases, cancer, diabetes or chronic obstructive pulmonary disease. Exacerbating this problem are the issues of multiple chronic conditions and the fact many remain undiagnosed due to the lack of awareness and accessibility. In India where infectious and parasitic diseases still pose substantial challenges to the public health system, rise in NCDs double the global burden of diseases. The most prevalent NCDs in India are cardiovascular or heart diseases, cerebro-vascular diseases, hypertension, diabetes, cancers (cervical, breast, and oral), chronic respiratory diseases, like asthma. These diseases involve high health care demand and are highly priced especially in low resource settings. Therefore, NCDs are one of the major challenges for public health in 21st century, not only in terms of human sufferings but also the burden they impose on the socioeconomic development of the country.`,
@@ -376,147 +376,148 @@ India’s education system in 2024 is marked by ongoing reform, digital transfor
       "https://webstaging-strapi.knowlarity.com/uploads/IVR_m_c4f3c3a653.jpg",
   },
 
-  {
-    id: "13",
-    path: "an-alarming-surge-in-the-non-communicable-diseases-ncds-in-india",
-    title: "Current Scenario of Education in India a122 ",
-    description1: `India's education system, one of the largest in the world, is undergoing a transformative phase in 2024. While there have been significant strides in improving access and quality, challenges persist in bridging gaps and meeting the demands of a rapidly changing world. Let’s explore the key elements shaping the education landscape in India today.`,
-    description2:
-      "According to a study, India has 101 million people with diabetes, 136 million people with pre-diabetes, 315 million people with high blood pressure, 254 million with generalized obesity, 351 million with abdominal obesity, 213 million people with hypercholesterolaemia and 185 million with high low-density lipoprotein (LDL) cholesterol. This data suggests that not only the urban population is associated with these diseases, but then a large scale population is affected by these posing threats to, particularly, the rural regions where there is lack of awareness as well as ease of access to receive government funded healthcare services.",
-    description3:
-      "The four major NCDs, i.e., cardiovascular diseases, cancers, chronic respiratory diseases and diabetes are also associated with lifestyle and behavioral factors. The NCDs may occur due to lifestyle as well as genetic factors. They are also termed as lifestyle diseases because the risk factors for NCDs involve poor/unhealthy diet, lack of exercise, inadequate sleep, tobacco, alcohol consumption and stress contributing to hypertension, diabetes, abnormal blood lipids and cholesterol that causes dyslipidaemia and obesity. There are also other risk factors like environmental factors, factors of medical conditions, and socio-demographic factors. Air and water pollution is also a leading risk factor for NCDs in terms of both outdoor air pollution and household air pollution that mainly results from burning solid fuels in the home for cooking and heat and lack of safe drinking water especially in the rural areas.",
-    description4:
-      "Spreading western lifestyle in low and middle-income countries, due to global population aging and commercial pressures for unhealthy diets and cigarettes, contributes to the increasing rate of NCDs in these countries. There is a direct relationship between poor health and low-income, which contributes to food poverty, purchasing of cheaper and unhealthy dietary products, and expensive treatments, in addition to psychosocial factors. There is a growing trend to consider social, political, and economic systems as critical factors that impact NCDs besides individual behavior and lifestyle.",
-    description5:
-      "While the cardiovascular diseases can be controlled and prevented by avoiding the risk factors like healthy diets, regular physical activity, avoiding tobacco consumption and smoking, reaching and maintaining a healthy weight, and keeping blood pressure, cholesterol, and blood sugar levels under control cancer is associated with a number of risk factors and causes. However, the most common type of cancer, i.e., lung cancer is mainly the result of smoking and the risk increases in heavy smokers. Hence studies reveal that it is possible to prevent lung cancer by stopping the prevalence of smoking and by increasing fruit and vegetable consumption. Chronic Respiratory Diseases include chronic obstructive pulmonary disease (COPD), occupational lung diseases, asthma and respiratory allergies, sleep apnoea syndrome, and pulmonary hypertension. Asthma and COPD account for most of the deaths in low and middle-income communities. These are not fully reversible and are partially preventable, thus following a healthy lifestyle in the early ages of life, avoiding respiratory infections, and avoiding environmental and occupational agents can effectively prevent Chronic Respiratory Diseases. Preventing exposure to indoor and outdoor pollutants can be achieved by filtration and ventilation, in addition to the use of natural gas. Diabetes’ prevalence and incidence rates have increased dramatically in the recent years. It is not only a chronic condition, but is also life-threatening. It may cause other serious diseases such as heart diseases, kidney failure, and eye damage, which may subsequently lead to blindness, and foot ulcers, which may require limb amputation. While diabetes can be partially inherited, several lifestyle factors, such as obesity, high sugar consumption, and lack of physical activity can significantly contribute to the progress diabetes. However, lifestyle changes can prevent diabetes and the long-term complications of diabetes. ",
-    description6:
-      "Since diet is a common risk factor among most NCDs, it attracts more attention in an effort to find effective strategies to provide healthy food to the community and at all stages of life. However, in developing countries like India, interventions to address poverty and economically weaker sections are required apart from controlling various other risk factors. Promotion of healthy diets would need availability of fruits, vegetables, and healthy oils at affordable prices, and reduction of salt, sugar and saturated fats, in processed foods. NCDs are silent killers threatening health without showing any symptoms until the problem progresses to an advanced stage. Patients with NCDs, or people with susceptibility to develop one need long-term care that is personalized, proactive, and sustainable. Primary health care must deliver healthcare strategies to manage NCDs in each community and to detect diseases at early stages. Early detection and prevention of NCDs is a key to control and manage them in a more efficient manner. Health services must gear up capacity for early detection and treatment of NCDs and risk factors in primary healthcare, so that NCDs and their complications can be prevented and early therapy can be initiated when they do occur. At higher levels of care, more advanced diagnostic tests and treatments must become available at affordable cost.",
-    description7:
-      "The epidemic of these diseases cannot be controlled simply through providing treatment facilities; there is a pressing need to take preventive measures by addressing root causes and spreading awareness about it. Reducing the major risk factors for NCDs is crucial to prevent morbidities and mortalities from NCDs. In line with Sustainable Development Goal, the global ambition is to reduce premature mortality from NCDs by one-third by 2030. The Indian government has rebranded and expanded the National Program for Prevention and Control of Cancer, Diabetes, Cardiovascular Diseases & Stroke (NPCDCS) into the NP-NCD, broadening its scope to include Chronic Obstructive Pulmonary Disease (COPD) and Asthma, Chronic Kidney Disease (CKD), and Non-Alcoholic Fatty Liver Disease (NAFLD).",
-    tagName: "Healthcare",
-    authorName: "Manoj Kumar Yadav",
-    authorDesignation: "Chief Secretary",
-    authorCompanyName: "Almanac Social Welfare",
-    published_date: "01-06-2024",
-    image: {
-      alt: "Education, the most powerful weapon to change the world",
-      url: "https://img.freepik.com/free-photo/portrait-professor-work-educational-system_23-2151737352.jpg?t=st=1733150869~exp=1733154469~hmac=327001bd2cec5bbd348c9d330bb0e3db95b44701a477db882fd2c4733d46e03c&w=740",
-      height: "",
-      width: "",
+  
+    {
+      id: "13",
+      path: "current-scenario-of-education-in-india-a122",
+      title: "Current Scenario of Education in India a122 ",
+      description1: `India's education system, one of the largest in the world, is undergoing a transformative phase in 2024. While there have been significant strides in improving access and quality, challenges persist in bridging gaps and meeting the demands of a rapidly changing world. Let’s explore the key elements shaping the education landscape in India today.`,
+      description2:
+        "According to a study, India has 101 million people with diabetes, 136 million people with pre-diabetes, 315 million people with high blood pressure, 254 million with generalized obesity, 351 million with abdominal obesity, 213 million people with hypercholesterolaemia and 185 million with high low-density lipoprotein (LDL) cholesterol. This data suggests that not only the urban population is associated with these diseases, but then a large scale population is affected by these posing threats to, particularly, the rural regions where there is lack of awareness as well as ease of access to receive government funded healthcare services.",
+      description3:
+        "The four major NCDs, i.e., cardiovascular diseases, cancers, chronic respiratory diseases and diabetes are also associated with lifestyle and behavioral factors. The NCDs may occur due to lifestyle as well as genetic factors. They are also termed as lifestyle diseases because the risk factors for NCDs involve poor/unhealthy diet, lack of exercise, inadequate sleep, tobacco, alcohol consumption and stress contributing to hypertension, diabetes, abnormal blood lipids and cholesterol that causes dyslipidaemia and obesity. There are also other risk factors like environmental factors, factors of medical conditions, and socio-demographic factors. Air and water pollution is also a leading risk factor for NCDs in terms of both outdoor air pollution and household air pollution that mainly results from burning solid fuels in the home for cooking and heat and lack of safe drinking water especially in the rural areas.",
+      description4:
+        "Spreading western lifestyle in low and middle-income countries, due to global population aging and commercial pressures for unhealthy diets and cigarettes, contributes to the increasing rate of NCDs in these countries. There is a direct relationship between poor health and low-income, which contributes to food poverty, purchasing of cheaper and unhealthy dietary products, and expensive treatments, in addition to psychosocial factors. There is a growing trend to consider social, political, and economic systems as critical factors that impact NCDs besides individual behavior and lifestyle.",
+      description5:
+        "While the cardiovascular diseases can be controlled and prevented by avoiding the risk factors like healthy diets, regular physical activity, avoiding tobacco consumption and smoking, reaching and maintaining a healthy weight, and keeping blood pressure, cholesterol, and blood sugar levels under control cancer is associated with a number of risk factors and causes. However, the most common type of cancer, i.e., lung cancer is mainly the result of smoking and the risk increases in heavy smokers. Hence studies reveal that it is possible to prevent lung cancer by stopping the prevalence of smoking and by increasing fruit and vegetable consumption. Chronic Respiratory Diseases include chronic obstructive pulmonary disease (COPD), occupational lung diseases, asthma and respiratory allergies, sleep apnoea syndrome, and pulmonary hypertension. Asthma and COPD account for most of the deaths in low and middle-income communities. These are not fully reversible and are partially preventable, thus following a healthy lifestyle in the early ages of life, avoiding respiratory infections, and avoiding environmental and occupational agents can effectively prevent Chronic Respiratory Diseases. Preventing exposure to indoor and outdoor pollutants can be achieved by filtration and ventilation, in addition to the use of natural gas. Diabetes’ prevalence and incidence rates have increased dramatically in the recent years. It is not only a chronic condition, but is also life-threatening. It may cause other serious diseases such as heart diseases, kidney failure, and eye damage, which may subsequently lead to blindness, and foot ulcers, which may require limb amputation. While diabetes can be partially inherited, several lifestyle factors, such as obesity, high sugar consumption, and lack of physical activity can significantly contribute to the progress diabetes. However, lifestyle changes can prevent diabetes and the long-term complications of diabetes. ",
+      description6:
+        "Since diet is a common risk factor among most NCDs, it attracts more attention in an effort to find effective strategies to provide healthy food to the community and at all stages of life. However, in developing countries like India, interventions to address poverty and economically weaker sections are required apart from controlling various other risk factors. Promotion of healthy diets would need availability of fruits, vegetables, and healthy oils at affordable prices, and reduction of salt, sugar and saturated fats, in processed foods. NCDs are silent killers threatening health without showing any symptoms until the problem progresses to an advanced stage. Patients with NCDs, or people with susceptibility to develop one need long-term care that is personalized, proactive, and sustainable. Primary health care must deliver healthcare strategies to manage NCDs in each community and to detect diseases at early stages. Early detection and prevention of NCDs is a key to control and manage them in a more efficient manner. Health services must gear up capacity for early detection and treatment of NCDs and risk factors in primary healthcare, so that NCDs and their complications can be prevented and early therapy can be initiated when they do occur. At higher levels of care, more advanced diagnostic tests and treatments must become available at affordable cost.",
+      description7:
+        "The epidemic of these diseases cannot be controlled simply through providing treatment facilities; there is a pressing need to take preventive measures by addressing root causes and spreading awareness about it. Reducing the major risk factors for NCDs is crucial to prevent morbidities and mortalities from NCDs. In line with Sustainable Development Goal, the global ambition is to reduce premature mortality from NCDs by one-third by 2030. The Indian government has rebranded and expanded the National Program for Prevention and Control of Cancer, Diabetes, Cardiovascular Diseases & Stroke (NPCDCS) into the NP-NCD, broadening its scope to include Chronic Obstructive Pulmonary Disease (COPD) and Asthma, Chronic Kidney Disease (CKD), and Non-Alcoholic Fatty Liver Disease (NAFLD).",
+      tagName: "Healthcare",
+      authorName: "Manoj Kumar Yadav",
+      authorDesignation: "Chief Secretary",
+      authorCompanyName: "Almanac Social Welfare",
+      published_date: "01-06-2024",
+      image: {
+        alt: "Education, the most powerful weapon to change the world",
+        url: "https://img.freepik.com/free-photo/portrait-professor-work-educational-system_23-2151737352.jpg?t=st=1733150869~exp=1733154469~hmac=327001bd2cec5bbd348c9d330bb0e3db95b44701a477db882fd2c4733d46e03c&w=740",
+        height: "",
+        width: "",
+      },
+      blogBoxImageURL:
+        "https://webstaging-strapi.knowlarity.com/uploads/IVR_m_c4f3c3a653.jpg",
     },
-    blogBoxImageURL:
-      "https://webstaging-strapi.knowlarity.com/uploads/IVR_m_c4f3c3a653.jpg",
-  },
 
-  {
-    id: "14",
-    path: "an-alarming-surge-in-the-non-communicable-diseases-ncds-in-india",
-    title: "The Rise of Artificial Intelligence (AI) in Education: Transforming Learning &Teaching",
-    description1: `In 2024, Artificial Intelligence (AI) is no longer a futuristic concept – it’s becoming an integral part of the education system, transforming how we learn, teach, and engage with knowledge. From personalized learning to administrative automation, AI is reshaping the educational landscape, offering promising new opportunities, yet presenting challenges that need to be addressed.`,
-    description2:
-      "One of the most exciting aspects of AI in education is its ability to create personalized learning experiences. Traditional education systems often use a one-size-fits-all approach, which can leave some students behind while others are under-stimulated. AI, however, allows for learning platforms and tools to adapt to each student’s needs, adjusting the pace and style of content delivery based on real-time feedback.",
-    description3:
-      "AI-powered platforms like intelligent tutoring systems can identify the areas where a student struggles, offering customized exercises and feedback to improve their understanding. This adaptive learning makes education more effective, helping students to learn at their own pace, while also ensuring that advanced learners are challenged.",
-    description4:
-      `For educators, AI isn’t about replacing teachers – it’s about enhancing their capabilities. Administrative tasks such as grading assignments, creating lesson plans, and monitoring student performance can be time-consuming. AI can streamline these tasks, freeing up valuable time for teachers to focus on direct interaction with students.`,
-    description5:
-      `AI-driven tools like chatbots and virtual teaching assistants can help answer routine questions, guide students through homework, and provide additional learning resources, offering personalized support at any time of the day. This creates a more efficient learning environment, where students feel supported and teachers can dedicate more time to creative, interactive teaching.`,
-    description6:
-      "AI is also revolutionizing the way we assess student performance. Traditional assessments often fail to measure a student’s true understanding of a topic, relying on standardized tests that may not reflect real-world skills. AI, however, can create dynamic assessments that evolve with the student’s learning journey, offering continuous feedback and identifying areas of improvement.",
-    description7:
-      `Moreover, AI can reduce bias in grading, ensuring that assessments are fair and objective. Tools like AI-powered plagiarism checkers and automated essay grading systems can make evaluations quicker and more accurate.
-Preparing Students for the Future Workforce.`,
-description8:`As AI continues to shape industries worldwide, it’s essential that students learn to work alongside this technology. In addition to using AI-powered tools, students need to develop the critical thinking, problem-solving, and technical skills required to thrive in an AI-driven world.
-Integrating AI into the curriculum allows students to not only engage with the technology but also understand its potential and limitations. It’s no longer enough to simply use AI; the future workforce will need to innovate with it. This means preparing students for careers in fields like AI development, data analysis, and ethical AI deployment.`,
-description9:`Despite its many benefits, AI in education raises important ethical issues. The data AI systems collect can reveal a lot about student behaviors, learning patterns, and even personal information. This raises concerns about privacy, data security, and the potential misuse of sensitive information.
-Moreover, there is the question of bias. AI systems learn from data, and if that data is biased, AI can perpetuate or even amplify these biases. Ensuring that AI tools are transparent, accountable, and ethically designed is crucial to preventing harm.
-The rise of Artificial Intelligence in education is a game-changer. AI has the potential to make education more personalized, efficient, and accessible than ever before. For teachers, it offers support and innovation, while for students, it provides a more dynamic and tailored learning experience.
-However, as AI continues to play a larger role, it is essential to address challenges related to ethics, data privacy, and equitable access to technology. By harnessing AI’s full potential and using it responsibly, we can shape an education system that prepares future generations for success in an increasingly digital and automated world.
-AI in education isn’t just about technology – it’s about creating an environment where both students and educators can thrive in a world of endless possibilities.
+    {
+      id: "14",
+      path: "the-rise-of-artificial-intelligence-(ai)-in-education-ransforming-learning-teaching",
+      title: "The Rise of Artificial Intelligence (AI) in Education: Transforming Learning &Teaching",
+      description1: `In 2024, Artificial Intelligence (AI) is no longer a futuristic concept – it’s becoming an integral part of the education system, transforming how we learn, teach, and engage with knowledge. From personalized learning to administrative automation, AI is reshaping the educational landscape, offering promising new opportunities, yet presenting challenges that need to be addressed.`,
+      description2:
+        "One of the most exciting aspects of AI in education is its ability to create personalized learning experiences. Traditional education systems often use a one-size-fits-all approach, which can leave some students behind while others are under-stimulated. AI, however, allows for learning platforms and tools to adapt to each student’s needs, adjusting the pace and style of content delivery based on real-time feedback.",
+      description3:
+        "AI-powered platforms like intelligent tutoring systems can identify the areas where a student struggles, offering customized exercises and feedback to improve their understanding. This adaptive learning makes education more effective, helping students to learn at their own pace, while also ensuring that advanced learners are challenged.",
+      description4:
+        `For educators, AI isn’t about replacing teachers – it’s about enhancing their capabilities. Administrative tasks such as grading assignments, creating lesson plans, and monitoring student performance can be time-consuming. AI can streamline these tasks, freeing up valuable time for teachers to focus on direct interaction with students.`,
+      description5:
+        `AI-driven tools like chatbots and virtual teaching assistants can help answer routine questions, guide students through homework, and provide additional learning resources, offering personalized support at any time of the day. This creates a more efficient learning environment, where students feel supported and teachers can dedicate more time to creative, interactive teaching.`,
+      description6:
+        "AI is also revolutionizing the way we assess student performance. Traditional assessments often fail to measure a student’s true understanding of a topic, relying on standardized tests that may not reflect real-world skills. AI, however, can create dynamic assessments that evolve with the student’s learning journey, offering continuous feedback and identifying areas of improvement.",
+      description7:
+        `Moreover, AI can reduce bias in grading, ensuring that assessments are fair and objective. Tools like AI-powered plagiarism checkers and automated essay grading systems can make evaluations quicker and more accurate.
+  Preparing Students for the Future Workforce.`,
+  description8:`As AI continues to shape industries worldwide, it’s essential that students learn to work alongside this technology. In addition to using AI-powered tools, students need to develop the critical thinking, problem-solving, and technical skills required to thrive in an AI-driven world.
+  Integrating AI into the curriculum allows students to not only engage with the technology but also understand its potential and limitations. It’s no longer enough to simply use AI; the future workforce will need to innovate with it. This means preparing students for careers in fields like AI development, data analysis, and ethical AI deployment.`,
+  description9:`Despite its many benefits, AI in education raises important ethical issues. The data AI systems collect can reveal a lot about student behaviors, learning patterns, and even personal information. This raises concerns about privacy, data security, and the potential misuse of sensitive information.
+  Moreover, there is the question of bias. AI systems learn from data, and if that data is biased, AI can perpetuate or even amplify these biases. Ensuring that AI tools are transparent, accountable, and ethically designed is crucial to preventing harm.
+  The rise of Artificial Intelligence in education is a game-changer. AI has the potential to make education more personalized, efficient, and accessible than ever before. For teachers, it offers support and innovation, while for students, it provides a more dynamic and tailored learning experience.
+  However, as AI continues to play a larger role, it is essential to address challenges related to ethics, data privacy, and equitable access to technology. By harnessing AI’s full potential and using it responsibly, we can shape an education system that prepares future generations for success in an increasingly digital and automated world.
+  AI in education isn’t just about technology – it’s about creating an environment where both students and educators can thrive in a world of endless possibilities.
 
-`,
-    tagName: "Healthcare",
-    authorName: "Shah Alim",
-    authorDesignation: "Trustee",
-    authorCompanyName: "Almanac Social Welfare",
-    published_date: "10-10-2024",
-    image: {
-      alt: "Education, the most powerful weapon to change the world",
-      url: "https://img.freepik.com/free-photo/international-day-education-futuristic-style_23-2150998657.jpg?t=st=1733150196~exp=1733153796~hmac=503392de5e0daac21d975a3b0a61921a2e6803a8c6bb37967d40f52b205d2f9d&w=740",
-      height: "",
-      width: "",
+  `,
+      tagName: "Healthcare",
+      authorName: "Shah Alim",
+      authorDesignation: "Trustee",
+      authorCompanyName: "Almanac Social Welfare",
+      published_date: "10-10-2024",
+      image: {
+        alt: "Education, the most powerful weapon to change the world",
+        url: "https://img.freepik.com/free-photo/international-day-education-futuristic-style_23-2150998657.jpg?t=st=1733150196~exp=1733153796~hmac=503392de5e0daac21d975a3b0a61921a2e6803a8c6bb37967d40f52b205d2f9d&w=740",
+        height: "",
+        width: "",
+      },
+      blogBoxImageURL:
+        "https://webstaging-strapi.knowlarity.com/uploads/IVR_m_c4f3c3a653.jpg",
     },
-    blogBoxImageURL:
-      "https://webstaging-strapi.knowlarity.com/uploads/IVR_m_c4f3c3a653.jpg",
-  },
 
-  {
-    id: "15",
-    path: "an-alarming-surge-in-the-non-communicable-diseases-ncds-in-india",
-    title: "AI and Healthcare: How Artificial Intelligence is Saving Lives",
-    description1: `Artificial Intelligence (AI) is revolutionizing the healthcare industry, bringing profound changes to how we diagnose, treat, and manage diseases. In 2024, AI is more than just a futuristic tool—it's an integral part of modern medicine, helping healthcare professionals save lives and improve patient outcomes. From early diagnosis to personalized treatments and improving operational efficiency, AI is transforming healthcare in ways that were once unimaginable.`,
-    description2:
-      "AI’s ability to detect diseases at early stages is one of its most powerful applications. Machine learning algorithms can analyze medical images, genetic data, and patient histories to identify signs of conditions like cancer, heart disease, and neurological disorders—often before symptoms even appear. For example, AI algorithms trained on thousands of medical images can detect tumors in mammograms or CT scans with greater precision than the human eye. Early detection significantly increases the chances of successful treatment, saving countless lives.",
-    description3:
-      "AI is also changing the way doctors create treatment plans. By analyzing a patient's genetic makeup, lifestyle, and medical history, AI can help doctors devise personalized treatment options. This is particularly beneficial in oncology, where AI is used to tailor chemotherapy regimens based on the genetic profile of both the patient and the cancer cells. This approach minimizes side effects and maximizes the efficacy of treatment, improving the patient's quality of life and survival chances.",
-    description4:
-      "Developing new drugs is an expensive and time-consuming process. AI accelerates this by predicting how different compounds interact with the human body. AI models can simulate the effects of various molecules and identify promising candidates for clinical trials, reducing both the time and cost involved in bringing new drugs to market. During the COVID-19 pandemic, AI was instrumental in accelerating vaccine development and repurposing existing drugs, demonstrating its life-saving potential.",
-    description5:
-      "With the rise of wearable health devices and smart sensors, AI now plays a critical role in real-time patient monitoring. Devices can track vital signs such as heart rate, blood pressure, and oxygen levels. AI systems analyze this data and alert healthcare providers about potential issues before they become critical. For example, AI can detect irregular heart rhythms or early signs of a stroke and notify doctors immediately, enabling faster interventions that can save lives. ",
-    description6:
-      "AI-powered technologies are also transforming the field of surgery. Robotic systems, assisted by AI, are capable of performing complex procedures with exceptional precision. These systems provide real-time guidance, allowing surgeons to navigate delicate areas with greater accuracy and fewer complications. AI-assisted surgeries, such as those in neurosurgery and orthopedics, result in smaller incisions, quicker recovery times, and a reduced risk of human error, improving patient outcomes.",
-    description7:
-      "AI is also playing a role in making healthcare more accessible. In rural or underserved regions, AI-driven telemedicine platforms allow patients to consult with doctors remotely, bypassing geographical barriers. Furthermore, AI can help develop affordable diagnostic tools that can be used in areas with limited access to specialized healthcare. By improving access to care, AI is helping reduce healthcare disparities and ensuring that more people receive the life-saving treatment they need.",
-    description8:`AI is streamlining healthcare operations, from scheduling appointments to managing patient records. AI tools can automate administrative tasks, allowing healthcare providers to focus more on direct patient care. Additionally, AI can predict patient inflow, helping hospitals manage resources more efficiently. This reduces wait times and ensures that the necessary medical resources are always available, ultimately improving patient care and saving lives.
-AI is no longer a concept of the future—it's actively saving lives today. From early diagnosis and personalized treatments to real-time monitoring and surgical precision, AI is reshaping healthcare in ways that were once unimaginable. While there are challenges, such as ensuring data privacy and ethical considerations, the potential benefits are immense.`,
- description9:`As we continue to integrate AI into healthcare, we can expect even more life-saving innovations. With its ability to enhance diagnostics, treatment, and patient care, AI is paving the way for a healthier, more efficient, and more accessible future for healthcare worldwide. The future of medicine is here, and it’s powered by AI.`,
+    {
+      id: "15",
+      path: "ai-and-healthcare-how-artificial-intelligence-is-saving-lives",
+      title: "AI and Healthcare: How Artificial Intelligence is Saving Lives",
+      description1: `Artificial Intelligence (AI) is revolutionizing the healthcare industry, bringing profound changes to how we diagnose, treat, and manage diseases. In 2024, AI is more than just a futuristic tool—it's an integral part of modern medicine, helping healthcare professionals save lives and improve patient outcomes. From early diagnosis to personalized treatments and improving operational efficiency, AI is transforming healthcare in ways that were once unimaginable.`,
+      description2:
+        "AI’s ability to detect diseases at early stages is one of its most powerful applications. Machine learning algorithms can analyze medical images, genetic data, and patient histories to identify signs of conditions like cancer, heart disease, and neurological disorders—often before symptoms even appear. For example, AI algorithms trained on thousands of medical images can detect tumors in mammograms or CT scans with greater precision than the human eye. Early detection significantly increases the chances of successful treatment, saving countless lives.",
+      description3:
+        "AI is also changing the way doctors create treatment plans. By analyzing a patient's genetic makeup, lifestyle, and medical history, AI can help doctors devise personalized treatment options. This is particularly beneficial in oncology, where AI is used to tailor chemotherapy regimens based on the genetic profile of both the patient and the cancer cells. This approach minimizes side effects and maximizes the efficacy of treatment, improving the patient's quality of life and survival chances.",
+      description4:
+        "Developing new drugs is an expensive and time-consuming process. AI accelerates this by predicting how different compounds interact with the human body. AI models can simulate the effects of various molecules and identify promising candidates for clinical trials, reducing both the time and cost involved in bringing new drugs to market. During the COVID-19 pandemic, AI was instrumental in accelerating vaccine development and repurposing existing drugs, demonstrating its life-saving potential.",
+      description5:
+        "With the rise of wearable health devices and smart sensors, AI now plays a critical role in real-time patient monitoring. Devices can track vital signs such as heart rate, blood pressure, and oxygen levels. AI systems analyze this data and alert healthcare providers about potential issues before they become critical. For example, AI can detect irregular heart rhythms or early signs of a stroke and notify doctors immediately, enabling faster interventions that can save lives. ",
+      description6:
+        "AI-powered technologies are also transforming the field of surgery. Robotic systems, assisted by AI, are capable of performing complex procedures with exceptional precision. These systems provide real-time guidance, allowing surgeons to navigate delicate areas with greater accuracy and fewer complications. AI-assisted surgeries, such as those in neurosurgery and orthopedics, result in smaller incisions, quicker recovery times, and a reduced risk of human error, improving patient outcomes.",
+      description7:
+        "AI is also playing a role in making healthcare more accessible. In rural or underserved regions, AI-driven telemedicine platforms allow patients to consult with doctors remotely, bypassing geographical barriers. Furthermore, AI can help develop affordable diagnostic tools that can be used in areas with limited access to specialized healthcare. By improving access to care, AI is helping reduce healthcare disparities and ensuring that more people receive the life-saving treatment they need.",
+      description8:`AI is streamlining healthcare operations, from scheduling appointments to managing patient records. AI tools can automate administrative tasks, allowing healthcare providers to focus more on direct patient care. Additionally, AI can predict patient inflow, helping hospitals manage resources more efficiently. This reduces wait times and ensures that the necessary medical resources are always available, ultimately improving patient care and saving lives.
+  AI is no longer a concept of the future—it's actively saving lives today. From early diagnosis and personalized treatments to real-time monitoring and surgical precision, AI is reshaping healthcare in ways that were once unimaginable. While there are challenges, such as ensuring data privacy and ethical considerations, the potential benefits are immense.`,
+   description9:`As we continue to integrate AI into healthcare, we can expect even more life-saving innovations. With its ability to enhance diagnostics, treatment, and patient care, AI is paving the way for a healthier, more efficient, and more accessible future for healthcare worldwide. The future of medicine is here, and it’s powered by AI.`,
 
-      tagName: "Dr. Mohammed Faiz",
-    authorName: "Trustee",
-    authorDesignation: "Chief Secretary",
-    authorCompanyName: "Almanac Social Welfare",
-    published_date: "20-11-2024",
-    image: {
-      alt: "Education, the most powerful weapon to change the world",
-      url: "https://img.freepik.com/free-photo/people-hanging-out-with-robot_23-2151112192.jpg?t=st=1733146229~exp=1733149829~hmac=93d93bf1e498129a942298fad12d518c6fee0b2221f529b0be995dd8430dc6f0&w=740",
-      height: "",
-      width: "",
+      tagName: "Healthcare",
+      authorName: "Dr. Mohd Kalim Ahmad Khan",
+      authorDesignation: "Trustee",
+      authorCompanyName: "Almanac Social Welfare",
+      published_date: "20-11-2024",
+      image: {
+        alt: "Education, the most powerful weapon to change the world",
+        url: "https://img.freepik.com/free-photo/people-hanging-out-with-robot_23-2151112192.jpg?t=st=1733146229~exp=1733149829~hmac=93d93bf1e498129a942298fad12d518c6fee0b2221f529b0be995dd8430dc6f0&w=740",
+        height: "",
+        width: "",
+      },
+      blogBoxImageURL:
+        "https://webstaging-strapi.knowlarity.com/uploads/IVR_m_c4f3c3a653.jpg",
     },
-    blogBoxImageURL:
-      "https://webstaging-strapi.knowlarity.com/uploads/IVR_m_c4f3c3a653.jpg",
-  },
 
-  {
-    id: "16",
-    path: "an-alarming-surge-in-the-non-communicable-diseases-ncds-in-india",
-    title:
-      "The Future of Personalized Medicine: Tailoring Treatment to Your DNA",
-    description1: `In recent years, personalized medicine has emerged as a game-changer in healthcare, offering treatments and strategies tailored to the unique genetic makeup of each patient. Rather than relying on a “one-size-fits-all” approach, personalized medicine uses genetic information, lifestyle factors, and environmental influences to customize healthcare interventions. This shift is transforming how we diagnose, treat, and prevent diseases, paving the way for a more precise and effective healthcare system.`,
-    description2:
-      "At the core of personalized medicine is genomic data, which holds the blueprint of a person’s health. By analyzing a patient’s DNA, scientists can identify genetic mutations that influence disease susceptibility, drug responses, and treatment effectiveness. Genetic sequencing allows healthcare providers to tailor interventions that are specifically suited to the individual, minimizing the risk of side effects and maximizing treatment success. For example, a patient’s genetic profile can help determine the best cancer treatment or pinpoint the optimal dosage of a medication.",
-    description3:
-      "One of the most impactful applications of personalized medicine is in cancer treatment. Traditional treatments like chemotherapy and radiation are often generalized and can harm healthy cells, leading to severe side effects. However, through genomic testing, doctors can identify the specific mutations driving a patient’s cancer and select targeted therapies that focus on those mutations. Drugs like Herceptin for breast cancer or Gleevec for leukemia are examples of targeted therapies that are more effective and less damaging than traditional treatments, improving the likelihood of survival and reducing side effects.",
-    description4:
-      "Personalized medicine is also revolutionizing the field of pharmacogenomics, which studies how genes affect a person’s response to drugs. By understanding genetic variations, doctors can predict how patients will metabolize medications. This enables the customization of prescriptions, ensuring the right drug and dosage for each individual. For example, some patients may metabolize certain blood thinners or antidepressants too quickly or too slowly, increasing the risk of adverse effects. With genetic insights, these risks can be mitigated, leading to more effective and safer treatments.",
-    description5:
-      "Another exciting aspect of personalized medicine is its potential for disease prevention. Genetic testing allows individuals to assess their risk for conditions like heart disease, diabetes, and Alzheimer’s. By identifying genetic predispositions, doctors can recommend early interventions such as lifestyle changes, preventive medications, or regular screenings, all of which can reduce the risk of developing these conditions. For example, women with mutations in the BRCA1 or BRCA2 genes are at a higher risk for breast and ovarian cancer. Knowing this in advance allows them to take preventive steps, such as increased screening or even preventive surgery, to lower their risk. ",
-    description6:
-      "Gene therapy, one of the most groundbreaking aspects of personalized medicine, offers the possibility of curing genetic disorders by directly altering a patient’s DNA. Technologies like CRISPR-Cas9 are enabling scientists to target and edit defective genes at the molecular level, potentially offering cures for conditions like sickle cell anemia, cystic fibrosis, and muscular dystrophy. While still in its early stages, gene therapy holds the promise of completely altering the treatment landscape for genetic diseases, offering patients the potential for long-term, even permanent, cures.",
-    description7:
-     "Despite its immense promise, personalized medicine does face challenges. The cost of genetic testing and customized treatments can be prohibitive, making it inaccessible to some populations. Additionally, ethical concerns regarding genetic privacy and data security must be addressed to ensure that individuals’ genetic information is protected from misuse. It is essential to create frameworks that allow the benefits of personalized medicine to be available to all, regardless of income or background.",
-    description8:`As we look toward the future, personalized medicine is poised to revolutionize healthcare by offering more effective, efficient, and precise treatments. With advancements in genomics, pharmacogenomics, and gene therapy, patients will experience healthcare that is truly customized to their individual genetic needs. From preventing diseases to targeting cancer cells and curing genetic disorders, the future of medicine lies in tailoring treatments to our DNA. While challenges remain, the potential benefits of personalized medicine make it one of the most exciting and transformative fields in modern healthcare.`,
-     tagName: "Healthcare",
-    authorName: "Dr. Mohammed Tarique",
-    authorDesignation: "Chairman",
-    authorCompanyName: "Almanac Social Welfare",
-    published_date: "28-11-2024",
-    image: {
-      alt: "Education, the most powerful weapon to change the world",
-      url: "https://img.freepik.com/free-photo/friendly-hospital-phlebotomist-collecting-blood-sample-from-patient-lab-preparation-blood-test-by-female-doctor-medical-uniform-table-white-bright-room_657921-879.jpg?t=st=1733134297~exp=1733137897~hmac=14b34e29f811c2df9b6b124250250d2325d3916fb8bc2ecaa3af791c17f24596&w=740",
-      height: "",
-      width: "",
+    {
+      id: "16",
+      path: "the-future-of-personalized-medicine-tailoring-treatment-to-your-dna",
+      title:
+        "The Future of Personalized Medicine: Tailoring Treatment to Your DNA",
+      description1: `In recent years, personalized medicine has emerged as a game-changer in healthcare, offering treatments and strategies tailored to the unique genetic makeup of each patient. Rather than relying on a “one-size-fits-all” approach, personalized medicine uses genetic information, lifestyle factors, and environmental influences to customize healthcare interventions. This shift is transforming how we diagnose, treat, and prevent diseases, paving the way for a more precise and effective healthcare system.`,
+      description2:
+        "At the core of personalized medicine is genomic data, which holds the blueprint of a person’s health. By analyzing a patient’s DNA, scientists can identify genetic mutations that influence disease susceptibility, drug responses, and treatment effectiveness. Genetic sequencing allows healthcare providers to tailor interventions that are specifically suited to the individual, minimizing the risk of side effects and maximizing treatment success. For example, a patient’s genetic profile can help determine the best cancer treatment or pinpoint the optimal dosage of a medication.",
+      description3:
+        "One of the most impactful applications of personalized medicine is in cancer treatment. Traditional treatments like chemotherapy and radiation are often generalized and can harm healthy cells, leading to severe side effects. However, through genomic testing, doctors can identify the specific mutations driving a patient’s cancer and select targeted therapies that focus on those mutations. Drugs like Herceptin for breast cancer or Gleevec for leukemia are examples of targeted therapies that are more effective and less damaging than traditional treatments, improving the likelihood of survival and reducing side effects.",
+      description4:
+        "Personalized medicine is also revolutionizing the field of pharmacogenomics, which studies how genes affect a person’s response to drugs. By understanding genetic variations, doctors can predict how patients will metabolize medications. This enables the customization of prescriptions, ensuring the right drug and dosage for each individual. For example, some patients may metabolize certain blood thinners or antidepressants too quickly or too slowly, increasing the risk of adverse effects. With genetic insights, these risks can be mitigated, leading to more effective and safer treatments.",
+      description5:
+        "Another exciting aspect of personalized medicine is its potential for disease prevention. Genetic testing allows individuals to assess their risk for conditions like heart disease, diabetes, and Alzheimer’s. By identifying genetic predispositions, doctors can recommend early interventions such as lifestyle changes, preventive medications, or regular screenings, all of which can reduce the risk of developing these conditions. For example, women with mutations in the BRCA1 or BRCA2 genes are at a higher risk for breast and ovarian cancer. Knowing this in advance allows them to take preventive steps, such as increased screening or even preventive surgery, to lower their risk. ",
+      description6:
+        "Gene therapy, one of the most groundbreaking aspects of personalized medicine, offers the possibility of curing genetic disorders by directly altering a patient’s DNA. Technologies like CRISPR-Cas9 are enabling scientists to target and edit defective genes at the molecular level, potentially offering cures for conditions like sickle cell anemia, cystic fibrosis, and muscular dystrophy. While still in its early stages, gene therapy holds the promise of completely altering the treatment landscape for genetic diseases, offering patients the potential for long-term, even permanent, cures.",
+      description7:
+       "Despite its immense promise, personalized medicine does face challenges. The cost of genetic testing and customized treatments can be prohibitive, making it inaccessible to some populations. Additionally, ethical concerns regarding genetic privacy and data security must be addressed to ensure that individuals’ genetic information is protected from misuse. It is essential to create frameworks that allow the benefits of personalized medicine to be available to all, regardless of income or background.",
+      description8:`As we look toward the future, personalized medicine is poised to revolutionize healthcare by offering more effective, efficient, and precise treatments. With advancements in genomics, pharmacogenomics, and gene therapy, patients will experience healthcare that is truly customized to their individual genetic needs. From preventing diseases to targeting cancer cells and curing genetic disorders, the future of medicine lies in tailoring treatments to our DNA. While challenges remain, the potential benefits of personalized medicine make it one of the most exciting and transformative fields in modern healthcare.`,
+       tagName: "Healthcare",
+      authorName: "Dr. Mohammed Tarique",
+      authorDesignation: "Founder & Chairman",
+      authorCompanyName: "Almanac Social Welfare",
+      published_date: "28-11-2024",
+      image: {
+        alt: "Education, the most powerful weapon to change the world",
+        url: "https://img.freepik.com/free-photo/friendly-hospital-phlebotomist-collecting-blood-sample-from-patient-lab-preparation-blood-test-by-female-doctor-medical-uniform-table-white-bright-room_657921-879.jpg?t=st=1733134297~exp=1733137897~hmac=14b34e29f811c2df9b6b124250250d2325d3916fb8bc2ecaa3af791c17f24596&w=740",
+        height: "",
+        width: "",
+      },
+      blogBoxImageURL:
+        "https://webstaging-strapi.knowlarity.com/uploads/IVR_m_c4f3c3a653.jpg",
     },
-    blogBoxImageURL:
-      "https://webstaging-strapi.knowlarity.com/uploads/IVR_m_c4f3c3a653.jpg",
-  },
 ];
