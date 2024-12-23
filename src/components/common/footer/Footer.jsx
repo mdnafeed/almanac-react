@@ -103,6 +103,22 @@ function Footer() {
                   </NavLink>
                 </p>
                 <p>
+                <NavLink to={RouteConstant.PRIVACY_POLICY} className={style.link}>
+                    {CONSTANT_LABEL.PRIVACY_POLICY}
+                  </NavLink>
+                </p>
+
+                <p>
+                <NavLink to={RouteConstant.TERMS_AND_CONDITION} className={style.link}>
+                    {CONSTANT_LABEL.TERMS_AND_CONDITION}
+                  </NavLink>
+                </p>
+                {/* <p>
+                <NavLink to={RouteConstant.ONLINE_PAYMENT} className={style.link}>
+                    {CONSTANT_LABEL.ONLINE_PAYMENT}
+                  </NavLink>
+                </p> */}
+                <p>
                   <NavLink to={RouteConstant.PAYMENT_CANCELATION} className={style.link}>
                     {CONSTANT_LABEL.PAYMENT_CANCELATION}
                   </NavLink>

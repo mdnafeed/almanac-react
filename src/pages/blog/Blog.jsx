@@ -55,7 +55,7 @@ function BlogList() {
                     src={item.image.url}
                     alt={item.image.alt}
                     // className="imageBlog"
-                    style={{height:'180px',}}
+                    style={{ height: '180px', }}
                   />
                   <Card.Text className={style.publishedDate}>
                     <CgCalendarDates className={style.dateIcon} />{" "}
