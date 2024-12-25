@@ -7,4 +7,9 @@ export default defineConfig({
   publicDir: 'public', // Specify the public directory
   // Add an assets path
   assetsDir: 'assets', // This specifies the path to your assets folder
+  server: {
+    port: 5173, 
+    open: true, 
+    historyApiFallback: true, 
+  },
 })
