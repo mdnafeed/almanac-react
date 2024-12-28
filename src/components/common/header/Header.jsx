@@ -14,8 +14,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+  // const toggleDropdown = () => {
+  //   setDropdownOpen(!dropdownOpen);
+  // };
+  const handleToggle = (isOpen) => {
+    setDropdownOpen(isOpen);
   };
 
   const googleTranslateElementInit = () => {
@@ -74,8 +77,9 @@ function Header() {
               </Nav.Link>
               <NavDropdown
                 show={dropdownOpen}
-                onMouseEnter={toggleDropdown}
-                onMouseLeave={toggleDropdown}
+                onToggle={handleToggle}
+                // onMouseEnter={toggleDropdown}
+                // onMouseLeave={toggleDropdown}
                 title="ABOUT US"
                 className={`${styles.trustDropdown}`}
 
