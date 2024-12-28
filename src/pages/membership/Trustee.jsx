@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Trustees from "./trustee/Trustees";
-import phonePayScan from "../../assets/scanner/phonePayScan.jpeg";
+import phonePayScan from "../../assets/scanner/payPhoneScanner.png";
 const Trustee = () => {
   return (
     <>
@@ -35,53 +35,56 @@ const Trustee = () => {
               will never compromise the interests of the underprivileged we help
               in the pursuit of any support we seek.
             </p>
+
+            <Row className="d-flex ">
+              <Col className=" ">
+                <img src={phonePayScan} alt="" width={200} height={200} />
+              </Col>
+              <Col>
+                <p
+                  className="text-center text-md text-danger"
+                  style={{ fontSize: "14px" }}
+                >
+                  <span className="text-success">Almanac Social Welfare</span>{" "}
+                  Bank Detail
+                </p>
+                <table
+                  className="table table-bordered p-1 w-100"
+                  style={{
+                    borderCollapse: "collapse",
+                    border: "1px solid black",
+                    borderColor: "#008080 #0000FF #800080 #a53g2f",
+                  }}
+                >
+                  <tbody>
+                    <tr className="bank-info-details">
+                      <th className="p-1 text-success">Name:</th>
+                      <td className="p-1 text-dark">Almanac Social Welfare</td>
+                    </tr>
+                    <tr className="bank-info-details">
+                      <th className="p-1 text-success">Bank Name:</th>
+                      <td className="p-1 text-dark">HDFC bank </td>
+                    </tr>
+                    <tr className="bank-info-details">
+                      <th className="p-1 text-success">Account Number:</th>
+                      <td className="p-1 text-dark">50200041911860</td>
+                    </tr>
+                    <tr className="bank-info-details">
+                      <th className="text-success">IFSC Code:</th>
+                      <td className="p-1 text-dark">HDFC0004296</td>
+                    </tr>
+                    <tr className="bank-info-details">
+                      <th className=" text-success">Account Type:</th>
+                      <td className=" text-dark">Current Account</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </Col>
+            </Row>
           </Col>
           <Col xs={12} sm={12} md={6} lg={16}>
             <Trustees />
           </Col>
-          {/* Bank info in Almanac Social Welfare (ASW) */}
-          <Row className="d-flex justify-content-center align-items-center w-100vw">
-            <Col className="d-flex flex-column align-items-center w-100">
-              <img src={phonePayScan} alt="" width={500} height={800} />
-            </Col>
-            <Col xs={12} sm={12} md={6} lg={6}>
-              <h3 className="text-center w-100 text-md text-danger mt-4">
-                <span className="text-success">Almanac Social Welfare</span>{" "}
-                Bank Detail
-              </h3>
-              <table
-                className="table table-bordered p-2 w-100"
-                style={{
-                  borderCollapse: "collapse",
-                  border: "3px solid black",
-                  borderColor: "#008080 #0000FF #800080 #a53g2f",
-                }}
-              >
-                <tbody>
-                  <tr>
-                    <th className="p-1 text-success">Name:</th>
-                    <td className="p-1 text-dark">Almanac Social Welfare</td>
-                  </tr>
-                  <tr>
-                    <th className="p-1 text-success">Bank Name:</th>
-                    <td className="p-1 text-dark">HDFC bank </td>
-                  </tr>
-                  <tr>
-                    <th className="p-1 text-success">Account Number:</th>
-                    <td className="p-1 text-dark">50200041911860</td>
-                  </tr>
-                  <tr>
-                    <th className="p-1 text-success">IFSC Code:</th>
-                    <td className="p-1 text-dark">HDFC0004296</td>{" "}
-                  </tr>
-                  <tr>
-                    <th className="p-1 text-success">Account Type:</th>
-                    <td className="p-1 text-dark">Current Account</td>
-                  </tr>
-                </tbody>
-              </table>
-            </Col>
-          </Row>
         </Row>
       </Container>
     </>
