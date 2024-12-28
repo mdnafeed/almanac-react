@@ -59,7 +59,7 @@ function BlogList() {
                   />
                   <Card.Text className={style.publishedDate}>
                     <CgCalendarDates className={style.dateIcon} />{" "}
-                    {item.published_date}
+                   <spam className={style.date}>{item.published_date}</spam>
                   </Card.Text>
                 </NavLink>
 
