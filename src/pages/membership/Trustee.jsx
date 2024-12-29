@@ -38,7 +38,7 @@ const Trustee = () => {
 
             <Row className="d-flex ">
               <Col className=" ">
-                <img src={phonePayScan} alt="" width={200} height={200} />
+                <img src={phonePayScan} alt="" width={150} height={150} />
               </Col>
               <Col>
                 <p
@@ -49,7 +49,7 @@ const Trustee = () => {
                   Bank Detail
                 </p>
                 <table
-                  className="table table-bordered p-1 w-100"
+                  className="table table-bordered  w-100"
                   style={{
                     borderCollapse: "collapse",
                     border: "1px solid black",
@@ -63,19 +63,19 @@ const Trustee = () => {
                     </tr>
                     <tr className="bank-info-details">
                       <th className="p-1 text-success">Bank Name:</th>
-                      <td className="p-1 text-dark">HDFC bank </td>
+                      <td className="p-1 text-dark">HDFC Bank</td>
                     </tr>
                     <tr className="bank-info-details">
                       <th className="p-1 text-success">Account Number:</th>
                       <td className="p-1 text-dark">50200041911860</td>
                     </tr>
                     <tr className="bank-info-details">
-                      <th className="text-success">IFSC Code:</th>
+                      <th className="p-1 text-success">IFSC Code:</th>
                       <td className="p-1 text-dark">HDFC0004296</td>
                     </tr>
                     <tr className="bank-info-details">
-                      <th className=" text-success">Account Type:</th>
-                      <td className=" text-dark">Current Account</td>
+                      <th className="p-1 text-success">Account Type:</th>
+                      <td className="p-1 text-dark">Current Account</td>
                     </tr>
                   </tbody>
                 </table>

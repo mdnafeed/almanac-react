@@ -129,10 +129,10 @@ const Trustees = () => {
   console.log(trusteeFormik);
 
   return (
-    <Card  className="member-ship-content mt-4">
+    <Card  className="member-ship-content">
       <Form onSubmit={trusteeFormik.handleSubmit}>
         <Container>
-          <h1 className="membership-textv pt-4"><b>Become a Membership</b></h1>
+          <h1 className="membership-textv"><b>Become a Membership</b></h1>
           <Row>
             <Col xs={12} sm={12} md={12} lg={12} className="mb-3">
               <Form.Label htmlFor="name">
